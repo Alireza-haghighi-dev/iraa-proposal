@@ -3,9 +3,9 @@
 | Field | Value |
 |---|---|
 | Document ID | S01_REVIEWER_CRITERIA_REGISTER |
-| Version | 4.0 |
+| Version | 4.1 |
 | Status | SUBMITTED FOR GATE |
-| Stage | S04 |
+| Stage | S04.1 |
 | Date | 2026-11-20 |
 | Depends on | REF-03; DEC-011; S02 deliverables; S03 deliverables; S04 deliverables |
 
@@ -29,7 +29,7 @@ The "Criterion (paraphrased)" column summarizes REF-03 in project terms. It is n
 | RF-008 | Team participation | No invented availability, assignments or shares; reconcile participation with total work. | 14, 13, 16 | S10 only | Deferred; local issue logged | SCHEDULED | ISS-025; FX-05 |
 | RF-009 | Budget specificity | Itemized, defensible cost table derived from approved scope; reconciles to Section 16. | 15 | S10 only | Deferred; local issue logged | SCHEDULED | ISS-024; FX-03 |
 | RF-010 | Gantt sequencing | Derive schedule and weights from final activities, dependencies, availability and costs; no early highlighting. | 16; 13–15 | S10 only | Deferred; rules recorded | SCHEDULED | FX-02, FX-04, FX-08 |
-| RF-011 | Track versus maturity | Do not confuse funding track with technical maturity; reconcile title, prototype type, deliverables and classification. | 1, 5, 7, 8, 11, 13 | S04–S06 | S04: options A–D compared; Option B recommended; Section 5 provisionally selected; title pattern noted | OPEN (owner decision required on ISS-001; recommendation delivered) | S04_SCOPE_OPTIONS; proposal/DRAFT_SEC05_CLASSIFICATION; ISS-001, ISS-016, FX-09 |
+| RF-011 | Track versus maturity | Do not confuse funding track with technical maturity; reconcile title, prototype type, deliverables and classification. | 1, 5, 7, 8, 11, 13 | S04–S06 | S04: options A–D compared; Option B recommended; Section 5 provisionally selected; title pattern noted. S04.1: recommendation audited and narrowed; track-versus-maturity and four further distinctions made explicit; drafts marked provisional | OPEN (owner decision required on ISS-001; recommendation PROVISIONAL) | S04_SCOPE_OPTIONS §6; proposal/DRAFT_SEC05_CLASSIFICATION; ISS-001, ISS-016, FX-09 |
 | RF-012 | Superseded funding guidance | Former budget ceiling and mandatory training/consulting charges do not apply automatically; current rules need owner confirmation. | 13, 15, 16 | S10 only (S06 for training activity) | Issues logged; no cost lines carried forward | SCHEDULED | ISS-018, ISS-024 |
 
 ## 2. Additional quality observations

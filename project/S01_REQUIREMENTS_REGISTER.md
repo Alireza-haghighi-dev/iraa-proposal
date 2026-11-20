@@ -3,11 +3,13 @@
 | Field | Value |
 |---|---|
 | Document ID | S01_REQUIREMENTS_REGISTER |
-| Version | 1.2 |
-| Status | APPROVED |
-| Stage | S01 |
+| Version | 2.0 |
+| Status | SUBMITTED FOR GATE |
+| Stage | S04.1 |
 | Date | 2026-11-20 |
-| Depends on | REF-01; REF-02; DEC-002 |
+| Depends on | REF-01; REF-02; DEC-002; DEC-029 |
+
+- **S04.1 correction (DEC-029):** R2 now carries the owner's corrected statement of intent (§1a). The REF-01 working wording of R2 is kept in the table for provenance and is no longer the operative requirement. R1 and R3 interpretations were tightened; see `stages/S04.1/S04.1_CORRECTION_MATRIX.md`.
 
 ## 1. Product requirements (from REF-01 §7)
 
@@ -15,10 +17,22 @@ REF-01 lists four "essential requirements" without priority order. They are carr
 
 | ID | Source text (REF-01, verbatim) | Source | Class | Working interpretation (not source text) | Unresolved points | Verification approach (to be defined in S05) | Sections |
 |---|---|---|---|---|---|---|---|
-| R1 | Assess similarities among requirements already stored in the platform. | REF-01 §7.1 | Functional | Identify stored submissions that describe the same or a closely related need or challenge. | New-versus-stored comparison, grouping of the stored collection, or both (ISS-004). Similarity criteria not defined. Whether the project can access stored records is open (ISS-002, ISS-008). | Retrieval and duplicate-detection metrics on a labelled test set | 7, 8, 12, 13 |
-| R2 | Check whether relevant existing solutions or precedents are available in an approved internal collection. | REF-01 §7.2 | Functional | Where an approved collection is available to the assistant, retrieve items from it that may address a submission and present them to the assessor. | REF-01 does not establish that the collection exists as a populated, machine-readable dataset, what it contains, who approves it, or whether the project may use it (ISS-003, ISS-002). No design or claim may assume these. | Retrieval relevance judged by assessors, conditional on ISS-003 and ISS-002 | 7, 8, 12, 13 |
-| R3 | Require final human approval of assessments and processing outcomes. | REF-01 §7.3 | Governance / functional | The assistant proposes; an assessor approves, edits or rejects. No outcome is final without assessor approval. | What an "assessment" contains (ISS-005). | Workflow test showing that no outcome is finalized without an approval record | 6, 7, 8, 12, 13, 17 |
+| R1 | Assess similarities among requirements already stored in the platform. | REF-01 §7.1 | Functional | Compare a new submission with stored submissions and show the assessor which stored records describe the same or a closely related need or challenge, with the passages or fields behind each match. This new-versus-stored comparison is the operative reading (DEC-029). Grouping or de-duplicating the whole stored collection is a PROPOSED optional addition, not a confirmed sponsor requirement. | Whether the owner wants the optional grouping function (ISS-004). Similarity criteria not defined. Access to stored records is open (ISS-002, ISS-008). | Retrieval metrics on a time-ordered, labelled test set of new-versus-stored pairs | 7, 8, 12, 13 |
+| R2 | Check whether relevant existing solutions or precedents are available in an approved internal collection. *(REF-01 working wording; superseded as the operative statement by §1a, DEC-029.)* | REF-01 §7.2; owner correction S04.1 | Functional | Corrected (§1a): assess whether relevant existing solution examples can be identified for a submitted need, and present any that are found to the assessor with their source and the passages that connect them to the submission. | Source categories, dataset availability, permissions and retrieval mechanisms are unresolved (ISS-003). Boundary with the solution examples named in R4 not settled (ISS-037). No design or claim may assume that an approved, populated internal solutions collection exists. | Relevance of identified examples judged by assessors on a sample; data source stated with every result | 7, 8, 12, 13 |
+| R3 | Require final human approval of assessments and processing outcomes. | REF-01 §7.3 | Governance / functional | The assistant proposes; an assessor approves, edits or rejects. No assessment or processing outcome is final without an assessor's approval, and an approved outcome that is later changed needs approval again. Further review controls (for example per-candidate labelling) are PROPOSED design options, not part of the requirement (S04_ARCHITECTURE §4). | What an "assessment" contains (ISS-005). Approval model and which optional controls to include (ISS-034). | Workflow test showing that no outcome is finalized without an approval record | 6, 7, 8, 12, 13, 17 |
 | R4 | Examine relevant external patents and solution examples for submitted requirements. | REF-01 §7.4 | Functional | Retrieve external prior art (patents and documented solution examples) related to a submission for assessor review. | Acceptable sources, licensing and access (ISS-006). "Solution examples" not defined. | Retrieval relevance on a sample, judged by assessors | 7, 8, 9, 12, 13 |
+
+### 1a. Owner correction to R2 (S04.1)
+
+| Item | Content |
+|---|---|
+| Identifier | R2 (unchanged) |
+| Superseded working wording | "Check whether relevant existing solutions or precedents are available in an approved internal collection." (REF-01 §7.2, English working copy) |
+| Problem | The working English wording introduced an assumption not supported by the owner's intent: that an existing, populated and approved internal solutions collection is available. |
+| Corrected statement of intent (owner, S04.1) | Assess whether relevant existing solution examples can be identified for a submitted need. |
+| Still unresolved | Which source categories count (internal records, external sources, or both); whether any dataset is available to the project; permissions; retrieval mechanisms (ISS-003, ISS-002, ISS-037). |
+| Provenance | Owner instruction START_STAGE S04.1, recorded as DEC-029 on 2026-11-20. The Claude Project reference copy REF-01 still carries the old wording; `stages/S04.1/S04.1_R2_REFERENCE_CORRECTION_NOTE.md` is the note for updating it. |
+| Not decided by this correction | Any replacement data source, any sponsor commitment to supply data, or the number of sources. None may be inferred. |
 
 ## 2. C-series: constraints, advisory guidance and project governance rules
 

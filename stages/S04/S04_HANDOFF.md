@@ -3,11 +3,13 @@
 | Field | Value |
 |---|---|
 | Document ID | S04_HANDOFF |
-| Version | 1.0 |
+| Version | 1.1 |
 | Status | SUBMITTED FOR GATE |
-| Stage | S04 |
+| Stage | S04.1 |
 | Date | 2026-11-20 |
-| Depends on | All S04 deliverables; DEC-026; DEC-027 |
+| Depends on | All S04 deliverables; DEC-026; DEC-027; DEC-029 |
+
+- **S04.1 notice:** this handoff is kept as the S04 record. For the next session use `stages/S04.1/S04.1_HANDOFF.md`, which replaces the input list and gate questions below. Items corrected since S04: R2 (DEC-029), R1 grouping now optional, R3 controls classified, DEC-026 labelled INFERRED (RC-01).
 
 - **Transition:** S04 Product Definition and Technical Architecture → S05 Technical Feasibility and Evaluation Design. S05 starts only after DEC-028 is recorded, including the owner's decision on ISS-001.
 

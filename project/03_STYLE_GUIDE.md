@@ -3,11 +3,11 @@
 | Field | Value |
 |---|---|
 | Document ID | 03_STYLE_GUIDE |
-| Version | 1.2 |
-| Status | APPROVED |
-| Stage | S01 |
+| Version | 2.0 |
+| Status | SUBMITTED FOR GATE |
+| Stage | S04.1 |
 | Date | 2026-11-20 |
-| Depends on | REF-03 (RF-001 to RF-004); DEC-006; DEC-013 |
+| Depends on | REF-03 (RF-001 to RF-004); DEC-006; DEC-013; DEC-029 |
 
 - **Applies to:** Every deliverable at every stage (DEC-006, DEC-013); proposal text additionally from S07
 - **Related criteria:** RF-002, RF-004, QA-002, QA-005
@@ -72,7 +72,8 @@ Synonym substitution and rhythm-only edits are not revisions. Editing is never a
 | Assessor | A sponsor staff member who reviews submissions and gives final approval (R3) | "Reviewer" (reserved below) |
 | Proposal reviewer | The person evaluating this proposal; source of RF items | "Reviewer" without qualifier where ambiguous |
 | Assistant | The proposed software that supports assessors | "AI system" as a vague label; "autonomous" |
-| Internal collection | The "approved internal collection" named in R2. Its existence as a populated, accessible dataset, its contents and its availability to the project are unresolved (ISS-003, ISS-002, CLM-012). | "Knowledge base" unless defined |
+| Solution-example source | Any source from which existing solution examples could be identified for R2 (corrected, DEC-029): sponsor-held records, external sources or both. Which ones count and whether any is available is unresolved (ISS-003, ISS-037, CLM-045). | "Approved internal collection", "internal precedent collection" or "knowledge base" as if such a dataset existed (withdrawn wording, S04.1) |
+| Substitute data | Data used to build and test a function when the real source is unavailable; results on it are labelled as such | "Proxy results" presented as sponsor-data results |
 | External prior art | Patents and solution examples from outside the sponsor (R4) | — |
 | Development stage | S01–S10 of this proposal-writing workflow | Using "stage" for work packages |
 | Work package (WP) | One of the ~6–7 funded main activities in Section 13 | "Stage", "phase" |

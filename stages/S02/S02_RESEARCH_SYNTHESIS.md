@@ -3,12 +3,13 @@
 | Field | Value |
 |---|---|
 | Document ID | S02_RESEARCH_SYNTHESIS |
-| Version | 1.0 |
-| Status | APPROVED |
-| Stage | S02 |
+| Version | 2.0 |
+| Status | SUBMITTED FOR GATE |
+| Stage | S04.1 |
 | Date | 2026-11-20 |
-| Depends on | S02_LITERATURE_EVIDENCE_MATRIX; 02_SOURCE_LOG; 02_CLAIM_REGISTER; S01_REQUIREMENTS_REGISTER |
+| Depends on | S02_LITERATURE_EVIDENCE_MATRIX; 02_SOURCE_LOG; 02_CLAIM_REGISTER; S01_REQUIREMENTS_REGISTER; DEC-029 |
 
+- **S04.1 revision:** only the R2 row of §2 changed, to follow the corrected R2 (DEC-029). The evidence, the other rows and the conclusions approved under DEC-022 are unchanged.
 - **Purpose:** state what the S02 evidence means for R1–R4 and what it does not settle. Matrix rows are cited as M-x.y (for example, M-1.2).
 - **Status of statements:** findings are VERIFIED at the depth recorded in the source log. Everything under "Candidate approaches" is PROPOSED input to S04–S05, not a design decision. Transfer of any finding to the sponsor's submissions is an ASSUMPTION until the S05 evaluation tests it.
 
@@ -35,7 +36,7 @@
 | Requirement | What the evidence supports | What remains unsettled |
 |---|---|---|
 | R1 Similarity among stored submissions | Retrieval-style duplicate search with lexical, dense and hybrid candidates (M-1.x, M-2.2); syntactic near-duplicate detection for re-submitted text (M-2.5); richer relationship labels than duplicate/not-duplicate (M-2.1) | Which interpretation of R1 applies (ISS-004); availability of labelled pairs (ISS-002) |
-| R2 Internal precedents | Retrieval over a document collection with optional grounded summaries (M-3.3); structural purpose/mechanism matching as a research option (M-3.2) | Whether the collection exists and can be used (ISS-003, CLM-012); grounding quality on sponsor texts (M-8.x) |
+| R2 Existing solution examples for a submitted need (corrected S04.1) | Retrieval over a document collection with optional grounded summaries (M-3.3); structural purpose/mechanism matching as a research option (M-3.2); direct evidence for need-to-solution matching is thin (M-3.1). These methods apply to whichever source is chosen | Which sources count and whether any is available to the project (ISS-003, ISS-037, CLM-045); grounding quality on sponsor texts (M-8.x) |
 | R3 Human approval | Interaction guidelines (M-5.1); automation-bias mechanisms and the effect of cognitive forcing (M-5.2, M-5.4) | Which assessor decisions the assistant supports (ISS-005); mitigator details from SRC-023 (OPEN) |
 | R4 External patents and solution examples | Patent retrieval is hard and best supported interactively (M-4.1); domain-adapted patent embeddings exist (M-4.2) | No evidence on retrieval from organizational need statements to patents (M-4.3, ISS-028); data sources and licences (ISS-006, RQ-14) |
 

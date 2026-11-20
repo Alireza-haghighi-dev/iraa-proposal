@@ -3,13 +3,14 @@
 | Field | Value |
 |---|---|
 | Document ID | S03_COMPARABLE_SYSTEMS_MATRIX |
-| Version | 1.0 |
-| Status | APPROVED |
-| Stage | S03 |
+| Version | 2.0 |
+| Status | SUBMITTED FOR GATE |
+| Stage | S04.1 |
 | Date | 2026-11-20 |
-| Depends on | S01_REQUIREMENTS_REGISTER; S01_RESEARCH_QUESTIONS (RQ-10, RQ-11); 02_SOURCE_LOG; 02_CLAIM_REGISTER; QA-005 |
+| Depends on | S01_REQUIREMENTS_REGISTER; S01_RESEARCH_QUESTIONS (RQ-10, RQ-11); 02_SOURCE_LOG; 02_CLAIM_REGISTER; QA-005; RC-01 |
 
-- **Reference point:** the final intended product, not the current-phase output (FX-10): an assistant that compares a submission with stored submissions (R1), checks an approved internal collection for existing solutions or precedents (R2), examines external patents and solution examples (R4), and leaves the final decision to an assessor (R3), designed for later extension (C1).
+- **S04.1 status note (RC-01):** the S04 session set this file to APPROVED on the basis of an approval inferred from the wording of the owner's START_STAGE S04 instruction. That approval has not been recorded as an explicit owner decision, so the status is returned to SUBMITTED FOR GATE until the owner confirms it (DEC-028). Reviewed S03 content: commit 6780335.
+- **Reference point:** the final intended product, not the current-phase output (FX-10): an assistant that compares a submission with stored submissions (R1), checks whether relevant existing solution examples can be identified for the submitted need (R2, as corrected in S04.1, DEC-029), examines external patents and solution examples (R4), and leaves the final decision to an assessor (R3), designed for later extension (C1).
 - **Evidence rule:** every vendor cell is a vendor statement (T2) found on the first-party page cited, read on 2026-11-20. It shows what the vendor says, not that the feature works as described or performs well (C4, QA-005).
 - **Cell legend:** `VS` = VERIFIED as vendor statement (cited SRC). `ND` = not documented in the pages read; OPEN. ND does not mean the capability is absent. `S02` = evidence carried from S02 without re-research.
 
@@ -18,7 +19,7 @@
 | Dimension (driver) | Wazoku | ITONICS | Brightidea | Wellspring |
 |---|---|---|---|---|
 | D1. Similar or duplicate submissions flagged (R1) | VS: admin setting shows links to potential duplicate Ideas while a user types the title of a new Idea (SRC-040). Fields compared and method: ND. | VS: AI "clusters similar ideas and flags duplicates" (SRC-045); "Duplicate hunt" before project approval and a uniqueness check before submission (SRC-044). Method: ND. | VS: Duplicate Checker shows possibly similar submissions while the form is filled in, limited to the same Initiative; admin toggle (SRC-046). Method, fields, threshold: ND. | ND on the Scout, evaluation and Accolade pages read (SRC-048, SRC-049, SRC-050). |
-| D2. Match a submission to an internal collection of existing solutions or precedents (R2) | ND. Jen searches platform content on request (SRC-041); no matching of a new Idea to a solution collection is described. | VS, partial: Prism links "external intelligence, internal portfolio data" and "highlights potential connections between related elements" (SRC-044). No precedent-matching workflow described. | ND (SRC-047). | ND on the pages read (SRC-048, SRC-050). |
+| D2. Match a submission to an internal collection of existing solutions or precedents (R2 as worded before S04.1; see the S04.1 note below the table) | ND. Jen searches platform content on request (SRC-041); no matching of a new Idea to a solution collection is described. | VS, partial: Prism links "external intelligence, internal portfolio data" and "highlights potential connections between related elements" (SRC-044). No precedent-matching workflow described. | ND (SRC-047). | ND on the pages read (SRC-048, SRC-050). |
 | D3. Human decision and review controls (R3) | VS, partial: Jen's evaluation output is a score that "supports evaluation" (SRC-041). On the challenge marketplace, Seeker organizations evaluate closed Challenges (SRC-043). Final-decision design: ND. | VS: a reviewer can check each AI-proposed change or set it to auto-apply; human ratings shown next to AI evaluations, disagreement flagged for discussion; role-based access to AI features (SRC-044). | VS, partial: submitter reviews AI-drafted text before submitting; Scout company profiles reviewed before import (SRC-047). Assessment-decision controls: ND. | VS, partial: workflows for "approvals, reviews"; evaluation scorecards and Stage-Gate processes (SRC-050); built-in triage, technical-fit and market-readiness workflows (SRC-049). Who decides: ND. |
 | D4. External patents and solution examples (R4) | VS, partial: Jen scouts companies and recommends organizations for Challenges (SRC-041); Wazoku acquired the Innocentive solver crowd in 2020 (SRC-042). Patent retrieval: ND. | VS: Prism can "cluster a competitor's recent patents" and AI agents "scan markets, patents, and startups" (SRC-044, SRC-045). Linking patents to a specific submission: ND. | VS, partial: Scout app searches the web for emerging-technology companies matching a described need; Project Room research covers "IP considerations" (SRC-047). Patent retrieval: ND. | VS: Scout searches patents (vendor states 90+ patent offices), publications, grants, startups and licensable technologies (SRC-048). Linking results to a submitted need: ND. |
 | D5. AI-assisted evaluation or scoring | VS: Jen gives a score for coherence, relevance to Challenge requirements and innovation (SRC-041). | VS: Prism evaluates ideas against custom criteria and performs "first-pass screening" against the jury's criteria (SRC-044). | VS: ranking of Top Ideas by a proprietary formula over evaluation scores and engagement (SRC-047). Generated assessment: ND. | ND. |
@@ -26,6 +27,8 @@
 | D7. Method or model disclosed | ND (SRC-040, SRC-041). | ND; models from "selected vendors", none named (SRC-044). | VS, partial: bring-your-own-model with named cloud model providers (SRC-047); retrieval method ND. | ND. |
 | D8. Published accuracy or effectiveness evaluation | ND. | ND. | ND. | ND. A vendor speed figure exists (SRC-049) but has no method; excluded (§4). |
 | D9. Data-control options | ND. | VS: no training on proprietary data without consent (SRC-044). | VS: bring-your-own-model keeps data "within your existing governance" (SRC-047). | ND. |
+
+**S04.1 re-reading of D2 and D4 (no new research).** Row D2 tested the withdrawn reading of R2 (an approved internal collection). Under the corrected R2, the question is whether a product identifies existing solution examples for a described need. Read that way, the D4 cells already record vendor statements that qualify: Wazoku's Jen scouts companies (SRC-041), Brightidea's Scout app searches for companies matching a described need (SRC-047) and Wellspring Scout searches patents, startups and licensable technologies (SRC-048). None of the pages read attaches those results to the assessment of an individual submission (CLM-046).
 
 **REF-01 §10 wording against the evidence (CLM-001 to CLM-004):**
 
@@ -53,7 +56,7 @@ The S02 lead "corporate crowdsourcing platform whose contest data underlies SRC-
 | No. | Finding | Label |
 |---|---|---|
 | 3.1 | Submission-time duplicate suggestion is documented by three of the four named vendors (Wazoku, ITONICS, Brightidea; not found on the Wellspring pages read) and by IdeaScale and ServiceNow. Only ServiceNow names the input fields and the model type; only IdeaScale shows an explanation to moderators. | VERIFIED (SRC-040, SRC-044 to SRC-046, SRC-051, SRC-052), vendor statements |
-| 3.2 | No vendor page read describes checking a new submission against an approved collection of existing solutions or precedents (R2) as a defined workflow. | OPEN (negative reading result; CLM-034) |
+| 3.2 | *Revised S04.1.* Three named vendors document scouting for existing companies, technologies or patents that match a described need, which falls under the corrected R2. None of the pages read links scouting results to the assessment record of a specific submission. (The S03 finding about an "approved collection of existing solutions or precedents" tested a reading of R2 that DEC-029 withdrew.) | VERIFIED as vendor statements (SRC-041, SRC-047, SRC-048); linkage OPEN (CLM-046) |
 | 3.3 | External technology and patent search exists as a separate scouting module (Wellspring Scout, ITONICS Prism, Brightidea Scout app); none of the pages read links scouting results to the assessment record of a specific submission. | VERIFIED for the modules (SRC-044, SRC-047, SRC-048); linkage OPEN |
 | 3.4 | AI scoring of ideas is documented by Wazoku and ITONICS; ITONICS documents per-change reviewer approval and an auto-apply option. An auto-apply option would conflict with R3 if applied to assessment outcomes. | VERIFIED (SRC-041, SRC-044); conflict statement is our reading of R3, PROPOSED |
 | 3.5 | No comparator page read reports a measured accuracy of its similarity, scoring or scouting functions. Superiority statements against any comparator are therefore unsupported (QA-005). | OPEN (CLM-034) |
@@ -73,7 +76,7 @@ The S02 lead "corporate crowdsourcing platform whose contest data underlies SRC-
 
 | No. | Implication | Feeds |
 |---|---|---|
-| 5.1 | R1 is a documented market feature. The product case rests on R2 and R4 being tied to the same assessment record as R1, and on the evidence shown to the assessor, not on duplicate detection alone. | Section 6, 9; S04 |
+| 5.1 | *Revised S04.1.* R1 is a documented market feature, and solution scouting (corrected R2) is documented as a separate module. The design position is to bring R1, R2 and R4 results for one submission into a single assessor-approved record with the evidence shown for each result (CLM-040). It is a position to evaluate, not a claimed advantage. | Section 6, 9; S04 |
 | 5.2 | Show the reason for each similarity flag (matched passages or fields), as IdeaScale describes, and keep the decision with the assessor; no auto-apply path for assessment outcomes. | R3; S04 review-screen design; CLM-028 |
 | 5.3 | Treat external search as a source connector (patents first, using an API such as PQAI's or an official patent-office service), with results stored against the submission. Access terms are ISS-006 and RQ-14. | R4; S04–S05 |
 | 5.4 | Because comparators publish no accuracy figures, the proposal can differ by stating how the assistant will be measured (time-ordered, assessor-judged test set; CLM-027), not by claiming better results. | QA-002, QA-005; S05 |

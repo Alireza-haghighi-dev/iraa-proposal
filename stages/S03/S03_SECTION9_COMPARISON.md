@@ -3,12 +3,13 @@
 | Field | Value |
 |---|---|
 | Document ID | S03_SECTION9_COMPARISON |
-| Version | 1.0 |
-| Status | APPROVED |
-| Stage | S03 |
+| Version | 2.0 |
+| Status | SUBMITTED FOR GATE |
+| Stage | S04.1 |
 | Date | 2026-11-20 |
-| Depends on | S03_COMPARABLE_SYSTEMS_MATRIX; S03_PRIOR_ART_REGISTER; F-09; FX-10; QA-005; REF-02 §9 |
+| Depends on | S03_COMPARABLE_SYSTEMS_MATRIX; S03_PRIOR_ART_REGISTER; F-09; FX-10; QA-005; REF-02 §9; RC-01 |
 
+- **S04.1 status note (RC-01):** the S04 session set this file to APPROVED on the basis of an approval inferred from the wording of the owner's START_STAGE S04 instruction. That approval has not been recorded as an explicit owner decision, so the status is returned to SUBMITTED FOR GATE until the owner confirms it (DEC-028). Reviewed S03 content: commit 6780335.
 - **Status of this text:** working input for S08, not proposal text. SRC and CLM identifiers stay visible until S08 Pass A converts them into the form's notes and URLs.
 - **Table schema:** the seven columns of REF-02 §9, unchanged (RF-003). Location descriptors are not researched (DEC-009) and remain `[LOCAL COMPLETION ONLY]`.
 - **Selection:** eight candidate rows; the form requires at least three. Final row selection is an owner decision (ISS-030). Recommended minimum set: rows 1–4 (the initiatives named in the requirements statement) plus row 5 or 6 as a research or open-tool comparator.
@@ -30,13 +31,13 @@ The form lists outcome types for products and research (feasibility report to co
 
 ## 2. Similarities and differences (draft prose for S08)
 
-**Wazoku.** Like the intended assistant, Wazoku documents a duplicate check on new submissions and an AI score that supports evaluation against challenge requirements (SRC-040, SRC-041). Its external reach is a solver community and company scouting (SRC-041, SRC-042), not retrieval of patents linked to a submission. The documentation read does not say how duplicates are detected or how evaluation scores are produced, and no accuracy figures are published. The intended assistant differs in combining R1, R2 and R4 results in one assessment record that the assessor approves (R3); whether this improves assessment is a hypothesis for the evaluation (CLM-006).
+**Wazoku.** Like the intended assistant, Wazoku documents a duplicate check on new submissions and an AI score that supports evaluation against challenge requirements (SRC-040, SRC-041). Its external reach is a solver community and company scouting (SRC-041, SRC-042), not retrieval of patents linked to a submission. The documentation read does not say how duplicates are detected or how evaluation scores are produced, and no accuracy figures are published. The intended assistant is designed to combine R1, R2 and R4 results in one assessment record that the assessor approves (R3); whether this improves assessment is a hypothesis for the evaluation (CLM-006).
 
-**ITONICS.** ITONICS documents the closest AI scope: duplicate detection, first-pass screening against jury criteria, patent clustering and market scanning, with per-change reviewer approval (SRC-044, SRC-045). Two differences matter for this project. First, the vendor allows AI changes to be auto-applied, whereas R3 requires a human decision on every assessment outcome. Second, patent analysis is described for competitor and market monitoring, not for examining prior art for an individual submission (R4). Models and methods are not disclosed.
+**ITONICS.** Of the four named vendors, ITONICS documents the largest set of AI functions: duplicate detection, first-pass screening against jury criteria, patent clustering and market scanning, with per-change reviewer approval (SRC-044, SRC-045). Two differences matter for this project. First, the vendor allows AI changes to be auto-applied, whereas R3 requires a human decision on every assessment outcome. Second, patent analysis is described for competitor and market monitoring, not for examining prior art for an individual submission (R4). Models and methods are not disclosed.
 
-**Brightidea.** Brightidea's Duplicate Checker searches earlier submissions within the same initiative while a submitter fills in the form (SRC-046), and its Scout app searches the web for companies matching a described need (SRC-047). R2-type checking of an internal precedent collection is not described. Brightidea is the only named vendor to document bring-your-own-model options with named providers (SRC-047), which is relevant to the data-handling constraint (C2, ISS-009).
+**Brightidea.** Brightidea's Duplicate Checker searches earlier submissions within the same initiative while a submitter fills in the form (SRC-046), and its Scout app searches the web for companies matching a described need (SRC-047). The Scout app is a form of solution scouting (corrected R2, CLM-046), but the pages read do not attach its results to the assessment of an individual submission. Brightidea is the only named vendor to document bring-your-own-model options with named providers (SRC-047), which is relevant to the data-handling constraint (C2, ISS-009).
 
-**Wellspring.** Wellspring's strength in the documentation read is external search: Scout covers patents, publications, grants and startups (SRC-048), and Accolade provides evaluation scorecards and stage-gate workflows (SRC-050). Duplicate detection and AI-assisted assessment are not described on the pages read. The intended assistant takes the opposite starting point: the submitted need, compared first with internal records and only then with external sources.
+**Wellspring.** The documentation read concentrates on external search: Scout covers patents, publications, grants and startups (SRC-048), and Accolade provides evaluation scorecards and stage-gate workflows (SRC-050). Duplicate detection and AI-assisted assessment are not described on the pages read. The intended assistant starts from the submitted need and keeps its stored-submission matches, solution examples and external prior art in one record for that need.
 
 **PQAI.** PQAI retrieves patents and technical literature from a plain-language description using models trained on examination records, and is available as open code and an API (SRC-053). It covers one requirement (R4) and has no submission management or approval workflow. It is a candidate component or baseline for R4, subject to access terms (RQ-14, ISS-006), not a competing product.
 

@@ -3,9 +3,9 @@
 | Field | Value |
 |---|---|
 | Document ID | S01_TRACEABILITY_MATRIX |
-| Version | 4.0 |
+| Version | 4.1 |
 | Status | SUBMITTED FOR GATE |
-| Stage | S04 |
+| Stage | S04.1 |
 | Date | 2026-11-20 |
 | Depends on | S01_REQUIREMENTS_REGISTER; S01_REVIEWER_CRITERIA_REGISTER; S01_RESEARCH_QUESTIONS; 00_OPEN_ISSUES_REGISTER; S02_LITERATURE_EVIDENCE_MATRIX; S03_COMPARABLE_SYSTEMS_MATRIX; S03_SECTION9_COMPARISON; S04_ARCHITECTURE; S04_DATA_FLOWS_AND_INTERFACES |
 
@@ -22,8 +22,8 @@ Every numbered item of REF-01 is accounted for. C-series classifications (SC spo
 | §4 Problems and causes | CTX-01, CLM-005 | 6 | Unquantified; ISS-011, ISS-023 |
 | §5 Frequency / scale | CTX-03, CLM-007 | 6, 11 | No figures; ISS-023 |
 | §6 Financial / operational value | CTX-07 (expected benefits), C5 (PG), CLM-006 | 6, 7, 8 | Hypotheses only |
-| §7.1 Similarity | R1 | 7, 8, 12, 13 | ISS-004 |
-| §7.2 Internal precedents | R2 | 7, 8, 12, 13 | ISS-003, ISS-002; collection existence not established (CLM-012) |
+| §7.1 Similarity | R1 | 7, 8, 12, 13 | New-versus-stored comparison (DEC-029); optional grouping ISS-004 |
+| §7.2 Existing solution examples (corrected S04.1, DEC-029) | R2 | 7, 8, 12, 13 | ISS-003, ISS-037, ISS-002; no source established (CLM-045; CLM-012 superseded) |
 | §7.3 Human approval | R3 | 6, 7, 8, 12, 13, 17 | ISS-005 |
 | §7.4 External patents and examples | R4 | 7, 8, 9, 12, 13 | ISS-006 |
 | §8 Constraints | C1 (SC), C2 (SC), CLM-008 | 8, 11, 12, 17 | ISS-009, ISS-010 |
@@ -102,10 +102,10 @@ Coverage, status and evidence for RF-001 to RF-012 and QA-001 to QA-010 are main
 
 | Item | Functions | Components | Interfaces / flows | R3 checkpoints | Specification rows (Section 8 draft) | Conditions |
 |---|---|---|---|---|---|---|
-| R1 | FN-01, FN-02, FN-03, FN-04 | AC-01, AC-02, AC-04, AC-05, AC-06 | IF-01, IF-02; DF-01, DF-02, DF-03 | CP-2, CP-4 | MS-01, MS-08 | ISS-002, ISS-004 |
-| R2 | FN-01, FN-02, FN-05 | AC-01, AC-02, AC-04, AC-05 | IF-01, IF-02; DF-01, DF-02 | CP-2 | MS-02 | ISS-003 (AS-02) |
-| R3 | FN-08, FN-09, FN-11 | AC-09, AC-10, AC-11, AC-12, AC-13 | IF-04, IF-05, IF-08; DF-02, DF-06 | CP-1 to CP-6 | MS-04, MS-09 | ISS-005, ISS-034, ISS-035 |
-| R4 | FN-06, FN-07 | AC-07, AC-08, AC-03 | IF-03; DF-04, DF-05 | CP-1, CP-2, CP-3 | MS-03, MS-05, MS-07 | ISS-006, ISS-009, ISS-033 |
+| R1 | FN-01, FN-02, FN-03; optional FN-04 | AC-01, AC-02, AC-04, AC-05; AC-06 only with FN-04 | IF-01, IF-02; DF-01, DF-02; DF-03 only with FN-04 | CP-4 only with FN-04; CP-2 optional | MS-01, MS-08 | ISS-002, ISS-004 |
+| R2 | FN-01, FN-02, FN-05 | AC-01, AC-02, AC-03 (source registry), AC-04, AC-05; AC-07 if ISS-037 adds external sources | IF-01, IF-02, IF-03; DF-01, DF-02 | CP-2 optional | MS-02 | ISS-003, ISS-037 (AS-02) |
+| R3 | FN-08, FN-09, FN-11 | AC-09, AC-10, AC-11, AC-12, AC-13 | IF-04, IF-05, IF-08; DF-02, DF-06 | Essential: CP-5, CP-6. Conditional or optional: CP-1 to CP-4 | MS-04; MS-09 only with CP-2 | ISS-005, ISS-034, ISS-035 |
+| R4 | FN-06; optional FN-07 | AC-07, AC-03; AC-08 only with FN-07 | IF-03; DF-04; DF-05 only with FN-07 | CP-1 conditional (ISS-033); CP-2 optional; CP-3 with FN-07 | MS-03; MS-05 only with CP-1; MS-07 only with FN-07 | ISS-006, ISS-009, ISS-033, ISS-037 |
 | C1 (SC) | Extension points | AC-05, AC-07, AC-09 | IF-02, IF-03, IF-07 | — | Section 8 feature 9 | — |
 | C2 (SC) | FN-11; risk assessment document | AC-12, AC-13 | DF trust boundaries | CP-1, CP-5 | MS-05, MS-06 | ISS-009, ISS-010, ISS-036 |
 | C3 (EA) | FN-10 | AC-09, AC-14 | IF-06; DF-07 | — | — | Future: Section 11 row 3 |

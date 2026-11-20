@@ -3,9 +3,9 @@
 | Field | Value |
 |---|---|
 | Document ID | 00_PROJECT_RULES |
-| Version | 3.0 |
+| Version | 3.1 |
 | Status | SUBMITTED FOR GATE |
-| Stage | S04 |
+| Stage | S04.1 |
 | Date | 2026-11-20 |
 | Depends on | 00_DECISIONS_LOG; 00_STAGE_GATE_PROTOCOL; 03_STYLE_GUIDE |
 
@@ -29,7 +29,7 @@ The sponsor's platform holds organizational, operational and technology **needs 
 6. The 10 development stages (S01–S10) are not the 6–7 funded work packages of Section 13 (DEC-012).
 7. Team, personal data, final financial figures, Sections 14–16 commitments and administrative completion are handled in S10 only.
 8. No third-party Skill is installed or run without explicit owner authorization and a recorded security review (DEC-005).
-9. No stage starts without a recorded owner approval in `00_DECISIONS_LOG.md`.
+9. No stage starts without a recorded owner approval in `00_DECISIONS_LOG.md`. An approval read into the wording of another instruction is recorded as INFERRED and does not count as an explicit decision until the owner confirms it (S04.1, RC-01).
 10. The repository is public. Never commit the three reference documents, credentials, personal or geographic identifiers (including the repository owner's account name or repository URL), private infrastructure details, unrelated files or unapproved material (DEC-018).
 11. Nothing is pushed before the owner approves the stage, unless the owner explicitly authorizes pushing a stage package as `SUBMITTED FOR GATE` (as for S02, DEC-021).
 
@@ -76,6 +76,7 @@ The `iraa-proposal` repository is the persistent source of truth. The three refe
 | REF / SRC | Project reference document / external source | 02_SOURCE_LOG |
 | CLM | Claim requiring evidence | 02_CLAIM_REGISTER |
 | DEC / ISS | Decision / open issue | 00_DECISIONS_LOG / 00_OPEN_ISSUES_REGISTER |
+| RC | Correction to the decision record itself (original entry kept) | 00_DECISIONS_LOG |
 | SKL | Skill evaluation | 00_SKILL_REGISTER |
 | WP | Funded work package for Section 13 (frozen at S06) | S06 deliverables |
 | DEF | Defect | 03_DEFECT_LOG (from S08) |

@@ -3,12 +3,13 @@
 | Field | Value |
 |---|---|
 | Document ID | S03_PRIOR_ART_REGISTER |
-| Version | 1.0 |
-| Status | APPROVED |
-| Stage | S03 |
+| Version | 2.0 |
+| Status | SUBMITTED FOR GATE |
+| Stage | S04.1 |
 | Date | 2026-11-20 |
-| Depends on | S01_RESEARCH_QUESTIONS (RQ-12); 02_SOURCE_LOG; DEC-009 |
+| Depends on | S01_RESEARCH_QUESTIONS (RQ-12); 02_SOURCE_LOG; DEC-009; RC-01 |
 
+- **S04.1 status note (RC-01):** the S04 session set this file to APPROVED on the basis of an approval inferred from the wording of the owner's START_STAGE S04 instruction. That approval has not been recorded as an explicit owner decision, so the status is returned to SUBMITTED FOR GATE until the owner confirms it (DEC-028). Reviewed S03 content: commit 6780335.
 - **Purpose:** documented answer to RQ-12: are there patents or published applications describing systems that match submitted needs against internal precedents and external prior art with human approval?
 - **Nature of this search:** a technical prior-art scan to support Section 9. It is not a patentability, validity or freedom-to-operate search and supports no legal conclusion (CLM-039).
 

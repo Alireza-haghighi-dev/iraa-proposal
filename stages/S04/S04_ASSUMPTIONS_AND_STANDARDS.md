@@ -3,11 +3,11 @@
 | Field | Value |
 |---|---|
 | Document ID | S04_ASSUMPTIONS_AND_STANDARDS |
-| Version | 1.0 |
+| Version | 1.1 |
 | Status | SUBMITTED FOR GATE |
-| Stage | S04 |
+| Stage | S04.1 |
 | Date | 2026-11-20 |
-| Depends on | C2; CLM-008; CLM-041; CLM-042; CLM-043; SRC-064; SRC-065; ISS-002; ISS-003; ISS-006 to ISS-010; ISS-023; ISS-033 to ISS-036 |
+| Depends on | C2; CLM-008; CLM-041; CLM-042; CLM-043; SRC-064; SRC-065; ISS-002; ISS-003; ISS-006 to ISS-010; ISS-023; ISS-033 to ISS-037; CLM-045; DEC-029 |
 
 - **Purpose:** state the planning assumptions the architecture uses while owner decisions are open, and define what "alignment" with ISO/IEC 20000 and ISO/IEC 27001 can honestly mean for this project.
 - **Labels:** AS rows are ASSUMPTION; each stays in force only until the linked issue is decided. Standards descriptions are VERIFIED at landing-page depth (SRC-064, SRC-065); the alignment mapping is PROPOSED.
@@ -17,7 +17,7 @@
 | ID | Assumption | Linked issue | If the assumption fails |
 |---|---|---|---|
 | AS-01 | Evaluation and prototype data come from a sanitized export of stored submissions; if none can be released, from a public proxy collection labelled as such | ISS-002, ISS-028 | Proxy only: Section 8 targets apply to proxy data, and the proposal says so |
-| AS-02 | The internal collection is treated as unavailable until the owner confirms its existence, format and permission to use it; FN-05 is built and tested on a proxy collection meanwhile | ISS-003, CLM-012 | If it exists and is released, FN-05 is re-evaluated on it; no other design change |
+| AS-02 | No solution-example source for R2 is treated as available until the owner confirms its category, format and permission to use it. FN-05 is built against the evidence-source interface and tested on labelled substitute data meanwhile; no substitute dataset is selected in S04 or S04.1 (revised S04.1, DEC-029) | ISS-003, ISS-037, CLM-045 | When a source is confirmed, it is registered and FN-05 is re-evaluated on it; no design change |
 | AS-03 | The platform can produce a file export of submissions; no API is assumed; the prototype never writes to the platform | ISS-008 | No export at all: AS-01 proxy route; API available: IF-07 can move into scope only by owner decision |
 | AS-04 | The prototype runs in an isolated, project-controlled or sponsor-provided environment with self-hosted retrieval models; no submission text goes to hosted AI services | ISS-009 | Hosted services allowed: AD-08 and hosted re-ranking become options, with the provider's terms recorded |
 | AS-05 | Access uses project-managed test accounts with three roles (assessor, administrator, evaluator); no sponsor production accounts | ISS-035 | Sponsor accounts required: IF-08 federation becomes in scope |
@@ -31,15 +31,16 @@ These are the open points that change the design. None asks for team, personal o
 
 | Issue | Question |
 |---|---|
-| ISS-003 | Does an approved collection of solutions or precedents exist in machine-readable form, and may the project use it or a sample? |
-| ISS-004 | Should R1 cover new-versus-stored search, grouping of the stored collection, or both? (Recommended: both, FN-03 and FN-04) |
+| ISS-003 | From which sources should existing solution examples be identified for a submitted need (sponsor-held records, external sources, or both)? Is any of them available to the project, under what permissions, and how can it be accessed? |
+| ISS-004 | R1 covers comparison of new submissions with stored ones (FN-03). Do you also want the optional grouping of the stored collection (FN-04)? |
 | ISS-005 | What fields and outcome codes does a completed assessment currently contain? |
-| ISS-007 | In which language or languages are submissions and the internal collection written? |
+| ISS-007 | In which language or languages are submissions and any solution-example source written? |
 | ISS-008 | Can the platform export submissions to a file, and is there an API? |
 | ISS-009 | May submission text be processed by externally hosted AI services, or must it stay in sponsor-controlled infrastructure? |
 | ISS-010 | Does the C2 standards constraint mean design alignment, fitting into an existing certified management system, or certification? |
 | ISS-033 | May assessor-approved query text be sent to external patent search services? |
-| ISS-034 | Is one assessor's approval sufficient, or does the sponsor require a second approver? |
+| ISS-034 | Is one assessor's approval sufficient, or does the sponsor require a second approver? Which optional review controls (CP-1 to CP-4) should the prototype include? |
+| ISS-037 | Should R2 cover only sponsor-held examples, or also external examples that R4 would otherwise return? |
 | ISS-035 | Which roles need accounts in the prototype, and must they use the sponsor's identity system? |
 | ISS-036 | How long may imported submissions and cached external results be kept in the prototype environment, and how are they deleted at project end? |
 
