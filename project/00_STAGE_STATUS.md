@@ -15,7 +15,7 @@
 |---|---|
 | Current stage | S04 submitted for gate (DEC-027); awaiting owner decision DEC-028 |
 | Latest approved baseline | S03: content commit 67803355fe0a9fd7ef9271718adb5f4b52459315, status record 9a7a95e (DEC-026, recorded by the S04 session from the owner's START_STAGE S04 instruction; owner confirmation requested). S02: commit 961ae6ad31581eac633304d905cbab1761179b0b (reviewed content 34a7745b9cdb8d665edd53ec7c06fa37fd1966e9; DEC-022). S01: commit 2b5f83c65749a4c697782216026a6291a91aa2a1 |
-| S04 submitted package | Content commit: recorded in the S04 report to the owner and in the next status update |
+| S04 submitted package | Content commit: ea246cef29c912dbd5a7b205b3a3a64f7f926597 |
 | S04 state | SUBMITTED FOR GATE; owner decisions due at this gate: ISS-001, ISS-004, ISS-005, ISS-016 (and planning assumptions AS-01 to AS-08 for ISS-003, ISS-006 to ISS-010) |
 | Next stage | S05 — Technical Feasibility and Evaluation Design |
 | S05 may start | No. Requires DEC-028, including the owner's decision on ISS-001, and a new chat (DEC-024) |
