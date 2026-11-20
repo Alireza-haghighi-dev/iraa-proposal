@@ -3,11 +3,11 @@
 | Field | Value |
 |---|---|
 | Document ID | S01_TRACEABILITY_MATRIX |
-| Version | 2.0 |
-| Status | APPROVED |
-| Stage | S02 |
+| Version | 3.0 |
+| Status | SUBMITTED FOR GATE |
+| Stage | S03 |
 | Date | 2026-11-20 |
-| Depends on | S01_REQUIREMENTS_REGISTER; S01_REVIEWER_CRITERIA_REGISTER; S01_RESEARCH_QUESTIONS; 00_OPEN_ISSUES_REGISTER; S02_LITERATURE_EVIDENCE_MATRIX |
+| Depends on | S01_REQUIREMENTS_REGISTER; S01_REVIEWER_CRITERIA_REGISTER; S01_RESEARCH_QUESTIONS; 00_OPEN_ISSUES_REGISTER; S02_LITERATURE_EVIDENCE_MATRIX; S03_COMPARABLE_SYSTEMS_MATRIX; S03_SECTION9_COMPARISON |
 
 ## A. Requirements statement (REF-01) → project items → proposal sections
 
@@ -28,7 +28,7 @@ Every numbered item of REF-01 is accounted for. C-series classifications (SC spo
 | §7.4 External patents and examples | R4 | 7, 8, 9, 12, 13 | ISS-006 |
 | §8 Constraints | C1 (SC), C2 (SC), CLM-008 | 8, 11, 12, 17 | ISS-009, ISS-010 |
 | §9 Current solution | CTX-02 | 6, 8 | Baseline workflow |
-| §10 Related initiatives | C4 (PG), CLM-001 to CLM-004 | 9 | Verify in S03 |
+| §10 Related initiatives | C4 (PG), CLM-001 to CLM-004 | 9 | Verified in part as vendor statements in S03 (CLM-029 to CLM-033); row choice ISS-030 |
 | §11 Proposed solution | CTX-07 | 6, 7 | "Accurate" needs a metric |
 | §12 Support mechanism | — | — | ODR / LOCAL (ISS-019) |
 | §13 Keywords | CTX-05 | 1; S02–S03 search terms | Context |
@@ -53,7 +53,7 @@ Columns list the IDs each section must satisfy. In the third column, PG items (C
 | 6 | Necessity and significance | CTX-01, CTX-02, CTX-03, CTX-07, R3, C5 | F-06, FX-07 | RF-004, QA-002 | RQ-05 | ISS-011, ISS-023 | D | S08 |
 | 7 | Objectives | R1–R4, C3, C5 | F-07, FX-06 | RF-011, QA-002, QA-003 | — | ISS-001, ISS-004, ISS-005 | D | S08 |
 | 8 | Features and specifications | R1–R4, C1, C2, C5, CTX-02 | F-08 | RF-011, QA-002, QA-003, QA-004, QA-010 | RQ-01 to RQ-08, RQ-13 to RQ-15 | ISS-002, ISS-003, ISS-006, ISS-007, ISS-009, ISS-010, ISS-012 | D | S05, S08 |
-| 9 | Related research and products | R4, C4 | F-09, FX-10 | QA-005, QA-010 | RQ-04, RQ-10 to RQ-12 | — | P | S03, S08 |
+| 9 | Related research and products | R4, C4 | F-09, FX-10 | QA-005, QA-010 | RQ-04, RQ-10 to RQ-12 | ISS-030, ISS-031, ISS-032 | P (working table in S03_SECTION9_COMPARISON) | S03, S08 |
 | 10 | Team prior work | — | F-10 | QA-006 | — | ISS-025 | S10 / L | S10 |
 | 11 | Continuity and future stages | C1, C3, CTX-03, CTX-08 | F-11, FX-07 | RF-005, RF-011, QA-003 | RQ-09 | ISS-001 | P | S04, S08, S10 |
 | 12 | Technical method | R1–R4, C1, C2 | F-12, FX-01 | RF-004, RF-006, QA-004, QA-007, QA-010 | RQ-01 to RQ-09, RQ-13 to RQ-15 | ISS-002 to ISS-012 | D | S07 |
@@ -81,7 +81,7 @@ Coverage, status and evidence for RF-001 to RF-012 and QA-001 to QA-010 are main
 | Work package (WP) per requirement and specification | S06 |
 | Section 12 method paragraph per WP | S07 |
 
-## E. Evidence links (added S02)
+## E. Evidence links (added S02; S03 rows appended)
 
 | Research question | Matrix rows | Sources | Requirements served |
 |---|---|---|---|
@@ -93,4 +93,6 @@ Coverage, status and evidence for RF-001 to RF-012 and QA-001 to QA-010 are main
 | RQ-06 | 6.1–6.6 | SRC-002, SRC-005, SRC-010, SRC-011, SRC-025 to SRC-027, SRC-036 | QA-002, QA-004 |
 | RQ-08 | 8.1–8.4 | SRC-028 to SRC-031 | R2, R3, R4 |
 | RQ-09 | 9.1–9.2 | SRC-038, SRC-039 | C1, C3 |
-
+| RQ-10 | S03 matrix §1 | SRC-040 to SRC-050 | C4; Section 9 |
+| RQ-11 | S03 matrix §2 | SRC-051 to SRC-055, SRC-063 (S02: SRC-013, SRC-014, SRC-016, SRC-017) | R1–R4; Section 9 |
+| RQ-12 | S03 prior-art register §2–§3 | SRC-053, SRC-055 to SRC-062 | R1, R2, R4; Section 9 |

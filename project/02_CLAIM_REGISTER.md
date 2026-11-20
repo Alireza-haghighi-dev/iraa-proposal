@@ -3,26 +3,26 @@
 | Field | Value |
 |---|---|
 | Document ID | 02_CLAIM_REGISTER |
-| Version | 2.0 |
-| Status | APPROVED |
-| Stage | S02 |
+| Version | 3.0 |
+| Status | SUBMITTED FOR GATE |
+| Stage | S03 |
 | Date | 2026-11-20 |
-| Depends on | REF-01; REF-02; 02_SOURCE_LOG; 02_SOURCE_LOG (SRC-001 to SRC-039) |
+| Depends on | REF-01; REF-02; 02_SOURCE_LOG (SRC-001 to SRC-063); S03_COMPARABLE_SYSTEMS_MATRIX; S03_PRIOR_ART_REGISTER |
 
 - **Purpose:** Tracks every claim that the proposal may rely on, its evidence and its permitted use. Seeded in S01 with claims in the reference documents that must not be used as verified facts.
 
 ## Status key
 
-`VERIFIED` (supported by a logged source) · `SOURCE CLAIM — UNVERIFIED` (stated in a reference document, not independently checked) · `HYPOTHESIS` (expected effect to be tested) · `PROPOSED` (team proposal) · `OPEN`
+`VERIFIED` (supported by a logged source) · `VERIFIED (vendor statement)` / `VERIFIED IN PART (vendor statement)` (a T2 source confirms the vendor says this; not evidence that the feature works or performs) · `SOURCE CLAIM — UNVERIFIED` (stated in a reference document, not independently checked) · `HYPOTHESIS` (expected effect to be tested) · `PROPOSED` (team proposal) · `OPEN`
 
 ## Claims
 
 | ID | Claim | Origin | Status | Permitted use now | Verification route | Target stage |
 |---|---|---|---|---|---|---|
-| CLM-001 | Wazoku provides innovation management and collection, assessment and prioritization of organizational challenges and ideas. | REF-01 §10 | SOURCE CLAIM — UNVERIFIED | Candidate comparator only | Vendor primary documentation (T2), labelled as vendor statement | S03 |
-| CLM-002 | ITONICS provides innovation management, technology-trend analysis and opportunity identification. | REF-01 §10 | SOURCE CLAIM — UNVERIFIED | Candidate comparator only | As CLM-001 | S03 |
-| CLM-003 | Brightidea supports idea collection, evaluation and management of organizational innovation processes. | REF-01 §10 | SOURCE CLAIM — UNVERIFIED | Candidate comparator only | As CLM-001 | S03 |
-| CLM-004 | Wellspring supports technology discovery, commercialization-opportunity analysis and industry–research connections. | REF-01 §10 | SOURCE CLAIM — UNVERIFIED | Candidate comparator only | As CLM-001 | S03 |
+| CLM-001 | Wazoku provides innovation management and collection, assessment and prioritization of organizational challenges and ideas. | REF-01 §10 | VERIFIED IN PART (vendor statement): SRC-040, SRC-041, SRC-042; "prioritization" not separately confirmed | Section 9 as "the vendor documents …" | Re-check pages before submission (ISS-032) | S08 |
+| CLM-002 | ITONICS provides innovation management, technology-trend analysis and opportunity identification. | REF-01 §10 | VERIFIED IN PART (vendor statement): SRC-044, SRC-045 | As CLM-001 | As CLM-001 | S08 |
+| CLM-003 | Brightidea supports idea collection, evaluation and management of organizational innovation processes. | REF-01 §10 | VERIFIED IN PART (vendor statement): SRC-046, SRC-047 | As CLM-001 | As CLM-001 | S08 |
+| CLM-004 | Wellspring supports technology discovery, commercialization-opportunity analysis and industry–research connections. | REF-01 §10 | VERIFIED IN PART (vendor statement): SRC-048, SRC-049, SRC-050; commercialization analysis and industry–research connections not confirmed | As CLM-001 | As CLM-001 | S08 |
 | CLM-005 | Growth in platform records beyond the usual volume increases review time and causes an assessment backlog. | REF-01 §4 | SOURCE CLAIM — UNVERIFIED (no figures) | Problem statement attributed to the sponsor | Baseline data from owner (ISS-011, ISS-023) | S05 |
 | CLM-006 | The assistant will improve review speed and accuracy, coordination and consistency of organization, and reduce errors. | REF-01 §6, §15 | HYPOTHESIS | Only as expected benefits to be tested | Evaluation design with baseline (QA-002) | S05 |
 | CLM-007 | The solution may be applicable to other organizations with comparable workflows. | REF-01 §5 | HYPOTHESIS | Only as conditional future possibility | None in current project; Section 11 | S04 / S08 |
@@ -43,7 +43,19 @@
 | CLM-022 | In a 2023 audit, about 51.5% of sentences from generative search engines were fully supported by citations and 74.5% of citations supported their sentence. | SRC-028 | VERIFIED | Justifies citation checks for generated summaries | As above | S04 |
 | CLM-023 | In crowdsourcing contests, a model could screen out weak ideas but could not mimic experts in selecting the best. | SRC-017 | VERIFIED | Supports human final authority (R3) | As above | S08 |
 | CLM-024 | Automatic patent retrieval performance is judged around average; interactive assistance for professionals is advocated. | SRC-019 | VERIFIED | Background for R4 scope | As above | S08 |
-| CLM-025 | No public benchmark of organizational need/challenge submissions was found in S02. | S02 searches (documented in S02_PLAN) | OPEN — negative search result | May be stated as "none identified in our search", not as "none exists" | Re-check in S03 | S03 |
+| CLM-025 | No public benchmark of organizational need/challenge submissions was found in S02 or S03. Public idea datasets exist (SRC-063; the annotated dataset in SRC-013) but contain ideas, not need or challenge submissions. | S02 and S03 searches (S02_PLAN, S03_PLAN) | OPEN — negative search result | May be stated as "none identified in our search", not as "none exists"; idea datasets only as proxies | S05 evaluation design (ISS-028) | S05 |
 | CLM-026 | Multi-stage retrieval (lexical and dense candidates, fusion, optional re-ranking) is a candidate design for R1 and R2. | S02_RESEARCH_SYNTHESIS §3 | PROPOSED | S04–S05 design input only | S05 evaluation | S05 |
 | CLM-027 | A time-ordered, assessor-judged, graded test set with measured inter-assessor agreement is a candidate evaluation design. | S02_RESEARCH_SYNTHESIS §3 | PROPOSED | S05 design input only | S05 | S05 |
 | CLM-028 | Evidence-first review screens with cognitive-forcing elements are a candidate design for R3. | S02_RESEARCH_SYNTHESIS §3 | PROPOSED | S04 design input only | S04 | S04 |
+| CLM-029 | Wazoku documents an admin setting that shows links to potential duplicate Ideas while a user types a new Idea title; the matching method is not documented. | SRC-040 | VERIFIED (vendor statement) | Section 9 comparison | Re-check before submission (ISS-032) | S08 |
+| CLM-030 | Wazoku's Jen assistant is documented to give an evaluation-support score for coherence, relevance to Challenge requirements and innovation, and to scout companies (scouting in English only). | SRC-041 | VERIFIED (vendor statement) | Section 9 comparison | As CLM-029 | S08 |
+| CLM-031 | ITONICS documents AI duplicate detection, first-pass screening against jury criteria, patent clustering, and reviewer approval of AI changes with an optional auto-apply mode. | SRC-044, SRC-045 | VERIFIED (vendor statement) | Section 9 comparison; R3 design contrast | As CLM-029 | S08 |
+| CLM-032 | Brightidea documents a submission-time Duplicate Checker scoped to one Initiative, a Scout app that searches the web for companies matching a described need, and bring-your-own-model options. | SRC-046, SRC-047 | VERIFIED (vendor statement) | Section 9 comparison | As CLM-029 | S08 |
+| CLM-033 | Wellspring documents Scout search over patents, publications, grants and startups, and evaluation scorecards and stage-gate workflows in Accolade; no AI assessment or duplicate detection is described on the pages read. | SRC-048, SRC-049, SRC-050 | VERIFIED (vendor statement) | Section 9 comparison | As CLM-029 | S08 |
+| CLM-034 | None of the comparator pages read discloses an accuracy evaluation of its similarity, scoring or scouting functions, and none describes checking a new submission against an approved collection of existing solutions or precedents. | S03 reading of SRC-040 to SRC-052 | OPEN — negative reading result | "Not documented in the vendor's public material as of 2026-11-20"; never "does not exist" | Re-check before submission | S08 |
+| CLM-035 | IdeaScale documents duplicate flags with similarity percentages and an AI-generated explanation for moderators; ServiceNow documents a trained similarity solution using idea Title and Description. | SRC-051, SRC-052 | VERIFIED (vendor statement) | Section 9 background; S04 review-screen design input | As CLM-029 | S04 |
+| CLM-036 | PQAI is an MIT-licensed open-source prior-art search engine that takes plain-language descriptions and uses ML models trained on past patent examination records; it offers an API. | SRC-053 (origin: SRC-054) | VERIFIED (project statement) | Section 9; candidate R4 component or baseline | Licence and API terms in RQ-14 | S04–S05 |
+| CLM-037 | SOLVENT combined human annotation of problem and mechanism with a computational model and found more analogies than baseline IR approaches; experts judged the analogies useful. | SRC-055 | VERIFIED | Section 9; R2/R3 design background | Full-text check in S08 Pass A | S08 |
+| CLM-038 | Patents describe parts of the intended product: overlap alerts against stored internal disclosures with inventor-controlled access (US 8,943,033 B2); matching logged needs to a solutions database including patent documents (US 11,561,987 B1 family); committee voting on submitted ideas (CA 2588160). | SRC-056 to SRC-059 | VERIFIED | Section 9 prior-art statements only | Office-register re-check if used (ISS-030) | S08 |
+| CLM-039 | The S03 prior-art scan found no record combining R1, R2, R4 and mandatory human approval of assessment outcomes in one system. | S03_PRIOR_ART_REGISTER §4 | OPEN — negative search result | "None identified in our scan"; no patentability or freedom-to-operate statement | Professional search if the owner requires it (ISS-031) | S08 |
+| CLM-040 | The intended product's distinguishing point is linking R1, R2 and R4 results to one assessment record approved by an assessor, with evidence shown for each result and a project-run evaluation. | S03_COMPARABLE_SYSTEMS_MATRIX §5; S03_SECTION9_COMPARISON | PROPOSED | Sections 6 and 9 as a design position; no superiority claim (QA-005) | S05 evaluation design | S05 |

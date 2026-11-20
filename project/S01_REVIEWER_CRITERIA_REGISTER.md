@@ -3,11 +3,11 @@
 | Field | Value |
 |---|---|
 | Document ID | S01_REVIEWER_CRITERIA_REGISTER |
-| Version | 2.0 |
-| Status | APPROVED |
-| Stage | S02 |
+| Version | 3.0 |
+| Status | SUBMITTED FOR GATE |
+| Stage | S03 |
 | Date | 2026-11-20 |
-| Depends on | REF-03; DEC-011; S02 deliverables |
+| Depends on | REF-03; DEC-011; S02 deliverables; S03 deliverables |
 
 - **Source:** REF-03 (REVIEWER_FEEDBACK_EN_V1), a consolidated secondary reconstruction (DEC-011)
 - **Evidence classes:** **RF** = reported reviewer criterion; **QA** = additional quality observation from the owner's handoff, not attributed to the proposal reviewer
@@ -40,12 +40,12 @@ The "Criterion (paraphrased)" column summarizes REF-03 in project terms. It is n
 | QA-002 | Speed and accuracy benefits lack a measured baseline. | 6, 7, 8 | S05, S08 | Benefits registered as hypotheses; baseline issue logged | SCHEDULED | CLM-006; ISS-011; RQ-06; S02 evidence on evaluation design (matrix RQ-06, CLM-017, CLM-027) |
 | QA-003 | Delivered-assistant wording conflicted with feasibility/PoC scope. | 1, 5, 7, 8, 11 | S04 | Owner decision logged | OPEN (owner decision required) | ISS-001 |
 | QA-004 | Measurable specifications, test criteria and data assumptions incomplete. | 8, 12, 13 | S05–S07 | Data and ground-truth issues logged; evaluation RQ defined | SCHEDULED | ISS-002, ISS-012, ISS-023; RQ-06; S02 matrix RQ-06; CLM-027 |
-| QA-005 | Comparators and claimed advantages lack source-specific verification. | 9 | S03, S08 | Vendor statements registered as unverified; tier rules set | SCHEDULED | CLM-001 to CLM-004; RQ-10, RQ-11; 02_SOURCE_LOG §1 |
+| QA-005 | Comparators and claimed advantages lack source-specific verification. | 9 | S03, S08 | Eight Section 9 candidates verified from first-party or patent-office sources; each capability cell sourced or marked ND; vendor statements labelled; marketing figures excluded; no superiority claim | ADDRESSED for evidence (S03); wording control SCHEDULED for S08 | S03_COMPARABLE_SYSTEMS_MATRIX; S03_SECTION9_COMPARISON; CLM-001 to CLM-004, CLM-029 to CLM-040; ISS-030, ISS-032 |
 | QA-006 | Team prior work undocumented; capacity unknown. | 10, 14 | S10 | Deferred; local issue logged | SCHEDULED | ISS-025 |
 | QA-007 | Activity table lacks adequate tasks and deliverables. | 12, 13 | S06–S07 | Gate criteria require tasks, deliverables, acceptance evidence | SCHEDULED | Gate criteria S06 |
 | QA-008 | Gantt markings and costs populated before assumptions agreed. | 15, 16 | S10 | No schedule or cost content before S10 | SCHEDULED | DEC-001; RF-010 entry |
 | QA-009 | Risks, dates, attachments and administrative fields incomplete. | 17–20 | S08, S10 | Risk split recorded; local fields logged | SCHEDULED | F-17; ISS-026 |
-| QA-010 | Earlier comparative research and technology choices are leads, not verified evidence. | 8, 9, 12 | S02–S05 | No earlier choices inherited; verification RQs defined | SCHEDULED (literature part completed in S02; versions, licences and resources remain for S05) | RQ-01 to RQ-15; 02_SOURCE_LOG §3 (SRC-001 to SRC-039); S02 matrix |
+| QA-010 | Earlier comparative research and technology choices are leads, not verified evidence. | 8, 9, 12 | S02–S05 | No earlier choices inherited; verification RQs defined | SCHEDULED (literature part completed in S02; comparative research completed in S03; versions, licences and resources remain for S05) | RQ-01 to RQ-15; 02_SOURCE_LOG §3 (SRC-001 to SRC-063); S02 matrix; S03 matrix |
 
 ## 3. Binding workflow implications from REF-03 §4 and where they are enforced
 

@@ -3,9 +3,9 @@
 | Field | Value |
 |---|---|
 | Document ID | 00_DECISIONS_LOG |
-| Version | 2.0 |
-| Status | APPROVED |
-| Stage | S02 |
+| Version | 3.0 |
+| Status | SUBMITTED FOR GATE |
+| Stage | S03 |
 | Date | 2026-11-20 |
 | Depends on | Owner instructions as recorded in each entry |
 
@@ -40,9 +40,10 @@
 | DEC-023 | 2026-11-20 | Fresh-thread stage workflow: the main Project conversation acts only as coordinator; each stage runs in one fresh thread that loads only `CLAUDE.md`, the stage status, the previous handoff and the registers it lists; workflow commands `START_STAGE` and `CLOSE_STAGE` defined in `CLAUDE.md`. Quality requirements unchanged. | Owner | ACTIVE | All later stages |
 | DEC-022 | 2026-11-20 | S02 approved for workflow progression; reviewed content is commit 34a7745b9cdb8d665edd53ec7c06fa37fd1966e9. Unresolved research limitations stay recorded for later independent verification (ISS-029). S03 is authorized to start in a new chat. | Owner | ACTIVE | S02, S03 |
 | DEC-024 | 2026-11-20 | Manual fresh-session workflow: every stage runs in a new chat inside the same Claude Project, opened by the owner, using the repository and the previous handoff. No scheduled tasks. Amends DEC-023. | Owner | ACTIVE | All later stages |
+| DEC-025 | 2026-11-20 | Owner instruction `START_STAGE S03` (approved baseline 961ae6a): execute S03, then commit and push the S03 package to `main` as `SUBMITTED FOR GATE` before the gate decision. No team or financial information is requested. S04 does not start. | Owner | ACTIVE | S03 |
 
 ## Pending owner decision
 
 | ID | Decision requested | Recommended |
 |---|---|---|
-| DEC-025 (proposed) | S03 gate outcome and authorization to begin S04 | Decided after S03 delivery |
+| DEC-026 (proposed) | S03 gate outcome and authorization to begin S04 | Decided after S03 delivery |

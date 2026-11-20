@@ -3,11 +3,11 @@
 | Field | Value |
 |---|---|
 | Document ID | 00_OPEN_ISSUES_REGISTER |
-| Version | 2.0 |
-| Status | APPROVED |
-| Stage | S02 |
+| Version | 3.0 |
+| Status | SUBMITTED FOR GATE |
+| Stage | S03 |
 | Date | 2026-11-20 |
-| Depends on | REF-01; REF-02; REF-03; S01_REQUIREMENTS_REGISTER; S02_RESEARCH_SYNTHESIS |
+| Depends on | REF-01; REF-02; REF-03; S01_REQUIREMENTS_REGISTER; S02_RESEARCH_SYNTHESIS; S03_COMPARABLE_SYSTEMS_MATRIX; S03_PRIOR_ART_REGISTER |
 
 - **Type key:** **ODR** = OWNER DECISION REQUIRED; **OPEN** = information or evidence missing; **LOCAL** = local completion only, not researched in the working package
 - **Blocking key:** The stage or gate that cannot close until the issue is resolved or an explicit assumption is approved
@@ -62,8 +62,16 @@
 
 | ID | Issue | Origin | Type | Blocks | Target | Status |
 |---|---|---|---|---|---|---|
-| ISS-028 | No public benchmark of organizational need/challenge submissions and no study of retrieval from need statements to patents were found. Every performance figure must come from the project's own evaluation or be labelled as a proxy result. | S02 matrix rows 4.3; synthesis §5; CLM-025 | OPEN | S05 gate (evaluation design must address it) | S05 | OPEN |
+| ISS-028 | No public benchmark of organizational need/challenge submissions and no study of retrieval from need statements to patents were found. Every performance figure must come from the project's own evaluation or be labelled as a proxy result. S03 re-check: idea datasets exist (SRC-063, SRC-013) as possible proxies; no comparator publishes accuracy figures either (CLM-034). | S02 matrix rows 4.3; synthesis §5; CLM-025; S03 matrix §3 | OPEN | S05 gate (evaluation design must address it) | S05 | OPEN |
 | ISS-029 | S02 research limitations awaiting independent verification: most sources checked at abstract or landing-page depth; mitigators of automation bias (SRC-023) unverified; CLM-025 is a negative search result. | S02_QC_REPORT §4–§5; DEC-022 | OPEN | S08 gate (Pass A full-text checks) and S09 (isolated review) | S08–S09 | OPEN |
+
+## F. Issues raised in S03
+
+| ID | Issue | Origin | Type | Blocks | Target | Status |
+|---|---|---|---|---|---|---|
+| ISS-030 | Final choice of Section 9 rows from the eight candidates in S03_SECTION9_COMPARISON (minimum three), including whether patent rows are used and how the form's outcome column is filled for them. | F-09, QA-005, S03_SECTION9_COMPARISON | ODR | S08 gate | S08 | OPEN |
+| ISS-031 | RQ-12 was a web-search-based scan, not a professional patent search. EP 2765543 A1 and US 11,762,916 B1 rest on search-result extracts because their record pages failed to load (SRC-060, SRC-061). Re-check on the issuing office's register, or commission a professional search if the owner requires it. | RQ-12, CLM-039, S03_PRIOR_ART_REGISTER §4 | OPEN | S08 gate (only if patent rows are used) | S08 | OPEN |
+| ISS-032 | Vendor capability statements reflect public pages read on 2026-11-20; one page (SRC-047) contains editorial placeholders. Re-check every Section 9 vendor statement shortly before submission. | QA-005, CLM-029 to CLM-035 | OPEN | S10 (final integration) | S08–S10 | OPEN |
 
 ## Closed issues
 

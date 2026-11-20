@@ -10,7 +10,8 @@ This repository contains proposal-development records, not software. No product 
 |---|---|---|
 | S01 | Research Foundation and Requirements Mapping | Approved (baseline commit `2b5f83c`) |
 | S02 | Scientific and Technical Literature Research | Approved (commit `34a7745`) |
-| S03–S10 | Comparable systems through final integration | Not started |
+| S03 | Comparable Systems and Prior-Art Analysis | Submitted for gate |
+| S04–S10 | Product architecture through final integration | Not started |
 
 Current position: `project/00_STAGE_STATUS.md`.
 
@@ -27,4 +28,4 @@ The sponsor's reference documents are not part of this repository. Administrativ
 
 ## Quality check
 
-From the repository root, each stage has its own check, for example `python3 stages/S02/qc/S02_QC_CHECK.py .` (Python 3 standard library only). The S01 check validates the S01 baseline and is run against that commit.
+From the repository root, each stage has its own check, for example `python3 stages/S03/qc/S03_QC_CHECK.py .` (Python 3 standard library only). Each earlier check validates its own stage baseline and is run against that commit.

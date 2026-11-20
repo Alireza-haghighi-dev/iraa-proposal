@@ -3,11 +3,11 @@
 | Field | Value |
 |---|---|
 | Document ID | 02_SOURCE_LOG |
-| Version | 2.0 |
-| Status | APPROVED |
-| Stage | S02 |
+| Version | 3.0 |
+| Status | SUBMITTED FOR GATE |
+| Stage | S03 |
 | Date | 2026-11-20 |
-| Depends on | REF-01; REF-02; REF-03; S02_LITERATURE_EVIDENCE_MATRIX |
+| Depends on | REF-01; REF-02; REF-03; S02_LITERATURE_EVIDENCE_MATRIX; S03_COMPARABLE_SYSTEMS_MATRIX; S03_PRIOR_ART_REGISTER |
 
 - **Rule:** Every source cited anywhere in the project is logged here before use. No citation from memory. Re-check this log before searching, to avoid repeated research.
 
@@ -31,6 +31,7 @@
 
 - **Depth key:** A = abstract or landing page read; P = full-text excerpt read; B = bibliographic record only. Verified = Y means the statement used in S02 was found at that depth.
 - **Accessed:** all entries 2026-11-20 unless stated.
+- **S03 entries (SRC-040 to SRC-063):** T2 rows evidence only what the vendor or project states about itself (C4, QA-005). Patent rows support prior-art statements, not legal conclusions.
 
 | ID | Citation | DOI / URL | Type | Tier | Depth | Verified | Supports | Limitations |
 |---|---|---|---|---|---|---|---|---|
@@ -73,6 +74,30 @@
 | SRC-037 | sentence-transformers. all-MiniLM-L6-v2 model card. Hugging Face. | https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2 | Official model documentation | T1 | A | Y | RQ-01 | Only embedding dimension and intended use verified |
 | SRC-038 | Liu, T.-Y. (2009). Learning to Rank for Information Retrieval. Foundations and Trends in Information Retrieval 3(3), 225–331. | doi:10.1561/1500000016 | Monograph | T1 | A | Y | RQ-09 | — |
 | SRC-039 | Settles, B. (2009). Active Learning Literature Survey. Computer Sciences Technical Report 1648, University of Wisconsin–Madison. | https://minds.wisc.edu/items/37538f44-36ae-413e-8967-e6c831e17a8e | Technical report | T1 | A | Y | RQ-09 | Not peer reviewed; widely used survey |
+| SRC-040 | Wazoku Limited. "Automatically search for duplicate Ideas." Wazoku Knowledge base (no page date). | https://support.wazoku.com/automatically-search-for-duplicate-ideas | Vendor documentation | T2 | A | Y | RQ-10 | Vendor statement; matching method and fields not stated |
+| SRC-041 | Wazoku Limited. "About Jen." Wazoku Knowledge base (no page date). | https://support.wazoku.com/about_jen | Vendor documentation | T2 | A | Y | RQ-10 | Vendor statement; model, data use and human-decision design not stated |
+| SRC-042 | Innocentive (Wazoku). Home page: "In 2020, Wazoku acquired Innocentive." | https://www.innocentive.com/ | Vendor web page | T2 | A | Y | RQ-10, RQ-11 | Corporate history statement only |
+| SRC-043 | Innocentive (Wazoku Crowd). Challenge page "Wazoku Inc: eRFP Challenge – Evaluation." | https://www.innocentive.com/challenges/wazoku-inc-erfp-challenge-evaluation/ | Vendor web page | T2 | A | Y | RQ-10 | Used only for: closed Challenges are evaluated by Seeker organizations |
+| SRC-044 | ITONICS. "AI" product page (Prism). | https://itonics-innovation.com/ai | Vendor web page | T2 | A | Y | RQ-10 | Marketing page; no model or method named; performance figures excluded |
+| SRC-045 | ITONICS. Innovation management demo page. | https://www.itonics-innovation.com/innovation-demo | Vendor web page | T2 | A | Y | RQ-10 | Marketing page; short statements only |
+| SRC-046 | Brightidea. "Duplicate Checker on Post Submission." Brightidea Support Portal (no page date). | https://support.brightidea.com/hc/en-us/articles/205840267-Duplicate-Checker-on-Post-Submission | Vendor documentation | T2 | A | Y | RQ-10 | Method, fields and threshold not stated; scope limited to one Initiative |
+| SRC-047 | Brightidea. AI features overview article, Brightidea Support Portal (no page date). | https://support.brightidea.com/hc/en-us/articles/16717011910163 | Vendor documentation | T2 | A | Y | RQ-10 | Page contains unfilled editorial placeholders; may be in revision |
+| SRC-048 | Wellspring. "Scout" product page. | https://www.wellspring.com/scout | Vendor web page | T2 | A | Y | RQ-10 | Record counts are vendor-stated; AI method not described |
+| SRC-049 | Wellspring. Technology evaluations page. | https://www.wellspring.com/technology-evaluations | Vendor web page | T2 | A | Y | RQ-10 | Speed figure has no method; excluded |
+| SRC-050 | Wellspring. "Accolade: Idea Management Software." | https://www.wellspring.com/solutions/idea-management-software | Vendor web page | T2 | A | Y | RQ-10 | No AI or duplicate detection described |
+| SRC-051 | IdeaScale. "Idea Duplicate Detection Tool." IdeaScale Support Center. | https://help.ideascale.com/idea-duplicate-detection-tool | Vendor documentation | T2 | A | Y | RQ-11 | Method, model and threshold not stated |
+| SRC-052 | ServiceNow. "Predictive Intelligence for Innovation Management." Product documentation, Yokohama release, updated 2025-01-30. | https://docs.servicenow.com/bundle/sandiego-it-business-management/page/product/innovation-management/concept/predictive-intelligence-for-innovation.html | Vendor documentation | T2 | A | Y | RQ-11 | Training procedure on a linked page not read |
+| SRC-053 | PQAI project. pqai repository README ("PQAI: Patent Quality Artificial Intelligence"). | https://github.com/pqaidevteam/pqai | Open-source project documentation | T2 | A | Y | RQ-11, RQ-12 | README read through a web mirror because the repository page was not reachable in this session; project self-description |
+| SRC-054 | Zellner [initials not recorded] (2020). Enabling Shared Understanding of Novelty with an Open Prior-Art Search Engine. Abstract, JURIX 2020 workshop page, Carnegie Mellon University. | https://www.cmu.edu/epp/patents/events/jurix2020/abstracts/zellner-abstract.html | Workshop abstract | T3 | A | Y | RQ-11 | Used only for project origin; author name as shown in page address |
+| SRC-055 | Chan, J., Chang, J. C., Hope, T., Shahaf, D. & Kittur, A. (2018). SOLVENT: A Mixed Initiative System for Finding Analogies between Research Papers. Proc. ACM Hum.-Comput. Interact. 2(CSCW), 31:1–31:21. | doi:10.1145/3274300 | Journal article | T1 | A | Y | RQ-11, RQ-12 | Research papers, not organizational submissions |
+| SRC-056 | Hamilton, R. A. II, Moskowitz, P. A., Pickover, C. A. & Seaman, J. W. US 8,943,033 B2, "System and method for avoiding duplication of effort in drafting documents." Granted 2015-01-27. Google Patents record. | https://patents.google.com/patent/US8943033 | Patent record | T1 | A | Y | RQ-12 | Legal status is a database assumption; claims read as summarized on the record page |
+| SRC-057 | Sager, B. M. & Kimberlin, W. L. (Reveal Networks Inc.). US 11,561,987 B1, "Platform for semantic search and dynamic reclassification." Granted 2023-01-24. Google Patents record. | https://patents.google.com/patent/US11561987 | Patent record | T1 | A | Y | RQ-12 | Claim 1 text not in the portion read; description sections used |
+| SRC-058 | USPTO Official Gazette entry: US 12,461,922 B1, "Platform for semantic search and dynamic reclassification," assigned to Reveal Networks, Inc., 2025-11-04. | https://patentsgazette.uspto.gov/week44/OG/html/1540-1/US12461922-20251104.html | Patent-office record | T1 | A | Y | RQ-12 | Gazette claim only |
+| SRC-059 | Canadian Patent Database record CA 2588160 (PCT/US2005/041749; WO 2006/055746), "Integrated idea management method and software with protection mechanism." | https://brevets-patents.ic.gc.ca/opic-cipo/cpd/eng/patent/2588160/summary.html | Patent-office record | T1 | A | Y | RQ-12 | Owner, inventors and status not shown on the page read |
+| SRC-060 | EP 2765543 A1, "Method and system for matching technical needs to solutions." Google Patents record (search-result extract). | https://patents.google.com/patent/EP2765543A1/en | Patent record | T1 | B | Partial | RQ-12 | Record page failed to load; only title and claim-1 opening read in the extract (ISS-031) |
+| SRC-061 | US 11,762,916 B1, "User interface for identifying unmet technical needs and/or technical problems." Google Patents record (search-result extract). | https://patents.google.com/patent/US11762916 | Patent record | T1 | B | Partial | RQ-12 | Record page failed to load; abstract extract only (ISS-031) |
+| SRC-062 | Verma, M., Sharma, V. & Singh, V. (2025). A Hybrid AI Framework for Strategic Patent Portfolio Pruning: Integrating Learning-to-Rank and Market-Need Analysis for Technology Transfer Optimization. arXiv:2509.00958. | doi:10.48550/arXiv.2509.00958 | Preprint | T3 | P | Y | RQ-12 | Not peer reviewed; no quantitative evaluation |
+| SRC-063 | Open Innovation Contests (16 Topics collected between 2015 and 2022). Dataset, Zenodo, version v1, published 2025-07-09. | https://zenodo.org/records/15854790 | Dataset record | T1 | A | Y | RQ-11 | Student-generated ideas, not organizational need or challenge submissions |
 
 ## 4. Entry procedure (from S02)
 
