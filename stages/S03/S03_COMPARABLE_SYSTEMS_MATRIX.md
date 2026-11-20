@@ -4,12 +4,12 @@
 |---|---|
 | Document ID | S03_COMPARABLE_SYSTEMS_MATRIX |
 | Version | 2.0 |
-| Status | SUBMITTED FOR GATE |
+| Status | APPROVED |
 | Stage | S04.1 |
 | Date | 2026-11-20 |
 | Depends on | S01_REQUIREMENTS_REGISTER; S01_RESEARCH_QUESTIONS (RQ-10, RQ-11); 02_SOURCE_LOG; 02_CLAIM_REGISTER; QA-005; RC-01 |
 
-- **S04.1 status note (RC-01):** the S04 session set this file to APPROVED on the basis of an approval inferred from the wording of the owner's START_STAGE S04 instruction. That approval has not been recorded as an explicit owner decision, so the status is returned to SUBMITTED FOR GATE until the owner confirms it (DEC-028). Reviewed S03 content: commit 6780335.
+- **S04.1 status note (RC-01):** the S04 session set this file to APPROVED on the basis of an approval inferred from the wording of the owner's START_STAGE S04 instruction. That approval has not been recorded as an explicit owner decision, so the status was returned to SUBMITTED FOR GATE; the owner confirmed the approval in DEC-028 and the status is APPROVED. Reviewed S03 content: commit 6780335.
 - **Reference point:** the final intended product, not the current-phase output (FX-10): an assistant that compares a submission with stored submissions (R1), checks whether relevant existing solution examples can be identified for the submitted need (R2, as corrected in S04.1, DEC-029), examines external patents and solution examples (R4), and leaves the final decision to an assessor (R3), designed for later extension (C1).
 - **Evidence rule:** every vendor cell is a vendor statement (T2) found on the first-party page cited, read on 2026-11-20. It shows what the vendor says, not that the feature works as described or performs well (C4, QA-005).
 - **Cell legend:** `VS` = VERIFIED as vendor statement (cited SRC). `ND` = not documented in the pages read; OPEN. ND does not mean the capability is absent. `S02` = evidence carried from S02 without re-research.

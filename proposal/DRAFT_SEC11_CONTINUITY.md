@@ -4,12 +4,12 @@
 |---|---|
 | Document ID | DRAFT_SEC11_CONTINUITY |
 | Version | 0.2 |
-| Status | SUBMITTED FOR GATE |
+| Status | APPROVED |
 | Stage | S04.1 |
 | Date | 2026-11-20 |
 | Depends on | F-11; RF-005; FX-07; C1; C3; CTX-03; CTX-08; CLM-011; ISS-001; DEC-029; S04_SCOPE_OPTIONS; S04_ARCHITECTURE |
 
-- **Draft status:** technical part only, PROVISIONAL on the owner's decision on ISS-001; the row 1 title and deliverable change if Option B is not chosen. Row 1 is the current project (RF-005). Durations are completed in S10 from Sections 13 to 16; cost cells are local completion. Later rows are prospective and conditional on the results of earlier rows and on sponsor decisions.
+- **Draft status:** technical part only; row 1 follows the planning scope approved in DEC-028 (narrowed Option B). Row 1 is the current project (RF-005). Durations are completed in S10 from Sections 13 to 16; cost cells are local completion. Later rows are prospective and conditional on the results of earlier rows and on sponsor decisions.
 
 ## 11. Project continuity and future stages
 

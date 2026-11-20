@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | 00_DECISIONS_LOG |
 | Version | 4.1 |
-| Status | SUBMITTED FOR GATE |
+| Status | APPROVED |
 | Stage | S04.1 |
 | Date | 2026-11-20 |
 | Depends on | Owner instructions as recorded in each entry |
@@ -43,26 +43,21 @@
 | DEC-024 | 2026-11-20 | Manual fresh-session workflow: every stage runs in a new chat inside the same Claude Project, opened by the owner, using the repository and the previous handoff. No scheduled tasks. Amends DEC-023. | Owner | ACTIVE | All later stages |
 | DEC-025 | 2026-11-20 | Owner instruction `START_STAGE S03` (approved baseline 961ae6a): execute S03, then commit and push the S03 package to `main` as `SUBMITTED FOR GATE` before the gate decision. No team or financial information is requested. S04 does not start. | Owner | ACTIVE | S03 |
 
-| DEC-026 | 2026-11-20 | S03 approved. Basis: the owner's `START_STAGE S04` instruction of 2026-11-20, which refers to "the approved S03 handoff". Reviewed content: commit 67803355fe0a9fd7ef9271718adb5f4b52459315; status record 9a7a95e. The coordinator had not recorded this entry before S04 began; the S04 session recorded it from the owner's instruction and reports it for owner confirmation. ISS-030 to ISS-032 carried forward. | Not an explicit owner decision: inferred by the S04 session from instruction wording (RC-01). Originally recorded as "Owner (recorded by S04 session)". | INFERRED — explicit owner confirmation pending (RC-01) | S03, S04 |
+| DEC-026 | 2026-11-20 | S03 approved. Basis: the owner's `START_STAGE S04` instruction of 2026-11-20, which refers to "the approved S03 handoff". Reviewed content: commit 67803355fe0a9fd7ef9271718adb5f4b52459315; status record 9a7a95e. The coordinator had not recorded this entry before S04 began; the S04 session recorded it from the owner's instruction and reports it for owner confirmation. ISS-030 to ISS-032 carried forward. | Not an explicit owner decision: inferred by the S04 session from instruction wording (RC-01). Originally recorded as "Owner (recorded by S04 session)". | CONFIRMED by DEC-028 (approval was inferred until then; RC-01) | S03, S04 |
 | DEC-027 | 2026-11-20 | Owner instruction `START_STAGE S04` (baseline 9a7a95e): execute S04 Product Definition and Technical Architecture; draft Sections 5, 7, 8 and the technical part of Section 11; recommend a scope without inventing commitments; treat ISO/IEC 20000 and 27001 as proposed alignment only; commit and push the S04 package to `main` as `SUBMITTED FOR GATE`. No team identities, personal information or financial commitments are requested. S05 does not start. | Owner | ACTIVE | S04 |
 
 | DEC-029 | 2026-11-20 | Owner instruction `START_STAGE S04.1`: run a consolidated corrective stage over S01–S04 from the S04 commit, then commit and push the corrections. Stated in the instruction: (1) R2 keeps its identifier and its intended meaning is "assess whether relevant existing solution examples can be identified for a submitted need"; source categories, dataset availability, permissions and retrieval mechanisms remain unresolved; (2) R1 must clearly support comparison of new submissions against existing records, and grouping of the whole stored collection must not be presented as a confirmed sponsor requirement; (3) R3 requires final human approval; (4) the S04 scope recommendation stays PROVISIONAL where an owner decision is needed; (5) inferred approvals must not be presented as explicit owner decisions. This entry does not approve S04 and does not authorize S05. | Owner | ACTIVE | R1–R3; S02–S04 deliverables; drafts; DEC-026 |
+
+| DEC-028 | 2026-11-20 | Owner gate decision on S03, S04 and S04.1. (1) S03 approval confirmed (settles RC-01). (2) Corrected S04 and S04.1 deliverables accepted for progression to S05. (3) Narrowed Option B approved as the CURRENT PLANNING SCOPE: laboratory prototype under technology development, with design, build and test activities; no live-platform integration or production deployment is committed (ISS-001). (4) Provisional Section 5 classification adopted, subject to later consistency review (ISS-016). (5) R1 new-versus-stored comparison is essential; optional whole-collection grouping (FN-04, CP-4) is excluded from the funded scope (ISS-004). (6) Decision logging (FN-10) included, without automatic retraining. (7) Generated summaries (FN-07, CP-3) and mandatory per-candidate labelling (CP-2) are outside the essential funded scope. (8) Essential human approval and re-approval controls (CP-5, CP-6) preserved. (9) R2/R4 source boundaries, dataset availability, assessment fields, languages and external disclosure permissions stay open where not established (ISS-002, ISS-003, ISS-005, ISS-007, ISS-033, ISS-037). (10) No confidential submission text may be sent to external services without the required authorization. S05 is authorized to start in a new chat (DEC-024); it is not started by this decision. | Owner | ACTIVE | S03, S04, S04.1; ISS-001, ISS-004, ISS-016, ISS-034; S05 |
 
 ## Record corrections
 
 | ID | Date | Entry corrected | Correction | Basis |
 |---|---|---|---|---|
 | RC-01 | 2026-11-20 | DEC-026 (S03 approval) | "Decided by" changed from "Owner (recorded by S04 session)" to an explicit INFERRED label; status changed from ACTIVE to INFERRED. The S03 stage files, which the S04 commit had set to APPROVED on this basis, are returned to SUBMITTED FOR GATE until the owner confirms. The S03 content commit 6780335 is unchanged and remains the reference for the S03 package. | DEC-029 item (5); the START_STAGE S04 instruction refers to "the approved S03 handoff" but does not itself record an approval decision |
+| RC-03 | 2026-11-20 | RC-01 | Closed: the owner confirmed the S03 approval in DEC-028; S03 files set to APPROVED. | DEC-028 |
 | RC-02 | 2026-11-20 | 00_STAGE_STATUS "latest approved baseline" | The latest explicitly approved baseline is S02 (961ae6a, reviewed content 34a7745; DEC-022). S03 is listed separately as "approval inferred, confirmation pending". Git tags are not used as baselines (DEC-020); none exist in the repository. | DEC-020; DEC-029 |
 
 ## Pending owner decision
 
-| ID | Decision requested | Recommended (S04, PROPOSED) |
-|---|---|---|
-| DEC-028 (proposed) | S04 gate outcome (S04 as corrected by S04.1); confirmation or rejection of the inferred S03 approval (RC-01); authorization to begin S05; decisions on the issues below | See `stages/S04.1/S04.1_HANDOFF.md` |
-| — ISS-001 | Development level of the current project | PROVISIONAL: Option B, technology development, laboratory prototype, design + build + test (`S04_SCOPE_OPTIONS` §4, audited in S04.1) |
-| — ISS-016 | Section 5 classification | Product/system; demand-driven; technology development; design, build, test; independent (`proposal/DRAFT_SEC05_CLASSIFICATION`) |
-| — ISS-004 | Whether to add optional grouping to R1 | New-versus-stored comparison (FN-03) is the operative reading (DEC-029). Stored-collection grouping (FN-04) is an optional addition for the owner to accept or drop |
-| — ISS-005 | Content of an assessment | Configurable assessment template (AD-07); sponsor fields supplied by the owner |
-| — ISS-007, ISS-008, ISS-009, ISS-010, ISS-003, ISS-037 | Language; integration; data handling; standards interpretation; R2 solution-example sources; R2/R4 boundary | Planning assumptions AS-01 to AS-08 in `S04_ASSUMPTIONS_AND_STANDARDS` apply until the owner decides |
-| — ISS-033, ISS-034 | External query disclosure; approval model and optional R3 controls | Essential R3 controls: CP-5 and CP-6. CP-1 if external disclosure needs approval (ISS-033); CP-2 to CP-4 optional or conditional (`S04_ARCHITECTURE` §4). Single assessor approval by default (AD-06) |
+None. The next decision is the S05 gate.

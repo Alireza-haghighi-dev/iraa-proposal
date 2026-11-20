@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | S04_ARCHITECTURE |
 | Version | 1.1 |
-| Status | SUBMITTED FOR GATE |
+| Status | APPROVED |
 | Stage | S04.1 |
 | Date | 2026-11-20 |
 | Depends on | S01_REQUIREMENTS_REGISTER; S02_RESEARCH_SYNTHESIS §3–§4; S03_COMPARABLE_SYSTEMS_MATRIX §5; CLM-011; CLM-021; CLM-026; CLM-028; CLM-035; CLM-036; CLM-040; CLM-045; DEC-029; S04_SCOPE_OPTIONS |
@@ -37,13 +37,13 @@ Evidence sources are kept apart because their owners, access rules and update cy
 | FN-01 | Ingestion: import exported submissions and items from any registered solution-example source from files; validate fields; keep source identifiers, source type, availability status and import version | R1, R2 | File import (AD-03) | Platform adapter through IF-07 |
 | FN-02 | Text normalization and enrichment: field mapping, cleaning, exact-copy hashing, near-duplicate fingerprints, language tag, passage segmentation for long texts | R1, R2, R4 | Yes | Additional languages if ISS-007 requires |
 | FN-03 | Similar-submission search: for a new submission, rank stored submissions and show the matched passages or fields behind each candidate | R1 (operative reading, DEC-029) | Yes | — |
-| FN-04 | Stored-collection grouping: propose groups of likely duplicate or overlapping stored submissions for assessor confirmation | PROPOSED addition to R1; not a confirmed sponsor requirement (ISS-004) | OPTIONAL: included only if the owner selects it; batch job; groups are proposals until CP-4 | Scheduled re-grouping on platform data |
+| FN-04 | Stored-collection grouping: propose groups of likely duplicate or overlapping stored submissions for assessor confirmation | PROPOSED addition to R1; not a confirmed sponsor requirement (ISS-004) | EXCLUDED from the funded scope (DEC-028); was OPTIONAL. Specification kept for a later stage | Scheduled re-grouping on platform data |
 | FN-05 | Solution-example identification: for a submitted need, rank items from the registered solution-example sources that may address it, show the evidence passages, and state each item's source type and availability status | R2 (corrected, DEC-029) | Yes, built against the evidence-source interface; tested on a confirmed source if ISS-003 yields one, otherwise on labelled substitute data (`S04_SCOPE_OPTIONS` §4, condition 2) | Further sources registered as they are confirmed |
 | FN-06 | External prior-art retrieval: build a query from the submission, let the assessor edit and approve it (CP-1), search external sources, store results with provenance | R4 | Patent source first (AD-04); solution-example sources only if ISS-006 identifies one | Further connectors |
-| FN-07 | Evidence-grounded summaries: optional generated summary of retrieved items in which every sentence cites a retrieved item and passes an automatic support check | R2, R4 (assessor support); not required by any R item | OPTIONAL, off by default (AD-08) | Enabled if ISS-009 and evaluation results allow |
+| FN-07 | Evidence-grounded summaries: optional generated summary of retrieved items in which every sentence cites a retrieved item and passes an automatic support check | R2, R4 (assessor support); not required by any R item | OPTIONAL; outside the essential funded scope (DEC-028); off by default (AD-08) | Enabled if ISS-009 and evaluation results allow |
 | FN-08 | Assessment record and report: one record per submission linking R1, R2 and R4 candidates, evidence, assessor decisions, outcome, approver and component versions; exportable report | R1–R4, R3 | Yes | Write-back of approved outcomes to the platform |
 | FN-09 | Review and approval workflow: enforces the essential R3 controls (CP-5, CP-6) and any conditional or optional controls the owner selects (§4) | R3 | Yes | Sponsor-specific approval chains |
-| FN-10 | Decision logging: store assessor decisions on candidates as labelled examples for later analysis | C3 | Logging and export only (AD-10) | Learning-to-rank or active learning from logged decisions (CLM-011) |
+| FN-10 | Decision logging: store assessor decisions on candidates as labelled examples for later analysis | C3 | Yes: logging and export only, no automatic retraining (DEC-028, AD-10) | Learning-to-rank or active learning from logged decisions (CLM-011) |
 | FN-11 | Administration and access control: roles, accounts, thresholds, connector settings | R3, C2 | Project-managed accounts (AS-05) | Sponsor identity provider |
 | FN-12 | Offline evaluation harness: time-ordered splits, judged test sets, metric scripts, overreliance checks | QA-002, QA-004 | Yes (project tooling, not a product feature) | Re-used for monitoring in a pilot |
 
@@ -99,8 +99,8 @@ R3 requires one thing: no assessment or processing outcome becomes final without
 
 | ID | Checkpoint | Class | Rule enforced by AC-09 | Why this class | Evidence produced |
 |---|---|---|---|---|---|
-| CP-1 | External query approval | Conditional (ISS-033, ISS-009) | No text leaves the controlled environment for an external source until an assessor has viewed and approved the exact query text; the assessor may shorten or redact it | A data-disclosure control, not an R3 control. Needed if the owner requires approval before submission text is sent out; dropped if the owner permits automatic queries or rules external queries out | Logged query text, approver, time, source |
-| CP-2 | Candidate decisions | Optional design choice | For each of the top N candidates shown, the assessor records a label (for example duplicate, overlapping, related, unrelated, not reviewed) before the record can be submitted. N is configurable, and the control can be switched off | Mitigates overreliance (CLM-021, CLM-028) but adds work per record; whether it pays for itself is tested in S05 (MS-09) | Per-candidate label, reason, time |
+| CP-1 | External query approval | Conditional (ISS-033, ISS-009); required until external disclosure is authorized (DEC-028) | No text leaves the controlled environment for an external source until an assessor has viewed and approved the exact query text; the assessor may shorten or redact it | A data-disclosure control, not an R3 control. Needed if the owner requires approval before submission text is sent out; dropped if the owner permits automatic queries or rules external queries out | Logged query text, approver, time, source |
+| CP-2 | Candidate decisions | Optional design choice; outside the essential funded scope (DEC-028) | For each of the top N candidates shown, the assessor records a label (for example duplicate, overlapping, related, unrelated, not reviewed) before the record can be submitted. N is configurable, and the control can be switched off | Mitigates overreliance (CLM-021, CLM-028) but adds work per record; whether it pays for itself is tested in S05 (MS-09) | Per-candidate label, reason, time |
 | CP-3 | Summary acceptance | Conditional (FN-07 enabled) | A generated summary enters the record only after the assessor accepts or edits it; rejected summaries are kept in the log, not in the record | Applies only if summaries are switched on (AD-08) | Accept, edit or reject event |
 | CP-4 | Grouping confirmation | Conditional (FN-04 selected) | A proposed group of stored submissions is a suggestion until an assessor confirms, splits or rejects it; the assistant never merges or alters platform records | Applies only if the owner selects grouping (ISS-004) | Group decision event |
 | CP-5 | Final approval | Essential (R3) | Only an authenticated user with the assessor role can move a record to Approved; the outcome field is written only by that event; an optional second approver can be required (AD-06, ISS-034) | This is the requirement | Approval event bound to user identity |
@@ -134,5 +134,5 @@ Four extension points are defined now so that later phases add functions without
 | Option | Change to this architecture |
 |---|---|
 | A | AC-01 to AC-05, AC-07 and AC-14 run as experiment code; AC-06, AC-08 to AC-13 are specified, and the review screens are a mock-up |
-| B, narrowed (S04.1) | Essential set only: FN-01 to FN-03, FN-05, FN-06, FN-08, FN-09 with CP-5 and CP-6, FN-11, FN-12; FN-10 recommended (logging only, supports C3); FN-04, FN-07 and CP-1 to CP-4 added only by owner selection (`S04_SCOPE_OPTIONS` §6) |
+| B, narrowed (S04.1; approved as planning scope, DEC-028) | Essential set only: FN-01 to FN-03, FN-05, FN-06, FN-08, FN-09 with CP-5 and CP-6, FN-11, FN-12; FN-10 recommended (logging only, supports C3); FN-04, FN-07 and CP-1 to CP-4 added only by owner selection (`S04_SCOPE_OPTIONS` §6) |
 | C | IF-07 is implemented; AC-12 connects to the sponsor's identity provider; deployment moves to sponsor infrastructure; write-back of approved outcomes needs a separate owner decision |

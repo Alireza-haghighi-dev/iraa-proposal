@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | 03_STYLE_GUIDE |
 | Version | 2.0 |
-| Status | SUBMITTED FOR GATE |
+| Status | APPROVED |
 | Stage | S04.1 |
 | Date | 2026-11-20 |
 | Depends on | REF-03 (RF-001 to RF-004); DEC-006; DEC-013; DEC-029 |

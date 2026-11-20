@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | S04_ASSUMPTIONS_AND_STANDARDS |
 | Version | 1.1 |
-| Status | SUBMITTED FOR GATE |
+| Status | APPROVED |
 | Stage | S04.1 |
 | Date | 2026-11-20 |
 | Depends on | C2; CLM-008; CLM-041; CLM-042; CLM-043; SRC-064; SRC-065; ISS-002; ISS-003; ISS-006 to ISS-010; ISS-023; ISS-033 to ISS-037; CLM-045; DEC-029 |

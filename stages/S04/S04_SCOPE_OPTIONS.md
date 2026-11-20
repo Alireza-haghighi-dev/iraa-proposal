@@ -4,13 +4,13 @@
 |---|---|
 | Document ID | S04_SCOPE_OPTIONS |
 | Version | 1.1 |
-| Status | SUBMITTED FOR GATE |
+| Status | APPROVED |
 | Stage | S04.1 |
 | Date | 2026-11-20 |
 | Depends on | ISS-001; ISS-016; RF-011; RF-012; QA-003; CLM-039; CLM-040; CLM-045; CLM-046; DEC-029; S04_ARCHITECTURE; S04_ASSUMPTIONS_AND_STANDARDS |
 
 - **Purpose:** give the owner the options for ISS-001 (development level of the current project) with their consequences, and a recommendation. The decision remains OWNER DECISION REQUIRED.
-- **S04.1 status:** the recommendation is PROVISIONAL. It was audited in S04.1 against the proposal form, the reviewer criteria and the defined deliverables (§6) and is not approved. OWNER DECISION REQUIRED (ISS-001, ISS-016).
+- **Status:** audited in S04.1 (§6); narrowed Option B approved by the owner as the current planning scope (DEC-028). Section 5 classification adopted provisionally, subject to consistency review (ISS-016).
 - **Labels:** option descriptions and the recommendation are PROPOSED. Maturity bands and prototype names are the proposal form's own terms (REF-02 §1, §5); the form's TRL mapping has not been validated for this project.
 
 ## 1. What the decision has to reconcile
@@ -92,4 +92,4 @@ The audit compared Option B with the proposal form (REF-02 §1, §5, §7, §8, �
 | Recommended, low cost | FN-10 decision logging (export only, no retraining) | Supports C3 (advisory) and C1 |
 | Owner-selectable options | FN-04 with CP-4 (ISS-004); FN-07 with CP-3 (ISS-009); CP-1 (ISS-033); CP-2 (ISS-034) | Not required by R1–R4; each adds effort to the funded plan |
 
-The recommendation stays at Option B with this narrowed scope. It becomes the planning basis for S05 only after the owner records a decision on ISS-001 in DEC-028.
+**Owner decision (DEC-028):** narrowed Option B approved as the current planning scope. Funded: the essential set, FN-10, and CP-1 while external disclosure is not authorized. Excluded from the funded scope: FN-04 with CP-4, FN-07 with CP-3, and mandatory CP-2. No live-platform integration or production deployment is committed.

@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | S04_PLAN |
 | Version | 1.0 |
-| Status | SUBMITTED FOR GATE |
+| Status | APPROVED |
 | Stage | S04 |
 | Date | 2026-11-20 |
 | Depends on | S03_HANDOFF; DEC-026; DEC-027; 00_STAGE_GATE_PROTOCOL §7 (S04 row) |

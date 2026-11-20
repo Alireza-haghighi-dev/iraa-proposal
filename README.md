@@ -10,9 +10,9 @@ This repository contains proposal-development records, not software. No product 
 |---|---|---|
 | S01 | Research Foundation and Requirements Mapping | Approved (baseline commit `2b5f83c`) |
 | S02 | Scientific and Technical Literature Research | Approved (commit `34a7745`) |
-| S03 | Comparable Systems and Prior-Art Analysis | Submitted; approval inferred, explicit owner confirmation pending (content commit `6780335`) |
-| S04 | Product Definition and Technical Architecture | Submitted for gate; corrected by S04.1 |
-| S04.1 | Consolidated correction and cross-stage audit (S01–S04) | Submitted for gate |
+| S03 | Comparable Systems and Prior-Art Analysis | Approved (content commit `6780335`) |
+| S04 | Product Definition and Technical Architecture | Approved as corrected by S04.1 |
+| S04.1 | Consolidated correction and cross-stage audit (S01–S04) | Approved (content commit `4c3ddda`) |
 | S05–S10 | Feasibility and evaluation through final integration | Not started |
 
 Current position: `project/00_STAGE_STATUS.md`.

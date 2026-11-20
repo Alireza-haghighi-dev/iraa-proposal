@@ -363,15 +363,19 @@ for f in OPERATIVE:
 add("S04.1 withdrawn-wording scan completed", True, f"{len(OPERATIVE)} operative files")
 dl = need("00_DECISIONS_LOG.md")
 d26 = re.search(r"^\| DEC-026 \|.*$", dl, re.M).group(0)
-add("S04.1: DEC-026 labelled INFERRED, not an owner decision", "INFERRED" in d26 and "| Owner (recorded" not in d26)
+add("S04.1: DEC-026 keeps INFERRED history and is not shown as an original owner decision", "nferred" in d26 and "| Owner (recorded" not in d26)
 d29 = re.search(r"^\| DEC-029 \|.*$", dl, re.M)
 add("S04.1: DEC-029 recorded as owner instruction", bool(d29) and "| Owner | ACTIVE |" in d29.group(0) and "does not approve S04" in d29.group(0))
 add("S04.1: record correction RC-01 present", re.search(r"^\| RC-01 \|", dl, re.M) is not None)
+d28 = re.search(r"^\| DEC-028 \|.*$", dl, re.M)
+confirmed = bool(d28) and "S03 approval confirmed" in d28.group(0) and "| Owner | ACTIVE |" in d28.group(0)
 s3app = [f for f, t in FILES.items() if f.startswith("S03_") and re.search(r"^\| Status \| APPROVED \|", t, re.M)]
-add("S04.1: no S03 file claims APPROVED while approval is inferred", not s3app, ", ".join(s3app) or "none")
+s3n = len([f for f in FILES if f.startswith("S03_")])
+add("S04.1: S03 status matches the decision record (APPROVED only after explicit confirmation)",
+    (len(s3app) == s3n) if confirmed else (not s3app), f"confirmed={confirmed}; approved files={len(s3app)}/{s3n}")
 st = need("00_STAGE_STATUS.md")
-add("S04.1: stage status names S02 as latest explicitly approved baseline; no reliance on tags",
-    "Latest explicitly approved baseline | S02" in st and "No Git tags" in st)
+add("S04.1: stage status identifies baselines by SHA; no reliance on tags",
+    "No Git tags" in st and "2b5f83c65749a4c697782216026a6291a91aa2a1" in st and "961ae6ad31581eac633304d905cbab1761179b0b" in st)
 arch = need("S04_ARCHITECTURE.md")
 cls = {}
 for l in arch.splitlines():
@@ -381,7 +385,7 @@ add("S04.1: CP-5 and CP-6 classed Essential", cls.get("CP-5", "").startswith("Es
 add("S04.1: CP-1 to CP-4 not classed Essential", all(not cls.get(f"CP-{i}", "Essential").startswith("Essential") for i in range(1, 5)))
 for fn in ("FN-04", "FN-07"):
     row = re.search(r"^\| " + fn + r" \|.*$", arch, re.M).group(0)
-    add(f"S04.1: {fn} marked OPTIONAL", "OPTIONAL" in row)
+    add(f"S04.1: {fn} not in the essential funded scope", ("OPTIONAL" in row) or ("EXCLUDED" in row))
 fn05 = re.search(r"^\| FN-05 \|.*$", arch, re.M).group(0)
 add("S04.1: FN-05 uses the evidence-source interface and labelled substitute data", "evidence-source interface" in fn05 and "substitute" in fn05)
 add("S04.1: architecture separates actual availability from proposed substitutes",
@@ -390,8 +394,8 @@ s5 = need("DRAFT_SEC05_CLASSIFICATION.md")
 add("S04.1: Section 5 selections marked provisional",
     s5.count("Provisional selection:") == 5 and not re.search(r"\. Selected:", s5))
 sco = need("S04_SCOPE_OPTIONS.md")
-add("S04.1: scope recommendation PROVISIONAL with audit section",
-    "PROVISIONAL" in sco and "## 6. S04.1 audit" in sco and
+add("S04.1: scope audit section with the five distinctions; owner decision recorded where made",
+    ("PROVISIONAL" in sco or "DEC-028" in sco) and "## 6. S04.1 audit" in sco and
     all(k in sco for k in ["funding track versus technological maturity", "Current funded deliverables versus future",
                            "Proposed architecture versus implemented", "Prototype evaluation versus live",
                            "Proposed standards alignment versus certification"]))

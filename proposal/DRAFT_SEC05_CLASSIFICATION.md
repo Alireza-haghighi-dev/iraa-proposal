@@ -4,12 +4,12 @@
 |---|---|
 | Document ID | DRAFT_SEC05_CLASSIFICATION |
 | Version | 0.2 |
-| Status | SUBMITTED FOR GATE |
+| Status | APPROVED |
 | Stage | S04.1 |
 | Date | 2026-11-20 |
 | Depends on | F-05; FX-09; RF-011; ISS-001; ISS-016; S04_SCOPE_OPTIONS; CLM-046; DEC-029 |
 
-- **Draft status:** PROVISIONAL selection under the recommended Option B, which the owner has not yet decided (S04.1 audit, `S04_SCOPE_OPTIONS` §6). OWNER DECISION REQUIRED (ISS-001, ISS-016); confirmed at S06, edited in S08. The table keeps the form's two columns and five rows (RF-003); the selected option is written in the second column after the form's options.
+- **Draft status:** provisional selection adopted by the owner (DEC-028), subject to later consistency review (ISS-016). OWNER DECISION REQUIRED (ISS-001, ISS-016); confirmed at S06, edited in S08. The table keeps the form's two columns and five rows (RF-003); the selected option is written in the second column after the form's options.
 
 ## 5. General project classification
 

@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | S04_DATA_FLOWS_AND_INTERFACES |
 | Version | 1.1 |
-| Status | SUBMITTED FOR GATE |
+| Status | APPROVED |
 | Stage | S04.1 |
 | Date | 2026-11-20 |
 | Depends on | S04_ARCHITECTURE; S04_ASSUMPTIONS_AND_STANDARDS; ISS-005; ISS-008; ISS-009; ISS-033; ISS-037; DEC-029 |

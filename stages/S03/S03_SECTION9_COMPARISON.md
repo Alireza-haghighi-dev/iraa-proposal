@@ -4,12 +4,12 @@
 |---|---|
 | Document ID | S03_SECTION9_COMPARISON |
 | Version | 2.0 |
-| Status | SUBMITTED FOR GATE |
+| Status | APPROVED |
 | Stage | S04.1 |
 | Date | 2026-11-20 |
 | Depends on | S03_COMPARABLE_SYSTEMS_MATRIX; S03_PRIOR_ART_REGISTER; F-09; FX-10; QA-005; REF-02 §9; RC-01 |
 
-- **S04.1 status note (RC-01):** the S04 session set this file to APPROVED on the basis of an approval inferred from the wording of the owner's START_STAGE S04 instruction. That approval has not been recorded as an explicit owner decision, so the status is returned to SUBMITTED FOR GATE until the owner confirms it (DEC-028). Reviewed S03 content: commit 6780335.
+- **S04.1 status note (RC-01):** the S04 session set this file to APPROVED on the basis of an approval inferred from the wording of the owner's START_STAGE S04 instruction. That approval has not been recorded as an explicit owner decision, so the status was returned to SUBMITTED FOR GATE; the owner confirmed the approval in DEC-028 and the status is APPROVED. Reviewed S03 content: commit 6780335.
 - **Status of this text:** working input for S08, not proposal text. SRC and CLM identifiers stay visible until S08 Pass A converts them into the form's notes and URLs.
 - **Table schema:** the seven columns of REF-02 §9, unchanged (RF-003). Location descriptors are not researched (DEC-009) and remain `[LOCAL COMPLETION ONLY]`.
 - **Selection:** eight candidate rows; the form requires at least three. Final row selection is an owner decision (ISS-030). Recommended minimum set: rows 1–4 (the initiatives named in the requirements statement) plus row 5 or 6 as a research or open-tool comparator.
