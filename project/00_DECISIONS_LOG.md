@@ -37,6 +37,7 @@
 | DEC-019 | 2026-11-20 | S02 authorized, subject to a read-only check that the required S01 files exist at the S01 baseline commit (check passed). | Owner | ACTIVE | S02 |
 | DEC-020 | 2026-11-20 | The S01 baseline is commit 2b5f83c65749a4c697782216026a6291a91aa2a1. The tag push failure (HTTP 403) is not a blocker. Approved baselines are identified by commit SHA in `00_STAGE_STATUS.md`; a stage tag is added when the environment permits. | Owner | ACTIVE (closes ISS-027) | All stages |
 | DEC-021 | 2026-11-20 | The owner authorized committing and pushing the finished S02 deliverables before the S02 gate decision. Pushed files carry status `SUBMITTED FOR GATE` until approved. This modifies the "no push before approval" rule of DEC-018 for S02. | Owner | ACTIVE | S02 |
+| DEC-023 | 2026-11-20 | Fresh-thread stage workflow: the main Project conversation acts only as coordinator; each stage runs in one fresh thread that loads only `CLAUDE.md`, the stage status, the previous handoff and the registers it lists; workflow commands `START_STAGE` and `CLOSE_STAGE` defined in `CLAUDE.md`. Quality requirements unchanged. | Owner | ACTIVE | All later stages |
 
 ## Pending owner decision
 

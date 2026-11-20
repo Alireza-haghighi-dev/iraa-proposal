@@ -32,6 +32,14 @@ Entry point for every session on the Intelligent Requirements Assessment Assista
 
 English only. Follow `project/03_STYLE_GUIDE.md` in every file: specific, evidenced, no promotional language, no filler. Revise content, not synonyms.
 
-## After owner approval of a stage
+## Stage threads (DEC-023)
 
-Run the stage QC script and the pre-commit safety scan, commit to `main`, push, record the approved commit SHA in `00_STAGE_STATUS.md`, add a `S0X-approved` tag if the environment permits it, and report the links in chat.
+- The main Project conversation is the coordinator only: approvals, links, blockers, decisions.
+- Each stage runs in one fresh thread: S01 — Research Foundation, S02 — Scientific Literature, S03 — Comparable Systems, S04 — Product Architecture, S05 — Feasibility and Evaluation, S06 — Work Packages, S07 — Technical Methodology, S08 — Proposal Drafting, S09 — Independent Review, S10 — Final Integration.
+- A stage thread loads only the start-of-session files above. No earlier transcripts, full research reports or whole-repository reads unless a specific verification needs them.
+- Focused subagents may be used when they materially cut context. Their sources enter the source log only with a DOI or URL and the supporting statement, and the stage thread spot-checks them.
+
+Workflow commands (conventions, not slash commands):
+
+- `START_STAGE SXX`: after the previous stage is approved, the coordinator records the approval (DEC entry, stage files set to `APPROVED`, commit, push, SHA in `00_STAGE_STATUS.md`) and opens a fresh thread for SXX. The thread runs the start-of-session steps.
+- `CLOSE_STAGE SXX`: finish deliverables, run the stage QC script and pre-commit safety scan, update living registers and the handoff, commit and push as `SUBMITTED FOR GATE`, record the commit SHA, report results and open issues to the coordinator, then stop.
