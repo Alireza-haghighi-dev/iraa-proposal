@@ -1,0 +1,26 @@
+# Packages and exports
+*.zip
+*.docx
+*.pdf
+exports/
+
+# Scratch and local-only material
+scratch/
+local/
+*.local.md
+
+# Credentials
+.env
+*.pem
+*.key
+
+# Python
+__pycache__/
+*.pyc
+
+# Editor and OS files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
