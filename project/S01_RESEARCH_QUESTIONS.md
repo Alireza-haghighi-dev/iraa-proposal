@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | S01_RESEARCH_QUESTIONS |
 | Version | 2.0 |
-| Status | SUBMITTED FOR GATE |
+| Status | APPROVED |
 | Stage | S02 |
 | Date | 2026-11-20 |
 | Depends on | S01_REQUIREMENTS_REGISTER; DEC-002; S02_RESEARCH_SYNTHESIS |

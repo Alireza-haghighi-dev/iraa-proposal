@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | 00_OPEN_ISSUES_REGISTER |
 | Version | 2.0 |
-| Status | SUBMITTED FOR GATE |
+| Status | APPROVED |
 | Stage | S02 |
 | Date | 2026-11-20 |
 | Depends on | REF-01; REF-02; REF-03; S01_REQUIREMENTS_REGISTER; S02_RESEARCH_SYNTHESIS |
@@ -63,6 +63,7 @@
 | ID | Issue | Origin | Type | Blocks | Target | Status |
 |---|---|---|---|---|---|---|
 | ISS-028 | No public benchmark of organizational need/challenge submissions and no study of retrieval from need statements to patents were found. Every performance figure must come from the project's own evaluation or be labelled as a proxy result. | S02 matrix rows 4.3; synthesis §5; CLM-025 | OPEN | S05 gate (evaluation design must address it) | S05 | OPEN |
+| ISS-029 | S02 research limitations awaiting independent verification: most sources checked at abstract or landing-page depth; mitigators of automation bias (SRC-023) unverified; CLM-025 is a negative search result. | S02_QC_REPORT §4–§5; DEC-022 | OPEN | S08 gate (Pass A full-text checks) and S09 (isolated review) | S08–S09 | OPEN |
 
 ## Closed issues
 

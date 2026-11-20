@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | 00_STAGE_STATUS |
 | Version | 2.0 |
-| Status | SUBMITTED FOR GATE |
+| Status | APPROVED |
 | Stage | S02 |
 | Date | 2026-11-20 |
 | Depends on | 00_DECISIONS_LOG; 00_OPEN_ISSUES_REGISTER; S02_HANDOFF |
@@ -13,18 +13,18 @@
 
 | Item | Value |
 |---|---|
-| Current stage | S02 delivered; awaiting owner gate decision |
-| Latest approved baseline | S01: commit 2b5f83c65749a4c697782216026a6291a91aa2a1 (DEC-020; no tag) |
-| S02 state | Delivered and pushed as `SUBMITTED FOR GATE` (DEC-021); not yet approved |
+| Current stage | S02 approved; S03 authorized to start in a new chat (DEC-022, DEC-024) |
+| Latest approved baseline | S02: commit 34a7745b9cdb8d665edd53ec7c06fa37fd1966e9 (reviewed content; DEC-022). Later commits before S03 change only workflow and status records. S01: commit 2b5f83c65749a4c697782216026a6291a91aa2a1 |
+| S02 state | APPROVED (DEC-022); open limitations in ISS-029 |
 | Next stage | S03 — Comparable Systems and Prior-Art Analysis |
-| S03 may start | Only after owner approval of S02 and authorization of S03 (DEC-022, proposed) |
+| S03 may start | Yes, in a new chat in the Claude Project (DEC-022, DEC-024) |
 
 ## Stage register
 
 | Stage | Title | State | Gate decision |
 |---|---|---|---|
 | S01 | Research Foundation and Requirements Mapping | Approved; baseline commit 2b5f83c | CONDITIONAL PASS (DEC-015), then APPROVED (DEC-016) |
-| S02 | Scientific and Technical Literature Research | Delivered (pushed for review) | Pending (DEC-022) |
+| S02 | Scientific and Technical Literature Research | Approved; content commit 34a7745 | APPROVED (DEC-022) |
 | S03 | Comparable Systems and Prior-Art Analysis | Not started | — |
 | S04 | Product Definition and Technical Architecture | Not started | — |
 | S05 | Technical Feasibility and Evaluation Design | Not started | — |

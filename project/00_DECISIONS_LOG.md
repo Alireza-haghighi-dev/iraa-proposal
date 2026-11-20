@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | 00_DECISIONS_LOG |
 | Version | 2.0 |
-| Status | SUBMITTED FOR GATE |
+| Status | APPROVED |
 | Stage | S02 |
 | Date | 2026-11-20 |
 | Depends on | Owner instructions as recorded in each entry |
@@ -38,9 +38,11 @@
 | DEC-020 | 2026-11-20 | The S01 baseline is commit 2b5f83c65749a4c697782216026a6291a91aa2a1. The tag push failure (HTTP 403) is not a blocker. Approved baselines are identified by commit SHA in `00_STAGE_STATUS.md`; a stage tag is added when the environment permits. | Owner | ACTIVE (closes ISS-027) | All stages |
 | DEC-021 | 2026-11-20 | The owner authorized committing and pushing the finished S02 deliverables before the S02 gate decision. Pushed files carry status `SUBMITTED FOR GATE` until approved. This modifies the "no push before approval" rule of DEC-018 for S02. | Owner | ACTIVE | S02 |
 | DEC-023 | 2026-11-20 | Fresh-thread stage workflow: the main Project conversation acts only as coordinator; each stage runs in one fresh thread that loads only `CLAUDE.md`, the stage status, the previous handoff and the registers it lists; workflow commands `START_STAGE` and `CLOSE_STAGE` defined in `CLAUDE.md`. Quality requirements unchanged. | Owner | ACTIVE | All later stages |
+| DEC-022 | 2026-11-20 | S02 approved for workflow progression; reviewed content is commit 34a7745b9cdb8d665edd53ec7c06fa37fd1966e9. Unresolved research limitations stay recorded for later independent verification (ISS-029). S03 is authorized to start in a new chat. | Owner | ACTIVE | S02, S03 |
+| DEC-024 | 2026-11-20 | Manual fresh-session workflow: every stage runs in a new chat inside the same Claude Project, opened by the owner, using the repository and the previous handoff. No scheduled tasks. Amends DEC-023. | Owner | ACTIVE | All later stages |
 
 ## Pending owner decision
 
 | ID | Decision requested | Recommended |
 |---|---|---|
-| DEC-022 (proposed) | S02 gate outcome and authorization to begin S03 | Approve S02; begin S03 |
+| DEC-025 (proposed) | S03 gate outcome and authorization to begin S04 | Decided after S03 delivery |

@@ -41,5 +41,5 @@ English only. Follow `project/03_STYLE_GUIDE.md` in every file: specific, eviden
 
 Workflow commands (conventions, not slash commands):
 
-- `START_STAGE SXX`: after the previous stage is approved, the coordinator records the approval (DEC entry, stage files set to `APPROVED`, commit, push, SHA in `00_STAGE_STATUS.md`) and opens a fresh thread for SXX. The thread runs the start-of-session steps.
+- `START_STAGE SXX`: after the previous stage is approved, the coordinator records the approval (DEC entry, stage files set to `APPROVED`, commit, push, SHA in `00_STAGE_STATUS.md`). The owner then opens a new chat in the Claude Project and sends `START_STAGE SXX`; that chat runs the start-of-session steps. No scheduled tasks (DEC-024).
 - `CLOSE_STAGE SXX`: finish deliverables, run the stage QC script and pre-commit safety scan, update living registers and the handoff, commit and push as `SUBMITTED FOR GATE`, record the commit SHA, report results and open issues to the coordinator, then stop.

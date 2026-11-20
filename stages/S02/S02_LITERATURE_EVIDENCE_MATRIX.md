@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | S02_LITERATURE_EVIDENCE_MATRIX |
 | Version | 1.0 |
-| Status | SUBMITTED FOR GATE |
+| Status | APPROVED |
 | Stage | S02 |
 | Date | 2026-11-20 |
 | Depends on | S01_RESEARCH_QUESTIONS; 02_SOURCE_LOG (SRC-001 to SRC-039); DEC-002 |

@@ -9,7 +9,7 @@ This repository contains proposal-development records, not software. No product 
 | Stage | Title | State |
 |---|---|---|
 | S01 | Research Foundation and Requirements Mapping | Approved (baseline commit `2b5f83c`) |
-| S02 | Scientific and Technical Literature Research | Submitted for gate review |
+| S02 | Scientific and Technical Literature Research | Approved (commit `34a7745`) |
 | S03–S10 | Comparable systems through final integration | Not started |
 
 Current position: `project/00_STAGE_STATUS.md`.

@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | 02_CLAIM_REGISTER |
 | Version | 2.0 |
-| Status | SUBMITTED FOR GATE |
+| Status | APPROVED |
 | Stage | S02 |
 | Date | 2026-11-20 |
 | Depends on | REF-01; REF-02; 02_SOURCE_LOG; 02_SOURCE_LOG (SRC-001 to SRC-039) |

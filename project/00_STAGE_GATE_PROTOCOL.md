@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | 00_STAGE_GATE_PROTOCOL |
 | Version | 2.0 |
-| Status | SUBMITTED FOR GATE |
+| Status | APPROVED |
 | Stage | S02 |
 | Date | 2026-11-20 |
 | Depends on | 00_PROJECT_RULES; 03_STYLE_GUIDE; REF-03 |

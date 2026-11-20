@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | S02_QC_REPORT |
 | Version | 1.0 |
-| Status | SUBMITTED FOR GATE |
+| Status | APPROVED |
 | Stage | S02 |
 | Date | 2026-11-20 |
 | Depends on | All S02 deliverables; updated living documents; S02_QC_CHECK.py; S02_QC_CHECK_OUTPUT.txt |
