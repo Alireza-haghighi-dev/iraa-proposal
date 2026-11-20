@@ -15,7 +15,7 @@
 |---|---|
 | Current stage | S03 submitted for gate (DEC-025); awaiting owner decision DEC-026 |
 | Latest approved baseline | S02: commit 961ae6ad31581eac633304d905cbab1761179b0b (approval record; reviewed content 34a7745b9cdb8d665edd53ec7c06fa37fd1966e9; DEC-022). S01: commit 2b5f83c65749a4c697782216026a6291a91aa2a1 |
-| S03 submitted package | Content commit: S03_CONTENT_SHA_PENDING |
+| S03 submitted package | Content commit: 67803355fe0a9fd7ef9271718adb5f4b52459315 |
 | S03 state | SUBMITTED FOR GATE; open limitations in ISS-030 to ISS-032 |
 | Next stage | S04 — Product Definition and Technical Architecture |
 | S04 may start | No. Requires DEC-026 and a new chat (DEC-024) |
