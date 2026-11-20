@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | 00_PROJECT_RULES |
 | Version | 4.0 |
-| Status | SUBMITTED FOR GATE |
+| Status | APPROVED |
 | Stage | S05 |
 | Date | 2026-11-20 |
 | Depends on | 00_DECISIONS_LOG; 00_STAGE_GATE_PROTOCOL; 03_STYLE_GUIDE |

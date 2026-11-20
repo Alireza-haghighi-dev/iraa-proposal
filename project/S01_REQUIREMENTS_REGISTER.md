@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | S01_REQUIREMENTS_REGISTER |
 | Version | 3.0 |
-| Status | SUBMITTED FOR GATE |
+| Status | APPROVED |
 | Stage | S05 |
 | Date | 2026-11-20 |
 | Depends on | REF-01; REF-02; DEC-002; DEC-029; S05_EVALUATION_DESIGN |

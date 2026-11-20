@@ -4,11 +4,12 @@
 |---|---|
 | Document ID | DRAFT_SEC08_FEATURES |
 | Version | 0.3 |
-| Status | SUBMITTED FOR GATE |
+| Status | APPROVED |
 | Stage | S05 |
 | Date | 2026-11-20 |
 | Depends on | F-08; R1–R4; C1; C2; QA-002; QA-004; ISS-001; ISS-003; ISS-009; ISS-010; ISS-037; DEC-029; S04_ARCHITECTURE; S04_DATA_FLOWS_AND_INTERFACES; S04_ASSUMPTIONS_AND_STANDARDS; S05_EVALUATION_DESIGN; ISS-039 |
 
+- **Gate condition (DEC-031):** S05 passed conditionally. Mandatory corrections ISS-042 to ISS-045 apply to this file and must be completed before the S07 evaluation-methodology freeze; until then the affected rows are not final.
 - **Draft status:** narrowed Option B, approved as the current planning scope (DEC-028). Feature numbers 3 and 6 were removed with grouping and summaries; the remaining numbers are kept until S08 renumbers. MS-07 and MS-09 apply only if a later decision brings summaries or mandatory labelling back into scope. The form asks design and prototyping projects for a table of measurable specifications and a separation between measurable specifications and functional features (REF-02 §8). The form gives no column schema for this table; the columns below are this project's. S05 set the metric, test condition and target of every active row (`stages/S05/S05_EVALUATION_DESIGN` §4, §8). All targets are untested. Retrieval targets are stated relative to a lexical baseline because no defensible absolute value exists before evaluation; absolute floors are fixed after a pilot (PV-11). Numeric planning values (PV-07, PV-09) await owner confirmation (ISS-039). Every result will be reported with the data track behind it: sponsor data (Track S) or substitute data (Track P). MS-10 was added in S05 to make source and evidence attribution testable.
 
 ## 8. Main features and general/technical specifications

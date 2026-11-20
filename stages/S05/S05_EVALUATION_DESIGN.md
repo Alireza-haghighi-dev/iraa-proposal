@@ -4,11 +4,12 @@
 |---|---|
 | Document ID | S05_EVALUATION_DESIGN |
 | Version | 1.0 |
-| Status | SUBMITTED FOR GATE |
+| Status | APPROVED |
 | Stage | S05 |
 | Date | 2026-11-20 |
 | Depends on | S01_REQUIREMENTS_REGISTER §1, §1a; S04_ARCHITECTURE; S04_DATA_FLOWS_AND_INTERFACES DF-08; S04_ASSUMPTIONS_AND_STANDARDS §1; S05_DATA_AVAILABILITY_AND_SUBSTITUTES; S05_FEASIBILITY_AND_RISKS; CLM-025 to CLM-028; CLM-045; CLM-047 to CLM-050; DEC-028; DEC-029 |
 
+- **Gate condition (DEC-031):** S05 passed conditionally. Mandatory corrections ISS-042 to ISS-045 apply to this file and must be completed before the S07 evaluation-methodology freeze; until then the affected rows are not final.
 - **Status of content:** PROPOSED evaluation design. No test has been run, no dataset has been obtained and no result exists. Every value in §7 is a planning value (ASSUMPTION, AS-12) that the owner can change; every entry in §8 is a target, not a result.
 - **Scope:** the narrowed Option B essential set (DEC-028). Tests for excluded options (FN-04 grouping, FN-07 summaries, mandatory CP-2) are not designed here; MS-07 and MS-09 stay conditional in the Section 8 draft.
 - **IDs defined here:** ET (evaluation test), PV (planning value). Data candidates (DS), data requirements (DR), feasibility tests (FT) and risks (RSK) are defined in the two companion files.

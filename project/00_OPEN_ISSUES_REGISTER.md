@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | 00_OPEN_ISSUES_REGISTER |
 | Version | 5.0 |
-| Status | SUBMITTED FOR GATE |
+| Status | APPROVED |
 | Stage | S05 |
 | Date | 2026-11-20 |
 | Depends on | REF-01; REF-02; REF-03; S01_REQUIREMENTS_REGISTER; S02_RESEARCH_SYNTHESIS; S03_COMPARABLE_SYSTEMS_MATRIX; S03_PRIOR_ART_REGISTER; S04_SCOPE_OPTIONS; S04_ASSUMPTIONS_AND_STANDARDS; DEC-029; S05_EVALUATION_DESIGN; S05_DATA_AVAILABILITY_AND_SUBSTITUTES; S05_FEASIBILITY_AND_RISKS |
@@ -89,7 +89,7 @@
 | ISS-037 | Boundary between R2 and R4. After the DEC-029 correction, R2 (existing solution examples for a submitted need) and R4 (external patents and solution examples) can overlap. Unresolved: whether R2 covers sponsor-held records only, external examples as well, or both, and how results are kept apart in the assessment record. The architecture keeps both behind one evidence-source interface with a source-type tag, so either answer fits without redesign. S05: R2 test design is identical for sponsor-held and external sources; source type is a reported condition (ET-03, ET-05). | R2, R4, DEC-029 | ODR | S05 gate (evaluation design for R2) | S05 | OPEN |
 
 
-## I. Issues raised in S05
+## I. Issues raised in S05 and at the S05 gate
 
 | ID | Issue | Origin | Type | Blocks | Target | Status |
 |---|---|---|---|---|---|---|
@@ -97,6 +97,10 @@
 | ISS-039 | Owner confirmation of the numeric planning values PV-01 to PV-11 (query counts, pool depth, agreement threshold, minimum difference, latency target, corpus brackets). | S05_EVALUATION_DESIGN §7; AS-12 | ODR | S06 effort sizing (non-blocking: AS-12 applies) | S06 | OPEN |
 | ISS-040 | Choice of patent service(s) for R4: EPO OPS, PatentsView (key issuance uncertain, SRC-080), Lens (terms and plan not read) or PQAI (API terms not verified). | S05_FEASIBILITY_AND_RISKS §2; ISS-006; RSK-06 | ODR | S07 (tool selection) | S06–S07 | OPEN |
 | ISS-041 | Training-data terms of the candidate models and the repository licence files of Pyserini and Faiss were not read; to be recorded before versions are fixed. | S05_FEASIBILITY_AND_RISKS §1.1; QA-010 | OPEN | S07 gate | S07 | OPEN |
+| ISS-042 | Mandatory correction (DEC-031, item 1): MS-03 currently reads "not lower than unaided keyword queries", tested with the §6 superiority test. A non-significant difference is not evidence of non-inferiority. Correct by either a pre-declared non-inferiority test with a stated margin or a restated target that does not claim non-inferiority. | DEC-031; S05_EVALUATION_DESIGN §4 (ET-09), §8; DRAFT_SEC08_FEATURES MS-03 | OPEN (mandatory correction) | S07 evaluation-methodology freeze | S06–S07 | OPEN |
+| ISS-043 | Mandatory correction (DEC-031, item 2): ET-01b and ET-04 define "nothing relevant" from the judged pool. A pool without a grade ≥ 2 item does not show that the corpus holds none. Correct the definitions, metric names (false-reassurance, false-match) and reporting so that pool-based absence is stated as such, and add a method for estimating corpus-level absence where it is claimed. | DEC-031; S05_EVALUATION_DESIGN §4; CLM-049 | OPEN (mandatory correction) | S07 evaluation-methodology freeze | S06–S07 | OPEN |
+| ISS-044 | Mandatory correction (DEC-031, item 3): verify the licence of the original CQADupStack dataset on its own distribution, separately from the Apache 2.0 licence of any code repository or third-party mirror (SRC-079 is T3 and not sufficient). DS-01 and DS-02 stay unusable until this is done. Extends ISS-038. | DEC-031; S05_DATA_AVAILABILITY_AND_SUBSTITUTES §4; ISS-038 | OPEN (mandatory correction) | S07 evaluation-methodology freeze | S06–S07 | OPEN |
+| ISS-045 | Mandatory correction (DEC-031, item 4): reassess whether MS-01 and MS-02 should require statistically supported outperformance of BM25 as a mandatory acceptance criterion, or whether BM25 should serve as a reported reference with acceptance defined otherwise (for example non-inferiority plus absolute floors). Record the reasoning and any owner decision. | DEC-031; S05_EVALUATION_DESIGN §1 rule 4, §8; CLM-057 | OPEN (mandatory correction; may need an owner decision) | S07 evaluation-methodology freeze | S06–S07 | OPEN |
 
 ## Closed issues
 

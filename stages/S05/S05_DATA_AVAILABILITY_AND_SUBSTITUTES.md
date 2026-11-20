@@ -4,11 +4,12 @@
 |---|---|
 | Document ID | S05_DATA_AVAILABILITY_AND_SUBSTITUTES |
 | Version | 1.0 |
-| Status | SUBMITTED FOR GATE |
+| Status | APPROVED |
 | Stage | S05 |
 | Date | 2026-11-20 |
 | Depends on | S05_EVALUATION_DESIGN; S04_ASSUMPTIONS_AND_STANDARDS §1 (AS-01, AS-02, AS-09, AS-10); ISS-002; ISS-003; ISS-007; ISS-012; ISS-023; ISS-028; ISS-033; ISS-037; ISS-038; CLM-025; CLM-045; DEC-029 |
 
+- **Gate condition (DEC-031):** S05 passed conditionally. Mandatory corrections ISS-042 to ISS-045 apply to this file and must be completed before the S07 evaluation-methodology freeze; until then the affected rows are not final.
 - **Purpose:** state what data each test needs, what the project would ask the sponsor for, what happens under each availability outcome, and which public or constructed substitutes could stand in. Sponsor data and substitute data are kept in separate tracks throughout (`S05_EVALUATION_DESIGN` §1, rule 1).
 - **What is not claimed:** no sponsor dataset is available to the project, no permission has been given, and no substitute dataset has been selected. Candidates in §4 are options for the owner, each with an open licence or structure check.
 - **IDs defined here:** DR (data requirement), DS (dataset candidate).

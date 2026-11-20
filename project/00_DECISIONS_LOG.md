@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | 00_DECISIONS_LOG |
 | Version | 5.0 |
-| Status | SUBMITTED FOR GATE |
+| Status | APPROVED |
 | Stage | S05 |
 | Date | 2026-11-20 |
 | Depends on | Owner instructions as recorded in each entry |
@@ -50,6 +50,7 @@
 
 | DEC-028 | 2026-11-20 | Owner gate decision on S03, S04 and S04.1. (1) S03 approval confirmed (settles RC-01). (2) Corrected S04 and S04.1 deliverables accepted for progression to S05. (3) Narrowed Option B approved as the CURRENT PLANNING SCOPE: laboratory prototype under technology development, with design, build and test activities; no live-platform integration or production deployment is committed (ISS-001). (4) Provisional Section 5 classification adopted, subject to later consistency review (ISS-016). (5) R1 new-versus-stored comparison is essential; optional whole-collection grouping (FN-04, CP-4) is excluded from the funded scope (ISS-004). (6) Decision logging (FN-10) included, without automatic retraining. (7) Generated summaries (FN-07, CP-3) and mandatory per-candidate labelling (CP-2) are outside the essential funded scope. (8) Essential human approval and re-approval controls (CP-5, CP-6) preserved. (9) R2/R4 source boundaries, dataset availability, assessment fields, languages and external disclosure permissions stay open where not established (ISS-002, ISS-003, ISS-005, ISS-007, ISS-033, ISS-037). (10) No confidential submission text may be sent to external services without the required authorization. S05 is authorized to start in a new chat (DEC-024); it is not started by this decision. | Owner | ACTIVE | S03, S04, S04.1; ISS-001, ISS-004, ISS-016, ISS-034; S05 |
 | DEC-030 | 2026-11-20 | Owner instruction `START_STAGE S05` (approved baseline a595df1, DEC-028): execute S05 Technical Feasibility and Evaluation Design with minimum necessary context, using the S04.1 handoff and the corrected R2 (DEC-029; the obsolete reading must not be restored). Stated in the instruction: design explicit tests for R1, R2, R3 and R4; separate sponsor data from substitute test data; do not invent datasets, test results, performance numbers or sponsor permissions; preserve unresolved owner decisions and use labelled, reversible planning assumptions; produce the deliverables, update registers, run QC, commit and push, and write the next-stage handoff; do not start S06. This entry authorizes pushing the S05 package as SUBMITTED FOR GATE; it does not approve S05. | Owner | ACTIVE | S05; AS-09 to AS-12 |
+| DEC-031 | 2026-11-20 | Owner gate decision on S05: CONDITIONAL PASS. S05 (content commit 83331af; status record 5e75b5e) approved for progression to S06, subject to four mandatory corrections from an independent audit, each to be completed before the S07 evaluation-methodology freeze: (1) MS-03 must not treat a non-significant superiority test as evidence of non-inferiority (ISS-042); (2) ET-01b and ET-04 must distinguish "no relevant item in the judged pool" from absence in the entire corpus (ISS-043); (3) the licence of the original CQADupStack dataset must be verified separately from the Apache 2.0 licence of any code repository (ISS-044); (4) whether MS-01 and MS-02 should require outperformance of BM25 as a mandatory acceptance criterion must be reassessed (ISS-045). Valid S05 research and all unresolved owner assumptions (AS-01 to AS-12, PV-01 to PV-11) are preserved. S06 is authorized to start in a new chat (DEC-024); it is not started by this decision. | Owner | ACTIVE | S05; MS-01 to MS-03; ET-01b; ET-04; DS-01; S06; S07 |
 
 ## Record corrections
 
@@ -61,4 +62,4 @@
 
 ## Pending owner decision
 
-S05 gate. Items for the owner at the gate: ISS-002, ISS-003, ISS-037 (data and R2 sources), ISS-033 (external disclosure), ISS-038 (substitute licences and DS-05), ISS-039 (planning values PV-01 to PV-11), ISS-040 (patent service choice).
+None for S05 (DEC-031). Mandatory corrections ISS-042 to ISS-045 must close before the S07 evaluation-methodology freeze. The next decision is the S06 gate.
