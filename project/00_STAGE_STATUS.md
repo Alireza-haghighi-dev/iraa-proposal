@@ -17,7 +17,7 @@
 | Latest explicitly approved baseline | S02: commit 961ae6ad31581eac633304d905cbab1761179b0b (reviewed content 34a7745b9cdb8d665edd53ec7c06fa37fd1966e9; DEC-022). S01: commit 2b5f83c65749a4c697782216026a6291a91aa2a1 (DEC-016, DEC-020) |
 | S03 package | Content commit 67803355fe0a9fd7ef9271718adb5f4b52459315, status record 9a7a95e. Approval INFERRED from instruction wording (DEC-026, RC-01); explicit owner confirmation pending. S03 files carry SUBMITTED FOR GATE |
 | S04 submitted package | Content commit ea246cef29c912dbd5a7b205b3a3a64f7f926597; corrected in place by S04.1 |
-| S04.1 package | Commit SHA reported to the owner after push and recorded at the next status update (a commit cannot contain its own SHA) |
+| S04.1 package | Content commit: 4c3ddda872d2c8782a2994e1a122923104e371c7 (SUBMITTED FOR GATE) |
 | Baseline identification | By commit SHA only (DEC-020). No Git tags exist in the repository |
 | Next stage | S05 — Technical Feasibility and Evaluation Design |
 | S05 may start | No. Requires DEC-028 (S04 gate, confirmation of S03, decision on ISS-001) and a new chat (DEC-024) |
