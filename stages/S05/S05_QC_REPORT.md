@@ -60,7 +60,7 @@ No Critical or Major defect is open.
 | Traceability | Part G added; Part E rows for RQ-06, RQ-14, RQ-15 |
 | RF/QA status | QA-002 and QA-004 ADDRESSED (design); QA-010 SCHEDULED for S07 |
 | Skill checkpoint | SKL-006 (no Skill used) |
-| Stage status | Updated; content SHA recorded after commit |
+| Stage status | Updated; content commit 83331af recorded |
 | S05 exit criterion | Metrics, baselines, dataset needs, procedures and acceptance criteria defined and labelled as targets; ISS-002 carries explicit assumption AS-09 |
 
 **Recommended gate outcome:** PASS, with the owner decisions listed in `S05_HANDOFF` taken at or after the gate. None of them blocks S06 because AS-01 to AS-12 cover each one.
