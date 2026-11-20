@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | S03_COMPARABLE_SYSTEMS_MATRIX |
 | Version | 1.0 |
-| Status | SUBMITTED FOR GATE |
+| Status | APPROVED |
 | Stage | S03 |
 | Date | 2026-11-20 |
 | Depends on | S01_REQUIREMENTS_REGISTER; S01_RESEARCH_QUESTIONS (RQ-10, RQ-11); 02_SOURCE_LOG; 02_CLAIM_REGISTER; QA-005 |

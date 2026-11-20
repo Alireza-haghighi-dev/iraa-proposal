@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | S03_HANDOFF |
 | Version | 1.0 |
-| Status | SUBMITTED FOR GATE |
+| Status | APPROVED |
 | Stage | S03 |
 | Date | 2026-11-20 |
 | Depends on | All S03 deliverables; DEC-022; DEC-025 |

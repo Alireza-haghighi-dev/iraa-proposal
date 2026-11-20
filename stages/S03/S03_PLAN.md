@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | S03_PLAN |
 | Version | 1.0 |
-| Status | SUBMITTED FOR GATE |
+| Status | APPROVED |
 | Stage | S03 |
 | Date | 2026-11-20 |
 | Depends on | S02_HANDOFF; S01_RESEARCH_QUESTIONS; DEC-022; DEC-024; DEC-025 |

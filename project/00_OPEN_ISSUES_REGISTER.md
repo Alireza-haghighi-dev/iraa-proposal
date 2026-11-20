@@ -3,11 +3,11 @@
 | Field | Value |
 |---|---|
 | Document ID | 00_OPEN_ISSUES_REGISTER |
-| Version | 3.0 |
+| Version | 4.0 |
 | Status | SUBMITTED FOR GATE |
-| Stage | S03 |
+| Stage | S04 |
 | Date | 2026-11-20 |
-| Depends on | REF-01; REF-02; REF-03; S01_REQUIREMENTS_REGISTER; S02_RESEARCH_SYNTHESIS; S03_COMPARABLE_SYSTEMS_MATRIX; S03_PRIOR_ART_REGISTER |
+| Depends on | REF-01; REF-02; REF-03; S01_REQUIREMENTS_REGISTER; S02_RESEARCH_SYNTHESIS; S03_COMPARABLE_SYSTEMS_MATRIX; S03_PRIOR_ART_REGISTER; S04_SCOPE_OPTIONS; S04_ASSUMPTIONS_AND_STANDARDS |
 
 - **Type key:** **ODR** = OWNER DECISION REQUIRED; **OPEN** = information or evidence missing; **LOCAL** = local completion only, not researched in the working package
 - **Blocking key:** The stage or gate that cannot close until the issue is resolved or an explicit assumption is approved
@@ -16,16 +16,16 @@
 
 | ID | Issue | Origin | Type | Blocks | Target | Status |
 |---|---|---|---|---|---|---|
-| ISS-001 | Development level of the current project: limited feasibility study / proof of concept versus a stronger prototype (laboratory, engineering, pilot or beta). Determines Sections 1, 5, 7, 8, 11 and 13 scope. | RF-011, QA-003, F-01, F-05 | ODR | S04 gate | S04 | OPEN |
-| ISS-004 | Scope of R1. "Similarities among requirements already stored" can mean (a) comparing a new submission against stored ones, (b) grouping or de-duplicating the stored collection, or both. | R1 | ODR | S04 gate (non-blocking for S02, which covers both) | S04 | OPEN |
-| ISS-005 | Content of an "assessment". The source does not state the assessment criteria, categories, scores or decision outcomes that human assessors currently produce, nor which steps the assistant should support. | CTX-01, R3, Req. §4, §11 | OPEN | S04 gate | S04 | OPEN |
-| ISS-003 | Existence and nature of the "approved internal collection" named in R2. REF-01 does not establish that it exists as a populated, machine-readable dataset. Unknown: whether it exists in that form, its content type, format, size, approval owner and access method. | R2, CLM-012 | OPEN | S04 gate | S04 | OPEN |
-| ISS-006 | External sources for R4: which patent and "solution example" sources are acceptable; access terms, licensing and cost. Jurisdiction-specific patent sources are deferred to owner-side completion. | R4, DEC-009 | OPEN | S05 gate | S04–S05 | OPEN |
-| ISS-007 | Language(s) of platform submissions and of the internal collection. Not stated; must not be inferred. Activates or retires conditional RQ-07. | C6, RQ-07 | ODR | S04 gate | S04 | OPEN |
-| ISS-008 | Platform integration: whether the platform offers an API, database export or file export; read/write expectations for the assistant. The proposal must not assume an existing integration. | Req. §4, §11 | OPEN | S04 gate | S04 | OPEN |
-| ISS-009 | Data-handling restrictions: whether submission text may be processed by externally hosted AI services or must stay within sponsor-controlled infrastructure. | C2 | ODR | S04 gate | S04 | OPEN |
-| ISS-010 | Interpretation of C2: whether ISO/IEC 20000 and ISO/IEC 27001 mean alignment of the assistant's design, conformity with an existing certified management system, or certification; which controls are in scope. | C2 | ODR | S04 gate | S04 | OPEN |
-| ISS-016 | Section 5 classification: project type, rationale (demand-driven versus documented need), maturity, execution stages, relationship to other projects. Depends on ISS-001. | F-05, RF-011 | ODR | S04 gate (provisional), S06 (confirmed) | S04–S06 | OPEN |
+| ISS-001 | Development level of the current project: limited feasibility study / proof of concept versus a stronger prototype (laboratory, engineering, pilot or beta). Determines Sections 1, 5, 7, 8, 11 and 13 scope. S04: options A–D compared; Option B recommended (S04_SCOPE_OPTIONS §4); decision still with the owner. | RF-011, QA-003, F-01, F-05 | ODR | S04 gate | S04 | OPEN |
+| ISS-004 | Scope of R1. "Similarities among requirements already stored" can mean (a) comparing a new submission against stored ones, (b) grouping or de-duplicating the stored collection, or both. S04: architecture covers both (FN-03, FN-04); recommendation is both. | R1 | ODR | S04 gate (non-blocking for S02, which covers both) | S04 | OPEN |
+| ISS-005 | Content of an "assessment". The source does not state the assessment criteria, categories, scores or decision outcomes that human assessors currently produce, nor which steps the assistant should support. S04: configurable template (AD-07) avoids guessing; fields still needed from the owner. | CTX-01, R3, Req. §4, §11 | OPEN | S04 gate | S04 | OPEN |
+| ISS-003 | Existence and nature of the "approved internal collection" named in R2. REF-01 does not establish that it exists as a populated, machine-readable dataset. Unknown: whether it exists in that form, its content type, format, size, approval owner and access method. S04: planning assumption AS-02 (treated as unavailable; proxy collection). | R2, CLM-012 | OPEN | S05 gate (the S04 gate proceeds on AS-02) | S04–S05 | OPEN |
+| ISS-006 | External sources for R4: which patent and "solution example" sources are acceptable; access terms, licensing and cost. Jurisdiction-specific patent sources are deferred to owner-side completion. S04: AS-08; connector interface IF-03 is source-agnostic. | R4, DEC-009 | OPEN | S05 gate | S04–S05 | OPEN |
+| ISS-007 | Language(s) of platform submissions and of the internal collection. Not stated; must not be inferred. Activates or retires conditional RQ-07. S04: AS-06; language tag stored, no translation step (AD-12). | C6, RQ-07 | ODR | S05 gate (the S04 gate proceeds on AS-06) | S04–S05 | OPEN |
+| ISS-008 | Platform integration: whether the platform offers an API, database export or file export; read/write expectations for the assistant. The proposal must not assume an existing integration. S04: AS-03 (file export, read-only); adapter specified as IF-07. | Req. §4, §11 | OPEN | S05 gate (the S04 gate proceeds on AS-03) | S04–S05 | OPEN |
+| ISS-009 | Data-handling restrictions: whether submission text may be processed by externally hosted AI services or must stay within sponsor-controlled infrastructure. S04: AS-04 (self-hosted default, AD-09); summaries off by default (AD-08). | C2 | ODR | S05 gate (the S04 gate proceeds on AS-04) | S04–S05 | OPEN |
+| ISS-010 | Interpretation of C2: whether ISO/IEC 20000 and ISO/IEC 27001 mean alignment of the assistant's design, conformity with an existing certified management system, or certification; which controls are in scope. S04: standards scope verified (CLM-041, CLM-042); alignment-only interpretation proposed (CLM-043). | C2 | ODR | S05 gate (the S04 gate proceeds on CLM-043) | S04–S05 | OPEN |
+| ISS-016 | Section 5 classification: project type, rationale (demand-driven versus documented need), maturity, execution stages, relationship to other projects. Depends on ISS-001. S04: provisional selection in proposal/DRAFT_SEC05_CLASSIFICATION. | F-05, RF-011 | ODR | S04 gate (provisional), S06 (confirmed) | S04–S06 | OPEN |
 
 ## B. Data and evaluation
 
@@ -72,6 +72,15 @@
 | ISS-030 | Final choice of Section 9 rows from the eight candidates in S03_SECTION9_COMPARISON (minimum three), including whether patent rows are used and how the form's outcome column is filled for them. | F-09, QA-005, S03_SECTION9_COMPARISON | ODR | S08 gate | S08 | OPEN |
 | ISS-031 | RQ-12 was a web-search-based scan, not a professional patent search. EP 2765543 A1 and US 11,762,916 B1 rest on search-result extracts because their record pages failed to load (SRC-060, SRC-061). Re-check on the issuing office's register, or commission a professional search if the owner requires it. | RQ-12, CLM-039, S03_PRIOR_ART_REGISTER §4 | OPEN | S08 gate (only if patent rows are used) | S08 | OPEN |
 | ISS-032 | Vendor capability statements reflect public pages read on 2026-11-20; one page (SRC-047) contains editorial placeholders. Re-check every Section 9 vendor statement shortly before submission. | QA-005, CLM-029 to CLM-035 | OPEN | S10 (final integration) | S08–S10 | OPEN |
+
+## G. Issues raised in S04
+
+| ID | Issue | Origin | Type | Blocks | Target | Status |
+|---|---|---|---|---|---|---|
+| ISS-033 | R4 requires sending query text derived from a submission to external search services. Whether assessor-approved query text may leave the controlled environment, and which services are acceptable, is not decided. | R4, ISS-009, DF-04 | ODR | S05 gate (R4 evaluation design) | S05 | OPEN |
+| ISS-034 | Approval model under R3: whether one assessor's approval is sufficient or a second approver is required, and which roles may approve. | R3, CP-5, AD-06 | ODR | S06 gate | S05–S06 | OPEN |
+| ISS-035 | Access permissions for the prototype: which roles need accounts and whether the sponsor's identity system must be used. | AS-05, IF-08 | ODR | S06 gate | S05–S06 | OPEN |
+| ISS-036 | Retention and deletion of imported submissions and cached external results in the prototype environment, during and after the project. | AC-03, C2 | ODR | S06 gate | S05–S06 | OPEN |
 
 ## Closed issues
 

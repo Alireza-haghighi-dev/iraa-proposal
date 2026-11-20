@@ -3,11 +3,11 @@
 | Field | Value |
 |---|---|
 | Document ID | S01_TRACEABILITY_MATRIX |
-| Version | 3.0 |
+| Version | 4.0 |
 | Status | SUBMITTED FOR GATE |
-| Stage | S03 |
+| Stage | S04 |
 | Date | 2026-11-20 |
-| Depends on | S01_REQUIREMENTS_REGISTER; S01_REVIEWER_CRITERIA_REGISTER; S01_RESEARCH_QUESTIONS; 00_OPEN_ISSUES_REGISTER; S02_LITERATURE_EVIDENCE_MATRIX; S03_COMPARABLE_SYSTEMS_MATRIX; S03_SECTION9_COMPARISON |
+| Depends on | S01_REQUIREMENTS_REGISTER; S01_REVIEWER_CRITERIA_REGISTER; S01_RESEARCH_QUESTIONS; 00_OPEN_ISSUES_REGISTER; S02_LITERATURE_EVIDENCE_MATRIX; S03_COMPARABLE_SYSTEMS_MATRIX; S03_SECTION9_COMPARISON; S04_ARCHITECTURE; S04_DATA_FLOWS_AND_INTERFACES |
 
 ## A. Requirements statement (REF-01) → project items → proposal sections
 
@@ -76,7 +76,7 @@ Coverage, status and evidence for RF-001 to RF-012 and QA-001 to QA-010 are main
 
 | Column | Added at |
 |---|---|
-| Architecture component(s) per requirement | S04 |
+| Architecture component(s) per requirement | S04 (done: Part F) |
 | Specification and acceptance criterion per requirement | S05 |
 | Work package (WP) per requirement and specification | S06 |
 | Section 12 method paragraph per WP | S07 |
@@ -96,3 +96,16 @@ Coverage, status and evidence for RF-001 to RF-012 and QA-001 to QA-010 are main
 | RQ-10 | S03 matrix §1 | SRC-040 to SRC-050 | C4; Section 9 |
 | RQ-11 | S03 matrix §2 | SRC-051 to SRC-055, SRC-063 (S02: SRC-013, SRC-014, SRC-016, SRC-017) | R1–R4; Section 9 |
 | RQ-12 | S03 prior-art register §2–§3 | SRC-053, SRC-055 to SRC-062 | R1, R2, R4; Section 9 |
+| RQ-13 | S04_ASSUMPTIONS_AND_STANDARDS §3 | SRC-064, SRC-065 | C2 |
+
+## F. Architecture per requirement (added S04; PROPOSED design)
+
+| Item | Functions | Components | Interfaces / flows | R3 checkpoints | Specification rows (Section 8 draft) | Conditions |
+|---|---|---|---|---|---|---|
+| R1 | FN-01, FN-02, FN-03, FN-04 | AC-01, AC-02, AC-04, AC-05, AC-06 | IF-01, IF-02; DF-01, DF-02, DF-03 | CP-2, CP-4 | MS-01, MS-08 | ISS-002, ISS-004 |
+| R2 | FN-01, FN-02, FN-05 | AC-01, AC-02, AC-04, AC-05 | IF-01, IF-02; DF-01, DF-02 | CP-2 | MS-02 | ISS-003 (AS-02) |
+| R3 | FN-08, FN-09, FN-11 | AC-09, AC-10, AC-11, AC-12, AC-13 | IF-04, IF-05, IF-08; DF-02, DF-06 | CP-1 to CP-6 | MS-04, MS-09 | ISS-005, ISS-034, ISS-035 |
+| R4 | FN-06, FN-07 | AC-07, AC-08, AC-03 | IF-03; DF-04, DF-05 | CP-1, CP-2, CP-3 | MS-03, MS-05, MS-07 | ISS-006, ISS-009, ISS-033 |
+| C1 (SC) | Extension points | AC-05, AC-07, AC-09 | IF-02, IF-03, IF-07 | — | Section 8 feature 9 | — |
+| C2 (SC) | FN-11; risk assessment document | AC-12, AC-13 | DF trust boundaries | CP-1, CP-5 | MS-05, MS-06 | ISS-009, ISS-010, ISS-036 |
+| C3 (EA) | FN-10 | AC-09, AC-14 | IF-06; DF-07 | — | — | Future: Section 11 row 3 |

@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | S03_SECTION9_COMPARISON |
 | Version | 1.0 |
-| Status | SUBMITTED FOR GATE |
+| Status | APPROVED |
 | Stage | S03 |
 | Date | 2026-11-20 |
 | Depends on | S03_COMPARABLE_SYSTEMS_MATRIX; S03_PRIOR_ART_REGISTER; F-09; FX-10; QA-005; REF-02 §9 |

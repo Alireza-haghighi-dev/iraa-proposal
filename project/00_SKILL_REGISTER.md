@@ -3,9 +3,9 @@
 | Field | Value |
 |---|---|
 | Document ID | 00_SKILL_REGISTER |
-| Version | 3.0 |
+| Version | 4.0 |
 | Status | SUBMITTED FOR GATE |
-| Stage | S03 |
+| Stage | S04 |
 | Date | 2026-11-20 |
 | Depends on | DEC-005 |
 
@@ -24,6 +24,7 @@
 | SKL-001 | S01 | None. S01 is extraction and structuring from three short reference documents; no external research. | None | Not applicable | No Skill used | Not required |
 | SKL-002 | S02 | Systematic literature search with per-source verification | Catalog search for research or citation Skills: no results. Built-in `deep-research` evaluated. Built-in `pdf-reading` available. | Not applicable (no third-party Skill) | `deep-research` DEFERRED: it delegates searches to subagents and returns narrative reports, while S02 requires each source to be opened and logged individually. Direct web search used instead. `pdf-reading` not needed: abstracts and landing pages were sufficient at the recorded depth. | Not required |
 | SKL-003 | S03 | Reading vendor help pages and patent records one by one, with per-statement verification | Catalog search (patent search, prior art, competitive analysis, citation verification): no results. Built-in `deep-research` and `pdf-reading` re-evaluated. | Not applicable (no third-party Skill) | `deep-research` DEFERRED for the S02 reason: subagent narrative output does not meet the per-source logging rule. `pdf-reading` not used: the USPTO PDFs returned no machine-readable text through the fetch tool, so the Skill could not help without file access. Direct search and fetch used. | Not required |
+| SKL-004 | S04 | None requiring a Skill. S04 is design and drafting from loaded registers, plus two standards-body pages for RQ-13. | Catalog search (software architecture, system design, technical proposal, architecture diagram, requirements traceability): no results. Built-in `docs` considered and rejected: deliverables must be versioned Markdown in the repository. Built-in `dataviz` not applicable: diagrams are Mermaid source in Markdown, not charts. `deep-research` not needed (two sources). | Not applicable (no third-party Skill) | No Skill used | Not required |
 
 ## 3. Forward notes
 
@@ -33,4 +34,4 @@
 | pdf-reading | Built-in (Anthropic) | Reading open-access papers retrieved as PDFs | Low risk; check that extracted figures are verified against the page |
 | Third-party research or citation-verification Skills | To be proposed by owner | Citation checking, structured extraction | Full security review required before any use |
 
-No Skill was used in S02 or S03. For S04 (architecture), no Skill need is foreseen; RQ-14 and RQ-15 in S05 may benefit from `pdf-reading` for licence and model documents.
+No Skill was used in S02, S03 or S04. RQ-14 and RQ-15 in S05 may benefit from `pdf-reading` for licence and model documents.

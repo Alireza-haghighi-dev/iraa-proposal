@@ -3,11 +3,11 @@
 | Field | Value |
 |---|---|
 | Document ID | S01_RESEARCH_QUESTIONS |
-| Version | 3.0 |
+| Version | 4.0 |
 | Status | SUBMITTED FOR GATE |
-| Stage | S03 |
+| Stage | S04 |
 | Date | 2026-11-20 |
-| Depends on | S01_REQUIREMENTS_REGISTER; DEC-002; S02_RESEARCH_SYNTHESIS; S03_COMPARABLE_SYSTEMS_MATRIX; S03_PRIOR_ART_REGISTER |
+| Depends on | S01_REQUIREMENTS_REGISTER; DEC-002; S02_RESEARCH_SYNTHESIS; S03_COMPARABLE_SYSTEMS_MATRIX; S03_PRIOR_ART_REGISTER; S04_ASSUMPTIONS_AND_STANDARDS |
 
 ## 1. Scope rules for research
 
@@ -81,5 +81,6 @@ Classification of C-series items (SC, EA, PG) follows S01_REQUIREMENTS_REGISTER 
 | RQ-10 | Closed for S03 | S03 matrix §1; every cell sourced or ND |
 | RQ-11 | Closed for S03 (eight Section 9 candidates) | S03 matrix §2; S03_SECTION9_COMPARISON |
 | RQ-12 | Closed for S03 as a documented scan; limits in ISS-031 | S03_PRIOR_ART_REGISTER |
-| RQ-13 to RQ-15 | Not started | S04–S05 |
+| RQ-13 | Closed for S04 at landing-page depth; alignment mapping PROPOSED | SRC-064, SRC-065; S04_ASSUMPTIONS_AND_STANDARDS §3 |
+| RQ-14, RQ-15 | Not started; S04 interfaces (IF-03, AD-09) do not depend on their answers | S05 |
 

@@ -3,9 +3,9 @@
 | Field | Value |
 |---|---|
 | Document ID | 00_DECISIONS_LOG |
-| Version | 3.0 |
+| Version | 4.0 |
 | Status | SUBMITTED FOR GATE |
-| Stage | S03 |
+| Stage | S04 |
 | Date | 2026-11-20 |
 | Depends on | Owner instructions as recorded in each entry |
 
@@ -42,8 +42,17 @@
 | DEC-024 | 2026-11-20 | Manual fresh-session workflow: every stage runs in a new chat inside the same Claude Project, opened by the owner, using the repository and the previous handoff. No scheduled tasks. Amends DEC-023. | Owner | ACTIVE | All later stages |
 | DEC-025 | 2026-11-20 | Owner instruction `START_STAGE S03` (approved baseline 961ae6a): execute S03, then commit and push the S03 package to `main` as `SUBMITTED FOR GATE` before the gate decision. No team or financial information is requested. S04 does not start. | Owner | ACTIVE | S03 |
 
+| DEC-026 | 2026-11-20 | S03 approved. Basis: the owner's `START_STAGE S04` instruction of 2026-11-20, which refers to "the approved S03 handoff". Reviewed content: commit 67803355fe0a9fd7ef9271718adb5f4b52459315; status record 9a7a95e. The coordinator had not recorded this entry before S04 began; the S04 session recorded it from the owner's instruction and reports it for owner confirmation. ISS-030 to ISS-032 carried forward. | Owner (recorded by S04 session) | ACTIVE (owner confirmation requested in S04 report) | S03, S04 |
+| DEC-027 | 2026-11-20 | Owner instruction `START_STAGE S04` (baseline 9a7a95e): execute S04 Product Definition and Technical Architecture; draft Sections 5, 7, 8 and the technical part of Section 11; recommend a scope without inventing commitments; treat ISO/IEC 20000 and 27001 as proposed alignment only; commit and push the S04 package to `main` as `SUBMITTED FOR GATE`. No team identities, personal information or financial commitments are requested. S05 does not start. | Owner | ACTIVE | S04 |
+
 ## Pending owner decision
 
-| ID | Decision requested | Recommended |
+| ID | Decision requested | Recommended (S04, PROPOSED) |
 |---|---|---|
-| DEC-026 (proposed) | S03 gate outcome and authorization to begin S04 | Decided after S03 delivery |
+| DEC-028 (proposed) | S04 gate outcome; authorization to begin S05; decisions on the S04-gate issues below | See `stages/S04/S04_HANDOFF.md` |
+| — ISS-001 | Development level of the current project | Option B: technology development, laboratory prototype, design + build + test (`S04_SCOPE_OPTIONS` §4) |
+| — ISS-016 | Section 5 classification | Product/system; demand-driven; technology development; design, build, test; independent (`proposal/DRAFT_SEC05_CLASSIFICATION`) |
+| — ISS-004 | Scope of R1 | Both readings: new-versus-stored search (FN-03) as the primary function, stored-collection grouping (FN-04) as an assessor-confirmed batch function |
+| — ISS-005 | Content of an assessment | Configurable assessment template (AD-07); sponsor fields supplied by the owner |
+| — ISS-007, ISS-008, ISS-009, ISS-010, ISS-003 | Language; integration; data handling; standards interpretation; internal collection | Planning assumptions AS-01 to AS-08 in `S04_ASSUMPTIONS_AND_STANDARDS` apply until the owner decides |
+| — ISS-033, ISS-034 | External query disclosure; approval model | Assessor-approved query text (CP-1); single assessor approval with optional second approver (AD-06) |

@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | S03_PRIOR_ART_REGISTER |
 | Version | 1.0 |
-| Status | SUBMITTED FOR GATE |
+| Status | APPROVED |
 | Stage | S03 |
 | Date | 2026-11-20 |
 | Depends on | S01_RESEARCH_QUESTIONS (RQ-12); 02_SOURCE_LOG; DEC-009 |

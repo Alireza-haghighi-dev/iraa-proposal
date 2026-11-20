@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | S03_QC_REPORT |
 | Version | 1.0 |
-| Status | SUBMITTED FOR GATE |
+| Status | APPROVED |
 | Stage | S03 |
 | Date | 2026-11-20 |
 | Depends on | 00_STAGE_GATE_PROTOCOL; S03 deliverables; qc/S03_QC_CHECK.py |

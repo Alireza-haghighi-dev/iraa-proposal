@@ -3,9 +3,9 @@
 | Field | Value |
 |---|---|
 | Document ID | 00_PROJECT_RULES |
-| Version | 2.0 |
-| Status | APPROVED |
-| Stage | S02 |
+| Version | 3.0 |
+| Status | SUBMITTED FOR GATE |
+| Stage | S04 |
 | Date | 2026-11-20 |
 | Depends on | 00_DECISIONS_LOG; 00_STAGE_GATE_PROTOCOL; 03_STYLE_GUIDE |
 
@@ -79,6 +79,10 @@ The `iraa-proposal` repository is the persistent source of truth. The three refe
 | SKL | Skill evaluation | 00_SKILL_REGISTER |
 | WP | Funded work package for Section 13 (frozen at S06) | S06 deliverables |
 | DEF | Defect | 03_DEFECT_LOG (from S08) |
+| FN / AC / CP / AD | Product function / architecture component / R3 checkpoint / architecture design choice (PROPOSED) | S04_ARCHITECTURE |
+| IF / DF | Interface / data flow (PROPOSED) | S04_DATA_FLOWS_AND_INTERFACES |
+| AS | Planning assumption, valid until the linked issue is decided | S04_ASSUMPTIONS_AND_STANDARDS |
+| MS | Measurable specification row for Section 8 (targets set in S05) | proposal/DRAFT_SEC08_FEATURES |
 
 ## 6. Claim labels
 
