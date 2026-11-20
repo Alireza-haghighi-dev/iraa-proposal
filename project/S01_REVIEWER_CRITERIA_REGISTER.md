@@ -3,11 +3,11 @@
 | Field | Value |
 |---|---|
 | Document ID | S01_REVIEWER_CRITERIA_REGISTER |
-| Version | 4.1 |
-| Status | APPROVED |
-| Stage | S04.1 |
+| Version | 5.0 |
+| Status | SUBMITTED FOR GATE |
+| Stage | S05 |
 | Date | 2026-11-20 |
-| Depends on | REF-03; DEC-011; S02 deliverables; S03 deliverables; S04 deliverables |
+| Depends on | REF-03; DEC-011; S02 deliverables; S03 deliverables; S04 deliverables; S05 deliverables |
 
 - **Source:** REF-03 (REVIEWER_FEEDBACK_EN_V1), a consolidated secondary reconstruction (DEC-011)
 - **Evidence classes:** **RF** = reported reviewer criterion; **QA** = additional quality observation from the owner's handoff, not attributed to the proposal reviewer
@@ -37,15 +37,15 @@ The "Criterion (paraphrased)" column summarizes REF-03 in project terms. It is n
 | ID | Observation (paraphrased) | Sections | Responsible stage(s) | S01 action | Status at S01 gate | Evidence / artifact |
 |---|---|---|---|---|---|---|
 | QA-001 | Earlier drafts disagree on work-package count and effort; their figures are not commitments. | 4, 13–16 | S06, S10 | No historical figures used; rule added | SCHEDULED | 03_STYLE_GUIDE §2.8 |
-| QA-002 | Speed and accuracy benefits lack a measured baseline. | 6, 7, 8 | S05, S08 | Benefits registered as hypotheses; baseline issue logged | SCHEDULED | CLM-006; ISS-011; RQ-06; S02 evidence on evaluation design (matrix RQ-06, CLM-017, CLM-027) |
+| QA-002 | Speed and accuracy benefits lack a measured baseline. | 6, 7, 8 | S05, S08 | Benefits registered as hypotheses; S05: evaluation measures retrieval quality and workflow conformance only, with an explicit no-baseline assumption for speed and accuracy (S05_EVALUATION_DESIGN §10) | ADDRESSED (design; proposal wording checked in S08) | CLM-006; ISS-011; S05_EVALUATION_DESIGN §1, §10; CLM-057 |
 | QA-003 | Delivered-assistant wording conflicted with feasibility/PoC scope. | 1, 5, 7, 8, 11 | S04 | S04: current-phase deliverables and future stages separated; drafts avoid delivered-assistant wording | OPEN (owner decision required on ISS-001) | S04_SCOPE_OPTIONS; S04_ARCHITECTURE §2; proposal/DRAFT_SEC07_OBJECTIVES |
-| QA-004 | Measurable specifications, test criteria and data assumptions incomplete. | 8, 12, 13 | S05–S07 | S04: data, integration, deployment and access assumptions recorded; specification rows MS-01 to MS-09 defined, values in S05 | SCHEDULED | S04_ASSUMPTIONS_AND_STANDARDS §1; proposal/DRAFT_SEC08_FEATURES; ISS-002, ISS-012, ISS-023 |
+| QA-004 | Measurable specifications, test criteria and data assumptions incomplete. | 8, 12, 13 | S05–S07 | S05: metric, test condition and target for every active MS row; data assumptions AS-09 to AS-12; data requirements and outcomes; MS-10 added | ADDRESSED (S05 design; verification steps mapped in S07) | proposal/DRAFT_SEC08_FEATURES v0.3; S05_EVALUATION_DESIGN §4, §8; S05_DATA_AVAILABILITY_AND_SUBSTITUTES; S04_ASSUMPTIONS_AND_STANDARDS §1 |
 | QA-005 | Comparators and claimed advantages lack source-specific verification. | 9 | S03, S08 | Eight Section 9 candidates verified from first-party or patent-office sources; each capability cell sourced or marked ND; vendor statements labelled; marketing figures excluded; no superiority claim | ADDRESSED for evidence (S03); wording control SCHEDULED for S08 | S03_COMPARABLE_SYSTEMS_MATRIX; S03_SECTION9_COMPARISON; CLM-001 to CLM-004, CLM-029 to CLM-040; ISS-030, ISS-032 |
 | QA-006 | Team prior work undocumented; capacity unknown. | 10, 14 | S10 | Deferred; local issue logged | SCHEDULED | ISS-025 |
 | QA-007 | Activity table lacks adequate tasks and deliverables. | 12, 13 | S06–S07 | Gate criteria require tasks, deliverables, acceptance evidence | SCHEDULED | Gate criteria S06 |
 | QA-008 | Gantt markings and costs populated before assumptions agreed. | 15, 16 | S10 | No schedule or cost content before S10 | SCHEDULED | DEC-001; RF-010 entry |
 | QA-009 | Risks, dates, attachments and administrative fields incomplete. | 17–20 | S08, S10 | Risk split recorded; local fields logged | SCHEDULED | F-17; ISS-026 |
-| QA-010 | Earlier comparative research and technology choices are leads, not verified evidence. | 8, 9, 12 | S02–S05 | No earlier technology choices inherited; S04 architecture names no tools or versions | SCHEDULED (literature S02 and comparators S03 done; versions, licences and resources in S05) | RQ-01 to RQ-15; 02_SOURCE_LOG §3 (SRC-001 to SRC-065); S04_ARCHITECTURE header |
+| QA-010 | Earlier comparative research and technology choices are leads, not verified evidence. | 8, 9, 12 | S02–S05 | No earlier technology choices inherited; S05: licences and input limits of candidate components verified at documentation depth; versions and training-data terms left for S07 (ISS-041) | SCHEDULED (versions and training-data terms in S07) | RQ-14, RQ-15; SRC-070 to SRC-081; S05_FEASIBILITY_AND_RISKS §1, §2; ISS-041 |
 
 ## 3. Binding workflow implications from REF-03 §4 and where they are enforced
 

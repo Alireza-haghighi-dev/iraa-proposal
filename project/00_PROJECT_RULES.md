@@ -3,9 +3,9 @@
 | Field | Value |
 |---|---|
 | Document ID | 00_PROJECT_RULES |
-| Version | 3.1 |
-| Status | APPROVED |
-| Stage | S04.1 |
+| Version | 4.0 |
+| Status | SUBMITTED FOR GATE |
+| Stage | S05 |
 | Date | 2026-11-20 |
 | Depends on | 00_DECISIONS_LOG; 00_STAGE_GATE_PROTOCOL; 03_STYLE_GUIDE |
 
@@ -84,6 +84,9 @@ The `iraa-proposal` repository is the persistent source of truth. The three refe
 | IF / DF | Interface / data flow (PROPOSED) | S04_DATA_FLOWS_AND_INTERFACES |
 | AS | Planning assumption, valid until the linked issue is decided | S04_ASSUMPTIONS_AND_STANDARDS |
 | MS | Measurable specification row for Section 8 (targets set in S05) | proposal/DRAFT_SEC08_FEATURES |
+| ET / PV | Evaluation test / numeric planning value (ASSUMPTION, AS-12) | S05_EVALUATION_DESIGN |
+| DR / DS | Data requirement / substitute dataset candidate | S05_DATA_AVAILABILITY_AND_SUBSTITUTES |
+| FT / RSK | Feasibility test / technical or data risk (input to Section 17) | S05_FEASIBILITY_AND_RISKS |
 
 ## 6. Claim labels
 

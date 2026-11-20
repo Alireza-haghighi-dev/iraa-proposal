@@ -3,13 +3,14 @@
 | Field | Value |
 |---|---|
 | Document ID | S04_ASSUMPTIONS_AND_STANDARDS |
-| Version | 1.1 |
-| Status | APPROVED |
-| Stage | S04.1 |
+| Version | 2.0 |
+| Status | SUBMITTED FOR GATE |
+| Stage | S05 |
 | Date | 2026-11-20 |
-| Depends on | C2; CLM-008; CLM-041; CLM-042; CLM-043; SRC-064; SRC-065; ISS-002; ISS-003; ISS-006 to ISS-010; ISS-023; ISS-033 to ISS-037; CLM-045; DEC-029 |
+| Depends on | C2; CLM-008; CLM-041; CLM-042; CLM-043; SRC-064; SRC-065; ISS-002; ISS-003; ISS-006 to ISS-010; ISS-023; ISS-033 to ISS-039; CLM-045; DEC-029; S05_EVALUATION_DESIGN; S05_DATA_AVAILABILITY_AND_SUBSTITUTES |
 
 - **Purpose:** state the planning assumptions the architecture uses while owner decisions are open, and define what "alignment" with ISO/IEC 20000 and ISO/IEC 27001 can honestly mean for this project.
+- **S05 addition:** AS-09 to AS-12 cover evaluation data, judges, the reference environment and the numeric planning values; AS-01 to AS-08 are unchanged.
 - **Labels:** AS rows are ASSUMPTION; each stays in force only until the linked issue is decided. Standards descriptions are VERIFIED at landing-page depth (SRC-064, SRC-065); the alignment mapping is PROPOSED.
 
 ## 1. Planning assumptions
@@ -24,6 +25,10 @@
 | AS-06 | Submission language is unknown; S05 selects components that can be tested on the actual language once ISS-007 is answered | ISS-007, RQ-07 | Conditional RQ-07 is activated in S05 |
 | AS-07 | Corpus size and submission rate are unknown; S05 sizes the prototype for ranges agreed with the owner | ISS-023, RQ-15 | Sizing revised |
 | AS-08 | At least one patent source offers access terms that permit automated queries for this use; solution-example sources are added only if ISS-006 names one | ISS-006, RQ-14 | R4 is limited to assessor-run searches with results entered manually, and Section 8 records the limit |
+| AS-09 | Until ISS-002 is answered, R1 method comparison and harness validation use public substitute data (candidates DS-01, DS-02, subject to the licence check) and R2 uses a constructed substitute (DS-05, subject to owner decision). All such results are labelled Track P (added S05) | ISS-002, ISS-038 | Sponsor data released: Track S added; Track P kept as a method check |
+| AS-10 | If sponsor assessors cannot judge (ISS-012), project judges with domain knowledge apply the same judging guide; their results are labelled "project judges" (added S05) | ISS-012 | Assessors available: they judge Track S, and a shared subset calibrates project judges |
+| AS-11 | Evaluation and timing run on one self-hosted reference environment (a single server with an optional single GPU and a Java 21 runtime); its exact specification is fixed in S06/S10 (added S05) | ISS-009, ISS-023 | Different environment: FT-02 and ET-10 repeated on it |
+| AS-12 | The numeric planning values PV-01 to PV-11 in `S05_EVALUATION_DESIGN` §7 apply until the owner confirms or changes them (added S05) | ISS-039 | Values changed: protocol, judging budget and Section 8 targets updated before the protocol is frozen |
 
 ## 2. Questions the owner is asked to answer
 

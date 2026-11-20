@@ -3,11 +3,11 @@
 | Field | Value |
 |---|---|
 | Document ID | 02_SOURCE_LOG |
-| Version | 4.0 |
-| Status | APPROVED |
-| Stage | S04 |
+| Version | 5.0 |
+| Status | SUBMITTED FOR GATE |
+| Stage | S05 |
 | Date | 2026-11-20 |
-| Depends on | REF-01; REF-02; REF-03; S02_LITERATURE_EVIDENCE_MATRIX; S03_COMPARABLE_SYSTEMS_MATRIX; S03_PRIOR_ART_REGISTER; S04_ASSUMPTIONS_AND_STANDARDS |
+| Depends on | REF-01; REF-02; REF-03; S02_LITERATURE_EVIDENCE_MATRIX; S03_COMPARABLE_SYSTEMS_MATRIX; S03_PRIOR_ART_REGISTER; S04_ASSUMPTIONS_AND_STANDARDS; S05_EVALUATION_DESIGN; S05_FEASIBILITY_AND_RISKS |
 
 - **Rule:** Every source cited anywhere in the project is logged here before use. No citation from memory. Re-check this log before searching, to avoid repeated research.
 
@@ -72,7 +72,7 @@
 | SRC-034 | Douze, M. et al. (2024). The Faiss library. arXiv preprint. | doi:10.48550/arXiv.2401.08281 | Preprint (primary source of library) | T1 | P | Y | RQ-15 preparation | Library scope only |
 | SRC-035 | Malkov, Yu. A. & Yashunin, D. A. Efficient and Robust Approximate Nearest Neighbor Search Using Hierarchical Navigable Small World Graphs. IEEE TPAMI (IEEE Xplore document 8594636); arXiv:1603.09320. | doi:10.48550/arXiv.1603.09320 | Journal article | T1 | A | Y | RQ-15 preparation | Journal volume not retrieved |
 | SRC-036 | Lin, J. et al. (2021). Pyserini: A Python Toolkit for Reproducible Information Retrieval Research with Sparse and Dense Representations. SIGIR 2021. | doi:10.1145/3404835.3463238 | Conference paper | T1 | A | Y | RQ-06 | Current version and licence not checked |
-| SRC-037 | sentence-transformers. all-MiniLM-L6-v2 model card. Hugging Face. | https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2 | Official model documentation | T1 | A | Y | RQ-01 | Only embedding dimension and intended use verified |
+| SRC-037 | sentence-transformers. all-MiniLM-L6-v2 model card. Hugging Face. | https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2 | Official model documentation | T1 | A | Y | RQ-01, RQ-15 | S04: embedding dimension and intended use verified. S05 (2026-11-20): licence (Apache 2.0) and 256-word-piece truncation verified on the same page |
 | SRC-038 | Liu, T.-Y. (2009). Learning to Rank for Information Retrieval. Foundations and Trends in Information Retrieval 3(3), 225–331. | doi:10.1561/1500000016 | Monograph | T1 | A | Y | RQ-09 | — |
 | SRC-039 | Settles, B. (2009). Active Learning Literature Survey. Computer Sciences Technical Report 1648, University of Wisconsin–Madison. | https://minds.wisc.edu/items/37538f44-36ae-413e-8967-e6c831e17a8e | Technical report | T1 | A | Y | RQ-09 | Not peer reviewed; widely used survey |
 | SRC-040 | Wazoku Limited. "Automatically search for duplicate Ideas." Wazoku Knowledge base (no page date). | https://support.wazoku.com/automatically-search-for-duplicate-ideas | Vendor documentation | T2 | A | Y | RQ-10 | Vendor statement; matching method and fields not stated |
@@ -101,6 +101,22 @@
 | SRC-063 | Open Innovation Contests (16 Topics collected between 2015 and 2022). Dataset, Zenodo, version v1, published 2025-07-09. | https://zenodo.org/records/15854790 | Dataset record | T1 | A | Y | RQ-11 | Student-generated ideas, not organizational need or challenge submissions |
 | SRC-064 | ISO/IEC 27001:2022 Information security, cybersecurity and privacy protection — Information security management systems — Requirements. Edition 3.0, published 2022-10-25, ISO/IEC JTC 1/SC 27. Publication record, IEC Webstore. | https://webstore.iec.ch/publication/79694 | Standards-body publication record | T1 | A | Y | RQ-13; CLM-041 | Abstract only; the standard's text and Annex A controls were not read. The iso.org record page returned client errors and was not used. |
 | SRC-065 | ISO/IEC 20000-1:2018 Information technology — Service management — Part 1: Service management system requirements. Edition 3, 2018-09; reviewed and confirmed 2023; Amendment 1:2024. Publication record, ISO. | https://www.iso.org/standard/70636.html | Standards-body publication record | T1 | A | Y | RQ-13; CLM-042 | Abstract only; clause text not read |
+| SRC-066 | Smucker, M. D., Allan, J. & Carterette, B. (2007). A comparison of statistical significance tests for information retrieval evaluation. CIKM 2007, 623–632. | doi:10.1145/1321440.1321528 | Conference paper | T1 | A | Y | RQ-06 | Abstract text read in a search-result extract of the authors' institutional PDF (accessed 2026-11-20); based on TREC ad-hoc runs with mean average precision |
+| SRC-067 | Voorhees, E. M. & Buckley, C. (2002). The effect of topic set size on retrieval experiment error. SIGIR 2002, 316–323. | doi:10.1145/564376.564432 | Conference paper | T1 | A | Y | RQ-06 | Abstract text read in a search-result extract of the NIST publication page (accessed 2026-11-20); error rates derived from TREC results, not from small domain collections |
+| SRC-068 | Buckley, C. & Voorhees, E. M. (2004). Retrieval evaluation with incomplete information. SIGIR 2004, 25–32. | doi:10.1145/1008992.1009000 | Conference paper | T1 | A | Y | RQ-06 | Abstract text read in a search-result extract of the NIST publication page (accessed 2026-11-20); binary relevance setting |
+| SRC-069 | Hayes, A. F. & Krippendorff, K. (2007). Answering the call for a standard reliability measure for coding data. Communication Methods and Measures 1(1), 77–89. | doi:10.1080/19312450709336664 | Journal article | T1 | A | Y | RQ-06 | Publisher abstract read in a search-result extract (accessed 2026-11-20); content-analysis field; interpretation thresholds not taken from this source |
+| SRC-070 | European Patent Office. Open Patent Services (OPS) product page with access tiers. | https://epo.org/ops | Official service documentation | T1 | A | Y | RQ-14 | Accessed 2026-11-20 via search-result extract; prices may change (terms clause 4.4) |
+| SRC-071 | European Patent Office. Fair use charter for the EPO's online patent information products. | https://epo.org/en/service-support/ordering/fair-use | Official service documentation | T1 | A | Y | RQ-14 | Accessed 2026-11-20 via search-result extract |
+| SRC-072 | European Patent Office. FAQ: "Are there any restrictions on using OPS?" | https://epo.org/en/service-support/faq/searching-patents/open-patent-services/general-information/are-there-any | Official service documentation | T1 | A | Y | RQ-14 | Accessed 2026-11-20 via search-result extract; thresholds stated as varying with operational circumstances |
+| SRC-073 | European Patent Office. Terms and conditions for use of the EPO's Open Patent Services (OPS). | https://www.epo.org/en/service-support/ordering/terms-and-conditions/ops-terms-and-conditions | Official terms | T1 | A | Partial | RQ-14 | Accessed 2026-11-20 through search extracts of clauses 1, 3.3, 4 and 5; full text not read |
+| SRC-074 | PatentsView. PatentSearch API reference (authentication and rate limits). | https://search.patentsview.org/docs/docs/Search%20API/SearchAPIReference | Official API documentation | T1 | A | Y | RQ-14 | Accessed 2026-11-20; page does not state data coverage or terms of use |
+| SRC-075 | intfloat. multilingual-e5-base model card. Hugging Face. | https://huggingface.co/intfloat/multilingual-e5-base | Official model documentation | T1 | A | Y | RQ-15 | Accessed 2026-11-20; licence, layers, embedding size, 512-token truncation, languages and input prefix verified; training-data terms not assessed |
+| SRC-076 | BAAI. bge-m3 model card and repository file listing. Hugging Face. | https://huggingface.co/BAAI/bge-m3 | Official model documentation | T1 | A | Y | RQ-15 | Accessed 2026-11-20 via search extracts of the model card and file listing; licence, 8,192-token input, 1024 dimensions and 2.27 GB weight file verified |
+| SRC-077 | BAAI. bge-reranker-v2-m3 model repository listing. Hugging Face. | https://huggingface.co/BAAI/bge-reranker-v2-m3 | Official model documentation | T1 | A | Partial | RQ-15 | Accessed 2026-11-20 via repository listing; licence and weight-file size verified; input limit not read |
+| SRC-078 | Pyserini project page. Python Package Index. | https://pypi.org/project/pyserini | Official package documentation | T1 | A | Y | RQ-06, RQ-15 | Accessed 2026-11-20 via search-result extract; Java 21 requirement verified; licence read from a secondary listing of the project badge, not from the licence file |
+| SRC-079 | CQADupStack preprocessed mirror, dataset card. Hugging Face (third-party upload). | https://huggingface.co/datasets/LLukas22/cqadupstack | Third-party dataset card | T3 | A | Y (statement only) | RQ-06 | Accessed 2026-11-20; licence statement made by the uploader, not by the dataset authors; not sufficient to establish the licence (ISS-038) |
+| SRC-080 | rOpenSci. "Breaking Release of the patentsview R Package." Blog post, 2026-03-10. | https://ropensci.org/blog/2026/03/10/patentsview-breaking-release/ | Blog | T3 | A | Y (statement only) | RQ-14 | Accessed 2026-11-20; reports removal of the key-request link; context only (ISS-040) |
+| SRC-081 | Lens. API documentation, Getting Started. | https://docs.api.lens.org/getting-started.html | Official API documentation | T1 | A | Y | RQ-14 | Accessed 2026-11-20; no numeric quotas or prices on the page; Terms of Use not read |
 
 ## 4. Entry procedure (from S02)
 

@@ -3,11 +3,11 @@
 | Field | Value |
 |---|---|
 | Document ID | S01_TRACEABILITY_MATRIX |
-| Version | 4.1 |
-| Status | APPROVED |
-| Stage | S04.1 |
+| Version | 5.0 |
+| Status | SUBMITTED FOR GATE |
+| Stage | S05 |
 | Date | 2026-11-20 |
-| Depends on | S01_REQUIREMENTS_REGISTER; S01_REVIEWER_CRITERIA_REGISTER; S01_RESEARCH_QUESTIONS; 00_OPEN_ISSUES_REGISTER; S02_LITERATURE_EVIDENCE_MATRIX; S03_COMPARABLE_SYSTEMS_MATRIX; S03_SECTION9_COMPARISON; S04_ARCHITECTURE; S04_DATA_FLOWS_AND_INTERFACES |
+| Depends on | S01_REQUIREMENTS_REGISTER; S01_REVIEWER_CRITERIA_REGISTER; S01_RESEARCH_QUESTIONS; 00_OPEN_ISSUES_REGISTER; S02_LITERATURE_EVIDENCE_MATRIX; S03_COMPARABLE_SYSTEMS_MATRIX; S03_SECTION9_COMPARISON; S04_ARCHITECTURE; S04_DATA_FLOWS_AND_INTERFACES; S05_EVALUATION_DESIGN; S05_DATA_AVAILABILITY_AND_SUBSTITUTES |
 
 ## A. Requirements statement (REF-01) → project items → proposal sections
 
@@ -77,7 +77,7 @@ Coverage, status and evidence for RF-001 to RF-012 and QA-001 to QA-010 are main
 | Column | Added at |
 |---|---|
 | Architecture component(s) per requirement | S04 (done: Part F) |
-| Specification and acceptance criterion per requirement | S05 |
+| Specification and acceptance criterion per requirement | S05 (done: Part G) |
 | Work package (WP) per requirement and specification | S06 |
 | Section 12 method paragraph per WP | S07 |
 
@@ -97,6 +97,9 @@ Coverage, status and evidence for RF-001 to RF-012 and QA-001 to QA-010 are main
 | RQ-11 | S03 matrix §2 | SRC-051 to SRC-055, SRC-063 (S02: SRC-013, SRC-014, SRC-016, SRC-017) | R1–R4; Section 9 |
 | RQ-12 | S03 prior-art register §2–§3 | SRC-053, SRC-055 to SRC-062 | R1, R2, R4; Section 9 |
 | RQ-13 | S04_ASSUMPTIONS_AND_STANDARDS §3 | SRC-064, SRC-065 | C2 |
+| RQ-06 (S05 additions) | S05_EVALUATION_DESIGN §4–§6 | SRC-066 to SRC-069 | R1–R4; QA-002, QA-004 |
+| RQ-14 | S05_FEASIBILITY_AND_RISKS §2 | SRC-070 to SRC-074, SRC-080, SRC-081 | R4 |
+| RQ-15 | S05_FEASIBILITY_AND_RISKS §1 | SRC-037, SRC-075 to SRC-078 | R1, R2, C2 |
 
 ## F. Architecture per requirement (added S04; PROPOSED design)
 
@@ -109,3 +112,14 @@ Coverage, status and evidence for RF-001 to RF-012 and QA-001 to QA-010 are main
 | C1 (SC) | Extension points | AC-05, AC-07, AC-09 | IF-02, IF-03, IF-07 | — | Section 8 feature 9 | — |
 | C2 (SC) | FN-11; risk assessment document | AC-12, AC-13 | DF trust boundaries | CP-1, CP-5 | MS-05, MS-06 | ISS-009, ISS-010, ISS-036 |
 | C3 (EA) | FN-10 | AC-09, AC-14 | IF-06; DF-07 | — | — | Future: Section 11 row 3 |
+
+## G. Specification and acceptance per requirement (added S05; targets, not results)
+
+| Item | Evaluation tests | Specification rows | Target type | Data tracks | Baseline | Conditions |
+|---|---|---|---|---|---|---|
+| R1 | ET-01, ET-01b, ET-02, ET-10, ET-11 | MS-01, MS-08, MS-10 | Relative to baseline; absolute floor after pilot (PV-11); latency PV-09 | Track S if ISS-002; Track P (DS-01, ISS-038) | B-LEX (BM25); B-REC; B-FP for duplicates | ISS-002, ISS-007, ISS-012, ISS-039 |
+| R2 | ET-03, ET-04, ET-05, ET-11 | MS-02, MS-10 | Relative to baseline per registered source; false-reassurance rate reported | Track S only on a source confirmed under ISS-003; Track P (DS-05) | B-LEX | ISS-003, ISS-037, ISS-038 |
+| R3 | ET-06, ET-07 | MS-04, MS-06 | Pass/fail: 0 violations; 100% version fields | Synthetic records (DR-05) | — | ISS-005, ISS-034 |
+| R4 | ET-08, ET-09, ET-11 | MS-03, MS-05, MS-10 | Not lower than unaided keyword queries; 100% approval and provenance | Track P always; Track S only if ISS-033 authorizes | Q-A unaided keyword query | ISS-006, ISS-033, ISS-040 |
+| C2 (SC) | ET-06 to ET-08 | MS-05, MS-06 | Pass/fail | Synthetic records | — | ISS-009, ISS-010 |
+| QA-002, QA-004 | All ET; S05_DATA_AVAILABILITY_AND_SUBSTITUTES | MS-01 to MS-06, MS-08, MS-10 | Targets labelled; no benefit claims (ISS-011) | Separated by track | — | ISS-002 (AS-09) |

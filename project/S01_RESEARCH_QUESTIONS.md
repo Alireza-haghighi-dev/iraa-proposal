@@ -3,11 +3,11 @@
 | Field | Value |
 |---|---|
 | Document ID | S01_RESEARCH_QUESTIONS |
-| Version | 4.1 |
-| Status | APPROVED |
-| Stage | S04.1 |
+| Version | 5.0 |
+| Status | SUBMITTED FOR GATE |
+| Stage | S05 |
 | Date | 2026-11-20 |
-| Depends on | S01_REQUIREMENTS_REGISTER; DEC-002; S02_RESEARCH_SYNTHESIS; S03_COMPARABLE_SYSTEMS_MATRIX; S03_PRIOR_ART_REGISTER; S04_ASSUMPTIONS_AND_STANDARDS |
+| Depends on | S01_REQUIREMENTS_REGISTER; DEC-002; S02_RESEARCH_SYNTHESIS; S03_COMPARABLE_SYSTEMS_MATRIX; S03_PRIOR_ART_REGISTER; S04_ASSUMPTIONS_AND_STANDARDS; S05_EVALUATION_DESIGN; S05_FEASIBILITY_AND_RISKS |
 
 ## 1. Scope rules for research
 
@@ -65,7 +65,7 @@ Classification of C-series items (SC, EA, PG) follows S01_REQUIREMENTS_REGISTER 
 | C5 (PG) | RQ-06 |
 | C6 (PG) | Confidentiality and process rule; no research question |
 
-## 4. Status after S03
+## 4. Status after S05
 
 | RQ | Status | Evidence |
 |---|---|---|
@@ -74,13 +74,14 @@ Classification of C-series items (SC, EA, PG) follows S01_REQUIREMENTS_REGISTER 
 | RQ-03 | Partially closed; thin direct evidence | Rows 3.1–3.5 |
 | RQ-04 | Partially closed; need-to-patent gap (ISS-028) | Rows 4.1–4.3 |
 | RQ-05 | Closed for S02; mitigator detail open | Rows 5.1–5.5 |
-| RQ-06 | Closed for S02 | Rows 6.1–6.6 |
-| RQ-07 | Not activated (ISS-007) | — |
+| RQ-06 | Closed for S05: evaluation design with T1 support for metrics, significance testing, sample size, incomplete judgments and agreement | Rows 6.1–6.6; SRC-066 to SRC-069; S05_EVALUATION_DESIGN |
+| RQ-07 | Not activated (ISS-007); multilingual candidates D-2, D-3 identified in case it is | S05_FEASIBILITY_AND_RISKS §1.1 |
 | RQ-08 | Closed for S02 | Rows 8.1–8.4 |
 | RQ-09 | Closed for S02 | Rows 9.1–9.2 |
 | RQ-10 | Closed for S03 | S03 matrix §1; every cell sourced or ND |
 | RQ-11 | Closed for S03 (eight Section 9 candidates) | S03 matrix §2; S03_SECTION9_COMPARISON |
 | RQ-12 | Closed for S03 as a documented scan; limits in ISS-031 | S03_PRIOR_ART_REGISTER |
 | RQ-13 | Closed for S04 at landing-page depth; alignment mapping PROPOSED | SRC-064, SRC-065; S04_ASSUMPTIONS_AND_STANDARDS §3 |
-| RQ-14, RQ-15 | Not started; S04 interfaces (IF-03, AD-09) do not depend on their answers | S05 |
+| RQ-14 | Closed for S05: three services with access routes and stated limits (criterion: at least two) | SRC-070 to SRC-074, SRC-080, SRC-081; S05_FEASIBILITY_AND_RISKS §2 |
+| RQ-15 | Partially closed: self-hosted candidates with verified licences and input limits; compute needs to be measured (FT-02), not estimated; hosted options not compared while ISS-009 is open | SRC-037, SRC-075 to SRC-078; S05_FEASIBILITY_AND_RISKS §1 |
 
