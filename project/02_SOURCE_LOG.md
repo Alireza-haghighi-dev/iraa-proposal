@@ -3,11 +3,11 @@
 | Field | Value |
 |---|---|
 | Document ID | 02_SOURCE_LOG |
-| Version | 1.2 |
-| Status | APPROVED |
-| Stage | S01 |
+| Version | 2.0 |
+| Status | SUBMITTED FOR GATE |
+| Stage | S02 |
 | Date | 2026-11-20 |
-| Depends on | REF-01; REF-02; REF-03 |
+| Depends on | REF-01; REF-02; REF-03; S02_LITERATURE_EVIDENCE_MATRIX |
 
 - **Rule:** Every source cited anywhere in the project is logged here before use. No citation from memory. Re-check this log before searching, to avoid repeated research.
 
@@ -29,9 +29,50 @@
 
 ## 3. External sources
 
-| ID | Citation | DOI / URL | Type | Tier | Accessed | Verified (Y/N) | Supports RQ / CLM | Limitations |
+- **Depth key:** A = abstract or landing page read; P = full-text excerpt read; B = bibliographic record only. Verified = Y means the statement used in S02 was found at that depth.
+- **Accessed:** all entries 2026-11-20 unless stated.
+
+| ID | Citation | DOI / URL | Type | Tier | Depth | Verified | Supports | Limitations |
 |---|---|---|---|---|---|---|---|---|
-| — | No external sources used in S01 | — | — | — | — | — | — | — |
+| SRC-001 | Robertson, S. & Zaragoza, H. (2009). The Probabilistic Relevance Framework: BM25 and Beyond. Foundations and Trends in Information Retrieval 3(4), 333–389. | doi:10.1561/1500000019 | Monograph | T1 | A | Y | RQ-01, RQ-02 | Theory; no evaluation on need texts |
+| SRC-002 | Thakur, N., Reimers, N., Rücklé, A., Srivastava, A. & Gurevych, I. (2021). BEIR: A Heterogeneous Benchmark for Zero-shot Evaluation of Information Retrieval Models. NeurIPS Datasets and Benchmarks. | doi:10.48550/arXiv.2104.08663 | Conference paper | T1 | A | Y | RQ-01, RQ-06 | Benchmark domains differ from submissions |
+| SRC-003 | Reimers, N. & Gurevych, I. (2019). Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks. EMNLP-IJCNLP, 3982–3992. | doi:10.18653/v1/D19-1410 | Conference paper | T1 | A | Y | RQ-01 | STS-focused evaluation |
+| SRC-004 | Karpukhin, V. et al. (2020). Dense Passage Retrieval for Open-Domain Question Answering. EMNLP, 6769–6781. | doi:10.18653/v1/2020.emnlp-main.550 | Conference paper | T1 | A | Y | RQ-01 | Requires in-domain training pairs |
+| SRC-005 | Muennighoff, N., Tazi, N., Magne, L. & Reimers, N. (2023). MTEB: Massive Text Embedding Benchmark. EACL, 2014–2037. | doi:10.18653/v1/2023.eacl-main.148 | Conference paper | T1 | A | Y | RQ-01, RQ-06 | Leaderboard snapshot dates quickly |
+| SRC-006 | Nogueira, R. & Cho, K. (2019). Passage Re-ranking with BERT. arXiv preprint. | doi:10.48550/arXiv.1901.04085 | Preprint (primary source of method) | T1 | A | Y | RQ-01 | Not peer reviewed; very large training set |
+| SRC-007 | Cormack, G. V., Clarke, C. L. A. & Büttcher, S. (2009). Reciprocal Rank Fusion Outperforms Condorcet and Individual Rank Learning Methods. SIGIR, 758–759. | doi:10.1145/1571941.1572114 | Short paper | T1 | P | Y | RQ-01 | Two-page paper; TREC runs of 2009 |
+| SRC-008 | Bruch, S., Gai, S. & Ingber, A. (2024). An Analysis of Fusion Functions for Hybrid Retrieval. ACM Transactions on Information Systems 42(1). | doi:10.1145/3596512 | Journal article | T1 | A | Y | RQ-01 | Authors affiliated with a vector-database vendor |
+| SRC-009 | Sun, C., Lo, D., Khoo, S.-C. & Jiang, J. (2011). Towards More Accurate Retrieval of Duplicate Bug Reports. ASE, 253–262. | doi:10.1109/ASE.2011.6100061 | Conference paper | T1 | A | Y | RQ-02 | Software domain; structured fields |
+| SRC-010 | Rakha, M. S., Bezemer, C.-P. & Hassan, A. E. (2018). Revisiting the Performance Evaluation of Automated Approaches for the Retrieval of Duplicate Issue Reports. IEEE Transactions on Software Engineering 44(12), 1245–1268. | https://sail.cs.queensu.ca/data/pdfs/TSE2017_RevisitingThePerformanceEvaluationOfAutomatedApproachesForTheRetrievalOfDuplicateIssueReports.pdf | Journal article (author copy) | T1 | A | Y | RQ-02, RQ-06 | DOI not retrieved in S02 |
+| SRC-011 | Hoogeveen, D., Verspoor, K. M. & Baldwin, T. (2015). CQADupStack: A Benchmark Data Set for Community Question-Answering Research. ADCS, 3:1–3:8. | https://findanexpert.unimelb.edu.au/scholarlywork/1028211-cqadupstack--a-benchmark-data-set-for-community-question-answering-research | Conference paper | T1 | A | Y | RQ-02, RQ-06 | Duplicate labels assigned by forum users |
+| SRC-012 | Broder, A. Z. (1997). On the Resemblance and Containment of Documents. Compression and Complexity of Sequences, 21–29. | https://www.cs.princeton.edu/courses/archive/spring13/cos598C/broder97resemblance.pdf | Conference paper (course copy) | T1 | P | Y | RQ-02 | Syntactic similarity only |
+| SRC-013 | Westerski, A., Iglesias, C. A. & Espinosa Garcia, J. (2012). Idea Relationship Analysis in Open Innovation Crowdsourcing Systems. CollaborateCom 2012. | doi:10.4108/icst.collaboratecom.2012.250412 | Conference paper | T1 | A | Y | RQ-02 | Keyword similarity; 2012 data |
+| SRC-014 | Just, J., Ströhle, T., Füller, J. & Hutter, K. (2024). AI-based novelty detection in crowdsourced idea spaces. Innovation: Organization & Management (online 2023). | doi:10.1080/14479338.2023.2215740 | Journal article | T1 | A | Y | RQ-03 | Publisher page not retrievable; abstract from indexing pages |
+| SRC-015 | Just, J. (2024). Natural language processing for innovation search – Reviewing an emerging non-human innovation intermediary. Technovation 129, 102883. | doi:10.1016/j.technovation.2023.102883 | Review article | T1 | A | Y | RQ-03 | Count of problem–solution studies taken from review table excerpt |
+| SRC-016 | Hope, T., Chan, J., Kittur, A. & Shahaf, D. (2017). Accelerating Innovation Through Analogy Mining. KDD, 235–243. | doi:10.1145/3097983.3098038 | Conference paper | T1 | A | Y | RQ-03 | Product descriptions; crowdsourced labels |
+| SRC-017 | Bell, J. J., Pescher, C., Tellis, G. J. & Füller, J. (2024). Can AI Help in Ideation? A Theory-Based Model for Idea Screening in Crowdsourcing Contests. Marketing Science 43(1), 54–72. | doi:10.1287/mksc.2023.1434 | Journal article | T1 | A | Y | RQ-03, RQ-05 | Screening, not matching |
+| SRC-018 | Lewis, P. et al. (2020). Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks. NeurIPS 33. | doi:10.48550/arXiv.2005.11401 | Conference paper | T1 | A | Y | RQ-03 | Open-domain QA benchmarks |
+| SRC-019 | Shalaby, W. & Zadrozny, W. (2019). Patent retrieval: a literature review. Knowledge and Information Systems 61, 631–660. | doi:10.1007/s10115-018-1322-7 | Review article | T1 | A | Y | RQ-04 | Covers literature to 2018 |
+| SRC-020 | Bekamiri, H., Hain, D. S. & Jurowetzki, R. (2024). PatentSBERTa: A deep NLP based hybrid model for patent distance and classification using augmented SBERT. Technological Forecasting and Social Change 206. | doi:10.48550/arXiv.2103.11933 | Journal article (preprint DOI cited) | T1 | A | Y | RQ-04 | Classification evaluation, not need-to-patent retrieval |
+| SRC-021 | Amershi, S. et al. (2019). Guidelines for Human-AI Interaction. CHI 2019. | doi:10.1145/3290605.3300233 | Conference paper | T1 | A | Y | RQ-05 | Guidelines; no effect sizes |
+| SRC-022 | Parasuraman, R. & Manzey, D. H. (2010). Complacency and Bias in Human Use of Automation: An Attentional Integration. Human Factors 52(3), 381–410. | doi:10.1177/0018720810376055 | Review article | T1 | A | Y | RQ-05 | Domains other than innovation management |
+| SRC-023 | Goddard, K., Roudsari, A. & Wyatt, J. C. (2012). Automation bias: a systematic review of frequency, effect mediators, and mitigators. JAMIA 19(1), 121–127. | doi:10.1136/amiajnl-2011-000089 | Systematic review | T1 | A | Partial | RQ-05 | Mediators verified; mitigators not verified (full abstract page blocked) |
+| SRC-024 | Buçinca, Z., Malaya, M. B. & Gajos, K. Z. (2021). To Trust or to Think: Cognitive Forcing Functions Can Reduce Overreliance on AI in AI-assisted Decision-making. Proc. ACM HCI 5(CSCW1), Art. 188. | doi:10.1145/3449287 | Journal article | T1 | A | Y | RQ-05 | Lab study, non-expert participants |
+| SRC-025 | Järvelin, K. & Kekäläinen, J. (2002). Cumulated Gain-Based Evaluation of IR Techniques. ACM TOIS 20(4), 422–446. | doi:10.1145/582415.582418 | Journal article | T1 | A | Y | RQ-06 | — |
+| SRC-026 | Voorhees, E. M. (2000). Variations in relevance judgments and the measurement of retrieval effectiveness. Information Processing & Management 36(5), 697–716. | doi:10.1016/S0306-4573(00)00010-8 | Journal article | T1 | A | Y | RQ-06 | TREC-scale topic sets |
+| SRC-027 | Cohen, J. (1960). A coefficient of agreement for nominal scales. Educational and Psychological Measurement 20, 37–46. | Bibliographic record via secondary sources; DOI not retrieved | Journal article | T1 | B | Y (bibliographic) | RQ-06 | Original not read |
+| SRC-028 | Liu, N. F., Zhang, T. & Liang, P. (2023). Evaluating Verifiability in Generative Search Engines. Findings of EMNLP 2023, 7001–7025. | doi:10.18653/v1/2023.findings-emnlp.467 | Conference paper | T1 | P | Y | RQ-08 | Commercial systems as of 2023 |
+| SRC-029 | Gao, T., Yen, H., Yu, J. & Chen, D. (2023). Enabling Large Language Models to Generate Text with Citations. EMNLP 2023, 6465–6488. | doi:10.18653/v1/2023.emnlp-main.398 | Conference paper | T1 | A | Y | RQ-08 | Benchmark tasks differ |
+| SRC-030 | Ji, Z. et al. (2023). Survey of Hallucination in Natural Language Generation. ACM Computing Surveys. | doi:10.1145/3571730 | Survey | T1 | A | Y | RQ-08 | Scope statement only used |
+| SRC-031 | Liu, N. F. et al. (2024). Lost in the Middle: How Language Models Use Long Contexts. TACL 12, 157–173. | doi:10.1162/tacl_a_00638 | Journal article | T1 | A | Y | RQ-08 | Models of 2023 |
+| SRC-032 | Sun, W. et al. (2023). Is ChatGPT Good at Search? Investigating Large Language Models as Re-Ranking Agents. EMNLP 2023, 14918–14937. | doi:10.18653/v1/2023.emnlp-main.923 | Conference paper | T1 | A | Y | RQ-01 | Figures from arXiv v1 abstract |
+| SRC-033 | Chen, J., Xiao, S., Zhang, P., Luo, K., Lian, D. & Liu, Z. (2024). M3-Embedding (BGE M3): Multi-Linguality, Multi-Functionality, Multi-Granularity Text Embeddings Through Self-Knowledge Distillation. arXiv preprint. | doi:10.48550/arXiv.2402.03216 | Preprint (primary source of model) | T1 | A | Y | RQ-01 (RQ-07 if activated) | Author-reported results |
+| SRC-034 | Douze, M. et al. (2024). The Faiss library. arXiv preprint. | doi:10.48550/arXiv.2401.08281 | Preprint (primary source of library) | T1 | P | Y | RQ-15 preparation | Library scope only |
+| SRC-035 | Malkov, Yu. A. & Yashunin, D. A. Efficient and Robust Approximate Nearest Neighbor Search Using Hierarchical Navigable Small World Graphs. IEEE TPAMI (IEEE Xplore document 8594636); arXiv:1603.09320. | doi:10.48550/arXiv.1603.09320 | Journal article | T1 | A | Y | RQ-15 preparation | Journal volume not retrieved |
+| SRC-036 | Lin, J. et al. (2021). Pyserini: A Python Toolkit for Reproducible Information Retrieval Research with Sparse and Dense Representations. SIGIR 2021. | doi:10.1145/3404835.3463238 | Conference paper | T1 | A | Y | RQ-06 | Current version and licence not checked |
+| SRC-037 | sentence-transformers. all-MiniLM-L6-v2 model card. Hugging Face. | https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2 | Official model documentation | T1 | A | Y | RQ-01 | Only embedding dimension and intended use verified |
+| SRC-038 | Liu, T.-Y. (2009). Learning to Rank for Information Retrieval. Foundations and Trends in Information Retrieval 3(3), 225–331. | doi:10.1561/1500000016 | Monograph | T1 | A | Y | RQ-09 | — |
+| SRC-039 | Settles, B. (2009). Active Learning Literature Survey. Computer Sciences Technical Report 1648, University of Wisconsin–Madison. | https://minds.wisc.edu/items/37538f44-36ae-413e-8967-e6c831e17a8e | Technical report | T1 | A | Y | RQ-09 | Not peer reviewed; widely used survey |
 
 ## 4. Entry procedure (from S02)
 

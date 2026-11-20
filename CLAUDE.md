@@ -5,15 +5,15 @@ Entry point for every session on the Intelligent Requirements Assessment Assista
 ## Start of session
 
 1. Read `project/00_PROJECT_RULES.md` and `project/00_STAGE_STATUS.md`.
-2. Read the latest handoff: `stages/S0X/S0X_HANDOFF.md` for the last approved stage.
-3. Confirm that the latest `S0X-approved` tag matches the stage in `00_STAGE_STATUS.md`. Stop and report any mismatch.
+2. Read the latest handoff: `stages/S0X/S0X_HANDOFF.md` for the most recent stage.
+3. Confirm that the approved baseline commit recorded in `00_STAGE_STATUS.md` exists in the repository history (and the stage tag, where one exists). Stop and report any mismatch.
 4. Read only the inputs the handoff lists. The three reference documents (REF-01 to REF-03) are in the Claude Project, not in this repository.
 5. Run the Skill checkpoint (`project/00_SKILL_REGISTER.md`).
 
 ## Never
 
 - Start a stage without an owner approval recorded in `project/00_DECISIONS_LOG.md`.
-- Push before the owner approves the stage, or push unapproved material.
+- Push before the owner approves the stage, unless the owner has explicitly authorized pushing that stage's package as `SUBMITTED FOR GATE`.
 - Commit the reference documents, credentials, personal or geographic identifiers (including the account name or repository URL), private infrastructure details or unrelated files. This repository is public.
 - Invent facts, citations, results, team details or figures, or present targets, expected benefits, vendor descriptions or standards mentions as verified.
 - Install or run a third-party Skill without owner authorization and a recorded security review.
@@ -34,4 +34,4 @@ English only. Follow `project/03_STYLE_GUIDE.md` in every file: specific, eviden
 
 ## After owner approval of a stage
 
-Run the stage QC script and the pre-commit safety scan, commit to `main`, tag `S0X-approved`, push the commit and tag, and report the links in chat.
+Run the stage QC script and the pre-commit safety scan, commit to `main`, push, record the approved commit SHA in `00_STAGE_STATUS.md`, add a `S0X-approved` tag if the environment permits it, and report the links in chat.

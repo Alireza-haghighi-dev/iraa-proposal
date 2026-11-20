@@ -3,28 +3,28 @@
 | Field | Value |
 |---|---|
 | Document ID | 00_STAGE_STATUS |
-| Version | 1.2 |
-| Status | APPROVED |
-| Stage | S01 |
+| Version | 2.0 |
+| Status | SUBMITTED FOR GATE |
+| Stage | S02 |
 | Date | 2026-11-20 |
-| Depends on | 00_DECISIONS_LOG; 00_OPEN_ISSUES_REGISTER; S01_HANDOFF |
+| Depends on | 00_DECISIONS_LOG; 00_OPEN_ISSUES_REGISTER; S02_HANDOFF |
 
 ## Current position
 
 | Item | Value |
 |---|---|
-| Current stage | Between S01 and S02 |
-| S01 state | APPROVED (DEC-016); published with tag `S01-approved` |
-| Latest approved tag | `S01-approved` |
-| Next stage | S02 — Scientific and Technical Literature Research |
-| S02 may start | Only after owner authorization is recorded (DEC-019, proposed) |
+| Current stage | S02 delivered; awaiting owner gate decision |
+| Latest approved baseline | S01: commit 2b5f83c65749a4c697782216026a6291a91aa2a1 (DEC-020; no tag) |
+| S02 state | Delivered and pushed as `SUBMITTED FOR GATE` (DEC-021); not yet approved |
+| Next stage | S03 — Comparable Systems and Prior-Art Analysis |
+| S03 may start | Only after owner approval of S02 and authorization of S03 (DEC-022, proposed) |
 
 ## Stage register
 
 | Stage | Title | State | Gate decision |
 |---|---|---|---|
-| S01 | Research Foundation and Requirements Mapping | Approved and published (v1.2) | CONDITIONAL PASS (DEC-015), then APPROVED (DEC-016) |
-| S02 | Scientific and Technical Literature Research | Not started | — |
+| S01 | Research Foundation and Requirements Mapping | Approved; baseline commit 2b5f83c | CONDITIONAL PASS (DEC-015), then APPROVED (DEC-016) |
+| S02 | Scientific and Technical Literature Research | Delivered (pushed for review) | Pending (DEC-022) |
 | S03 | Comparable Systems and Prior-Art Analysis | Not started | — |
 | S04 | Product Definition and Technical Architecture | Not started | — |
 | S05 | Technical Feasibility and Evaluation Design | Not started | — |
@@ -48,4 +48,4 @@ Full list: `00_OPEN_ISSUES_REGISTER.md`.
 
 ## Required inputs for the next session
 
-See `stages/S01/S01_HANDOFF.md`, sections "Inputs for S02" and "Session start".
+See `stages/S02/S02_HANDOFF.md`, sections "Inputs for S03" and "Session start".

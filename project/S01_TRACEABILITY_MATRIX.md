@@ -3,11 +3,11 @@
 | Field | Value |
 |---|---|
 | Document ID | S01_TRACEABILITY_MATRIX |
-| Version | 1.2 |
-| Status | APPROVED |
-| Stage | S01 |
+| Version | 2.0 |
+| Status | SUBMITTED FOR GATE |
+| Stage | S02 |
 | Date | 2026-11-20 |
-| Depends on | S01_REQUIREMENTS_REGISTER; S01_REVIEWER_CRITERIA_REGISTER; S01_RESEARCH_QUESTIONS; 00_OPEN_ISSUES_REGISTER |
+| Depends on | S01_REQUIREMENTS_REGISTER; S01_REVIEWER_CRITERIA_REGISTER; S01_RESEARCH_QUESTIONS; 00_OPEN_ISSUES_REGISTER; S02_LITERATURE_EVIDENCE_MATRIX |
 
 ## A. Requirements statement (REF-01) → project items → proposal sections
 
@@ -80,3 +80,17 @@ Coverage, status and evidence for RF-001 to RF-012 and QA-001 to QA-010 are main
 | Specification and acceptance criterion per requirement | S05 |
 | Work package (WP) per requirement and specification | S06 |
 | Section 12 method paragraph per WP | S07 |
+
+## E. Evidence links (added S02)
+
+| Research question | Matrix rows | Sources | Requirements served |
+|---|---|---|---|
+| RQ-01 | 1.1–1.11 | SRC-001 to SRC-008, SRC-032, SRC-033, SRC-037 | R1, R2 |
+| RQ-02 | 2.1–2.5 | SRC-009 to SRC-013 | R1 |
+| RQ-03 | 3.1–3.5 | SRC-014 to SRC-018 | R2 |
+| RQ-04 | 4.1–4.3 | SRC-019, SRC-020 | R4 |
+| RQ-05 | 5.1–5.5 | SRC-017, SRC-021 to SRC-024 | R3 |
+| RQ-06 | 6.1–6.6 | SRC-002, SRC-005, SRC-010, SRC-011, SRC-025 to SRC-027, SRC-036 | QA-002, QA-004 |
+| RQ-08 | 8.1–8.4 | SRC-028 to SRC-031 | R2, R3, R4 |
+| RQ-09 | 9.1–9.2 | SRC-038, SRC-039 | C1, C3 |
+

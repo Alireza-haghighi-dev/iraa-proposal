@@ -3,11 +3,11 @@
 | Field | Value |
 |---|---|
 | Document ID | S01_RESEARCH_QUESTIONS |
-| Version | 1.2 |
-| Status | APPROVED |
-| Stage | S01 |
+| Version | 2.0 |
+| Status | SUBMITTED FOR GATE |
+| Stage | S02 |
 | Date | 2026-11-20 |
-| Depends on | S01_REQUIREMENTS_REGISTER; DEC-002 |
+| Depends on | S01_REQUIREMENTS_REGISTER; DEC-002; S02_RESEARCH_SYNTHESIS |
 
 ## 1. Scope rules for research
 
@@ -64,3 +64,19 @@ Classification of C-series items (SC, EA, PG) follows S01_REQUIREMENTS_REGISTER 
 | C4 (PG) | RQ-10 |
 | C5 (PG) | RQ-06 |
 | C6 (PG) | Confidentiality and process rule; no research question |
+
+## 4. Status after S02
+
+| RQ | Status | Evidence |
+|---|---|---|
+| RQ-01 | Closed for S02 | S02 matrix rows 1.1–1.11 |
+| RQ-02 | Closed for S02 | Rows 2.1–2.5 |
+| RQ-03 | Partially closed; thin direct evidence | Rows 3.1–3.5 |
+| RQ-04 | Partially closed; need-to-patent gap (ISS-028) | Rows 4.1–4.3 |
+| RQ-05 | Closed for S02; mitigator detail open | Rows 5.1–5.5 |
+| RQ-06 | Closed for S02 | Rows 6.1–6.6 |
+| RQ-07 | Not activated (ISS-007) | — |
+| RQ-08 | Closed for S02 | Rows 8.1–8.4 |
+| RQ-09 | Closed for S02 | Rows 9.1–9.2 |
+| RQ-10 to RQ-15 | Not started | S03–S05 |
+

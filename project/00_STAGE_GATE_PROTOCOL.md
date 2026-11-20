@@ -3,9 +3,9 @@
 | Field | Value |
 |---|---|
 | Document ID | 00_STAGE_GATE_PROTOCOL |
-| Version | 1.2 |
-| Status | APPROVED |
-| Stage | S01 |
+| Version | 2.0 |
+| Status | SUBMITTED FOR GATE |
+| Stage | S02 |
 | Date | 2026-11-20 |
 | Depends on | 00_PROJECT_RULES; 03_STYLE_GUIDE; REF-03 |
 
@@ -26,7 +26,7 @@ Only the owner decides the gate. The decision is recorded as a DEC entry. The ne
 - [ ] `S0X_QC_REPORT.md` and `S0X_HANDOFF.md` (one page or less, listing exact inputs for the next stage).
 - [ ] Skill checkpoint recorded in `00_SKILL_REGISTER.md`.
 - [ ] `00_STAGE_STATUS.md` updated.
-- [ ] After approval only: QC script and pre-commit safety scan passed; commit on `main`; annotated tag `S0X-approved`; commit and tag pushed (`00_PROJECT_RULES.md` §4).
+- [ ] Before any push: QC script and pre-commit safety scan passed. After approval: commit on `main`, pushed, approved commit SHA recorded in `00_STAGE_STATUS.md`; tag added where the environment permits (`00_PROJECT_RULES.md` §4, DEC-020).
 
 ## 3. Evidence checks
 

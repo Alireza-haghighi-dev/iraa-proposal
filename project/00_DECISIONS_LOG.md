@@ -3,9 +3,9 @@
 | Field | Value |
 |---|---|
 | Document ID | 00_DECISIONS_LOG |
-| Version | 1.2 |
-| Status | APPROVED |
-| Stage | S01 |
+| Version | 2.0 |
+| Status | SUBMITTED FOR GATE |
+| Stage | S02 |
 | Date | 2026-11-20 |
 | Depends on | Owner instructions as recorded in each entry |
 
@@ -34,8 +34,12 @@
 | DEC-017 | 2026-11-20 | GitHub-based storage adopted. The connected `iraa-proposal` repository is the persistent source of truth. Each approved stage is committed and pushed with an annotated `S0X-approved` tag; links are reported in chat. | Owner | ACTIVE (supersedes the storage and handoff parts of DEC-010) | All stages |
 | DEC-018 | 2026-11-20 | Repository layout approved: `project/` (living documents), `stages/` (stage deliverables), `proposal/` (drafts). The repository is public. The three reference documents stay in the Claude Project and are not committed. No credentials, personal or geographic identifiers (including the account name or repository URL), private infrastructure details, unrelated files or unapproved material are committed. Nothing is pushed before stage approval. | Owner | ACTIVE | All stages |
 
+| DEC-019 | 2026-11-20 | S02 authorized, subject to a read-only check that the required S01 files exist at the S01 baseline commit (check passed). | Owner | ACTIVE | S02 |
+| DEC-020 | 2026-11-20 | The S01 baseline is commit 2b5f83c65749a4c697782216026a6291a91aa2a1. The tag push failure (HTTP 403) is not a blocker. Approved baselines are identified by commit SHA in `00_STAGE_STATUS.md`; a stage tag is added when the environment permits. | Owner | ACTIVE (closes ISS-027) | All stages |
+| DEC-021 | 2026-11-20 | The owner authorized committing and pushing the finished S02 deliverables before the S02 gate decision. Pushed files carry status `SUBMITTED FOR GATE` until approved. This modifies the "no push before approval" rule of DEC-018 for S02. | Owner | ACTIVE | S02 |
+
 ## Pending owner decision
 
 | ID | Decision requested | Recommended |
 |---|---|---|
-| DEC-019 (proposed) | Authorization to begin S02 | Begin S02 in a fresh session from tag `S01-approved` |
+| DEC-022 (proposed) | S02 gate outcome and authorization to begin S03 | Approve S02; begin S03 |

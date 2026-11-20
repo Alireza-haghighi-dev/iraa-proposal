@@ -3,11 +3,11 @@
 | Field | Value |
 |---|---|
 | Document ID | 00_OPEN_ISSUES_REGISTER |
-| Version | 1.2 |
-| Status | APPROVED |
-| Stage | S01 |
+| Version | 2.0 |
+| Status | SUBMITTED FOR GATE |
+| Stage | S02 |
 | Date | 2026-11-20 |
-| Depends on | REF-01; REF-02; REF-03; S01_REQUIREMENTS_REGISTER |
+| Depends on | REF-01; REF-02; REF-03; S01_REQUIREMENTS_REGISTER; S02_RESEARCH_SYNTHESIS |
 
 - **Type key:** **ODR** = OWNER DECISION REQUIRED; **OPEN** = information or evidence missing; **LOCAL** = local completion only, not researched in the working package
 - **Blocking key:** The stage or gate that cannot close until the issue is resolved or an explicit assumption is approved
@@ -58,6 +58,14 @@
 | ISS-021 | RF-001 (regular 12-point font, no arbitrary bold) and RF-003 (table layout) cannot be fully enforced in Markdown. Markdown drafts preserve schemas; typography is applied at local finalization. | RF-001, RF-003 | LOCAL | None | Local finalization | OPEN |
 | ISS-022 | The requirements statement's illustration (§14) was omitted from the working copy and is described as conceptual. It must not be used as evidence of a working product. | Req. §14 | OPEN (informational) | None | S08 | OPEN |
 
+## E. Issues raised in S02
+
+| ID | Issue | Origin | Type | Blocks | Target | Status |
+|---|---|---|---|---|---|---|
+| ISS-028 | No public benchmark of organizational need/challenge submissions and no study of retrieval from need statements to patents were found. Every performance figure must come from the project's own evaluation or be labelled as a proxy result. | S02 matrix rows 4.3; synthesis §5; CLM-025 | OPEN | S05 gate (evaluation design must address it) | S05 | OPEN |
+
 ## Closed issues
 
-None in S01.
+| ID | Issue | Resolution | Closed by |
+|---|---|---|---|
+| ISS-027 | The `S01-approved` tag could not be pushed (HTTP 403 from the session's git proxy). | Owner designated commit 2b5f83c65749a4c697782216026a6291a91aa2a1 as the immutable S01 baseline. | DEC-020 |

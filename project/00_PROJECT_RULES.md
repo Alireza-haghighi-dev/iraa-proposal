@@ -3,9 +3,9 @@
 | Field | Value |
 |---|---|
 | Document ID | 00_PROJECT_RULES |
-| Version | 1.2 |
-| Status | APPROVED |
-| Stage | S01 |
+| Version | 2.0 |
+| Status | SUBMITTED FOR GATE |
+| Stage | S02 |
 | Date | 2026-11-20 |
 | Depends on | 00_DECISIONS_LOG; 00_STAGE_GATE_PROTOCOL; 03_STYLE_GUIDE |
 
@@ -31,7 +31,7 @@ The sponsor's platform holds organizational, operational and technology **needs 
 8. No third-party Skill is installed or run without explicit owner authorization and a recorded security review (DEC-005).
 9. No stage starts without a recorded owner approval in `00_DECISIONS_LOG.md`.
 10. The repository is public. Never commit the three reference documents, credentials, personal or geographic identifiers (including the repository owner's account name or repository URL), private infrastructure details, unrelated files or unapproved material (DEC-018).
-11. Nothing is pushed before the owner approves the stage. Review before approval happens through downloaded files.
+11. Nothing is pushed before the owner approves the stage, unless the owner explicitly authorizes pushing a stage package as `SUBMITTED FOR GATE` (as for S02, DEC-021).
 
 ## 4. Session handoff procedure (GitHub; DEC-017)
 
@@ -53,13 +53,13 @@ The `iraa-proposal` repository is the persistent source of truth. The three refe
 **After owner approval:**
 1. Record the approval as a DEC entry and set the approved files to `APPROVED`.
 2. Run the stage QC script and the pre-commit safety scan; both must pass.
-3. Commit to `main`, create the annotated tag `S0X-approved`, and push the commit and tag.
+3. Commit to `main` and push. Record the approved commit SHA in `00_STAGE_STATUS.md` (DEC-020). Add an annotated `S0X-approved` tag only if the environment permits pushing tags.
 4. Report the repository, stage-folder and tag links to the owner in chat (not in committed files).
 
 **Starting a new stage (fresh session):**
 1. Attach and clone the repository; `CLAUDE.md` loads automatically.
 2. Read this file, `project/00_STAGE_STATUS.md` and the previous handoff.
-3. Confirm that the latest `S0X-approved` tag matches the stage named in `00_STAGE_STATUS.md`; if not, stop and report.
+3. Confirm that the approved baseline commit recorded in `00_STAGE_STATUS.md` exists in the repository history; if not, stop and report.
 4. Read only the inputs the handoff lists, plus the reference documents in the Claude Project as needed.
 5. Run the Skill checkpoint and record it in `00_SKILL_REGISTER.md`.
 6. Do not reconstruct decisions from chat history; the repository files are the record.
