@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | S07_HANDOFF |
 | Version | 1.0 |
-| Status | SUBMITTED FOR GATE |
+| Status | APPROVED |
 | Stage | S07 |
 | Date | 2026-11-21 |
 | Depends on | DEC-033; DEC-034; DRAFT_SEC12_METHODOLOGY; S07_CORRECTED_EVALUATION_METHODOLOGY; S07_TOOL_AND_VERSION_REGISTER; S07_WP_METHOD_TRACEABILITY; S07_QC_REPORT |
@@ -23,6 +23,9 @@
 
 ## Instructions for S08
 
+- **Mandatory (DEC-035, ISS-052):** reword every passage that treats assessor query approval (CP-1) as sufficient for external transmission. Both disclosure authorization (ISS-033) and query approval are required before any confidential text leaves the controlled environment; without authorization, only public need statements or text the authorization covers may be sent. Affected: Section 7 third objective, Section 8 feature 5 and MS-05, Section 12 activity 4 and intro, `S04_ARCHITECTURE` CP-1 row.
+- **Critical reviewer requirement (DEC-035, RF-003):** preserve the official form's 20 sections and original table structures in the English master.
+- Keep all open experimental parameters and licensing decisions provisional (ISS-039, ISS-041, ISS-044, ISS-049, ISS-050).
 - Draft the remaining draftable sections into the English master; carry Section 12 into it with an editorial pass (Passes A–E), removing bracketed working IDs and keeping every claim label's meaning.
 - Do not change WP titles or the corrected targets; keep "not required" for superiority and "non-inferiority not established" wording.
 - Full-text checks (Pass A) for SRC-066 to SRC-069, SRC-087, SRC-089, SRC-090 and S02 sources (ISS-029).
@@ -33,7 +36,7 @@
 | Path | Why |
 |---|---|
 | `CLAUDE.md`, `project/00_PROJECT_RULES.md`, `00_STAGE_STATUS.md`, `00_STAGE_GATE_PROTOCOL.md` (§5, §7 S08 row), `03_STYLE_GUIDE.md` | Rules and gate |
-| `project/00_DECISIONS_LOG.md` (DEC-028, DEC-033, DEC-034, S07 gate entry), `00_OPEN_ISSUES_REGISTER.md`, `02_CLAIM_REGISTER.md`, `02_SOURCE_LOG.md`, `S01_REVIEWER_CRITERIA_REGISTER.md` | Decisions, issues, evidence, criteria |
+| `project/00_DECISIONS_LOG.md` (DEC-028, DEC-033, DEC-034, DEC-035), `00_OPEN_ISSUES_REGISTER.md`, `02_CLAIM_REGISTER.md`, `02_SOURCE_LOG.md`, `S01_REVIEWER_CRITERIA_REGISTER.md` | Decisions, issues, evidence, criteria |
 | `proposal/` (all drafts) | Sections to integrate |
 | `stages/S07/S07_WP_METHOD_TRACEABILITY.md` §4; `stages/S03/S03_SECTION9_COMPARISON.md` | Consistency checks; Section 9 |
 

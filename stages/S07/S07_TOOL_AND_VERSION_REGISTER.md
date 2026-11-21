@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | S07_TOOL_AND_VERSION_REGISTER |
 | Version | 1.0 |
-| Status | SUBMITTED FOR GATE |
+| Status | APPROVED |
 | Stage | S07 |
 | Date | 2026-11-21 |
 | Depends on | S05_FEASIBILITY_AND_RISKS §1; S04_ARCHITECTURE §3, §5; QA-010; ISS-040; ISS-041; SRC-033 to SRC-037; SRC-075 to SRC-078; SRC-086; CLM-054; CLM-055; CLM-058; CLM-063 |
