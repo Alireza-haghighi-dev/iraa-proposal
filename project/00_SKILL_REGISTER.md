@@ -3,10 +3,10 @@
 | Field | Value |
 |---|---|
 | Document ID | 00_SKILL_REGISTER |
-| Version | 5.0 |
-| Status | APPROVED |
-| Stage | S05 |
-| Date | 2026-11-20 |
+| Version | 6.0 |
+| Status | SUBMITTED FOR GATE |
+| Stage | S06 |
+| Date | 2026-11-21 |
 | Depends on | DEC-005 |
 
 ## 1. Checkpoint procedure (run at the start of every stage)
@@ -27,6 +27,7 @@
 | SKL-004 | S04 | None requiring a Skill. S04 is design and drafting from loaded registers, plus two standards-body pages for RQ-13. | Catalog search (software architecture, system design, technical proposal, architecture diagram, requirements traceability): no results. Built-in `docs` considered and rejected: deliverables must be versioned Markdown in the repository. Built-in `dataviz` not applicable: diagrams are Mermaid source in Markdown, not charts. `deep-research` not needed (two sources). | Not applicable (no third-party Skill) | No Skill used | Not required |
 | SKL-005 | S04.1 | None requiring a Skill. S04.1 corrects existing Markdown registers and drafts from loaded files; no new research. | Built-in `docs` not applicable (repository Markdown is the canonical format); `deep-research` not applicable (no search). | Not applicable (no third-party Skill) | No Skill used | Not required |
 | SKL-006 | S05 | Reading official service, model and licence pages one by one for RQ-14 and RQ-15, with per-statement logging | Built-in `deep-research` re-evaluated; built-in `pdf-reading` considered for licence documents; `dataviz` and `docs` not applicable (repository Markdown, no charts) | Not applicable (no third-party Skill) | No Skill used. `deep-research` DEFERRED for the S02 reason (subagent narrative output does not meet the per-source logging rule). `pdf-reading` not needed: the pages read were HTML. Direct search and fetch used; two pages (SRC-063 record, EPO OPS landing page) were not reachable by fetch and were handled by search-result extracts or left OPEN | Not required |
+| SKL-007 | S06 | None requiring a Skill. S06 plans work packages from approved S04 and S05 Markdown files; no external research, no charts, no non-Markdown output. | Built-in `docs` not applicable (repository Markdown is the canonical format); `xlsx` considered for the effort table and rejected (the QC script recomputes the figures from Markdown); `deep-research` not applicable (no search) | Not applicable (no third-party Skill) | No Skill used | Not required |
 
 ## 3. Forward notes
 
@@ -36,4 +37,4 @@
 | pdf-reading | Built-in (Anthropic) | Reading open-access papers retrieved as PDFs | Low risk; check that extracted figures are verified against the page |
 | Third-party research or citation-verification Skills | To be proposed by owner | Citation checking, structured extraction | Full security review required before any use |
 
-No Skill was used in S02, S03, S04, S04.1 or S05. S07 may need `pdf-reading` for licence files distributed as PDF (ISS-041).
+No Skill was used in S02, S03, S04, S04.1, S05 or S06. S07 may need `pdf-reading` for licence files distributed as PDF (ISS-041).

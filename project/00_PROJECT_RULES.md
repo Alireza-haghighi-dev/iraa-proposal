@@ -3,10 +3,10 @@
 | Field | Value |
 |---|---|
 | Document ID | 00_PROJECT_RULES |
-| Version | 4.0 |
-| Status | APPROVED |
-| Stage | S05 |
-| Date | 2026-11-20 |
+| Version | 5.0 |
+| Status | SUBMITTED FOR GATE |
+| Stage | S06 |
+| Date | 2026-11-21 |
 | Depends on | 00_DECISIONS_LOG; 00_STAGE_GATE_PROTOCOL; 03_STYLE_GUIDE |
 
 - **Purpose:** Full project rules. `CLAUDE.md` at the repository root is the short entry point and points here.
@@ -87,6 +87,8 @@ The `iraa-proposal` repository is the persistent source of truth. The three refe
 | ET / PV | Evaluation test / numeric planning value (ASSUMPTION, AS-12) | S05_EVALUATION_DESIGN |
 | DR / DS | Data requirement / substitute dataset candidate | S05_DATA_AVAILABILITY_AND_SUBSTITUTES |
 | FT / RSK | Feasibility test / technical or data risk (input to Section 17) | S05_FEASIBILITY_AND_RISKS |
+| Tn.m / Dn.m / M | Task / deliverable within work package n / milestone (decision point, no date) | S06_WORK_PACKAGES; S06_DELIVERABLES_AND_ACCEPTANCE |
+| EH / L | Effort-sizing assumption (ASSUMPTION) / effort-reduction option if the ISS-013 envelope is lower | S06_DEPENDENCIES_AND_EFFORT |
 
 ## 6. Claim labels
 

@@ -1,0 +1,964 @@
+INFO  sha256  [bf2db6beb649366c824feb7b9225b8b456aba2fe9fbad9020311842cef5b98e6  00_DECISIONS_LOG.md]
+INFO  sha256  [c7268e621861fbfd7855df162aabb6809ae5be6516e5e7986d7284cb63506719  00_OPEN_ISSUES_REGISTER.md]
+INFO  sha256  [4374cf3269ae17656ac5e9fc3c94f77288d565fa0a8dca5ce25eb6dbfaf4a9fb  00_PROJECT_RULES.md]
+INFO  sha256  [a6c881d78891c4eb111113f879f80a5b92469c60dcfc63b875c07800f649ed7f  00_SKILL_REGISTER.md]
+INFO  sha256  [04f67d57e84e382a8b6894b6bc34bbaa03e4c4482174b078f59d16165d66142f  00_STAGE_GATE_PROTOCOL.md]
+INFO  sha256  [c1257b26f439c46c63fe34357f30c5dd76dd4380cce164516c66f16ed2e5f1c1  00_STAGE_STATUS.md]
+INFO  sha256  [f7ad747940ad0fe90376ea6e84183193d596057f8c7ca71883295d3ac83d67d7  02_CLAIM_REGISTER.md]
+INFO  sha256  [ae7c6b176cd319215a35b290a974eac4659fea93300f36aff60fb7c12853a16f  02_SOURCE_LOG.md]
+INFO  sha256  [dfb6d542c7a8ddcf62c1dbb8d0a23613ce7f0d66ab9ed95b5394eb0f7ddc81a0  03_STYLE_GUIDE.md]
+INFO  sha256  [faa6d15a4eda6db7e2960ae8ed3ed1f0dfcac7877135fc549cf327d90f017c4b  S01_REQUIREMENTS_REGISTER.md]
+INFO  sha256  [37e7ba7b41c139532a25339fbcd4a06341b09317d7ef7c01655045d2e33c1026  S01_RESEARCH_QUESTIONS.md]
+INFO  sha256  [4eb5b39064dd9fd776d02579c1800e7a31cfa92125f091c9c39bf0fd1c9c07ba  S01_REVIEWER_CRITERIA_REGISTER.md]
+INFO  sha256  [8751a358c6e3d03275d2755735242dec5cc8dee155ec5e4fc9615aaa425a2613  S01_TRACEABILITY_MATRIX.md]
+INFO  sha256  [6da8f3b3ac2a9bfbef8f4d5b39ed1a47f3ca17739dc5550a9e0f267f5ace49dd  DRAFT_SEC05_CLASSIFICATION.md]
+INFO  sha256  [c2de01b2e39788559be39ad1a30516ad4951b2189ee2f79641577dd99ff6ef90  DRAFT_SEC07_OBJECTIVES.md]
+INFO  sha256  [e1411c035d244d3bf72f72b2e95123752f6d6ae21de3468657655322df63fe0e  DRAFT_SEC08_FEATURES.md]
+INFO  sha256  [3e159aa96914dbd7cac605b8a1ae65aa484e21acc6a2ed4b30f8839802b6a6a3  DRAFT_SEC11_CONTINUITY.md]
+INFO  sha256  [400faa9210c6a7193ab1ec353d8fcea8c47e69310b3a9bff99e1c8da75225a3e  DRAFT_SEC13_ACTIVITIES.md]
+INFO  sha256  [d97d0204fd0fe598ca4862a4ebf3add2c715b17b03febf36e94a151e8e501293  S01_CHANGE_REPORT.md]
+INFO  sha256  [207acd3770dd6def40a41214605631d4cdb20329cd5b681984374f734543b085  S01_HANDOFF.md]
+INFO  sha256  [c65d4ab4fc1c83b7800dd694cb0579a998688517b0a0b90324f987936466a43f  S01_PLAN.md]
+INFO  sha256  [05fc2afa1e1679326bbe048f583b4f7bb0e3930f797112d5fb35c6eb60fd50c6  S01_QC_REPORT.md]
+INFO  sha256  [321c045296230c2f40918ed5bf7c500fe30b92e4522d660780bf7f19f4080a62  S02_HANDOFF.md]
+INFO  sha256  [02af062d1d36df10fa403735ac2a889064800f5b6f77056e09a540bc4aa29fff  S02_LITERATURE_EVIDENCE_MATRIX.md]
+INFO  sha256  [44f56a8ff4a9c7fe51bddee665a6533cd8c087692472e0e22e522a0bdd9e4d2a  S02_PLAN.md]
+INFO  sha256  [8fb33a9f7b7fb5726e0f6d18d9d3d4fa9f08c3b0b6b5c190646ac4537fb0586b  S02_QC_REPORT.md]
+INFO  sha256  [20655d1b6a86fba0a452c952ac8ae441b0fa49c934a2744a7cb2ca0ef102b45a  S02_RESEARCH_SYNTHESIS.md]
+INFO  sha256  [84bfdece8359a7493c36ebe0e9cd14ea03608b67a1498c23829ed1368b0c94f5  S03_COMPARABLE_SYSTEMS_MATRIX.md]
+INFO  sha256  [69b3f7dec5d58a60aba39a2bad85f0181c90b74f12abca2bc7c0943039c16d81  S03_HANDOFF.md]
+INFO  sha256  [1d2f907bae3902d5da9058aad96b8b95b017f64300c77498142bcb2205c38fa6  S03_PLAN.md]
+INFO  sha256  [212fb52293d29e93e4e443dc7f226e06d6282ce5e84b6b5a78bbdabcb843b5d4  S03_PRIOR_ART_REGISTER.md]
+INFO  sha256  [f501d4046a182574fb83e79c5a77f31674fdba7dc9ce46c2e7ebfa90977bed5c  S03_QC_REPORT.md]
+INFO  sha256  [a3d5c0fea9b7c96dc21d65d68f4c73571da5666d1b44aab56ff0742a1183af5e  S03_SECTION9_COMPARISON.md]
+INFO  sha256  [56b421eee8089805aa3f015d350430ae9357ac0d6a308a73750362a865c54dfb  S04.1_CHANGE_REPORT.md]
+INFO  sha256  [dcd32f4912722c887def86d0f3eaf496ac763560fa91b5302e83273a533006e3  S04.1_CORRECTION_MATRIX.md]
+INFO  sha256  [0f3241e295b1ace916b3de202a41fa8d6ab1707e16dc2189ff9d6315372668c8  S04.1_HANDOFF.md]
+INFO  sha256  [69372940fba54263a0f7288c11310b74e99dcc9f91fa8dadb9aa2b5a9d6c6a2a  S04.1_QC_REPORT.md]
+INFO  sha256  [b64c2d99ae8b5b9c5c554247f1ffdd23aedc3f46ee4e842661a9a7917d47cadc  S04.1_R2_REFERENCE_CORRECTION_NOTE.md]
+INFO  sha256  [f3643293283985366fdd91f9aa3a77244b4a8e18bea0d52499dd9fb91a09f2cc  S04_ARCHITECTURE.md]
+INFO  sha256  [46dab71fa5cfe7408d0e3e77047a10062bd752cc2252c1c1968e0a36db15dacb  S04_ASSUMPTIONS_AND_STANDARDS.md]
+INFO  sha256  [33279201b83a3eaa81c044a9cd9994fdc41a7e9021aa5d9497f845454589bdde  S04_DATA_FLOWS_AND_INTERFACES.md]
+INFO  sha256  [c055d8b90b73cd1f5c1087841da132b759724d30227c17edde02d1e91e0469e9  S04_HANDOFF.md]
+INFO  sha256  [a44e2e3b79bceb5465c417b88b4a68bd65e39a5cdd7055d9e161c6f753f5579f  S04_PLAN.md]
+INFO  sha256  [cf9eee16ee999e18eb736da083c73d0668b5433f1c5f945e61f1dfbbd8edc767  S04_QC_REPORT.md]
+INFO  sha256  [124ee3f89bde223923873a84b1af980b135f0577958628a3100970a9ab819b0b  S04_SCOPE_OPTIONS.md]
+INFO  sha256  [17abeb057f43570d48b18fb19e63f3007c804b84979a3bdd2f0b5ff076ba9ec0  S05_DATA_AVAILABILITY_AND_SUBSTITUTES.md]
+INFO  sha256  [ca05b30ccd2cb2bece4e322cc8dfd74e85f8e684557e6c7e85ddec0c05b200a2  S05_EVALUATION_DESIGN.md]
+INFO  sha256  [0f32755229b698f6640c285674657e341e7bd6a0e2635191039bc276d9d030c5  S05_FEASIBILITY_AND_RISKS.md]
+INFO  sha256  [5d01a5532122979c73cff0ff98058fc4d8fc4726144f07e88dcb11a4b0847e0d  S05_HANDOFF.md]
+INFO  sha256  [1744e8bb2c6a5434047b7d8e935c497ad82190902a963df6fbb7b2a7161ddcd8  S05_PLAN.md]
+INFO  sha256  [b5921dd2853ebec3f59d9fb14e5d168b55ce571a22bbaabf8a659cc8925e57c8  S05_QC_REPORT.md]
+INFO  sha256  [2f7448c5af4668f071b2db58c65c0a446bbc3a07e8090f4888d44bc899650b3f  S06_DELIVERABLES_AND_ACCEPTANCE.md]
+INFO  sha256  [f6f06c110cac70cc6e3222d1d66a4bd3710c0ef0a139dcd35a9e71a7aace9323  S06_DEPENDENCIES_AND_EFFORT.md]
+INFO  sha256  [a23bb5a194fb0cf713a2460a8fa968f885df34fef3d9c84f0e35a934a187fca6  S06_HANDOFF.md]
+INFO  sha256  [e7d192382a79e3d55a8c2df7744f334b65ff5c521529151b9071e8c146f2ef39  S06_PLAN.md]
+INFO  sha256  [bcd995e052ca8d6f002d7de57a6df4e7c5ee33bc5af3e48efa9da447ee234303  S06_QC_REPORT.md]
+INFO  sha256  [8c421bfb39acb0802b468b40337920001956f07b83478835e65fef4edf0df7e1  S06_WORK_PACKAGES.md]
+PASS  metadata header  [00_DECISIONS_LOG.md]
+PASS  metadata header  [00_OPEN_ISSUES_REGISTER.md]
+PASS  metadata header  [00_PROJECT_RULES.md]
+PASS  metadata header  [00_SKILL_REGISTER.md]
+PASS  metadata header  [00_STAGE_GATE_PROTOCOL.md]
+PASS  metadata header  [00_STAGE_STATUS.md]
+PASS  metadata header  [02_CLAIM_REGISTER.md]
+PASS  metadata header  [02_SOURCE_LOG.md]
+PASS  metadata header  [03_STYLE_GUIDE.md]
+PASS  metadata header  [S01_REQUIREMENTS_REGISTER.md]
+PASS  metadata header  [S01_RESEARCH_QUESTIONS.md]
+PASS  metadata header  [S01_REVIEWER_CRITERIA_REGISTER.md]
+PASS  metadata header  [S01_TRACEABILITY_MATRIX.md]
+PASS  metadata header  [DRAFT_SEC05_CLASSIFICATION.md]
+PASS  metadata header  [DRAFT_SEC07_OBJECTIVES.md]
+PASS  metadata header  [DRAFT_SEC08_FEATURES.md]
+PASS  metadata header  [DRAFT_SEC11_CONTINUITY.md]
+PASS  metadata header  [DRAFT_SEC13_ACTIVITIES.md]
+PASS  metadata header  [S01_CHANGE_REPORT.md]
+PASS  metadata header  [S01_HANDOFF.md]
+PASS  metadata header  [S01_PLAN.md]
+PASS  metadata header  [S01_QC_REPORT.md]
+PASS  metadata header  [S02_HANDOFF.md]
+PASS  metadata header  [S02_LITERATURE_EVIDENCE_MATRIX.md]
+PASS  metadata header  [S02_PLAN.md]
+PASS  metadata header  [S02_QC_REPORT.md]
+PASS  metadata header  [S02_RESEARCH_SYNTHESIS.md]
+PASS  metadata header  [S03_COMPARABLE_SYSTEMS_MATRIX.md]
+PASS  metadata header  [S03_HANDOFF.md]
+PASS  metadata header  [S03_PLAN.md]
+PASS  metadata header  [S03_PRIOR_ART_REGISTER.md]
+PASS  metadata header  [S03_QC_REPORT.md]
+PASS  metadata header  [S03_SECTION9_COMPARISON.md]
+PASS  metadata header  [S04.1_CHANGE_REPORT.md]
+PASS  metadata header  [S04.1_CORRECTION_MATRIX.md]
+PASS  metadata header  [S04.1_HANDOFF.md]
+PASS  metadata header  [S04.1_QC_REPORT.md]
+PASS  metadata header  [S04.1_R2_REFERENCE_CORRECTION_NOTE.md]
+PASS  metadata header  [S04_ARCHITECTURE.md]
+PASS  metadata header  [S04_ASSUMPTIONS_AND_STANDARDS.md]
+PASS  metadata header  [S04_DATA_FLOWS_AND_INTERFACES.md]
+PASS  metadata header  [S04_HANDOFF.md]
+PASS  metadata header  [S04_PLAN.md]
+PASS  metadata header  [S04_QC_REPORT.md]
+PASS  metadata header  [S04_SCOPE_OPTIONS.md]
+PASS  metadata header  [S05_DATA_AVAILABILITY_AND_SUBSTITUTES.md]
+PASS  metadata header  [S05_EVALUATION_DESIGN.md]
+PASS  metadata header  [S05_FEASIBILITY_AND_RISKS.md]
+PASS  metadata header  [S05_HANDOFF.md]
+PASS  metadata header  [S05_PLAN.md]
+PASS  metadata header  [S05_QC_REPORT.md]
+PASS  metadata header  [S06_DELIVERABLES_AND_ACCEPTANCE.md]
+PASS  metadata header  [S06_DEPENDENCIES_AND_EFFORT.md]
+PASS  metadata header  [S06_HANDOFF.md]
+PASS  metadata header  [S06_PLAN.md]
+PASS  metadata header  [S06_QC_REPORT.md]
+PASS  metadata header  [S06_WORK_PACKAGES.md]
+PASS  no duplicate ISS definitions  [48 defined]
+PASS  no duplicate DEC definitions  [32 defined]
+PASS  no duplicate CLM definitions  [57 defined]
+PASS  no duplicate REF definitions  [3 defined]
+PASS  no duplicate SKL definitions  [7 defined]
+PASS  no duplicate RF definitions  [12 defined]
+PASS  no duplicate QA definitions  [10 defined]
+PASS  no duplicate F definitions  [20 defined]
+PASS  no duplicate FX definitions  [12 defined]
+PASS  no duplicate CTX definitions  [8 defined]
+PASS  no duplicate RQ definitions  [15 defined]
+PASS  no duplicate SRC definitions  [81 defined]
+PASS  complete set RF  [12/12]
+PASS  complete set QA  [10/10]
+PASS  complete set F  [20/20]
+PASS  complete set FX  [12/12]
+PASS  complete set RQ  [15/15]
+PASS  complete set SRC  [81/81]
+PASS  complete set CLM  [57/57]
+PASS  complete set ISS  [48/48]
+PASS  requirement R1 registered
+PASS  requirement R2 registered
+PASS  requirement R3 registered
+PASS  requirement R4 registered
+PASS  C1 registered with classification SC
+PASS  C2 registered with classification SC
+PASS  C3 registered with classification EA
+PASS  C4 registered with classification PG
+PASS  C5 registered with classification PG
+PASS  C6 registered with classification PG
+PASS  all ISS references defined  [48 referenced]
+PASS  all DEC references defined  [32 referenced]
+PASS  all CLM references defined  [57 referenced]
+PASS  all REF references defined  [3 referenced]
+PASS  all SKL references defined  [7 referenced]
+PASS  all RF references defined  [12 referenced]
+PASS  all QA references defined  [10 referenced]
+PASS  all F references defined  [20 referenced]
+PASS  all FX references defined  [12 referenced]
+PASS  all CTX references defined  [8 referenced]
+PASS  all RQ references defined  [15 referenced]
+PASS  all SRC references defined  [81 referenced]
+INFO  proposed (pending) decisions  [none]
+PASS  RF/QA status label  [QA-001: ADDRESSED (S06 figures; S10 recomputes)]
+PASS  RF/QA status label  [QA-002: ADDRESSED (design; proposal wording checked in S08)]
+PASS  RF/QA status label  [QA-003: OPEN (owner decision required on ISS-001)]
+PASS  RF/QA status label  [QA-004: ADDRESSED (S05 design; verification steps mapped in S07)]
+PASS  RF/QA status label  [QA-005: ADDRESSED for evidence (S03); wording control SCHEDULED for S08]
+PASS  RF/QA status label  [QA-006: SCHEDULED]
+PASS  RF/QA status label  [QA-007: ADDRESSED for Section 13 (Section 12 in S07)]
+PASS  RF/QA status label  [QA-008: SCHEDULED]
+PASS  RF/QA status label  [QA-009: SCHEDULED]
+PASS  RF/QA status label  [QA-010: SCHEDULED (versions and training-data terms in S07)]
+PASS  RF/QA status label  [RF-001: SCHEDULED]
+PASS  RF/QA status label  [RF-002: SCHEDULED]
+PASS  RF/QA status label  [RF-003: SCHEDULED]
+PASS  RF/QA status label  [RF-004: SCHEDULED (controls in place)]
+PASS  RF/QA status label  [RF-005: SCHEDULED (draft complete; final wording S08, durations S10)]
+PASS  RF/QA status label  [RF-006: SCHEDULED (S07 writes Section 12 from the frozen titles)]
+PASS  RF/QA status label  [RF-007: ADDRESSED (effort provisional while ISS-013 is open)]
+PASS  RF/QA status label  [RF-008: SCHEDULED]
+PASS  RF/QA status label  [RF-009: SCHEDULED]
+PASS  RF/QA status label  [RF-010: SCHEDULED]
+PASS  RF/QA status label  [RF-011: SCHEDULED (Section 13 aligned with DEC-028; cross-section consistency with Section 5 checked in S08, ISS-016)]
+PASS  RF/QA status label  [RF-012: SCHEDULED (training decision ISS-018; costs S10)]
+PASS  RQ coverage R1
+PASS  RQ coverage R2
+PASS  RQ coverage R3
+PASS  RQ coverage R4
+PASS  RQ coverage C1
+PASS  RQ coverage C2
+PASS  RQ coverage C3
+PASS  RQ coverage C4
+PASS  RQ coverage C5
+PASS  traceability Part A covers REF-01 §1-§18  [18/18]
+PASS  traceability Part B covers form sections 1-20  [20/20]
+INFO  pattern scan  [00_STAGE_GATE_PROTOCOL.md:52 'robust' example usage (exempt)]
+INFO  pattern scan  [00_STAGE_GATE_PROTOCOL.md:52 'comprehensive' example usage (exempt)]
+INFO  pattern scan  [02_SOURCE_LOG.md:73 'robust' citation title (exempt)]
+INFO  pattern scan  [03_STYLE_GUIDE.md:22 'robust' example usage (exempt)]
+INFO  pattern scan  [03_STYLE_GUIDE.md:44 'in today' example usage (exempt)]
+INFO  pattern scan  [03_STYLE_GUIDE.md:45 'crucial' example usage (exempt)]
+INFO  pattern scan  [03_STYLE_GUIDE.md:45 'paramount' example usage (exempt)]
+INFO  pattern scan  [03_STYLE_GUIDE.md:46 'robust' example usage (exempt)]
+INFO  pattern scan  [03_STYLE_GUIDE.md:51 'revolutioni' example usage (exempt)]
+INFO  pattern list size  [14]
+PASS  source log row complete  [SRC-001]
+PASS  source log row complete  [SRC-002]
+PASS  source log row complete  [SRC-003]
+PASS  source log row complete  [SRC-004]
+PASS  source log row complete  [SRC-005]
+PASS  source log row complete  [SRC-006]
+PASS  source log row complete  [SRC-007]
+PASS  source log row complete  [SRC-008]
+PASS  source log row complete  [SRC-009]
+PASS  source log row complete  [SRC-010]
+PASS  source log row complete  [SRC-011]
+PASS  source log row complete  [SRC-012]
+PASS  source log row complete  [SRC-013]
+PASS  source log row complete  [SRC-014]
+PASS  source log row complete  [SRC-015]
+PASS  source log row complete  [SRC-016]
+PASS  source log row complete  [SRC-017]
+PASS  source log row complete  [SRC-018]
+PASS  source log row complete  [SRC-019]
+PASS  source log row complete  [SRC-020]
+PASS  source log row complete  [SRC-021]
+PASS  source log row complete  [SRC-022]
+PASS  source log row complete  [SRC-023]
+PASS  source log row complete  [SRC-024]
+PASS  source log row complete  [SRC-025]
+PASS  source log row complete  [SRC-026]
+PASS  source log row complete  [SRC-027]
+PASS  source log row complete  [SRC-028]
+PASS  source log row complete  [SRC-029]
+PASS  source log row complete  [SRC-030]
+PASS  source log row complete  [SRC-031]
+PASS  source log row complete  [SRC-032]
+PASS  source log row complete  [SRC-033]
+PASS  source log row complete  [SRC-034]
+PASS  source log row complete  [SRC-035]
+PASS  source log row complete  [SRC-036]
+PASS  source log row complete  [SRC-037]
+PASS  source log row complete  [SRC-038]
+PASS  source log row complete  [SRC-039]
+PASS  source log row complete  [SRC-040]
+PASS  source log row complete  [SRC-041]
+PASS  source log row complete  [SRC-042]
+PASS  source log row complete  [SRC-043]
+PASS  source log row complete  [SRC-044]
+PASS  source log row complete  [SRC-045]
+PASS  source log row complete  [SRC-046]
+PASS  source log row complete  [SRC-047]
+PASS  source log row complete  [SRC-048]
+PASS  source log row complete  [SRC-049]
+PASS  source log row complete  [SRC-050]
+PASS  source log row complete  [SRC-051]
+PASS  source log row complete  [SRC-052]
+PASS  source log row complete  [SRC-053]
+PASS  source log row complete  [SRC-054]
+PASS  source log row complete  [SRC-055]
+PASS  source log row complete  [SRC-056]
+PASS  source log row complete  [SRC-057]
+PASS  source log row complete  [SRC-058]
+PASS  source log row complete  [SRC-059]
+PASS  source log row complete  [SRC-060]
+PASS  source log row complete  [SRC-061]
+PASS  source log row complete  [SRC-062]
+PASS  source log row complete  [SRC-063]
+PASS  source log row complete  [SRC-064]
+PASS  source log row complete  [SRC-065]
+PASS  source log row complete  [SRC-066]
+PASS  source log row complete  [SRC-067]
+PASS  source log row complete  [SRC-068]
+PASS  source log row complete  [SRC-069]
+PASS  source log row complete  [SRC-070]
+PASS  source log row complete  [SRC-071]
+PASS  source log row complete  [SRC-072]
+PASS  source log row complete  [SRC-073]
+PASS  source log row complete  [SRC-074]
+PASS  source log row complete  [SRC-075]
+PASS  source log row complete  [SRC-076]
+PASS  source log row complete  [SRC-077]
+PASS  source log row complete  [SRC-078]
+PASS  source log row complete  [SRC-079]
+PASS  source log row complete  [SRC-080]
+PASS  source log row complete  [SRC-081]
+PASS  matrix sources all logged  [39 cited]
+PASS  S03/S04 sources all logged  [62 cited]
+PASS  no orphan sources in log  [all logged sources cited in S02 matrix or S03/S04/S05 deliverables]
+PASS  every S03 source cited in an S03 deliverable  [24 S03 sources]
+PASS  every S04 source cited in an S04 deliverable  [2 S04 sources]
+PASS  every S05 source cited in an S05 deliverable  [16 S05 sources]
+PASS  RQ-13 has a verified T1 source
+PASS  RQ-01 has a verified T1 source  [12 verified T1 of 12 cited]
+PASS  RQ-02 has a verified T1 source  [5 verified T1 of 5 cited]
+PASS  RQ-03 has a verified T1 source  [5 verified T1 of 5 cited]
+PASS  RQ-04 has a verified T1 source  [2 verified T1 of 2 cited]
+PASS  RQ-05 has a verified T1 source  [4 verified T1 of 5 cited]
+PASS  RQ-06 has a verified T1 source  [8 verified T1 of 8 cited]
+PASS  RQ-08 has a verified T1 source  [4 verified T1 of 4 cited]
+PASS  RQ-09 has a verified T1 source  [2 verified T1 of 2 cited]
+PASS  matrix row label  [1.1: VERIFIED]
+PASS  matrix row label  [1.2: VERIFIED]
+PASS  matrix row label  [1.3: VERIFIED]
+PASS  matrix row label  [1.4: VERIFIED]
+PASS  matrix row label  [1.5: VERIFIED]
+PASS  matrix row label  [1.6: VERIFIED]
+PASS  matrix row label  [1.7: VERIFIED]
+PASS  matrix row label  [1.8: VERIFIED]
+PASS  matrix row label  [1.9: VERIFIED]
+PASS  matrix row label  [1.10: VERIFIED (source claim)]
+PASS  matrix row label  [1.11: VERIFIED]
+PASS  matrix row label  [2.1: VERIFIED]
+PASS  matrix row label  [2.2: VERIFIED]
+PASS  matrix row label  [2.3: VERIFIED]
+PASS  matrix row label  [2.4: VERIFIED]
+PASS  matrix row label  [2.5: VERIFIED]
+PASS  matrix row label  [3.1: VERIFIED]
+PASS  matrix row label  [3.2: VERIFIED]
+PASS  matrix row label  [3.3: VERIFIED]
+PASS  matrix row label  [3.4: VERIFIED]
+PASS  matrix row label  [3.5: VERIFIED]
+PASS  matrix row label  [4.1: VERIFIED]
+PASS  matrix row label  [4.2: VERIFIED]
+PASS  matrix row label  [4.3: OPEN]
+PASS  matrix row label  [5.1: VERIFIED]
+PASS  matrix row label  [5.2: VERIFIED]
+PASS  matrix row label  [5.3: VERIFIED (mediators); OPEN (mitigators)]
+PASS  matrix row label  [5.4: VERIFIED]
+PASS  matrix row label  [5.5: VERIFIED]
+PASS  matrix row label  [6.1: VERIFIED]
+PASS  matrix row label  [6.2: VERIFIED]
+PASS  matrix row label  [6.3: VERIFIED (bibliographic)]
+PASS  matrix row label  [6.4: VERIFIED]
+PASS  matrix row label  [6.5: VERIFIED]
+PASS  matrix row label  [6.6: VERIFIED]
+PASS  matrix row label  [8.1: VERIFIED]
+PASS  matrix row label  [8.2: VERIFIED]
+PASS  matrix row label  [8.3: VERIFIED]
+PASS  matrix row label  [8.4: VERIFIED]
+PASS  matrix row label  [9.1: VERIFIED]
+PASS  matrix row label  [9.2: VERIFIED]
+PASS  matrix row label  [I.1: VERIFIED]
+PASS  matrix row label  [I.2: VERIFIED]
+PASS  RQ-10 has a verified source  [11 verified]
+PASS  RQ-11 has a verified source  [7 verified]
+PASS  RQ-12 has a verified source  [7 verified]
+PASS  matrix section 1 cells sourced or ND  [all cells labelled]
+PASS  matrix section 2 cells sourced or ND  [all cells labelled]
+PASS  Section 9 table uses the form header
+PASS  Section 9 has at least three comparators  [8 rows]
+PASS  Section 9 row: 7 cells, local placeholder, source  [1]
+PASS  Section 9 row: 7 cells, local placeholder, source  [2]
+PASS  Section 9 row: 7 cells, local placeholder, source  [3]
+PASS  Section 9 row: 7 cells, local placeholder, source  [4]
+PASS  Section 9 row: 7 cells, local placeholder, source  [5]
+PASS  Section 9 row: 7 cells, local placeholder, source  [6]
+PASS  Section 9 row: 7 cells, local placeholder, source  [7]
+PASS  Section 9 row: 7 cells, local placeholder, source  [8]
+PASS  prior-art row sourced  [PA-1]
+PASS  prior-art row sourced  [PA-2]
+PASS  prior-art row sourced  [PA-3]
+PASS  prior-art row sourced  [PA-4]
+PASS  prior-art row sourced  [PA-5]
+PASS  prior-art row sourced  [NP-1]
+PASS  prior-art row sourced  [NP-2]
+PASS  prior-art row sourced  [NP-3]
+PASS  prior-art row sourced  [NP-4]
+INFO  superiority scan  [S03_SECTION9_COMPARISON.md:50 'outperform' in a rule statement (exempt)]
+INFO  superiority scan  [S03_SECTION9_COMPARISON.md:50 'more accurate than' in a rule statement (exempt)]
+INFO  superiority scan  [S04.1_CORRECTION_MATRIX.md:24 'distinguishing point' in a rule statement (exempt)]
+INFO  superiority list size  [11]
+PASS  no duplicate FN definitions  [12 defined]
+PASS  all FN references defined  [12 referenced]
+PASS  no duplicate AC definitions  [14 defined]
+PASS  all AC references defined  [14 referenced]
+PASS  no duplicate CP definitions  [6 defined]
+PASS  all CP references defined  [6 referenced]
+PASS  no duplicate AD definitions  [12 defined]
+PASS  all AD references defined  [12 referenced]
+PASS  no duplicate IF definitions  [8 defined]
+PASS  all IF references defined  [8 referenced]
+PASS  no duplicate DF definitions  [8 defined]
+PASS  all DF references defined  [8 referenced]
+PASS  no duplicate AS definitions  [12 defined]
+PASS  all AS references defined  [12 referenced]
+PASS  no duplicate MS definitions  [10 defined]
+PASS  all MS references defined  [10 referenced]
+PASS  R3 checkpoints CP-1 to CP-6 defined  [CP-1, CP-2, CP-3, CP-4, CP-5, CP-6]
+PASS  approval rule: no transition into Approved outside CP-5
+PASS  every FN row states current-project scope  [12 functions]
+PASS  future-only and never-in-scope items stated
+PASS  scope options A-D present with recommendation
+PASS  assumption AS-01 linked to an issue
+PASS  assumption AS-02 linked to an issue
+PASS  assumption AS-03 linked to an issue
+PASS  assumption AS-04 linked to an issue
+PASS  assumption AS-05 linked to an issue
+PASS  assumption AS-06 linked to an issue
+PASS  assumption AS-07 linked to an issue
+PASS  assumption AS-08 linked to an issue
+PASS  traceability Part F row R1 has components
+PASS  traceability Part F row R2 has components
+PASS  traceability Part F row R3 has components
+PASS  traceability Part F row R4 has components
+PASS  traceability Part F row C1 (SC) has components
+PASS  traceability Part F row C2 (SC) has components
+PASS  traceability Part F row C3 (EA) has components
+PASS  Section 5 draft uses the form table
+PASS  Section 11 draft uses the form header
+PASS  Section 11 row 1 is the current project (RF-005)
+PASS  Section 11 cost cells local only
+PASS  Section 11 durations not invented
+PASS  Section 8 target set in S05 (no row left as 'S05')  [MS-01: Higher nDCG@10 than the BM25 baseline, with the 95% interval of the difference above zero; absolute floor fixed after the pilot]
+PASS  Section 8 target set in S05 (no row left as 'S05')  [MS-02: Higher P@5 than the BM25 baseline on each source, same criterion; absolute floor fixed after the pilot]
+PASS  Section 8 target set in S05 (no row left as 'S05')  [MS-03: Not lower than unaided keyword queries]
+PASS  Section 8 target set in S05 (no row left as 'S05')  [MS-04: 0]
+PASS  Section 8 target set in S05 (no row left as 'S05')  [MS-05: 100%]
+PASS  Section 8 target set in S05 (no row left as 'S05')  [MS-06: 100%]
+PASS  Section 8 target set in S05 (no row left as 'S05')  [MS-07: Not set: feature outside the funded scope]
+PASS  Section 8 target set in S05 (no row left as 'S05')  [MS-08: ≤ 5 s (planning value, to be confirmed)]
+PASS  Section 8 target set in S05 (no row left as 'S05')  [MS-09: Not set: control outside the funded scope]
+PASS  Section 8 target set in S05 (no row left as 'S05')  [MS-10: 100%]
+PASS  Section 8 separates measurable specifications from functional features
+INFO  certification scan  [DRAFT_SEC08_FEATURES.md:46 'certified' negated or quoted (exempt)]
+INFO  certification scan  [DRAFT_SEC08_FEATURES.md:46 'conformity' negated or quoted (exempt)]
+INFO  certification scan  [S04.1_CORRECTION_MATRIX.md:30 'certification' negated or quoted (exempt)]
+INFO  certification scan  [S04.1_CORRECTION_MATRIX.md:37 'certification' negated or quoted (exempt)]
+INFO  certification scan  [S04_ASSUMPTIONS_AND_STANDARDS.md:45 'certified' negated or quoted (exempt)]
+INFO  certification scan  [S04_ASSUMPTIONS_AND_STANDARDS.md:45 'certification' negated or quoted (exempt)]
+INFO  certification scan  [S04_ASSUMPTIONS_AND_STANDARDS.md:54 'conformity' negated or quoted (exempt)]
+INFO  certification scan  [S04_ASSUMPTIONS_AND_STANDARDS.md:56 'certified' negated or quoted (exempt)]
+INFO  certification scan  [S04_ASSUMPTIONS_AND_STANDARDS.md:56 'certification' negated or quoted (exempt)]
+INFO  certification scan  [S04_ASSUMPTIONS_AND_STANDARDS.md:56 'compliant' negated or quoted (exempt)]
+INFO  certification scan  [S04_ASSUMPTIONS_AND_STANDARDS.md:56 'conformity' negated or quoted (exempt)]
+INFO  certification scan  [S04_ASSUMPTIONS_AND_STANDARDS.md:69 'certification' negated or quoted (exempt)]
+INFO  certification scan  [S04_ASSUMPTIONS_AND_STANDARDS.md:69 'conformity' negated or quoted (exempt)]
+INFO  certification scan  [S04_SCOPE_OPTIONS.md:77 'certification' negated or quoted (exempt)]
+INFO  certification scan  [S04_SCOPE_OPTIONS.md:77 'conformity' negated or quoted (exempt)]
+INFO  certification list size  [6]
+PASS  S04.1: R2 corrected statement recorded with provenance
+PASS  S04.1: R2 row keeps identifier and marks old wording superseded
+PASS  S04.1: R1 operative reading is new-versus-stored; grouping not a confirmed requirement
+INFO  S04.1 withdrawn-wording scan  [S04_SCOPE_OPTIONS.md:82 'approved internal collection' in a correction note (exempt)]
+INFO  S04.1 withdrawn-wording scan  [03_STYLE_GUIDE.md:75 'approved internal collection' in a correction note (exempt)]
+INFO  S04.1 withdrawn-wording scan  [03_STYLE_GUIDE.md:75 'internal precedent' in a correction note (exempt)]
+INFO  S04.1 withdrawn-wording scan  [03_STYLE_GUIDE.md:75 'precedent collection' in a correction note (exempt)]
+PASS  S04.1 withdrawn-wording scan completed  [10 operative files]
+PASS  S04.1: DEC-026 keeps INFERRED history and is not shown as an original owner decision
+PASS  S04.1: DEC-029 recorded as owner instruction
+PASS  S04.1: record correction RC-01 present
+PASS  S04.1: S03 status matches the decision record (APPROVED only after explicit confirmation)  [confirmed=True; approved files=6/6]
+PASS  S04.1: stage status identifies baselines by SHA; no reliance on tags
+PASS  S04.1: CP-5 and CP-6 classed Essential  [{'CP-1': 'Conditional (ISS-033, ISS-009); required until external disclosure is authorized (DEC-028)', 'CP-2': 'Optional design choice; outside the essential funded scope (DEC-028)', 'CP-3': 'Conditional (FN-07 enabled)', 'CP-4': 'Conditional (FN-04 selected)', 'CP-5': 'Essential (R3)', 'CP-6': 'Essential (R3)'}]
+PASS  S04.1: CP-1 to CP-4 not classed Essential
+PASS  S04.1: FN-04 not in the essential funded scope
+PASS  S04.1: FN-07 not in the essential funded scope
+PASS  S04.1: FN-05 uses the evidence-source interface and labelled substitute data
+PASS  S04.1: architecture separates actual availability from proposed substitutes
+PASS  S04.1: Section 5 selections marked provisional
+PASS  S04.1: scope audit section with the five distinctions; owner decision recorded where made
+PASS  S04.1: every claim row has an evidence-depth cell; VERIFIED claims cite depth  [all rows]
+PASS  S04.1: CLM-012 superseded by CLM-045
+PASS  S04.1 deliverable present: S04.1_CORRECTION_MATRIX.md
+PASS  S04.1 deliverable present: S04.1_CHANGE_REPORT.md
+PASS  S04.1 deliverable present: S04.1_QC_REPORT.md
+PASS  S04.1 deliverable present: S04.1_HANDOFF.md
+PASS  S04.1 deliverable present: S04.1_R2_REFERENCE_CORRECTION_NOTE.md
+PASS  S06: S07 not started (stages/S07 holds no deliverables)  [empty]
+PASS  S05 deliverable present: S05_PLAN.md
+PASS  S05 deliverable present: S05_EVALUATION_DESIGN.md
+PASS  S05 deliverable present: S05_DATA_AVAILABILITY_AND_SUBSTITUTES.md
+PASS  S05 deliverable present: S05_FEASIBILITY_AND_RISKS.md
+PASS  S05 deliverable present: S05_QC_REPORT.md
+PASS  S05 deliverable present: S05_HANDOFF.md
+PASS  no duplicate ET definitions  [12 defined]
+PASS  all ET references defined  [12 referenced]
+PASS  no duplicate PV definitions  [11 defined]
+PASS  all PV references defined  [11 referenced]
+PASS  no duplicate DR definitions  [6 defined]
+PASS  all DR references defined  [6 referenced]
+PASS  no duplicate DS definitions  [5 defined]
+PASS  all DS references defined  [5 referenced]
+PASS  no duplicate FT definitions  [5 defined]
+PASS  all FT references defined  [5 referenced]
+PASS  no duplicate RSK definitions  [14 defined]
+PASS  all RSK references defined  [14 referenced]
+PASS  S05: explicit test(s) for R1  [ET-01, ET-01b, ET-02]
+PASS  S05: explicit test(s) for R2  [ET-03, ET-04, ET-05]
+PASS  S05: explicit test(s) for R3  [ET-06, ET-07]
+PASS  S05: explicit test(s) for R4  [ET-08, ET-09]
+PASS  S05: R2 section uses the corrected statement (DEC-029)
+PASS  S05: Track S and Track P defined and never pooled
+PASS  S05: no substitute dataset selected; every DS row has a licence or access cell and open checks
+PASS  S05: planning values labelled ASSUMPTION with owner issue
+PASS  assumption AS-09 linked to an issue
+PASS  assumption AS-10 linked to an issue
+PASS  assumption AS-11 linked to an issue
+PASS  assumption AS-12 linked to an issue
+PASS  S05: MS-01 to MS-10 present in Section 8  [MS-01, MS-02, MS-03, MS-04, MS-05, MS-06, MS-07, MS-08, MS-09, MS-10]
+PASS  S05: MS-07 kept conditional (not set)
+PASS  S05: MS-09 kept conditional (not set)
+PASS  S05: MS-01 target is relative to a baseline
+PASS  S05: MS-02 target is relative to a baseline
+PASS  S05: MS-03 target is relative to a baseline
+PASS  S05: Section 8 states targets are untested
+PASS  S05 result-language scan completed
+PASS  S05: dense-index memory table matches N x d x 4 bytes  [9 cells]
+PASS  S05: R4 volume arithmetic consistent with PV-08
+PASS  S05: CLM-051 not supported by T3 sources alone  [SRC-070, SRC-071, SRC-072, SRC-073]
+PASS  S05: CLM-053 not supported by T3 sources alone  [SRC-081]
+PASS  S05: CLM-054 not supported by T3 sources alone  [SRC-037, SRC-075, SRC-076, SRC-077]
+PASS  S05: T3-only statement in CLM-052 kept OPEN
+PASS  S05: DEC-030 recorded; does not approve S05
+PASS  S05 exit: ISS-002 resolved or explicit assumption recorded
+PASS  S05 withdrawn-wording scan completed
+PASS  traceability Part G row R1 has ET and MS
+PASS  traceability Part G row R2 has ET and MS
+PASS  traceability Part G row R3 has ET and MS
+PASS  traceability Part G row R4 has ET and MS
+PASS  S06 deliverable present: S06_PLAN.md
+PASS  S06 deliverable present: S06_WORK_PACKAGES.md
+PASS  S06 deliverable present: S06_DELIVERABLES_AND_ACCEPTANCE.md
+PASS  S06 deliverable present: S06_DEPENDENCIES_AND_EFFORT.md
+PASS  S06 deliverable present: S06_QC_REPORT.md
+PASS  S06 deliverable present: S06_HANDOFF.md
+PASS  S06 deliverable present: DRAFT_SEC13_ACTIVITIES.md
+PASS  S06: 6 or 7 work packages registered  [7]
+PASS  S06: WP identifiers sequential and unique  [WP1, WP2, WP3, WP4, WP5, WP6, WP7]
+PASS  S06: WP1 has objective and type cells
+PASS  S06: WP2 has objective and type cells
+PASS  S06: WP3 has objective and type cells
+PASS  S06: WP4 has objective and type cells
+PASS  S06: WP5 has objective and type cells
+PASS  S06: WP6 has objective and type cells
+PASS  S06: WP7 has objective and type cells
+PASS  S06: Section 13 table uses the form schema
+PASS  S06: Section 13 rows = WP count  [7]
+PASS  S06: Section 13 row 1 title = WP1 title  [Prototype design specification and data-protection baseline]
+PASS  S06: Section 13 row 1 has deliverables, tasks and effort
+PASS  S06: Section 13 row 2 title = WP2 title  [Evaluation protocol, test collections and evaluation harness]
+PASS  S06: Section 13 row 2 has deliverables, tasks and effort
+PASS  S06: Section 13 row 3 title = WP3 title  [Ingestion and retrieval for similar submissions and solution examples]
+PASS  S06: Section 13 row 3 has deliverables, tasks and effort
+PASS  S06: Section 13 row 4 title = WP4 title  [External prior-art retrieval with query approval]
+PASS  S06: Section 13 row 4 has deliverables, tasks and effort
+PASS  S06: Section 13 row 5 title = WP5 title  [Assessment record, review interface and approval controls]
+PASS  S06: Section 13 row 5 has deliverables, tasks and effort
+PASS  S06: Section 13 row 6 title = WP6 title  [Prototype integration and evaluation]
+PASS  S06: Section 13 row 6 has deliverables, tasks and effort
+PASS  S06: Section 13 row 7 title = WP7 title  [Technical documentation and handover]
+PASS  S06: Section 13 row 7 has deliverables, tasks and effort
+PASS  S06: no development stage used as a work package  [none]
+PASS  S06: no duplicate task IDs  [44 tasks]
+PASS  S06: WP1 has tasks and a heading  [6 tasks]
+PASS  S06: WP2 has tasks and a heading  [6 tasks]
+PASS  S06: WP3 has tasks and a heading  [8 tasks]
+PASS  S06: WP4 has tasks and a heading  [6 tasks]
+PASS  S06: WP5 has tasks and a heading  [6 tasks]
+PASS  S06: WP6 has tasks and a heading  [7 tasks]
+PASS  S06: WP7 has tasks and a heading  [5 tasks]
+PASS  S06: every task reference defined  [44 referenced]
+PASS  S06: deliverable IDs defined  [22]
+PASS  S06: WP1 has at least one deliverable  [D1.1, D1.2, D1.3]
+PASS  S06: WP2 has at least one deliverable  [D2.1, D2.2, D2.3]
+PASS  S06: WP3 has at least one deliverable  [D3.1, D3.2, D3.3]
+PASS  S06: WP4 has at least one deliverable  [D4.1, D4.2]
+PASS  S06: WP5 has at least one deliverable  [D5.1, D5.2, D5.3]
+PASS  S06: WP6 has at least one deliverable  [D6.1, D6.2, D6.3, D6.4]
+PASS  S06: WP7 has at least one deliverable  [D7.1, D7.2, D7.3, D7.4]
+PASS  S06: D1.1 prefix matches its WP and has acceptance evidence
+PASS  S06: D1.2 prefix matches its WP and has acceptance evidence
+PASS  S06: D1.3 prefix matches its WP and has acceptance evidence
+PASS  S06: D2.1 prefix matches its WP and has acceptance evidence
+PASS  S06: D2.2 prefix matches its WP and has acceptance evidence
+PASS  S06: D2.3 prefix matches its WP and has acceptance evidence
+PASS  S06: D3.1 prefix matches its WP and has acceptance evidence
+PASS  S06: D3.2 prefix matches its WP and has acceptance evidence
+PASS  S06: D3.3 prefix matches its WP and has acceptance evidence
+PASS  S06: D4.1 prefix matches its WP and has acceptance evidence
+PASS  S06: D4.2 prefix matches its WP and has acceptance evidence
+PASS  S06: D5.1 prefix matches its WP and has acceptance evidence
+PASS  S06: D5.2 prefix matches its WP and has acceptance evidence
+PASS  S06: D5.3 prefix matches its WP and has acceptance evidence
+PASS  S06: D6.1 prefix matches its WP and has acceptance evidence
+PASS  S06: D6.2 prefix matches its WP and has acceptance evidence
+PASS  S06: D6.3 prefix matches its WP and has acceptance evidence
+PASS  S06: D6.4 prefix matches its WP and has acceptance evidence
+PASS  S06: D7.1 prefix matches its WP and has acceptance evidence
+PASS  S06: D7.2 prefix matches its WP and has acceptance evidence
+PASS  S06: D7.3 prefix matches its WP and has acceptance evidence
+PASS  S06: D7.4 prefix matches its WP and has acceptance evidence
+PASS  S06: every deliverable reference defined  [22 referenced]
+PASS  S06: acceptance does not depend on outperforming BM25
+PASS  S06: every non-conditional task has an effort row  [41 rows]
+PASS  S06: conditional tasks not in the planning table  [none]
+PASS  S06: judging hours ET-01 recomputed  [(25, 58, 104) vs (25, 58, 104)]
+PASS  S06: judging hours ET-03 recomputed  [(25, 58, 104) vs (25, 58, 104)]
+PASS  S06: judging hours ET-09 recomputed  [(13, 24, 39) vs (13, 24, 39)]
+PASS  S06: judging totals recomputed  [{'low': 63, 'plan': 140, 'high': 247}]
+PASS  S06: T6.3 planning hours = planning judging total
+PASS  S06: WP1 totals recomputed (plan, low, high)  [(210, 168, 273) vs (210, 168, 273)]
+PASS  S06: Section 13 effort for activity 1 = planning figure
+PASS  S06: WP2 totals recomputed (plan, low, high)  [(290, 232, 377) vs (290, 232, 377)]
+PASS  S06: Section 13 effort for activity 2 = planning figure
+PASS  S06: WP3 totals recomputed (plan, low, high)  [(380, 304, 494) vs (380, 304, 494)]
+PASS  S06: Section 13 effort for activity 3 = planning figure
+PASS  S06: WP4 totals recomputed (plan, low, high)  [(210, 168, 273) vs (210, 168, 273)]
+PASS  S06: Section 13 effort for activity 4 = planning figure
+PASS  S06: WP5 totals recomputed (plan, low, high)  [(400, 320, 520) vs (400, 320, 520)]
+PASS  S06: Section 13 effort for activity 5 = planning figure
+PASS  S06: WP6 totals recomputed (plan, low, high)  [(374, 250, 551) vs (374, 250, 551)]
+PASS  S06: Section 13 effort for activity 6 = planning figure
+PASS  S06: WP7 totals recomputed (plan, low, high)  [(140, 112, 182) vs (140, 112, 182)]
+PASS  S06: Section 13 effort for activity 7 = planning figure
+PASS  S06: grand totals recomputed  [[2004, 1554, 2670]]
+PASS  S06: Section 13 total stated
+PASS  S06: person-week conversion (EH-01, 45 h)
+PASS  S06: L-4 per-query figure  [0.714]
+PASS  S06: handoff figures match
+PASS  S06: effort assumptions labelled ASSUMPTION with owner issue
+PASS  S06: no claim that the ISS-013 envelope is met
+PASS  S06: envelope-claim scan completed
+PASS  S06: R1 traced to a WP
+PASS  S06: R2 traced to a WP
+PASS  S06: R3 traced to a WP
+PASS  S06: R4 traced to a WP
+PASS  S06: essential FN-01 assigned
+PASS  S06: essential FN-02 assigned
+PASS  S06: essential FN-03 assigned
+PASS  S06: essential FN-05 assigned
+PASS  S06: essential FN-06 assigned
+PASS  S06: essential FN-08 assigned
+PASS  S06: essential FN-09 assigned
+PASS  S06: essential FN-10 assigned
+PASS  S06: essential FN-11 assigned
+PASS  S06: essential FN-12 assigned
+PASS  S06: AC-01 built or specified in a WP
+PASS  S06: AC-02 built or specified in a WP
+PASS  S06: AC-03 built or specified in a WP
+PASS  S06: AC-04 built or specified in a WP
+PASS  S06: AC-05 built or specified in a WP
+PASS  S06: AC-07 built or specified in a WP
+PASS  S06: AC-09 built or specified in a WP
+PASS  S06: AC-10 built or specified in a WP
+PASS  S06: AC-11 built or specified in a WP
+PASS  S06: AC-12 built or specified in a WP
+PASS  S06: AC-13 built or specified in a WP
+PASS  S06: AC-14 built or specified in a WP
+PASS  S06: excluded FN-04 not a funded task  [absent from tasks]
+PASS  S06: excluded FN-07 not a funded task  [absent from tasks]
+PASS  S06: excluded AC-06 not a funded task  [absent from tasks]
+PASS  S06: excluded AC-08 not a funded task  [absent from tasks]
+PASS  S06: excluded CP-2 not a funded task  [absent from tasks]
+PASS  S06: excluded CP-3 not a funded task  [absent from tasks]
+PASS  S06: excluded CP-4 not a funded task  [absent from tasks]
+PASS  S06: ET-01 scheduled
+PASS  S06: ET-01b scheduled
+PASS  S06: ET-02 scheduled
+PASS  S06: ET-03 scheduled
+PASS  S06: ET-04 scheduled
+PASS  S06: ET-05 scheduled
+PASS  S06: ET-06 scheduled
+PASS  S06: ET-07 scheduled
+PASS  S06: ET-08 scheduled
+PASS  S06: ET-09 scheduled
+PASS  S06: ET-10 scheduled
+PASS  S06: ET-11 scheduled
+PASS  S06: FT-01 scheduled in a task
+PASS  S06: FT-02 scheduled in a task
+PASS  S06: FT-03 scheduled in a task
+PASS  S06: FT-04 scheduled in a task
+PASS  S06: FT-05 scheduled in a task
+PASS  S06: MS-01 evidenced by a deliverable
+PASS  S06: MS-02 evidenced by a deliverable
+PASS  S06: MS-03 evidenced by a deliverable
+PASS  S06: MS-04 evidenced by a deliverable
+PASS  S06: MS-05 evidenced by a deliverable
+PASS  S06: MS-06 evidenced by a deliverable
+PASS  S06: MS-08 evidenced by a deliverable
+PASS  S06: MS-10 evidenced by a deliverable
+PASS  S06: RSK-01 referenced in S06 planning
+PASS  S06: RSK-02 referenced in S06 planning
+PASS  S06: RSK-03 referenced in S06 planning
+PASS  S06: RSK-04 referenced in S06 planning
+PASS  S06: RSK-05 referenced in S06 planning
+PASS  S06: RSK-06 referenced in S06 planning
+PASS  S06: RSK-07 referenced in S06 planning
+PASS  S06: RSK-08 referenced in S06 planning
+PASS  S06: RSK-09 referenced in S06 planning
+PASS  S06: RSK-10 referenced in S06 planning
+PASS  S06: RSK-11 referenced in S06 planning
+PASS  S06: RSK-12 referenced in S06 planning
+PASS  S06: RSK-13 referenced in S06 planning
+PASS  S06: RSK-14 referenced in S06 planning
+PASS  S06: Section 13 excludes 'cluster'
+PASS  S06: Section 13 excludes 'grouping'
+PASS  S06: Section 13 excludes 'summar'
+PASS  S06: Section 13 excludes 'write-back'
+PASS  S06: Section 13 excludes 'production deployment'
+PASS  S06: Section 13 mentions retraining only as excluded
+PASS  S06: Section 13 has no cost, month or team content  [none]
+PASS  S06: training activity stated as not included (ISS-018)
+PASS  S06: DEC-032 recorded; does not approve S06
+PASS  S06: ISS-042 carried with S06 note and open
+PASS  S06: ISS-042 has an explicit S07 instruction in the handoff
+PASS  S06: ISS-043 carried with S06 note and open
+PASS  S06: ISS-043 has an explicit S07 instruction in the handoff
+PASS  S06: ISS-044 carried with S06 note and open
+PASS  S06: ISS-044 has an explicit S07 instruction in the handoff
+PASS  S06: ISS-045 carried with S06 note and open
+PASS  S06: ISS-045 has an explicit S07 instruction in the handoff
+PASS  S06: ISS-013 updated and still open
+PASS  S06: ISS-018 updated and still open
+PASS  S06 result-language and withdrawn-wording scans completed
+PASS  traceability Part H row R1 has WP, D and MS
+PASS  traceability Part H row R2 has WP, D and MS
+PASS  traceability Part H row R3 has WP, D and MS
+PASS  traceability Part H row R4 has WP, D and MS
+PASS  S06: RF-007 status updated with artifact
+PASS  identifying-data scan  [.gitignore]
+PASS  identifying-data scan  [CLAUDE.md]
+PASS  identifying-data scan  [README.md]
+PASS  identifying-data scan  [project/00_DECISIONS_LOG.md]
+PASS  identifying-data scan  [project/00_OPEN_ISSUES_REGISTER.md]
+PASS  identifying-data scan  [project/00_PROJECT_RULES.md]
+PASS  identifying-data scan  [project/00_SKILL_REGISTER.md]
+PASS  identifying-data scan  [project/00_STAGE_GATE_PROTOCOL.md]
+PASS  identifying-data scan  [project/00_STAGE_STATUS.md]
+PASS  identifying-data scan  [project/02_CLAIM_REGISTER.md]
+PASS  identifying-data scan  [project/02_SOURCE_LOG.md]
+PASS  identifying-data scan  [project/03_STYLE_GUIDE.md]
+PASS  identifying-data scan  [project/S01_REQUIREMENTS_REGISTER.md]
+PASS  identifying-data scan  [project/S01_RESEARCH_QUESTIONS.md]
+PASS  identifying-data scan  [project/S01_REVIEWER_CRITERIA_REGISTER.md]
+PASS  identifying-data scan  [project/S01_TRACEABILITY_MATRIX.md]
+PASS  identifying-data scan  [proposal/.gitkeep]
+PASS  identifying-data scan  [proposal/DRAFT_SEC05_CLASSIFICATION.md]
+PASS  identifying-data scan  [proposal/DRAFT_SEC07_OBJECTIVES.md]
+PASS  identifying-data scan  [proposal/DRAFT_SEC08_FEATURES.md]
+PASS  identifying-data scan  [proposal/DRAFT_SEC11_CONTINUITY.md]
+PASS  identifying-data scan  [proposal/DRAFT_SEC13_ACTIVITIES.md]
+PASS  identifying-data scan  [stages/S01/S01_CHANGE_REPORT.md]
+PASS  identifying-data scan  [stages/S01/S01_HANDOFF.md]
+PASS  identifying-data scan  [stages/S01/S01_PLAN.md]
+PASS  identifying-data scan  [stages/S01/S01_QC_REPORT.md]
+PASS  identifying-data scan  [stages/S01/qc/S01_QC_CHECK.py]
+PASS  identifying-data scan  [stages/S01/qc/S01_QC_CHECK_OUTPUT.txt]
+PASS  identifying-data scan  [stages/S02/.gitkeep]
+PASS  identifying-data scan  [stages/S02/S02_HANDOFF.md]
+PASS  identifying-data scan  [stages/S02/S02_LITERATURE_EVIDENCE_MATRIX.md]
+PASS  identifying-data scan  [stages/S02/S02_PLAN.md]
+PASS  identifying-data scan  [stages/S02/S02_QC_REPORT.md]
+PASS  identifying-data scan  [stages/S02/S02_RESEARCH_SYNTHESIS.md]
+PASS  identifying-data scan  [stages/S02/qc/S02_QC_CHECK.py]
+PASS  identifying-data scan  [stages/S02/qc/S02_QC_CHECK_OUTPUT.txt]
+PASS  identifying-data scan  [stages/S03/.gitkeep]
+PASS  identifying-data scan  [stages/S03/S03_COMPARABLE_SYSTEMS_MATRIX.md]
+PASS  identifying-data scan  [stages/S03/S03_HANDOFF.md]
+PASS  identifying-data scan  [stages/S03/S03_PLAN.md]
+PASS  identifying-data scan  [stages/S03/S03_PRIOR_ART_REGISTER.md]
+PASS  identifying-data scan  [stages/S03/S03_QC_REPORT.md]
+PASS  identifying-data scan  [stages/S03/S03_SECTION9_COMPARISON.md]
+PASS  identifying-data scan  [stages/S03/qc/S03_QC_CHECK.py]
+PASS  identifying-data scan  [stages/S03/qc/S03_QC_CHECK_OUTPUT.txt]
+PASS  identifying-data scan  [stages/S04.1/S04.1_CHANGE_REPORT.md]
+PASS  identifying-data scan  [stages/S04.1/S04.1_CORRECTION_MATRIX.md]
+PASS  identifying-data scan  [stages/S04.1/S04.1_HANDOFF.md]
+PASS  identifying-data scan  [stages/S04.1/S04.1_QC_REPORT.md]
+PASS  identifying-data scan  [stages/S04.1/S04.1_R2_REFERENCE_CORRECTION_NOTE.md]
+PASS  identifying-data scan  [stages/S04.1/qc/S04.1_QC_CHECK.py]
+PASS  identifying-data scan  [stages/S04.1/qc/S04.1_QC_CHECK_OUTPUT.txt]
+PASS  identifying-data scan  [stages/S04/S04_ARCHITECTURE.md]
+PASS  identifying-data scan  [stages/S04/S04_ASSUMPTIONS_AND_STANDARDS.md]
+PASS  identifying-data scan  [stages/S04/S04_DATA_FLOWS_AND_INTERFACES.md]
+PASS  identifying-data scan  [stages/S04/S04_HANDOFF.md]
+PASS  identifying-data scan  [stages/S04/S04_PLAN.md]
+PASS  identifying-data scan  [stages/S04/S04_QC_REPORT.md]
+PASS  identifying-data scan  [stages/S04/S04_SCOPE_OPTIONS.md]
+PASS  identifying-data scan  [stages/S04/qc/S04_QC_CHECK.py]
+PASS  identifying-data scan  [stages/S04/qc/S04_QC_CHECK_OUTPUT.txt]
+PASS  identifying-data scan  [stages/S05/S05_DATA_AVAILABILITY_AND_SUBSTITUTES.md]
+PASS  identifying-data scan  [stages/S05/S05_EVALUATION_DESIGN.md]
+PASS  identifying-data scan  [stages/S05/S05_FEASIBILITY_AND_RISKS.md]
+PASS  identifying-data scan  [stages/S05/S05_HANDOFF.md]
+PASS  identifying-data scan  [stages/S05/S05_PLAN.md]
+PASS  identifying-data scan  [stages/S05/S05_QC_REPORT.md]
+PASS  identifying-data scan  [stages/S05/qc/S05_QC_CHECK.py]
+PASS  identifying-data scan  [stages/S05/qc/S05_QC_CHECK_OUTPUT.txt]
+PASS  identifying-data scan  [stages/S06/S06_DELIVERABLES_AND_ACCEPTANCE.md]
+PASS  identifying-data scan  [stages/S06/S06_DEPENDENCIES_AND_EFFORT.md]
+PASS  identifying-data scan  [stages/S06/S06_HANDOFF.md]
+PASS  identifying-data scan  [stages/S06/S06_PLAN.md]
+PASS  identifying-data scan  [stages/S06/S06_QC_REPORT.md]
+PASS  identifying-data scan  [stages/S06/S06_WORK_PACKAGES.md]
+PASS  identifying-data scan  [stages/S06/qc/S06_QC_CHECK.py]
+PASS  identifying-data scan  [stages/S06/qc/S06_QC_CHECK_OUTPUT.txt]
+PASS  identifying-data scan  [stages/S07/.gitkeep]
+PASS  identifying-data scan  [stages/S08/.gitkeep]
+PASS  identifying-data scan  [stages/S09/.gitkeep]
+PASS  identifying-data scan  [stages/S10/.gitkeep]
+PASS  credential scan  [.gitignore]
+PASS  credential scan  [CLAUDE.md]
+PASS  credential scan  [README.md]
+PASS  credential scan  [project/00_DECISIONS_LOG.md]
+PASS  credential scan  [project/00_OPEN_ISSUES_REGISTER.md]
+PASS  credential scan  [project/00_PROJECT_RULES.md]
+PASS  credential scan  [project/00_SKILL_REGISTER.md]
+PASS  credential scan  [project/00_STAGE_GATE_PROTOCOL.md]
+PASS  credential scan  [project/00_STAGE_STATUS.md]
+PASS  credential scan  [project/02_CLAIM_REGISTER.md]
+PASS  credential scan  [project/02_SOURCE_LOG.md]
+PASS  credential scan  [project/03_STYLE_GUIDE.md]
+PASS  credential scan  [project/S01_REQUIREMENTS_REGISTER.md]
+PASS  credential scan  [project/S01_RESEARCH_QUESTIONS.md]
+PASS  credential scan  [project/S01_REVIEWER_CRITERIA_REGISTER.md]
+PASS  credential scan  [project/S01_TRACEABILITY_MATRIX.md]
+PASS  credential scan  [proposal/.gitkeep]
+PASS  credential scan  [proposal/DRAFT_SEC05_CLASSIFICATION.md]
+PASS  credential scan  [proposal/DRAFT_SEC07_OBJECTIVES.md]
+PASS  credential scan  [proposal/DRAFT_SEC08_FEATURES.md]
+PASS  credential scan  [proposal/DRAFT_SEC11_CONTINUITY.md]
+PASS  credential scan  [proposal/DRAFT_SEC13_ACTIVITIES.md]
+PASS  credential scan  [stages/S01/S01_CHANGE_REPORT.md]
+PASS  credential scan  [stages/S01/S01_HANDOFF.md]
+PASS  credential scan  [stages/S01/S01_PLAN.md]
+PASS  credential scan  [stages/S01/S01_QC_REPORT.md]
+PASS  credential scan  [stages/S01/qc/S01_QC_CHECK.py]
+PASS  credential scan  [stages/S01/qc/S01_QC_CHECK_OUTPUT.txt]
+PASS  credential scan  [stages/S02/.gitkeep]
+PASS  credential scan  [stages/S02/S02_HANDOFF.md]
+PASS  credential scan  [stages/S02/S02_LITERATURE_EVIDENCE_MATRIX.md]
+PASS  credential scan  [stages/S02/S02_PLAN.md]
+PASS  credential scan  [stages/S02/S02_QC_REPORT.md]
+PASS  credential scan  [stages/S02/S02_RESEARCH_SYNTHESIS.md]
+PASS  credential scan  [stages/S02/qc/S02_QC_CHECK.py]
+PASS  credential scan  [stages/S02/qc/S02_QC_CHECK_OUTPUT.txt]
+PASS  credential scan  [stages/S03/.gitkeep]
+PASS  credential scan  [stages/S03/S03_COMPARABLE_SYSTEMS_MATRIX.md]
+PASS  credential scan  [stages/S03/S03_HANDOFF.md]
+PASS  credential scan  [stages/S03/S03_PLAN.md]
+PASS  credential scan  [stages/S03/S03_PRIOR_ART_REGISTER.md]
+PASS  credential scan  [stages/S03/S03_QC_REPORT.md]
+PASS  credential scan  [stages/S03/S03_SECTION9_COMPARISON.md]
+PASS  credential scan  [stages/S03/qc/S03_QC_CHECK.py]
+PASS  credential scan  [stages/S03/qc/S03_QC_CHECK_OUTPUT.txt]
+PASS  credential scan  [stages/S04.1/S04.1_CHANGE_REPORT.md]
+PASS  credential scan  [stages/S04.1/S04.1_CORRECTION_MATRIX.md]
+PASS  credential scan  [stages/S04.1/S04.1_HANDOFF.md]
+PASS  credential scan  [stages/S04.1/S04.1_QC_REPORT.md]
+PASS  credential scan  [stages/S04.1/S04.1_R2_REFERENCE_CORRECTION_NOTE.md]
+PASS  credential scan  [stages/S04.1/qc/S04.1_QC_CHECK.py]
+PASS  credential scan  [stages/S04.1/qc/S04.1_QC_CHECK_OUTPUT.txt]
+PASS  credential scan  [stages/S04/S04_ARCHITECTURE.md]
+PASS  credential scan  [stages/S04/S04_ASSUMPTIONS_AND_STANDARDS.md]
+PASS  credential scan  [stages/S04/S04_DATA_FLOWS_AND_INTERFACES.md]
+PASS  credential scan  [stages/S04/S04_HANDOFF.md]
+PASS  credential scan  [stages/S04/S04_PLAN.md]
+PASS  credential scan  [stages/S04/S04_QC_REPORT.md]
+PASS  credential scan  [stages/S04/S04_SCOPE_OPTIONS.md]
+PASS  credential scan  [stages/S04/qc/S04_QC_CHECK.py]
+PASS  credential scan  [stages/S04/qc/S04_QC_CHECK_OUTPUT.txt]
+PASS  credential scan  [stages/S05/S05_DATA_AVAILABILITY_AND_SUBSTITUTES.md]
+PASS  credential scan  [stages/S05/S05_EVALUATION_DESIGN.md]
+PASS  credential scan  [stages/S05/S05_FEASIBILITY_AND_RISKS.md]
+PASS  credential scan  [stages/S05/S05_HANDOFF.md]
+PASS  credential scan  [stages/S05/S05_PLAN.md]
+PASS  credential scan  [stages/S05/S05_QC_REPORT.md]
+PASS  credential scan  [stages/S05/qc/S05_QC_CHECK.py]
+PASS  credential scan  [stages/S05/qc/S05_QC_CHECK_OUTPUT.txt]
+PASS  credential scan  [stages/S06/S06_DELIVERABLES_AND_ACCEPTANCE.md]
+PASS  credential scan  [stages/S06/S06_DEPENDENCIES_AND_EFFORT.md]
+PASS  credential scan  [stages/S06/S06_HANDOFF.md]
+PASS  credential scan  [stages/S06/S06_PLAN.md]
+PASS  credential scan  [stages/S06/S06_QC_REPORT.md]
+PASS  credential scan  [stages/S06/S06_WORK_PACKAGES.md]
+PASS  credential scan  [stages/S06/qc/S06_QC_CHECK.py]
+PASS  credential scan  [stages/S06/qc/S06_QC_CHECK_OUTPUT.txt]
+PASS  credential scan  [stages/S07/.gitkeep]
+PASS  credential scan  [stages/S08/.gitkeep]
+PASS  credential scan  [stages/S09/.gitkeep]
+PASS  credential scan  [stages/S10/.gitkeep]
+PASS  file inventory  [.gitignore]
+PASS  file inventory  [CLAUDE.md]
+PASS  file inventory  [README.md]
+PASS  file inventory  [project/00_DECISIONS_LOG.md]
+PASS  file inventory  [project/00_OPEN_ISSUES_REGISTER.md]
+PASS  file inventory  [project/00_PROJECT_RULES.md]
+PASS  file inventory  [project/00_SKILL_REGISTER.md]
+PASS  file inventory  [project/00_STAGE_GATE_PROTOCOL.md]
+PASS  file inventory  [project/00_STAGE_STATUS.md]
+PASS  file inventory  [project/02_CLAIM_REGISTER.md]
+PASS  file inventory  [project/02_SOURCE_LOG.md]
+PASS  file inventory  [project/03_STYLE_GUIDE.md]
+PASS  file inventory  [project/S01_REQUIREMENTS_REGISTER.md]
+PASS  file inventory  [project/S01_RESEARCH_QUESTIONS.md]
+PASS  file inventory  [project/S01_REVIEWER_CRITERIA_REGISTER.md]
+PASS  file inventory  [project/S01_TRACEABILITY_MATRIX.md]
+PASS  file inventory  [proposal/.gitkeep]
+PASS  file inventory  [proposal/DRAFT_SEC05_CLASSIFICATION.md]
+PASS  file inventory  [proposal/DRAFT_SEC07_OBJECTIVES.md]
+PASS  file inventory  [proposal/DRAFT_SEC08_FEATURES.md]
+PASS  file inventory  [proposal/DRAFT_SEC11_CONTINUITY.md]
+PASS  file inventory  [proposal/DRAFT_SEC13_ACTIVITIES.md]
+PASS  file inventory  [stages/S01/S01_CHANGE_REPORT.md]
+PASS  file inventory  [stages/S01/S01_HANDOFF.md]
+PASS  file inventory  [stages/S01/S01_PLAN.md]
+PASS  file inventory  [stages/S01/S01_QC_REPORT.md]
+PASS  file inventory  [stages/S01/qc/S01_QC_CHECK.py]
+PASS  file inventory  [stages/S01/qc/S01_QC_CHECK_OUTPUT.txt]
+PASS  file inventory  [stages/S02/.gitkeep]
+PASS  file inventory  [stages/S02/S02_HANDOFF.md]
+PASS  file inventory  [stages/S02/S02_LITERATURE_EVIDENCE_MATRIX.md]
+PASS  file inventory  [stages/S02/S02_PLAN.md]
+PASS  file inventory  [stages/S02/S02_QC_REPORT.md]
+PASS  file inventory  [stages/S02/S02_RESEARCH_SYNTHESIS.md]
+PASS  file inventory  [stages/S02/qc/S02_QC_CHECK.py]
+PASS  file inventory  [stages/S02/qc/S02_QC_CHECK_OUTPUT.txt]
+PASS  file inventory  [stages/S03/.gitkeep]
+PASS  file inventory  [stages/S03/S03_COMPARABLE_SYSTEMS_MATRIX.md]
+PASS  file inventory  [stages/S03/S03_HANDOFF.md]
+PASS  file inventory  [stages/S03/S03_PLAN.md]
+PASS  file inventory  [stages/S03/S03_PRIOR_ART_REGISTER.md]
+PASS  file inventory  [stages/S03/S03_QC_REPORT.md]
+PASS  file inventory  [stages/S03/S03_SECTION9_COMPARISON.md]
+PASS  file inventory  [stages/S03/qc/S03_QC_CHECK.py]
+PASS  file inventory  [stages/S03/qc/S03_QC_CHECK_OUTPUT.txt]
+PASS  file inventory  [stages/S04.1/S04.1_CHANGE_REPORT.md]
+PASS  file inventory  [stages/S04.1/S04.1_CORRECTION_MATRIX.md]
+PASS  file inventory  [stages/S04.1/S04.1_HANDOFF.md]
+PASS  file inventory  [stages/S04.1/S04.1_QC_REPORT.md]
+PASS  file inventory  [stages/S04.1/S04.1_R2_REFERENCE_CORRECTION_NOTE.md]
+PASS  file inventory  [stages/S04.1/qc/S04.1_QC_CHECK.py]
+PASS  file inventory  [stages/S04.1/qc/S04.1_QC_CHECK_OUTPUT.txt]
+PASS  file inventory  [stages/S04/S04_ARCHITECTURE.md]
+PASS  file inventory  [stages/S04/S04_ASSUMPTIONS_AND_STANDARDS.md]
+PASS  file inventory  [stages/S04/S04_DATA_FLOWS_AND_INTERFACES.md]
+PASS  file inventory  [stages/S04/S04_HANDOFF.md]
+PASS  file inventory  [stages/S04/S04_PLAN.md]
+PASS  file inventory  [stages/S04/S04_QC_REPORT.md]
+PASS  file inventory  [stages/S04/S04_SCOPE_OPTIONS.md]
+PASS  file inventory  [stages/S04/qc/S04_QC_CHECK.py]
+PASS  file inventory  [stages/S04/qc/S04_QC_CHECK_OUTPUT.txt]
+PASS  file inventory  [stages/S05/S05_DATA_AVAILABILITY_AND_SUBSTITUTES.md]
+PASS  file inventory  [stages/S05/S05_EVALUATION_DESIGN.md]
+PASS  file inventory  [stages/S05/S05_FEASIBILITY_AND_RISKS.md]
+PASS  file inventory  [stages/S05/S05_HANDOFF.md]
+PASS  file inventory  [stages/S05/S05_PLAN.md]
+PASS  file inventory  [stages/S05/S05_QC_REPORT.md]
+PASS  file inventory  [stages/S05/qc/S05_QC_CHECK.py]
+PASS  file inventory  [stages/S05/qc/S05_QC_CHECK_OUTPUT.txt]
+PASS  file inventory  [stages/S06/S06_DELIVERABLES_AND_ACCEPTANCE.md]
+PASS  file inventory  [stages/S06/S06_DEPENDENCIES_AND_EFFORT.md]
+PASS  file inventory  [stages/S06/S06_HANDOFF.md]
+PASS  file inventory  [stages/S06/S06_PLAN.md]
+PASS  file inventory  [stages/S06/S06_QC_REPORT.md]
+PASS  file inventory  [stages/S06/S06_WORK_PACKAGES.md]
+PASS  file inventory  [stages/S06/qc/S06_QC_CHECK.py]
+PASS  file inventory  [stages/S06/qc/S06_QC_CHECK_OUTPUT.txt]
+PASS  file inventory  [stages/S07/.gitkeep]
+PASS  file inventory  [stages/S08/.gitkeep]
+PASS  file inventory  [stages/S09/.gitkeep]
+PASS  file inventory  [stages/S10/.gitkeep]
+PASS  entry file present: CLAUDE.md
+PASS  entry file present: README.md
+PASS  entry file present: .gitignore
+
+SUMMARY  files=57  checks=869  failed=0  info=92
+RESULT PASS

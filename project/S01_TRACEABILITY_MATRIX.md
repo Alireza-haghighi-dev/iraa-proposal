@@ -3,11 +3,11 @@
 | Field | Value |
 |---|---|
 | Document ID | S01_TRACEABILITY_MATRIX |
-| Version | 5.0 |
-| Status | APPROVED |
-| Stage | S05 |
-| Date | 2026-11-20 |
-| Depends on | S01_REQUIREMENTS_REGISTER; S01_REVIEWER_CRITERIA_REGISTER; S01_RESEARCH_QUESTIONS; 00_OPEN_ISSUES_REGISTER; S02_LITERATURE_EVIDENCE_MATRIX; S03_COMPARABLE_SYSTEMS_MATRIX; S03_SECTION9_COMPARISON; S04_ARCHITECTURE; S04_DATA_FLOWS_AND_INTERFACES; S05_EVALUATION_DESIGN; S05_DATA_AVAILABILITY_AND_SUBSTITUTES |
+| Version | 6.0 |
+| Status | SUBMITTED FOR GATE |
+| Stage | S06 |
+| Date | 2026-11-21 |
+| Depends on | S01_REQUIREMENTS_REGISTER; S01_REVIEWER_CRITERIA_REGISTER; S01_RESEARCH_QUESTIONS; 00_OPEN_ISSUES_REGISTER; S02_LITERATURE_EVIDENCE_MATRIX; S03_COMPARABLE_SYSTEMS_MATRIX; S03_SECTION9_COMPARISON; S04_ARCHITECTURE; S04_DATA_FLOWS_AND_INTERFACES; S05_EVALUATION_DESIGN; S05_DATA_AVAILABILITY_AND_SUBSTITUTES; S06_WORK_PACKAGES; S06_DELIVERABLES_AND_ACCEPTANCE |
 
 ## A. Requirements statement (REF-01) → project items → proposal sections
 
@@ -78,7 +78,7 @@ Coverage, status and evidence for RF-001 to RF-012 and QA-001 to QA-010 are main
 |---|---|
 | Architecture component(s) per requirement | S04 (done: Part F) |
 | Specification and acceptance criterion per requirement | S05 (done: Part G) |
-| Work package (WP) per requirement and specification | S06 |
+| Work package (WP) per requirement and specification | S06 (done: Part H) |
 | Section 12 method paragraph per WP | S07 |
 
 ## E. Evidence links (added S02; S03 rows appended)
@@ -123,3 +123,16 @@ Coverage, status and evidence for RF-001 to RF-012 and QA-001 to QA-010 are main
 | R4 | ET-08, ET-09, ET-11 | MS-03, MS-05, MS-10 | Not lower than unaided keyword queries; 100% approval and provenance | Track P always; Track S only if ISS-033 authorizes | Q-A unaided keyword query | ISS-006, ISS-033, ISS-040 |
 | C2 (SC) | ET-06 to ET-08 | MS-05, MS-06 | Pass/fail | Synthetic records | — | ISS-009, ISS-010 |
 | QA-002, QA-004 | All ET; S05_DATA_AVAILABILITY_AND_SUBSTITUTES | MS-01 to MS-06, MS-08, MS-10 | Targets labelled; no benefit claims (ISS-011) | Separated by track | — | ISS-002 (AS-09) |
+
+## H. Work packages per requirement and specification (added S06; PROPOSED plan)
+
+| Item | Build | Specification and evaluation tooling | Verification | Deliverables carrying the evidence | Section 8 rows | Conditions |
+|---|---|---|---|---|---|---|
+| R1 | WP3 (FN-01 to FN-03; AC-01 to AC-05) | WP1 (IF-01, IF-02); WP2 (ET-01, ET-01b, ET-02 protocol; DS-01, DS-02 licence) | WP6 (ET-01, ET-01b, ET-10, ET-11) | D3.1, D3.2, D3.3, D6.4 | MS-01, MS-08, MS-10 | ISS-002, ISS-043, ISS-044, ISS-045 |
+| R2 | WP3 (FN-05; AC-03 source registry, AC-05) | WP1; WP2 (ET-03, ET-04 protocol; T2.4 DS-05) | WP6 (ET-03, ET-04, ET-05, ET-11) | D2.2, D3.2, D6.4 | MS-02, MS-10 | ISS-003, ISS-037, ISS-038, ISS-043, ISS-045 |
+| R3 | WP5 (FN-08, FN-09, FN-11; AC-09 to AC-13; CP-5, CP-6) | WP1 (T1.2 state model) | WP6 (ET-06, ET-07 via D5.3) | D1.1, D5.1, D5.2, D5.3, D6.3 | MS-04, MS-06 | ISS-005, ISS-034, ISS-035 |
+| R4 | WP4 (FN-06; AC-07; CP-1) | WP1 (IF-03); WP2 (ET-09 protocol) | WP6 (ET-08, ET-09) | D4.1, D4.2, D6.4 | MS-03, MS-05, MS-10 | ISS-033, ISS-040, ISS-042 |
+| C1 (SC) | WP3, WP4, WP5 (extension points) | WP1 (IF-07 specified) | — | D1.1, D7.1 | Section 8 feature 9 | — |
+| C2 (SC) | WP5 (AC-12, AC-13) | WP1 (D1.2, D1.3) | WP6 (ET-06 to ET-08); WP7 (D7.2) | D1.2, D1.3, D7.2 | MS-05, MS-06 | ISS-009, ISS-010, ISS-036 |
+| C3 (EA) | WP5 (FN-10 export only) | — | — | D5.1, D7.1 | — | Future: Section 11 row 3 |
+| QA-001, RF-007 | All WP | — | — | S06_DEPENDENCIES_AND_EFFORT | — | ISS-013, ISS-046 |
