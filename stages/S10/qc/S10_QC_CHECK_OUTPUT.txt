@@ -1,11 +1,7 @@
-INFO    S09 cumulative run  [SUMMARY  s09_checks=62  failed=4]
-PASS    S09 cumulative checks pass apart from the listed supersessions
-INFO    superseded S09 condition  [Master is v0.2, stage S09  [0.3 S10]]
-INFO    superseded S09 condition  [S10 not started (stages/S10 holds no deliverables)  [qc, S10_UNRESOLVED_ITEMS.md, S10_CHANGE_REPORT.md, S10_PLAN.m]
-INFO    superseded S09 condition  [Master not longer than the S08 baseline (12,874 words; DEC-038 EPO refinement allowance to 12,900)  [12941]]
-INFO    superseded S09 condition  [Stage status records S09 submitted for gate]
+INFO    S11 cumulative run  [SUMMARY  s11_checks=75  failed=7]
+PASS    S11 cumulative checks pass apart from the listed supersessions
 PASS    20 sections in official order with form headings  [[('1', 'Project title'), ('2', 'Team name'), ('3', 'Team lead and contact information')]]
-PASS    Master v0.3, stage S10, status DRAFT
+PASS    Master v0.5, stage S10, status DRAFT
 PASS    Master states it is not submission-ready
 PASS    Embedded header for Section 5 equals REF-02
 PASS    Embedded header for Section 9 equals REF-02
@@ -44,22 +40,22 @@ PASS    Seven frozen WP titles found in S06
 PASS    Section 13 titles equal frozen WP titles, in order
 PASS    Section 12 numbered titles equal Section 13 (FX-01)
 PASS    Section 16 titles equal Section 13
-PASS    Section 13 efforts sum to stated total  [2004 vs 2,004]
+PASS    Section 13 efforts sum to stated total  [1291 vs 1,291]
 PASS    Section 16 efforts equal Section 13 row by row
-PENDING FX-02 to FX-05 (hours, costs, weights, shares)  [await owner inputs; Sections 14-16 still hold placeholders]
-PASS    Effort marked provisional while owner inputs are open
+PENDING FX-03 to FX-05 (costs, weights, shares)  [await personnel and cost inputs; Sections 14, 15 and the Section 16 cost columns still hold placeholders]
+PASS    FX-02 Section 16 hours = Section 13 total = 1,291 (DEC-042)
+PASS    No effort cell still marked provisional
 PASS    No bold, bullets or decorative marks in proposal text
 PASS    No working identifiers in proposal text  [[]]
-PASS    Body length within S09 body + 50 words (S10 corrections allowance)  [12622 vs S09 12590]
+PASS    Body length within S09 body + 50 words (S10 corrections allowance)  [12116 vs S09 12590]
 PASS    OPS: thresholds called guidance values, not fixed limits
 PASS    OPS: charter values (1 Mbit per second; 4 GB per week)
 PASS    OPS: FAQ values (ten per minute per IP as a rule; family-related one per second; operational variation)
 PASS    OPS: Espacenet/Register charter value not attributed to OPS
-PASS    Statistical level question stated (0.025 per family or 0.05 with 90% intervals)
 PASS    Required wording present: 'approval of a query does not authorize disclosure'
 PASS    Required wording present: 'query approval never substitutes for disclosure clearance'
 PASS    Required wording present: 'checks whether relevant existing solution examples can be id'
-PASS    Required wording present: 'superiority tested second, not required'
+PASS    Required wording present: 'being better than bm25 is not required'
 PASS    Required wording present: 'has not been confirmed'
 PASS    Prohibited claim wording absent: 'certified'
 PASS    Prohibited claim wording absent: 'proven'
@@ -74,28 +70,35 @@ PASS    DEF-002 recorded as FIXED
 PASS    DEF-029 recorded as FIXED
 PASS    DEF-040 recorded as FIXED
 PASS    DEF-041 recorded as FIXED
-PASS    Malkov and Yashunin: journal record and DOI
+PASS    Removed references stay removed (S11)
 PASS    Every author-year citation has a reference entry  [[]]
-PASS    Addition rows recompute (13/30/53, 6/10/15, 4/5/7)
-PASS    Added totals 23/45/75 stated
-PASS    Request S06 column equals Section 13 provisional figures
-PASS    Proposed planning total = 2004 + 45 = 2049
-PASS    Proposed range 1,577 to 2,745 (S06 1,554 / 2,670 + additions)
-PASS    Person-weeks at 45 h: about 45.5
+PASS    Section 13 effort = DEC-042 approved figures = model
+PASS    Section 4: 6 months and 1,291 person-hours
+PASS    Section 11 stage 1 duration = 6
+PASS    Section 16 month marks = approved month distribution; months 7-12 empty
+PASS    Every activity scheduled in at least one month; month 1 and month 6 used
+PASS    Dependency order: no activity starts before its predecessor starts
+PASS    Capacity risk (lead about 110 h per month) recorded in Section 17
+PASS    Weights and activity costs still open (await costs)
+PASS    Decision request v0.2 issued on the approved baseline
+PASS    Resource calculations: lead share 40.7% and contributor share 59.3% of 1,291 h
+PASS    Resource calculations: hour-share weights listed and summing to 100% within rounding
 PASS    Deliverable S10_PLAN present with metadata
 PASS    Deliverable S10_FORM_MAPPING present with metadata
 PASS    Deliverable S10_OWNER_DECISION_REQUEST present with metadata
 PASS    Deliverable S10_UNRESOLVED_ITEMS present with metadata
 PASS    Deliverable S10_CONSISTENCY_REPORT present with metadata
+PASS    Deliverable S10_RESOURCE_CALCULATIONS present with metadata
 PASS    Deliverable S10_CHANGE_REPORT present with metadata
 PASS    Deliverable S10_QC_REPORT present with metadata
 PASS    Deliverable S10_HANDOFF present with metadata
 PASS    DEC-039 recorded
-PASS    Stage status records S10 in progress, awaiting owner inputs
+PASS    Stage status records S11 approved and S10 resumed
+PASS    DEC-042 recorded
 PASS    Skill checkpoint recorded for S10
 PASS    Safety: no account name, repository URL, e-mail or phone
 PASS    No Persian text in repository
 PASS    Submission readiness not claimed
 
-SUMMARY  s10_checks=91  failed=0  pending=1  info=6
+SUMMARY  s10_checks=98  failed=0  pending=1  info=2
 RESULT PASS

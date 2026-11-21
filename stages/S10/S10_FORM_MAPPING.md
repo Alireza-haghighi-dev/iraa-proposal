@@ -3,11 +3,11 @@
 | Field | Value |
 |---|---|
 | Document ID | S10_FORM_MAPPING |
-| Version | 0.1 |
+| Version | 0.2 |
 | Status | DRAFT |
 | Stage | S10 |
 | Date | 2026-11-21 |
-| Depends on | REF-02 (PROPOSAL_FORM_EN_WORKING_V1); proposal/IRAA_PROPOSAL_EN_MASTER v0.3; RF-001 to RF-003; DEC-039; ISS-021; ISS-056 |
+| Depends on | REF-02 (PROPOSAL_FORM_EN_WORKING_V1); proposal/IRAA_PROPOSAL_EN_MASTER v0.5; DEC-042; RF-001 to RF-003; DEC-039; ISS-021; ISS-056 |
 
 - **Purpose:** maps every field and table of the official form to the master and states what remains before transfer into the native template.
 - **Native template:** not available in this session. The only form available is the English working representation REF-02, which reproduces the 20 sections and the logical table schemas but not the page design. No claim of Word-layout compliance is made (DEC-039 item 2). Table header rows below are checked verbatim against REF-02 by `qc/S10_QC_CHECK.py`.
@@ -20,19 +20,19 @@
 | 1 | Title text | Title naming maturity, execution stages and prototype type, following the form's own pattern | COMPLETE | Plain text in the title field |
 | 2 | Team name | Placeholder | LOCAL | Naming rule is local |
 | 3 | Team lead and contact | Placeholder | LOCAL | Personal data never entered here |
-| 4 | Duration (months); total person-hours | Placeholders; provisional 2,004 h cited | OWNER | Filled from items 1–3 of the decision request; must equal Section 13 and the Section 16 month span |
+| 4 | Duration (months); total person-hours | 6 months; 1,291 person-hours (DEC-042) | COMPLETE | Equals Section 13 and the Section 16 month span |
 | 5 | Classification table, 2 columns × 5 rows | Table kept; selection written after the options in each cell; justification below the table | COMPLETE | In the native form, mark the selection with the form's own mechanism (tick, highlight or deletion of unselected options) and remove the words "Provisional selection"; the classification is provisionally adopted (DEC-028, ISS-016) |
 | 6 | Free text | Need, gap, literature basis, human-approval rationale | COMPLETE | Plain paragraphs |
 | 7 | Free text | Five objectives, completion deliverables, assumptions | COMPLETE | Plain paragraphs |
 | 8 | Free text; the form asks for measurable specifications in a table | Functional features table (No. / Feature / Requirement) and measurable specifications table (No. / Specification / Metric and test condition / Target) | COMPLETE | Both tables are project tables inside a free-text field, as the form invites for specifications; the features table could be turned into a numbered paragraph list if the reviewer reads it as a new form table (ISS-056) |
 | 9 | Comparator table, 7 columns | Six rows; two patent records discussed after the table | COMPLETE (location column LOCAL) | Location descriptor part of column 4 is local |
 | 10 | Team prior-work table, 7 columns | One placeholder row | OWNER / LOCAL | Only documented work; left blank if none (decision request item 10) |
-| 11 | Continuity table, 5 columns | Four stages, current project first | OWNER (durations); LOCAL (cost) | Row 1 duration = Section 4; later rows are estimates, not commitments |
+| 11 | Continuity table, 5 columns | Four stages, current project first; row 1 duration 6 | OWNER (rows 2–4 durations); LOCAL (cost) | Later rows are estimates, not commitments |
 | 12 | Free text; activity titles repeated from Section 13 | Introductory parts, seven numbered activities with exact Section 13 titles, limits of the method | COMPLETE | Unnumbered subheadings and the tool table are not in the form; at insertion either keep them as plain lines and a simple table or convert them to paragraphs (ISS-056). Numbered titles must stay verbatim |
-| 13 | Activity table, 5 columns | Seven activities, deliverables, key tasks, provisional effort | OWNER (effort) | Effort figures final only after decision request items 2–5 |
-| 14 | Team table, 6 columns | Placeholder row | OWNER / LOCAL | Name and qualifications local; responsibility, monthly hours and share from item 1; shares total 100% |
-| 15 | Budget table, 6 columns | Placeholder row; four cost drivers named | OWNER / LOCAL | Unit cost and total are local in the form; item types and quantities from items 6–8 |
-| 16 | Gantt table, 17 columns (12 month columns) | Seven activities with titles and provisional effort; month cells open | OWNER | Months from items 1 and 3; cost cells local; weights from item 7. A duration above 12 months does not fit the 12 month columns of REF-02 and needs the native template's rule (item 3) |
+| 13 | Activity table, 5 columns | Seven activities, deliverables, key tasks, approved effort (DEC-042) | COMPLETE | — |
+| 14 | Team table, 6 columns | Placeholder row; four members planned (DEC-042) | OWNER / LOCAL | Name and qualifications local; responsibility, monthly hours and shares from request items 1–3 (formulas in S10_RESOURCE_CALCULATIONS); shares total 100% |
+| 15 | Budget table, 6 columns | Placeholder row; four cost drivers named | OWNER / LOCAL | Unit cost and total are local in the form; item types and quantities from request items 4–6 |
+| 16 | Gantt table, 17 columns (12 month columns) | Seven activities, approved effort, months 1–6 marked from the approved distribution; months 7–12 blank | COMPLETE except costs and weights | Cost cells local; weights from request items 4–5; mark months with the native form's own mechanism |
 | 17 | Risk table, 4 columns | Fourteen risks | COMPLETE except three schedule and cost mitigations marked open | Updated after owner inputs |
 | 18 | Completion date | Placeholder | LOCAL | Must agree with Section 4 duration and start date |
 | 19 | Free text | Claim-status statement and reference list | COMPLETE | References as plain paragraphs |

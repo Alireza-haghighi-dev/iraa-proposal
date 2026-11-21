@@ -3,7 +3,7 @@
 | Field | Value |
 |---|---|
 | Document ID | S10_CHANGE_REPORT |
-| Version | 0.1 |
+| Version | 0.2 |
 | Status | DRAFT |
 | Stage | S10 |
 | Date | 2026-11-21 |
@@ -20,3 +20,14 @@
 | Master v0.3, DRAFT; front matter states S10 status and not submission-ready | Master | DEC-039 item 5 |
 | Registers: DEC-039; DEF-002 and DEF-029 fixed, DEF-040 and DEF-041 added; ISS notes; SKL-011; stage status | project/ | Record keeping |
 | Body length 12,594 → 12,622 words (+28) | Master | Within the S10 allowance of 50 words |
+
+## Resumption on the approved S11 baseline (DEC-042)
+
+| Change | Files | Reason |
+|---|---|---|
+| Effort labels "(provisional)" removed; Section 4 = 6 months and 1,291 h; Section 11 row 1 = 6; Section 13 total note restated | Master v0.5 | DEC-042 items 1–3 |
+| Section 16 months 1–6 marked from the approved month distribution; months 7–12 blank; explanatory note | Master §16 | DEC-042 item 4 (applied by `qc/S10_APPLY_S11_BASELINE.py`) |
+| Risk 13 restated; risk 15 added for the technical lead's planned capacity | Master §17 | DEC-042 item 9 |
+| Decision request v0.2 (nine remaining inputs); resource calculations with formulas for Sections 14–16 | S10_OWNER_DECISION_REQUEST, S10_RESOURCE_CALCULATIONS | DEC-042 next step |
+| QC rebuilt on the approved baseline: runs the S11 suite (which runs S09, S08, S07) and checks FX-02, the Gantt marks, dependencies and the new documents; S11 suite skips its call back to S10 when run from it | qc/S10_QC_CHECK.py; stages/S11/qc/S11_QC_CHECK.py | Avoids circular suites |
+| Registers: DEC-042; ISS-013, ISS-018, ISS-046, ISS-048, ISS-049, ISS-050, ISS-055, ISS-057 resolved; ISS-025, ISS-039, ISS-051 notes; S11 files APPROVED; stage status | project/; stages/S11 | Record keeping |

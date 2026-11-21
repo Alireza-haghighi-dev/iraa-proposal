@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | S11_PLAN |
 | Version | 0.1 |
-| Status | SUBMITTED FOR GATE |
+| Status | APPROVED |
 | Stage | S11 |
 | Date | 2026-11-21 |
 | Depends on | DEC-040; DEC-041 |

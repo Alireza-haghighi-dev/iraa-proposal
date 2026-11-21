@@ -4,12 +4,12 @@
 |---|---|
 | Document ID | S11_HANDOFF |
 | Version | 0.1 |
-| Status | SUBMITTED FOR GATE |
+| Status | APPROVED |
 | Stage | S11 |
 | Date | 2026-11-21 |
 | Depends on | DEC-041; S11_EFFORT_AND_SCHEDULE; S11_SCOPE_AND_TECHNICAL_PLAN; S11_QC_REPORT; S10_HANDOFF |
 
-- **Status:** S11 submitted for the owner checkpoint (DEC-041 item 8). Revised scope, effort (1,291 h), lead/contributor split and month allocation are provisional. Not submission-ready.
+- **Status:** S11 APPROVED (DEC-042). Scope, 1,291 h, WP split, six months and the month distribution are frozen. Not submission-ready.
 - **Owner decisions at the checkpoint:** (1) approve or amend the revised scope; (2) approve the 1,291 h and its WP split; (3) Section 13 effort convention, full figure or without coordination (ISS-057); (4) confirm the revised planning values (ISS-039, ISS-049, ISS-050, ISS-055 notes); (5) state whether the technical lead can give about 110 h in months 3–4 (about 27 h per week), or choose the 90 h or 80 h adjustment in S11_EFFORT_AND_SCHEDULE §5; (6) rehearsal arrangement (ISS-051).
 
 ## Resuming S10 after approval

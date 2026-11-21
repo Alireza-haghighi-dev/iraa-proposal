@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | S11_QC_REPORT |
 | Version | 0.1 |
-| Status | SUBMITTED FOR GATE |
+| Status | APPROVED |
 | Stage | S11 |
 | Date | 2026-11-21 |
 | Depends on | qc/S11_QC_CHECK.py; qc/S11_QC_CHECK_OUTPUT.txt; qc/S11_EFFORT_MODEL.py; 00_STAGE_GATE_PROTOCOL §6 |

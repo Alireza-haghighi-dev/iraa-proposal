@@ -3,7 +3,7 @@
 
 Usage (from the repository root):  python3 stages/S11/qc/S11_QC_CHECK.py . [path/to/PROPOSAL_FORM_EN_WORKING_V1.md]
 
-Cumulative: runs the S09 and S10 suites (S09 runs S08, S07 and the safety scan) and accepts
+Cumulative: runs the S09 and S10 suites (S09 runs S08, S07 and the safety scan; the S10 suite is skipped when IRAA_SKIP_S10 is set, because the resumed S10 suite runs this script) and accepts
 only failures caused by deliberate S11 design changes, each listed with its reason and
 re-checked by an S11 check below. Then checks the master against the S11 model and scope,
 the effort model's internal consistency and the generated tables, registers and deliverables.
@@ -66,12 +66,15 @@ for l in [x for x in s9.splitlines() if x.startswith("FAIL")]:
     elif not any(k in l for k in ACC_S09):
         bad.append(l)
 add("S09 suite: only S11-superseded failures", not bad, " | ".join(bad)[:600])
-s10 = run("S10", (FORM,) if FORM else ())
-s10f = [x for x in s10.splitlines() if x.startswith("FAIL") and "S09 cumulative checks pass" not in x]
-u10 = unexpected(s10f, ACC_S10)
-add("S10 suite: only S11-superseded failures", not u10, " | ".join(u10)[:600])
-for l in s10.splitlines():
-    if l.startswith("PENDING"): info("S10 pending", l[8:120])
+if os.environ.get("IRAA_SKIP_S10"):
+    info("S10 suite", "skipped: called from the resumed S10 suite, which runs its own checks (DEC-042)")
+else:
+    s10 = run("S10", (FORM,) if FORM else ())
+    s10f = [x for x in s10.splitlines() if x.startswith("FAIL") and "S09 cumulative checks pass" not in x]
+    u10 = unexpected(s10f, ACC_S10)
+    add("S10 suite: only S11-superseded failures", not u10, " | ".join(u10)[:600])
+    for l in s10.splitlines():
+        if l.startswith("PENDING"): info("S10 pending", l[8:120])
 
 # ---- 1. Master scope ---------------------------------------------------------------------
 M = rd("proposal", "IRAA_PROPOSAL_EN_MASTER.md") or ""

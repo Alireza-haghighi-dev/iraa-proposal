@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | S11_CHANGE_REPORT |
 | Version | 0.1 |
-| Status | SUBMITTED FOR GATE |
+| Status | APPROVED |
 | Stage | S11 |
 | Date | 2026-11-21 |
 | Depends on | DEC-040; DEC-041; qc/S11_MASTER_REVISION.py; qc/S11_EFFORT_MODEL.py |

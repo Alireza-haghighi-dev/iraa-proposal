@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""S10_QC_CHECK.py - reproducible checks for S10 (final integration), interim phase.
+"""S10_QC_CHECK.py - reproducible checks for S10 (final integration), resumed on the approved S11 baseline (DEC-042).
 
 Usage (from the repository root):  python3 stages/S10/qc/S10_QC_CHECK.py . [path/to/PROPOSAL_FORM_EN_WORKING_V1.md]
 
@@ -25,22 +25,38 @@ def rd(*p):
     f = os.path.join(ROOT, *p)
     return open(f, encoding="utf-8").read() if os.path.isfile(f) else None
 
-# ---- 0. Cumulative S09 run ------------------------------------------------------------
-s9 = subprocess.run([sys.executable, os.path.join(ROOT, "stages", "S09", "qc", "S09_QC_CHECK.py"), ROOT],
-                    capture_output=True, text=True)
-m = re.search(r"SUMMARY\s+s09_checks=(\d+)\s+failed=(\d+)", s9.stdout)
-info("S09 cumulative run", m.group(0) if m else "no summary")
-SUPERSEDED = {
-    "Master is v0.2, stage S09": "master v0.3 / S10 (checked below)",
-    "S10 not started": "S10 started under DEC-039",
-    "Master not longer than the S08 baseline": "replaced by the S10 body-length rule below",
-    "Stage status records S09 submitted for gate": "stage status records S10 in progress (checked below)",
+# ---- 0. Cumulative S11 run (DEC-042) ----------------------------------------------------
+# The approved S11 suite runs S09 (with S08, S07 and the safety scan). It is called with IRAA_SKIP_S10
+# so that it does not call this script back. Its pre-approval checks that the approval made obsolete
+# are accepted by name below and replaced by the baseline checks in section 4.
+env = dict(os.environ, IRAA_SKIP_S10="1")
+s11 = subprocess.run([sys.executable, "-B", os.path.join(ROOT, "stages", "S11", "qc", "S11_QC_CHECK.py"), ROOT],
+                     capture_output=True, text=True, env=env).stdout
+m = re.search(r"SUMMARY\s+s11_checks=(\d+)\s+failed=(\d+)", s11)
+info("S11 cumulative run", m.group(0) if m else "no summary")
+ACC_S11 = {
+    "Master v0.4, stage S11": "master v0.5 / S10 after approval",
+    "Section 4 states six months, provisional": "Section 4 states the approved six months and 1,291 h",
+    "Effort labelled provisional in Section 13": "figures approved (DEC-042); labels removed",
+    "Section 16 months not yet marked": "months marked from the approved distribution (checked in section 4)",
+    "Stage status records S11 submitted for the owner checkpoint": "stage status records S11 approved",
+    "No S11 file claims approval of the revised baseline": "S11 approved by DEC-042",
 }
-s9fail = [l for l in s9.stdout.splitlines() if l.startswith("FAIL")]
-unexpected = [l for l in s9fail if not any(k in l for k in SUPERSEDED)]
-add("S09 cumulative checks pass apart from the listed supersessions", not unexpected, " | ".join(unexpected)[:600])
-for l in s9fail:
-    if l not in unexpected: info("superseded S09 condition", l[6:120])
+ACC_DEEP = {  # earlier-stage checks reported inside the S11 suite's S09 line
+    "Section 13: every effort cell marked provisional": "approved figures",
+    "Section 16: months, cost and weight left for S10": "months now marked; cost and weight still open",
+    "Section 11: durations S10, costs local": "stage 1 duration 6 (approved); later stages open; costs local",
+    "ISS-013 updated and still open": "resolved by DEC-042", "ISS-018 updated and still open": "resolved by DEC-040/DEC-042",
+    "ISS-049 registered and open": "resolved by DEC-042", "ISS-050 registered and open": "resolved by DEC-042",
+}
+bad = []
+for l in [x for x in s11.splitlines() if x.startswith("FAIL")]:
+    if "S09 suite: only S11-superseded failures" in l:
+        det = l.split("[", 1)[1].rsplit("]", 1)[0] if "[" in l else ""
+        bad += [d.strip() for d in det.split(" | ") if d.strip() and not any(k in d for k in ACC_DEEP)]
+    elif not any(k in l for k in ACC_S11):
+        bad.append(l)
+add("S11 cumulative checks pass apart from the listed supersessions", not bad, " | ".join(bad)[:600])
 
 # ---- 1. Master structure ---------------------------------------------------------------
 M = rd("proposal", "IRAA_PROPOSAL_EN_MASTER.md") or ""
@@ -58,7 +74,7 @@ HEAD = ["Project title", "Team name", "Team lead and contact information", "Proj
 found = re.findall(r"^## (\d+)\. (.+)$", body, re.M)
 add("20 sections in official order with form headings", [(int(a), b.strip()) for a, b in found] == list(enumerate(HEAD, 1)),
     str(found[:3]))
-add("Master v0.3, stage S10, status DRAFT", "| Version | 0.3 |" in M and "| Stage | S10 |" in M and "| Status | DRAFT |" in M)
+add("Master v0.5, stage S10, status DRAFT", "| Version | 0.5 |" in M and "| Stage | S10 |" in M and "| Status | DRAFT |" in M)
 add("Master states it is not submission-ready", "Not submission-ready" in M)
 
 # ---- 2. Official table header rows -----------------------------------------------------
@@ -115,15 +131,12 @@ add("Section 16 titles equal Section 13", t16 == t13)
 # ---- 4. Effort arithmetic -----------------------------------------------------------------
 num = lambda s: int(re.match(r"[\d,]+", s).group(0).replace(",", "")) if re.match(r"[\d,]+", s) else None
 e13 = [num(x) for x in tbl(13, 5)]; e16 = [num(x) for x in tbl(16, 3)]
-tot = re.search(r"Total effort \(provisional\): ([\d,]+) person-hours", sec(13))
+tot = re.search(r"Total effort: ([\d,]+) person-hours", sec(13))
 add("Section 13 efforts sum to stated total", None not in e13 and tot and sum(e13) == num(tot.group(1)), "%s vs %s" % (sum(x or 0 for x in e13), tot.group(1) if tot else None))
 add("Section 16 efforts equal Section 13 row by row", e16 == e13)
-owner_done = "[OPEN — S10]" not in sec(14) + sec(15) + sec(16)
-if owner_done:
-    add("FX-02 Section 16 hours = Section 13 total", sum(e16) == sum(e13))
-else:
-    pend("FX-02 to FX-05 (hours, costs, weights, shares)", "await owner inputs; Sections 14-16 still hold placeholders")
-add("Effort marked provisional while owner inputs are open", owner_done or "(provisional)" in sec(13))
+pend("FX-03 to FX-05 (costs, weights, shares)", "await personnel and cost inputs; Sections 14, 15 and the Section 16 cost columns still hold placeholders")
+add("FX-02 Section 16 hours = Section 13 total = 1,291 (DEC-042)", sum(e16) == sum(e13) == 1291)
+add("No effort cell still marked provisional", "(provisional)" not in sec(13) + sec(16))
 
 # ---- 5. Formatting and identifiers ------------------------------------------------------------
 add("No bold, bullets or decorative marks in proposal text", not re.search(r"\*\*|^\s*[-*•] |✓|✔|☐|☑", body, re.M))
@@ -143,10 +156,9 @@ add("OPS: FAQ values (ten per minute per IP as a rule; family-related one per se
     "ten searches per minute per ip address as a rule" in a4 and "one request per second for family-related actions" in a4
     and "depending on operational circumstances" in a4)
 add("OPS: Espacenet/Register charter value not attributed to OPS", "10 search-related actions" not in low)
-add("Statistical level question stated (0.025 per family or 0.05 with 90% intervals)", "0.025 per family" in low and "90% intervals" in low)
 for ph in ["approval of a query does not authorize disclosure", "query approval never substitutes for disclosure clearance",
            "checks whether relevant existing solution examples can be identified for a submitted need",
-           "superiority tested second, not required", "has not been confirmed"]:
+           "being better than bm25 is not required", "has not been confirmed"]:
     add("Required wording present: '%s'" % ph[:60], ph in low)
 for bad in ["certified", "proven", "patentable", "guarantee", "state-of-the-art", "will reduce", "outperforms"]:
     add("Prohibited claim wording absent: '%s'" % bad, not re.search(r"\b%s\b" % bad, low.split("## 19.")[0]) or (bad == "certified" and "not certified" in low and low.count("certified") == low.count("not certified")))
@@ -168,38 +180,55 @@ for d in ["DEF-002", "DEF-029", "DEF-040", "DEF-041"]:
 
 # ---- 8. Citations -------------------------------------------------------------------------------
 refs = sec(19)
-add("Malkov and Yashunin: journal record and DOI", "42(4), 824–836" in refs and "10.1109/TPAMI.2018.2889473" in refs)
+add("Removed references stay removed (S11)", not any(r in refs for r in ("Malkov,", "Holm,", "Bruch,", "Nogueira,")))
 cites = set(re.findall(r"\(([A-Z][A-Za-z\-]+)(?: et al\.| and [A-Z][A-Za-z\-]+)?,? (\d{4})\)", body))
 cites |= set(re.findall(r"([A-Z][A-Za-z\-]+)(?: et al\.)? \((\d{4})\)", sec(6) + sec(9) + sec(12)))
 missing = sorted({(a, y) for a, y in cites if not re.search(r"^%s.*\(%s\)" % (re.escape(a), y), refs, re.M)
                   and a not in ("ISO", "CPMP", "Section")})
 add("Every author-year citation has a reference entry", not missing, str(missing))
 
-# ---- 9. Effort recomputation in the decision request ---------------------------------------------
+# ---- 9. Approved S11 baseline (DEC-042) -------------------------------------------------------------
+import importlib.util, io, contextlib
+sys.dont_write_bytecode = True
+sp = importlib.util.spec_from_file_location("m", os.path.join(ROOT, "stages", "S11", "qc", "S11_EFFORT_MODEL.py"))
+mod = importlib.util.module_from_spec(sp)
+with contextlib.redirect_stdout(io.StringIO()): sp.loader.exec_module(mod)
+APPROVED = [150, 168, 210, 138, 226, 267, 132]
+add("Section 13 effort = DEC-042 approved figures = model", e13 == APPROVED == [mod.RL[w] + mod.RC[w] for w in range(1, 8)])
+add("Section 4: 6 months and 1,291 person-hours", "Duration: 6 months. Total effort: 1,291 person-hours." in sec(4))
+s11row = next((l for l in sec(11).splitlines() if l.startswith("| 1 (current project)")), "")
+add("Section 11 stage 1 duration = 6", s11row.split("|")[3].strip() == "6" if s11row else False)
+grow = {int(l.split("|")[1]): [c.strip() for c in l.split("|")[4:16]] for l in sec(16).splitlines() if re.match(r"\| [1-7] \|", l)}
+ok = True
+for w in range(1, 8):
+    hrs = [sum((t[3] + t[4]) * t[5][mm] for t in mod.T if t[1] == w) for mm in range(6)]
+    ok &= grow.get(w, [None])[:6] == ["X" if h > 0 else "" for h in hrs] and all(c == "" for c in grow[w][6:])
+add("Section 16 month marks = approved month distribution; months 7-12 empty", ok)
+add("Every activity scheduled in at least one month; month 1 and month 6 used", all("X" in grow[w] for w in grow)
+    and any(grow[w][0] == "X" for w in grow) and any(grow[w][5] == "X" for w in grow))
+dep = {2: 1, 3: 1, 4: 3, 5: 1, 6: 3, 7: 6}   # activity: predecessor whose first month must not be later
+first = {w: grow[w].index("X") for w in grow}
+add("Dependency order: no activity starts before its predecessor starts", all(first[w] >= first[d] for w, d in dep.items()))
+add("Capacity risk (lead about 110 h per month) recorded in Section 17", "about 110 hours per month" in sec(17))
+add("Weights and activity costs still open (await costs)", sec(16).count("[OPEN — S10]") == 7 and sec(16).count("[LOCAL COMPLETION ONLY]") == 7)
 R = rd("stages", "S10", "S10_OWNER_DECISION_REQUEST.md") or ""
-RT = R.split("| No. | Main activity | S06 planning | Proposed planning |")[-1]
-add_low, add_pl, add_hi = 20*80*30/3600, 20*120*45/3600, 20*160*60/3600
-q_low, q_pl, q_hi = 30*2*6/60, 30*2*10/60, 30*2*15/60
-calc = [(round(add_low), round(add_pl), round(add_hi)), (round(q_low), round(q_pl), round(q_hi)), (4, 5, 7)]
-tl, tp, th = (sum(c[i] for c in calc) for i in range(3))
-add("Addition rows recompute (13/30/53, 6/10/15, 4/5/7)", calc == [(13, 30, 53), (6, 10, 15), (4, 5, 7)])
-add("Added totals 23/45/75 stated", "| Total added | | | %d | %d | %d |" % (tl, tp, th) in R)
-prop = [int(l.split("|")[4]) for l in RT.splitlines() if re.match(r"\| [1-7] \| ", l)]
-s06 = [int(l.split("|")[3]) for l in RT.splitlines() if re.match(r"\| [1-7] \| ", l)]
-add("Request S06 column equals Section 13 provisional figures", s06 == e13)
-add("Proposed planning total = 2004 + 45 = 2049", sum(prop) == sum(e13) + tp == 2049 and "| Total | | 2004 | 2049 |" in R)
-add("Proposed range 1,577 to 2,745 (S06 1,554 / 2,670 + additions)", "1,577 to 2,745" in R and 1554 + tl == 1577 and 2670 + th == 2745)
-add("Person-weeks at 45 h: about 45.5", round(2049 / 45, 1) == 45.5 and "45.5 person-weeks" in R)
+add("Decision request v0.2 issued on the approved baseline", "| Version | 0.2 |" in R and "DEC-042" in R)
+C = rd("stages", "S10", "S10_RESOURCE_CALCULATIONS.md") or ""
+wl = round(100 * 526 / 1291, 1)
+add("Resource calculations: lead share 40.7% and contributor share 59.3% of 1,291 h", wl == 40.7 and "40.7%" in C and "59.3%" in C)
+hw = [round(100 * x / 1291, 1) for x in APPROVED]
+add("Resource calculations: hour-share weights listed and summing to 100% within rounding", all(("%.1f" % x) in C for x in hw) and abs(sum(hw) - 100) <= 0.2)
 
 # ---- 10. Deliverables, records, safety ------------------------------------------------------------
-for f in ["S10_PLAN", "S10_FORM_MAPPING", "S10_OWNER_DECISION_REQUEST", "S10_UNRESOLVED_ITEMS", "S10_CONSISTENCY_REPORT",
+for f in ["S10_PLAN", "S10_FORM_MAPPING", "S10_OWNER_DECISION_REQUEST", "S10_UNRESOLVED_ITEMS", "S10_CONSISTENCY_REPORT", "S10_RESOURCE_CALCULATIONS",
           "S10_CHANGE_REPORT", "S10_QC_REPORT", "S10_HANDOFF"]:
     t = rd("stages", "S10", f + ".md")
     add("Deliverable %s present with metadata" % f, bool(t) and "| Document ID | %s |" % f in t)
 DL = rd("project", "00_DECISIONS_LOG.md") or ""
 add("DEC-039 recorded", "| DEC-039 |" in DL)
 ST = rd("project", "00_STAGE_STATUS.md") or ""
-add("Stage status records S10 in progress, awaiting owner inputs", "S10 in progress" in ST)
+add("Stage status records S11 approved and S10 resumed", "S11 approved (DEC-042); S10 resumed" in ST)
+add("DEC-042 recorded", "| DEC-042 |" in DL)
 add("Skill checkpoint recorded for S10", "| SKL-011 | S10 |" in (rd("project", "00_SKILL_REGISTER.md") or ""))
 allmd = "\n".join(open(f, encoding="utf-8").read() for f in glob.glob(os.path.join(ROOT, "**", "*.md"), recursive=True))
 add("Safety: no account name, repository URL, e-mail or phone", not re.search(r"github\.com/[A-Za-z0-9-]+/iraa|@[a-z0-9-]+\.(com|org|ir)\b|\+\d{2}[ \d]{8,}", allmd, re.I))

@@ -4,12 +4,12 @@
 |---|---|
 | Document ID | S11_EFFORT_AND_SCHEDULE |
 | Version | 0.1 |
-| Status | SUBMITTED FOR GATE |
+| Status | APPROVED |
 | Stage | S11 |
 | Date | 2026-11-21 |
 | Depends on | DEC-040; DEC-041; S11_SCOPE_AND_TECHNICAL_PLAN; S06_DEPENDENCIES_AND_EFFORT; qc/S11_EFFORT_MODEL.py |
 
-- **Status:** PROVISIONAL. Hours, the lead/contributor split and the month allocation are proposals for the owner checkpoint (DEC-041 item 8). No availability, rate, cost or Gantt marking is final.
+- **Status:** APPROVED as the planning baseline (DEC-042): 1,291 h, the WP split and the month distribution. The lead/contributor split is an internal planning assumption; the lead's monthly hours are a scheduling assumption, not a confirmed availability. No rate or cost is set.
 - **Source of every number:** `qc/S11_EFFORT_MODEL.py`, which holds the task list and month shares and regenerates the tables below; the QC script checks that the tables match it.
 - **Nature of the estimates:** every task figure is an engineering judgment for the revised scope (S11_SCOPE_AND_TECHNICAL_PLAN), made at task level; no percentage was applied to the earlier figures and no productivity multiplier is used. Judging hours use the S06 formula (queries × pooled items × 1.27 × seconds ÷ 3,600) with the revised sizes: about 20 pooled items per query over three configurations, 45 s per item for retrieval judgments and 90 s for patent documents, all to be replaced by pilot values.
 - **Split:** "Lead" is Member 1; "Contributors" are Members 2–4 combined. The split assigns architecture, the retrieval service core, the decision rule, the approval and disclosure enforcement, integration and adjudication to the lead, and specified, testable work (import, normalization, collections, harness code, screens, exports, generated tests, judging, documentation drafts, licence inventory, rehearsal) to contributors under the lead's review. This is an internal planning assumption (DEC-040 item 2) and does not appear in the proposal.

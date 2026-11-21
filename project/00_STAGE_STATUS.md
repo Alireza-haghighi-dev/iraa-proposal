@@ -7,14 +7,14 @@
 | Status | DRAFT |
 | Stage | S11 |
 | Date | 2026-11-21 |
-| Depends on | 00_DECISIONS_LOG; 00_OPEN_ISSUES_REGISTER; S06_HANDOFF; DEC-031; DEC-032; DEC-033; DEC-034; DEC-035; S07_HANDOFF; DEC-036; S08_HANDOFF; DEC-037; S09_HANDOFF; DEC-038; DEC-039; S10_HANDOFF; DEC-040; DEC-041; S11_HANDOFF |
+| Depends on | 00_DECISIONS_LOG; 00_OPEN_ISSUES_REGISTER; S06_HANDOFF; DEC-031; DEC-032; DEC-033; DEC-034; DEC-035; S07_HANDOFF; DEC-036; S08_HANDOFF; DEC-037; S09_HANDOFF; DEC-038; DEC-039; S10_HANDOFF; DEC-040; DEC-041; S11_HANDOFF; DEC-042 |
 
 ## Current position
 
 | Item | Value |
 |---|---|
-| Current stage | S11 corrective stage (DEC-041) submitted for the owner checkpoint: six-month right-sizing with provisional effort of 1,291 h; S10 in progress and paused until the checkpoint; not submission-ready |
-| Latest approved baseline | c8470d6a8c090e41a80cd5a34a37a0701c95b6a9 (S09 conditional-pass checkpoint; DEC-038) |
+| Current stage | S11 approved (DEC-042); S10 resumed on the approved baseline: technical integration and schedule data complete; personnel, budget, Section 16 weights and local fields await owner inputs; not submission-ready |
+| Latest approved baseline | 0475aa1 (S11 content, approved by DEC-042); earlier: c8470d6a8c090e41a80cd5a34a37a0701c95b6a9 (S09 conditional-pass checkpoint; DEC-038) |
 | Earlier baselines | S07 conditional-pass checkpoint 267712fa4838c4f69f2e8773efaa29e9e74f732a (DEC-035); S06 conditional-pass checkpoint 2d46990b966db528a39456d7457b23cf918b8f4d (DEC-033); S05 conditional-pass checkpoint 350ac4328908610e3c0fce678ead1eb77053dd69 (DEC-031); S05 content 83331af94aa058c486ad1150a0472178375e6cf1 (status record 5e75b5e); S03–S04.1 approved checkpoint 51daa1ac37c375736e086dfdec0f1e778966d8be (DEC-028); S04.1 content 4c3ddda872d2c8782a2994e1a122923104e371c7; S04 content ea246cef29c912dbd5a7b205b3a3a64f7f926597; S03 content 67803355fe0a9fd7ef9271718adb5f4b52459315 (approval confirmed in DEC-028); S02 961ae6ad31581eac633304d905cbab1761179b0b (DEC-022); S01 2b5f83c65749a4c697782216026a6291a91aa2a1 |
 | Baseline identification | By commit SHA only (DEC-020). No Git tags exist in the repository |
 | Planning scope | Narrowed Option B, laboratory prototype, technology development, design + build + test (DEC-028) |
@@ -40,8 +40,8 @@
 | S07 | Detailed Technical Methodology (Section 12) | Approved; content commit b534b9a | CONDITIONAL PASS (DEC-035); parameters and licensing decisions provisional; editorial correction ISS-052 due in S08 |
 | S08 | Proposal Drafting and Intensive Editorial Pass | Approved; content commit f343416; English master `proposal/IRAA_PROPOSAL_EN_MASTER` accepted as working draft for review | CONDITIONAL PASS (DEC-037); Section 9 rows fixed (ISS-030); PQAI classification to S09 (ISS-054) |
 | S09 | Independent Critical Review | Approved; content commit 9c8c9db; master v0.2 approved as basis for final integration | CONDITIONAL PASS (DEC-038); ISS-054 resolved; EPO OPS refinement applied |
-| S10 | Team, Financial Planning, Schedule and Final Integration (incl. S10b independent audit) | In progress (DEC-039); interim package pushed as DRAFT, awaiting owner inputs | — |
-| S11 | Project right-sizing and six-month rebaseline (corrective) | Submitted for owner checkpoint (DEC-041); revised hours, allocation and schedule provisional | — |
+| S10 | Team, Financial Planning, Schedule and Final Integration (incl. S10b independent audit) | In progress (DEC-039), resumed on the S11 baseline (DEC-042); awaiting personnel and cost inputs | — |
+| S11 | Project right-sizing and six-month rebaseline (corrective) | Approved; content commit 0475aa1; 1,291 h, six months | APPROVED (DEC-042) |
 
 ## Owner decisions due by stage
 
