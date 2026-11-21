@@ -14,7 +14,7 @@ This repository contains proposal-development records, not software. No product 
 | S04 | Product Definition and Technical Architecture | Approved as corrected by S04.1 |
 | S04.1 | Consolidated correction and cross-stage audit (S01–S04) | Approved (content commit `4c3ddda`) |
 | S05 | Technical Feasibility and Evaluation Design | Approved, conditional pass (content commit `83331af`) |
-| S06 | Main Activities and Deliverables (Section 13 work packages) | Submitted for gate |
+| S06 | Main Activities and Deliverables (Section 13 work packages) | Approved, conditional pass (content commit `03f56dd`) |
 | S07–S10 | Technical methodology through final integration | Not started |
 
 Current position: `project/00_STAGE_STATUS.md`.

@@ -4,12 +4,12 @@
 |---|---|
 | Document ID | S06_HANDOFF |
 | Version | 1.0 |
-| Status | SUBMITTED FOR GATE |
+| Status | APPROVED |
 | Stage | S06 |
 | Date | 2026-11-21 |
 | Depends on | DEC-031; DEC-032; S06_WORK_PACKAGES; S06_DELIVERABLES_AND_ACCEPTANCE; S06_DEPENDENCIES_AND_EFFORT; S06_QC_REPORT |
 
-- **Transition:** S06 → S07 Detailed Technical Methodology (Section 12). S07 starts only after the owner records the S06 gate decision and opens a new chat (DEC-024).
+- **Transition:** S06 → S07 Detailed Technical Methodology (Section 12). Gate: CONDITIONAL PASS (DEC-033); WP identifiers and titles frozen; effort figures are provisional scenarios, not staffing or budget commitments. S07 starts in a new chat (DEC-024).
 
 ## What S06 produced
 
@@ -30,7 +30,8 @@ S07 must make these corrections in the evaluation methodology and in `proposal/D
 
 - Use WP1–WP7 numbers and titles verbatim in Section 12 (RF-006, FX-01); one Section 12 subsection per work package, with methods, inputs, tools, procedures, evaluation and outputs. Tasks may be refined; WP titles may not change without an owner decision.
 - Verify or mark PROPOSED every tool and version (QA-010; ISS-041). Map each Section 8 row to a verification step using `S06_DELIVERABLES_AND_ACCEPTANCE` §2.
-- The Section 7 draft's assessor walk-through must be made conditional on ISS-012 (T6.7), here or in S08.
+- The Section 7 walk-through correction was made at the gate (DEC-033, draft v0.3); keep Section 12 consistent with it and promise no assessor availability.
+- Coordination stays cross-cutting within WP1–WP7; no eighth work package (DEC-033, ISS-048).
 
 ## Owner decisions
 
