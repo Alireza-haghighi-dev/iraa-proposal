@@ -21,7 +21,7 @@
 | S05 content | 83331af94aa058c486ad1150a0472178375e6cf1 (approved, CONDITIONAL PASS, DEC-031) |
 | S06 content | 03f56ddafbca86f52158827b1dc3bacf49852f62 (approved, CONDITIONAL PASS, DEC-033; status record f8bdb0e) |
 | S07 content | b534b9afd356c19c7fa36e3b46d4b9f2db1d11f0 (approved, CONDITIONAL PASS, DEC-035; status record 6208f0a) |
-| S08 content | Recorded in the status-record commit after push (SUBMITTED FOR GATE, DEC-036) |
+| S08 content | f3434164baa1b4060c11831203d4deebfb8540f5 (SUBMITTED FOR GATE, DEC-036) |
 | Next stage | S09 — Independent Critical Review (after the S08 gate; needs ISS-014 authorization) |
 | S09 may start | No: S08 gate decision pending |
 
@@ -37,7 +37,7 @@
 | S05 | Technical Feasibility and Evaluation Design | Approved; content commit 83331af | CONDITIONAL PASS (DEC-031); mandatory corrections ISS-042 to ISS-045 before the S07 freeze |
 | S06 | Main Activities and Deliverables (Section 13 work packages) | Approved; content commit 03f56dd | CONDITIONAL PASS (DEC-033); WP1–WP7 identifiers and titles frozen; effort figures provisional scenarios only |
 | S07 | Detailed Technical Methodology (Section 12) | Approved; content commit b534b9a | CONDITIONAL PASS (DEC-035); parameters and licensing decisions provisional; editorial correction ISS-052 due in S08 |
-| S08 | Proposal Drafting and Intensive Editorial Pass | Submitted for gate (DEC-036); English master `proposal/IRAA_PROPOSAL_EN_MASTER` | Pending |
+| S08 | Proposal Drafting and Intensive Editorial Pass | Submitted for gate (DEC-036); content commit f343416; English master `proposal/IRAA_PROPOSAL_EN_MASTER` | Pending |
 | S09 | Independent Critical Review | Not started | — |
 | S10 | Team, Financial Planning, Schedule and Final Integration (incl. S10b independent audit) | Not started | — |
 
