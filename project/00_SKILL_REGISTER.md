@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | 00_SKILL_REGISTER |
 | Version | 9.0 |
-| Status | SUBMITTED FOR GATE |
+| Status | APPROVED |
 | Stage | S09 |
 | Date | 2026-11-21 |
 | Depends on | DEC-005 |

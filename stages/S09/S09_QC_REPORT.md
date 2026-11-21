@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | S09_QC_REPORT |
 | Version | 1.0 |
-| Status | SUBMITTED FOR GATE |
+| Status | APPROVED |
 | Stage | S09 |
 | Date | 2026-11-21 |
 | Depends on | S09_QC_CHECK; S09_REVIEW_REPORT; S09_ISOLATED_REVIEW_RECORD; 03_DEFECT_LOG; 00_STAGE_GATE_PROTOCOL §5–§7 |

@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | S09_HANDOFF |
 | Version | 1.0 |
-| Status | SUBMITTED FOR GATE |
+| Status | APPROVED |
 | Stage | S09 |
 | Date | 2026-11-21 |
 | Depends on | DEC-037; S09_REVIEW_REPORT; S09_CORRECTION_REPORT; S09_QC_REPORT; 03_DEFECT_LOG |

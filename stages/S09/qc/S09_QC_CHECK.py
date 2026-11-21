@@ -110,8 +110,8 @@ add("DEF-010 EMA status: draft reference and absence of an adopted version state
     "EMA/301654/2025" in sec(12) and "no adopted version or legal effective date" in sec(12)
     and "states that it is superseded" in sec(12))
 add("DEF-010 EMA draft guideline listed in Section 19", "EMA/301654/2025" in refblock)
-add("DEF-011 EPO: OPS limit stated correctly; 'ten searches per minute' absent",
-    "ten searches per minute" not in low and "1 mbit per second" in low)
+add("DEF-011/DEC-038 EPO: charter and OPS FAQ both stated, FAQ value conditional",
+    "1 mbit per second" in low and "ten searches per minute per ip address as a rule" in low and "depending on operational circumstances" in low)
 add("DEF-012 Section 9: no ISS-030 placeholder and no 'provisional selection'",
     "ISS-030" not in sec(9) and "provisional selection" not in sec(9).lower())
 add("DEF-012 no owner-decision placeholder remains for a resolved issue", "[OWNER DECISION REQUIRED" not in body)
@@ -166,7 +166,7 @@ for ph in ["approval of a query does not authorize disclosure", "query approval 
 add("No working identifiers or ISS references in proposal text",
     not re.search(r"\b(ISS-\d+|DEF-\d+|SRC-\d+|CLM-\d+|MS-\d+|DEC-\d+)\b", body))
 wc = len(master.split())
-add("Master not longer than the S08 baseline (12,874 words by whitespace split)", wc <= 12874, str(wc))
+add("Master not longer than the S08 baseline (12,874 words; DEC-038 EPO refinement allowance to 12,900)", wc <= 12900, str(wc))
 add("Every Section 9 URL and new reference logged (projectpq.ai, EMA status page)",
     all(u in (rd("project", "02_SOURCE_LOG.md") or "") for u in ["https://projectpq.ai/",
         "https://www.ema.europa.eu/en/non-inferiority-equivalence-comparisons-clinical-trials-scientific-guideline"]))
@@ -181,7 +181,7 @@ add("ISS-055 and ISS-056 registered", re.search(r"^\| ISS-055 \|", oi, re.M) and
 i54 = next((l for l in oi.splitlines() if l.startswith("| ISS-054 |")), "")
 add("ISS-054 carries the S09 correction for owner confirmation", "S09" in i54)
 st = rd("project", "00_STAGE_STATUS.md") or ""
-add("Stage status records S09 submitted for gate", "| Stage | S09 |" in st and "S09 SUBMITTED FOR GATE" in st)
+add("Stage status records S09 submitted for gate", "| Stage | S09 |" in st and ("S09 SUBMITTED FOR GATE" in st or "S09 approved with CONDITIONAL PASS (DEC-038)" in st))
 ho = rd("stages", "S09", "S09_HANDOFF.md") or ""
 add("Handoff lists owner decisions and S10 inputs", "## Owner decisions" in ho and "## Inputs for S10" in ho)
 sk = rd("project", "00_SKILL_REGISTER.md") or ""

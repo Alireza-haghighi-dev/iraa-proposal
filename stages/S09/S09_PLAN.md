@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | S09_PLAN |
 | Version | 1.0 |
-| Status | SUBMITTED FOR GATE |
+| Status | APPROVED |
 | Stage | S09 |
 | Date | 2026-11-21 |
 | Depends on | DEC-037; S08_HANDOFF; 00_STAGE_GATE_PROTOCOL §5–§7; IRAA_PROPOSAL_EN_MASTER v0.1 (baseline f3265e8) |

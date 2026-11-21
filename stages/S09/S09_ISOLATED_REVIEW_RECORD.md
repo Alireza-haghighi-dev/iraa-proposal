@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | S09_ISOLATED_REVIEW_RECORD |
 | Version | 1.0 |
-| Status | SUBMITTED FOR GATE |
+| Status | APPROVED |
 | Stage | S09 |
 | Date | 2026-11-21 |
 | Depends on | S09_PLAN; IRAA_PROPOSAL_EN_MASTER v0.1 (f3265e8); 03_DEFECT_LOG |

@@ -28,7 +28,7 @@ PASS  DEF-009 old interval-only decision wording absent from Sections 8 and 12
 PASS  DEF-009 Section 8 specifications 1 to 3 state the Holm-adjusted rule
 PASS  DEF-010 EMA status: draft reference and absence of an adopted version stated
 PASS  DEF-010 EMA draft guideline listed in Section 19
-PASS  DEF-011 EPO: OPS limit stated correctly; 'ten searches per minute' absent
+PASS  DEF-011/DEC-038 EPO: charter and OPS FAQ both stated, FAQ value conditional
 PASS  DEF-012 Section 9: no ISS-030 placeholder and no 'provisional selection'
 PASS  DEF-012 no owner-decision placeholder remains for a resolved issue
 PASS  DEF-013 PQAI row: Type 'Industry project', bare Outcome; collaborative initiative and paid tiers in Notes
@@ -61,7 +61,7 @@ PASS  disclosure rule wording present: 'query approval never substitutes for dis
 PASS  disclosure rule wording present: 'two separate conditions'
 PASS  disclosure rule wording present: 'every query, in either case, still requires the assessor's approval'
 PASS  No working identifiers or ISS references in proposal text
-PASS  Master not longer than the S08 baseline (12,874 words by whitespace split)  [12870]
+PASS  Master not longer than the S08 baseline (12,874 words; DEC-038 EPO refinement allowance to 12,900)  [12882]
 PASS  Every Section 9 URL and new reference logged (projectpq.ai, EMA status page)
 PASS  Defect log: DEF-009 to DEF-039 present
 PASS  No open Critical or Major defect

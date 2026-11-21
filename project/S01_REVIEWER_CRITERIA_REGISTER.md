@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | S01_REVIEWER_CRITERIA_REGISTER |
 | Version | 9.0 |
-| Status | SUBMITTED FOR GATE |
+| Status | APPROVED |
 | Stage | S09 |
 | Date | 2026-11-21 |
 | Depends on | REF-03; DEC-011; S02 deliverables; S03 deliverables; S04 deliverables; S05 deliverables; S06 deliverables; S07 deliverables; S08 deliverables; S09_REVIEW_REPORT |

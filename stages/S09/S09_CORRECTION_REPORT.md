@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | S09_CORRECTION_REPORT |
 | Version | 1.0 |
-| Status | SUBMITTED FOR GATE |
+| Status | APPROVED |
 | Stage | S09 |
 | Date | 2026-11-21 |
 | Depends on | S09_REVIEW_REPORT; 03_DEFECT_LOG; IRAA_PROPOSAL_EN_MASTER v0.2 |
