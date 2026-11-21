@@ -3,11 +3,11 @@
 | Field | Value |
 |---|---|
 | Document ID | 00_OPEN_ISSUES_REGISTER |
-| Version | 7.0 |
-| Status | APPROVED |
-| Stage | S07 |
+| Version | 8.0 |
+| Status | SUBMITTED FOR GATE |
+| Stage | S08 |
 | Date | 2026-11-21 |
-| Depends on | REF-01; REF-02; REF-03; S01_REQUIREMENTS_REGISTER; S02_RESEARCH_SYNTHESIS; S03_COMPARABLE_SYSTEMS_MATRIX; S03_PRIOR_ART_REGISTER; S04_SCOPE_OPTIONS; S04_ASSUMPTIONS_AND_STANDARDS; DEC-029; S05_EVALUATION_DESIGN; S05_DATA_AVAILABILITY_AND_SUBSTITUTES; S05_FEASIBILITY_AND_RISKS; S06_WORK_PACKAGES; S06_DEPENDENCIES_AND_EFFORT; S07_CORRECTED_EVALUATION_METHODOLOGY; S07_TOOL_AND_VERSION_REGISTER |
+| Depends on | REF-01; REF-02; REF-03; S01_REQUIREMENTS_REGISTER; S02_RESEARCH_SYNTHESIS; S03_COMPARABLE_SYSTEMS_MATRIX; S03_PRIOR_ART_REGISTER; S04_SCOPE_OPTIONS; S04_ASSUMPTIONS_AND_STANDARDS; DEC-029; S05_EVALUATION_DESIGN; S05_DATA_AVAILABILITY_AND_SUBSTITUTES; S05_FEASIBILITY_AND_RISKS; S06_WORK_PACKAGES; S06_DEPENDENCIES_AND_EFFORT; S07_CORRECTED_EVALUATION_METHODOLOGY; S07_TOOL_AND_VERSION_REGISTER; S08_EDITORIAL_LOG; 03_DEFECT_LOG; DEC-035 |
 
 - **Type key:** **ODR** = OWNER DECISION REQUIRED; **OPEN** = information or evidence missing; **LOCAL** = local completion only, not researched in the working package
 - **Blocking key:** The stage or gate that cannot close until the issue is resolved or an explicit assumption is approved
@@ -55,7 +55,7 @@
 | ID | Issue | Origin | Type | Blocks | Target | Status |
 |---|---|---|---|---|---|---|
 | ISS-020 | REVIEWER_FEEDBACK_EN_V1 is a secondary reconstruction; the original reviewer record and prior drafts have not been compared line by line. Reconcile if sanitized primary material becomes available. | Reviewer doc §5 | OPEN | None | Any | OPEN |
-| ISS-021 | RF-001 (regular 12-point font, no arbitrary bold) and RF-003 (table layout) cannot be fully enforced in Markdown. Markdown drafts preserve schemas; typography is applied at local finalization. | RF-001, RF-003 | LOCAL | None | Local finalization | OPEN |
+| ISS-021 | RF-001 (regular 12-point font, no arbitrary bold) and RF-003 (table layout) cannot be fully enforced in Markdown. Markdown drafts preserve schemas; typography is applied at local finalization. | RF-001, RF-003 | LOCAL | None | Local finalization | OPEN (S08: master preserves REF-02 header rows verbatim in Markdown; native template not inspected, DEF-008) |
 | ISS-022 | The requirements statement's illustration (§14) was omitted from the working copy and is described as conceptual. It must not be used as evidence of a working product. | Req. §14 | OPEN (informational) | None | S08 | OPEN |
 
 ## E. Issues raised in S02
@@ -63,15 +63,15 @@
 | ID | Issue | Origin | Type | Blocks | Target | Status |
 |---|---|---|---|---|---|---|
 | ISS-028 | No public benchmark of organizational need/challenge submissions and no study of retrieval from need statements to patents were found. Every performance figure must come from the project's own evaluation or be labelled as a proxy result. S03 re-check: idea datasets exist (SRC-063, SRC-013) as possible proxies; no comparator publishes accuracy figures either (CLM-034). S05: addressed in design: Track S and Track P separation, baseline-relative targets and labelling rules (S05_EVALUATION_DESIGN §1; CLM-057). Stays open until results exist. | S02 matrix rows 4.3; synthesis §5; CLM-025; S03 matrix §3 | OPEN | S05 gate (evaluation design must address it) | S05 | ADDRESSED IN DESIGN; OPEN for results |
-| ISS-029 | S02 research limitations awaiting independent verification: most sources checked at abstract or landing-page depth; mitigators of automation bias (SRC-023) unverified; CLM-025 is a negative search result. | S02_QC_REPORT §4–§5; DEC-022 | OPEN | S08 gate (Pass A full-text checks) and S09 (isolated review) | S08–S09 | OPEN |
+| ISS-029 | S02 research limitations awaiting independent verification: most sources checked at abstract or landing-page depth; mitigators of automation bias (SRC-023) unverified; CLM-025 is a negative search result. | S02_QC_REPORT §4–§5; DEC-022 | OPEN | S08 gate (Pass A full-text checks) and S09 (isolated review) | S08–S09 | OPEN (S08 Pass A: SRC-066, SRC-068, SRC-087, SRC-089 confirmed at full-text-extract depth; SRC-002, SRC-005, SRC-022, SRC-067, SRC-069 confirmed at abstract depth; CLM-017 figure and CLM-019 count not confirmed and not used, DEF-003, DEF-004; remaining sources listed in S08_EDITORIAL_LOG for S09) |
 
 ## F. Issues raised in S03
 
 | ID | Issue | Origin | Type | Blocks | Target | Status |
 |---|---|---|---|---|---|---|
-| ISS-030 | Final choice of Section 9 rows from the eight candidates in S03_SECTION9_COMPARISON (minimum three), including whether patent rows are used and how the form's outcome column is filled for them. | F-09, QA-005, S03_SECTION9_COMPARISON | ODR | S08 gate | S08 | OPEN |
+| ISS-030 | Final choice of Section 9 rows from the eight candidates in S03_SECTION9_COMPARISON (minimum three), including whether patent rows are used and how the form's outcome column is filled for them. | F-09, QA-005, S03_SECTION9_COMPARISON | ODR | S08 gate | S08 | OPEN (S08: rows 1–6 presented in the master as a provisional selection; patent records described in prose only) |
 | ISS-031 | RQ-12 was a web-search-based scan, not a professional patent search. EP 2765543 A1 and US 11,762,916 B1 rest on search-result extracts because their record pages failed to load (SRC-060, SRC-061). Re-check on the issuing office's register, or commission a professional search if the owner requires it. | RQ-12, CLM-039, S03_PRIOR_ART_REGISTER §4 | OPEN | S08 gate (only if patent rows are used) | S08 | OPEN |
-| ISS-032 | Vendor capability statements reflect public pages read on 2026-11-20; one page (SRC-047) contains editorial placeholders. Re-check every Section 9 vendor statement shortly before submission. | QA-005, CLM-029 to CLM-035 | OPEN | S10 (final integration) | S08–S10 | OPEN |
+| ISS-032 | Vendor capability statements reflect public pages read on 2026-11-20; one page (SRC-047) contains editorial placeholders. Re-check every Section 9 vendor statement shortly before submission. | QA-005, CLM-029 to CLM-035 | OPEN | S10 (final integration) | S08–S10 | OPEN (S08: vendor pages not re-read; Section 9 states the access date) |
 
 ## G. Issues raised in S04
 
@@ -118,7 +118,13 @@
 | ISS-049 | MS-03 non-inferiority parameters: confirm PV-12 (margin 0.10) and PV-13 (10 R4 development statements per track); after the pilot, choose (a) raise PV-08 to the computed sample size, (b) keep PV-08 and report an estimate without expecting non-inferiority to be established, or (c) revise the margin with a written reason. At PV-08 = 30, non-inferiority with margin 0.10 is unlikely to be established even if the formulations perform equally (S07_CORRECTED_EVALUATION_METHODOLOGY §2.3). | ISS-042; S07 | ODR | D2.1 freeze (parameters); test run (choice) | WP2, WP6 | OPEN |
 | ISS-050 | ET-12 parameters and effort: confirm PV-14 (10 sampled pool-absent queries per test and track) and PV-15 (depth 50; exhaustive below 200 items); accept that ET-12 judging hours are added to activity 6 in S10. | ISS-043; S07 | ODR | D2.1 freeze; S10 effort | WP2, WP6, S10 | OPEN |
 | ISS-051 | D7.1 acceptance needs a deployment rehearsal by a person not involved in the build. With three core members and one unconfirmed collaborator (DEC-033), who performs it, or whether an owner-designated reviewer does, is not settled. | S06_DELIVERABLES_AND_ACCEPTANCE D7.1; DEC-033; S07 | ODR | D7.1 acceptance | S10 | OPEN |
-| ISS-052 | Mandatory editorial correction (DEC-035, item 3): assessor approval of a proposed external search query (CP-1) does not itself authorize disclosure of sponsor data. Both conditions, disclosure authorization (ISS-033) and query approval, must be satisfied before any confidential submission text is transmitted externally. Current drafts present CP-1 as the control that applies "while external disclosure is not authorized" (Sections 7, 8 feature 5 and MS-05, 12 activity 4; S04 CP-1 class) and must be reworded: without authorization, no confidential text is sent even with an approved query (only public need statements or text the authorization covers). | DEC-035 | OPEN (mandatory correction) | S08 gate | S08 | OPEN |
+| ISS-052 | Mandatory editorial correction (DEC-035, item 3): assessor approval of a proposed external search query (CP-1) does not itself authorize disclosure of sponsor data. Both conditions, disclosure authorization (ISS-033) and query approval, must be satisfied before any confidential submission text is transmitted externally. Current drafts present CP-1 as the control that applies "while external disclosure is not authorized" (Sections 7, 8 feature 5 and MS-05, 12 activity 4; S04 CP-1 class) and must be reworded: without authorization, no confidential text is sent even with an approved query (only public need statements or text the authorization covers). | DEC-035 | OPEN (mandatory correction) | S08 gate | S08 | RESOLVED in the master, pending the S08 gate (DEF-001; S04_ARCHITECTURE CP-1 v2.0); register wording alignment DEF-002 |
+
+## L. Issues raised in S08
+
+| ID | Issue | Origin | Type | Blocks | Target | Status |
+|---|---|---|---|---|---|---|
+| ISS-053 | The EMA page for CPMP/EWP/482/99 (SRC-087) states that it is superseded by the guideline on non-inferiority and equivalence comparisons in clinical trials; SRC-088 recorded that guideline as a draft. Read the current guideline and confirm, or adjust with a written reason, the confidence-interval criterion of the non-inferiority comparisons before the protocol freeze. | S08 Pass A; DEF-005 | OPEN | D2.1 freeze (T2.2) | WP2 | OPEN |
 
 ## Closed issues
 

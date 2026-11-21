@@ -3,9 +3,9 @@
 | Field | Value |
 |---|---|
 | Document ID | 00_SKILL_REGISTER |
-| Version | 7.0 |
-| Status | APPROVED |
-| Stage | S07 |
+| Version | 8.0 |
+| Status | SUBMITTED FOR GATE |
+| Stage | S08 |
 | Date | 2026-11-21 |
 | Depends on | DEC-005 |
 
@@ -29,6 +29,7 @@
 | SKL-006 | S05 | Reading official service, model and licence pages one by one for RQ-14 and RQ-15, with per-statement logging | Built-in `deep-research` re-evaluated; built-in `pdf-reading` considered for licence documents; `dataviz` and `docs` not applicable (repository Markdown, no charts) | Not applicable (no third-party Skill) | No Skill used. `deep-research` DEFERRED for the S02 reason (subagent narrative output does not meet the per-source logging rule). `pdf-reading` not needed: the pages read were HTML. Direct search and fetch used; two pages (SRC-063 record, EPO OPS landing page) were not reachable by fetch and were handled by search-result extracts or left OPEN | Not required |
 | SKL-007 | S06 | None requiring a Skill. S06 plans work packages from approved S04 and S05 Markdown files; no external research, no charts, no non-Markdown output. | Built-in `docs` not applicable (repository Markdown is the canonical format); `xlsx` considered for the effort table and rejected (the QC script recomputes the figures from Markdown); `deep-research` not applicable (no search) | Not applicable (no third-party Skill) | No Skill used | Not required |
 | SKL-008 | S07 | Reading a small number of licence, package and guideline pages one by one (ISS-041, ISS-044, statistical sources), and drafting Section 12 as repository Markdown | Built-in `pdf-reading` (licence or guideline documents as PDF); built-in `deep-research`; built-in `docs` (document output); `dataviz` (no charts needed) | Not applicable (no third-party Skill) | No Skill used. The pages needed were HTML and were read with the web tools, so `pdf-reading` was not needed; `deep-research` DEFERRED for the S02 reason (subagent narrative output does not meet the per-source logging rule, and fewer than ten sources were needed); `docs` not applicable because the repository Markdown is the canonical format and the owner reviews drafts there | Not required |
+| SKL-009 | S08 | Assembling and editing repository Markdown; a small number of targeted source checks (Pass A) | Built-in `docs` (shareable review copy), `pdf-reading` (full-text PDFs), `deep-research` | Not applicable (no third-party Skill) | No Skill used. Repository Markdown is canonical and the owner reviews it there, so `docs` was not used; Pass A needed only targeted search extracts, so `deep-research` was not applicable; page fetching required approval that was unavailable, so `pdf-reading` could not be applied to downloaded files | Not required |
 
 ## 3. Forward notes
 
@@ -38,4 +39,4 @@
 | pdf-reading | Built-in (Anthropic) | Reading open-access papers retrieved as PDFs | Low risk; check that extracted figures are verified against the page |
 | Third-party research or citation-verification Skills | To be proposed by owner | Citation checking, structured extraction | Full security review required before any use |
 
-No Skill was used in S02 to S07. S08 may reconsider `docs` only if the owner wants a shareable review copy of the English master; the repository stays canonical.
+No Skill was used in S02 to S08. A shareable review copy of the English master (`docs`) can be made on owner request; the repository stays canonical.

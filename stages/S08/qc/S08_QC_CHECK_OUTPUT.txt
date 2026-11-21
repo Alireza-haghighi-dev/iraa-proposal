@@ -1,0 +1,99 @@
+INFO  S07 cumulative run  [SUMMARY  files=66  checks=1127  failed=2]
+INFO  S07 check superseded  [citation title in Section 19 reference list, line 354 'robust']
+INFO  S07 check superseded  [S08 not started -> S08 started under DEC-036]
+PASS  S07 cumulative checks pass apart from the two superseded checks  [2 superseded]
+PASS  file present: proposal/IRAA_PROPOSAL_EN_MASTER.md
+PASS  file present: project/03_DEFECT_LOG.md
+PASS  file present: stages/S08/S08_PLAN.md
+PASS  file present: stages/S08/S08_EDITORIAL_LOG.md
+PASS  file present: stages/S08/S08_QC_REPORT.md
+PASS  file present: stages/S08/S08_CHANGE_REPORT.md
+PASS  file present: stages/S08/S08_HANDOFF.md
+PASS  S08 metadata header  [S08_CHANGE_REPORT.md]
+PASS  S08 metadata header  [S08_EDITORIAL_LOG.md]
+PASS  S08 metadata header  [S08_HANDOFF.md]
+PASS  S08 metadata header  [S08_PLAN.md]
+PASS  S08 metadata header  [S08_QC_REPORT.md]
+PASS  S09 not started (stages/S09 holds no deliverables)  [empty]
+PASS  20 form sections present in order, no other level-2 headings  [20 headings]
+PASS  Section 5: one table, REF-02 header verbatim, every row has 2 cells
+PASS  Section 9: one table, REF-02 header verbatim, every row has 7 cells
+PASS  Section 10: one table, REF-02 header verbatim, every row has 7 cells
+PASS  Section 11: one table, REF-02 header verbatim, every row has 5 cells
+PASS  Section 13: one table, REF-02 header verbatim, every row has 5 cells
+PASS  Section 14: one table, REF-02 header verbatim, every row has 6 cells
+PASS  Section 15: one table, REF-02 header verbatim, every row has 6 cells
+PASS  Section 16: one table, REF-02 header verbatim, every row has 17 cells
+PASS  Section 17: one table, REF-02 header verbatim, every row has 4 cells
+PASS  Section 20: one table, REF-02 header verbatim, every row has 2 cells
+PASS  Section 5: five classification rows in form order
+PASS  Section 9: at least three comparator rows
+PASS  Section 9: provisional selection flagged with ISS-030
+PASS  Sections 8 and 12 hold only project tables (no REF-02 schema exists)
+PASS  Section 13: seven activities identical to the frozen titles and figures  [[210, 290, 380, 210, 400, 374, 140]]
+PASS  Section 13: every effort cell marked provisional
+PASS  Section 13 total = 2,004 and stated in Sections 4 and 13  [2004]
+PASS  Section 12 numbered headings = Section 13 numbers and titles
+PASS  Section 16: numbers, titles and effort identical to Section 13
+PASS  Section 16: months, cost and weight left for S10 / local completion
+PASS  Section 1 title = Section 11 row 1 title; row 1 is the current project
+PASS  Section 11: durations S10, costs local
+PASS  Section 17: categories from the form's four risk types  [['Financial', 'Information and data', 'Technical', 'Timeline']]
+PASS  Arithmetic: 10^6 x 1,024 x 4 bytes rounds to 4.1 GB
+PASS  Section 2: local completion placeholder only  [[LOCAL COMPLETION ONLY]]
+PASS  Section 3: local completion placeholder only  [[LOCAL COMPLETION ONLY]]
+PASS  Section 18: local completion placeholder only  [[LOCAL COMPLETION ONLY]]
+PASS  Section 10: table rows hold placeholders only
+PASS  Section 14: table rows hold placeholders only
+PASS  Section 15: table rows hold placeholders only
+PASS  Section 20: every status cell is local completion
+PASS  Section 4: duration and total effort reserved for S10
+PASS  No bold or emphasis markup in proposal text
+PASS  No paragraph-opening bullets in proposal text
+PASS  No working identifiers in proposal text
+PASS  ISS identifiers appear only inside owner-decision placeholders  [ISS-030]
+PASS  No Persian or Arabic script anywhere in the repository Markdown
+PASS  required wording present: 'approval of a query does not authorize disclosure'
+PASS  required wording present: 'query approval never substitutes for disclosure clearance'
+PASS  required wording present: 'two separate conditions'
+PASS  required wording present: 'superiority tested second, not required'
+PASS  required wording present: 'non-inferiority not established'
+PASS  required wording present: 'is not required to be better than the bm25 baseline'
+PASS  required wording present: 'planning value'
+PASS  required wording present: 'lower bound'
+PASS  required wording present: 'makes bm25 the default configuration'
+PASS  required wording present: 'lists as superseded'
+PASS  required wording present: 'results on substitute data are reported as such'
+PASS  withdrawn or prohibited wording absent: 'while external disclosure is not authorized'
+PASS  withdrawn or prohibited wording absent: 'unless external disclosure is otherwise authorized'
+PASS  withdrawn or prohibited wording absent: 'only if query approval is required'
+PASS  withdrawn or prohibited wording absent: 'approved internal collection'
+PASS  withdrawn or prohibited wording absent: 'internal precedent'
+PASS  withdrawn or prohibited wording absent: 'knowledge base'
+PASS  withdrawn or prohibited wording absent: 'outperform'
+PASS  withdrawn or prohibited wording absent: 'proven '
+PASS  withdrawn or prohibited wording absent: 'guarantee'
+PASS  withdrawn or prohibited wording absent: 'state-of-the-art'
+PASS  withdrawn or prohibited wording absent: 'will revolution'
+PASS  withdrawn or prohibited wording absent: 'more accurate than'
+PASS  withdrawn or prohibited wording absent: 'conforms to iso'
+PASS  withdrawn or prohibited wording absent: 'compliant with iso'
+PASS  withdrawn or prohibited wording absent: 'iso-certified'
+PASS  withdrawn or prohibited wording absent: 'iso certified'
+PASS  every 'certif' statement is negated
+PASS  every 'patentab' statement is negated
+PASS  every 'freedom-to-operate' statement is negated
+PASS  Section 12 effort-free: no person-hours or personnel in Section 12
+PASS  Every author-year citation has a Section 19 reference  [27 citations; missing: ]
+PASS  Every reference DOI or URL (Section 19 and Section 9) is logged in 02_SOURCE_LOG
+INFO  reference entries  [29]
+PASS  Stage status: S08 SUBMITTED FOR GATE under DEC-036
+PASS  Decisions log: DEC-036 recorded
+PASS  ISS-052 marked resolved in the master, pending gate
+PASS  ISS-053 (EMA guideline supersession) registered
+PASS  Defect log: DEF-001 to DEF-008 present
+PASS  S04_ARCHITECTURE CP-1 row carries the DEC-035 rule
+PASS  Handoff lists inputs and session start for S09
+
+SUMMARY  s08_checks=92  failed=0  info=4
+RESULT PASS

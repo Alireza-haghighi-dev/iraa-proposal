@@ -3,14 +3,15 @@
 | Field | Value |
 |---|---|
 | Document ID | S04_ARCHITECTURE |
-| Version | 1.1 |
-| Status | APPROVED |
-| Stage | S04.1 |
-| Date | 2026-11-20 |
-| Depends on | S01_REQUIREMENTS_REGISTER; S02_RESEARCH_SYNTHESIS §3–§4; S03_COMPARABLE_SYSTEMS_MATRIX §5; CLM-011; CLM-021; CLM-026; CLM-028; CLM-035; CLM-036; CLM-040; CLM-045; DEC-029; S04_SCOPE_OPTIONS |
+| Version | 2.0 |
+| Status | SUBMITTED FOR GATE |
+| Stage | S08 |
+| Date | 2026-11-21 |
+| Depends on | S01_REQUIREMENTS_REGISTER; S02_RESEARCH_SYNTHESIS §3–§4; S03_COMPARABLE_SYSTEMS_MATRIX §5; CLM-011; CLM-021; CLM-026; CLM-028; CLM-035; CLM-036; CLM-040; CLM-045; DEC-029; S04_SCOPE_OPTIONS; DEC-035; ISS-052 |
 
 - **Status of content:** everything in this file is PROPOSED design unless a row cites a source. No component exists. Tool and model names are deliberately absent: versions, licences and resource needs are verified in S05 and S07 (QA-010).
 - **Scope basis:** written for Option B, which remains a PROVISIONAL recommendation pending the owner's decision on ISS-001 (`S04_SCOPE_OPTIONS` §4). The functional decomposition also serves Options A and C; §7 states what changes.
+- **S08 correction (DEC-035, ISS-052):** CP-1 restated. Query approval is no longer described as the control that applies while disclosure is not authorized: confidential text leaves the controlled environment only if a disclosure authorization covers it and an assessor has approved the exact query text. Earlier registers that describe CP-1 as conditional (S04_DATA_FLOWS_AND_INTERFACES, S05_EVALUATION_DESIGN MS-05, S06_DELIVERABLES_AND_ACCEPTANCE D4.1) are governed by this row and by the English master; alignment of their wording is logged as DEF-002.
 - **S04.1 corrections (DEC-029):** R2 no longer assumes an approved internal solutions collection (§1, FN-05); R1 grouping (FN-04) is optional; R3 controls are split into essential, conditional and optional (§4).
 - **IDs defined here:** FN (function), AC (architecture component), CP (R3 checkpoint), AD (architecture design choice). Interfaces (IF) and data flows (DF) are in `S04_DATA_FLOWS_AND_INTERFACES`; assumptions (AS) in `S04_ASSUMPTIONS_AND_STANDARDS`.
 
@@ -99,7 +100,7 @@ R3 requires one thing: no assessment or processing outcome becomes final without
 
 | ID | Checkpoint | Class | Rule enforced by AC-09 | Why this class | Evidence produced |
 |---|---|---|---|---|---|
-| CP-1 | External query approval | Conditional (ISS-033, ISS-009); required until external disclosure is authorized (DEC-028) | No text leaves the controlled environment for an external source until an assessor has viewed and approved the exact query text; the assessor may shorten or redact it | A data-disclosure control, not an R3 control. Needed if the owner requires approval before submission text is sent out; dropped if the owner permits automatic queries or rules external queries out | Logged query text, approver, time, source |
+| CP-1 | External query approval and disclosure clearance | Required for every external query (DEC-035); disclosure authorization itself is a sponsor decision (ISS-033, ISS-009) | Text leaves the controlled environment for an external source only if both conditions hold: (a) disclosure clearance, meaning the record is public or a recorded sponsor authorization covers the record and field the text comes from; (b) an assessor has viewed and approved the exact query text, which they may shorten or redact. Approval never substitutes for clearance; without authorization no text derived from a sponsor submission is sent | A data-disclosure control, not an R3 control. Query approval does not authorize disclosure of sponsor data (DEC-035) | Logged clearance basis, query text, approver, time, source, payload hash |
 | CP-2 | Candidate decisions | Optional design choice; outside the essential funded scope (DEC-028) | For each of the top N candidates shown, the assessor records a label (for example duplicate, overlapping, related, unrelated, not reviewed) before the record can be submitted. N is configurable, and the control can be switched off | Mitigates overreliance (CLM-021, CLM-028) but adds work per record; whether it pays for itself is tested in S05 (MS-09) | Per-candidate label, reason, time |
 | CP-3 | Summary acceptance | Conditional (FN-07 enabled) | A generated summary enters the record only after the assessor accepts or edits it; rejected summaries are kept in the log, not in the record | Applies only if summaries are switched on (AD-08) | Accept, edit or reject event |
 | CP-4 | Grouping confirmation | Conditional (FN-04 selected) | A proposed group of stored submissions is a suggestion until an assessor confirms, splits or rejects it; the assistant never merges or alters platform records | Applies only if the owner selects grouping (ISS-004) | Group decision event |

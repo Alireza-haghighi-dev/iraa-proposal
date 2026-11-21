@@ -16,7 +16,8 @@ This repository contains proposal-development records, not software. No product 
 | S05 | Technical Feasibility and Evaluation Design | Approved, conditional pass (content commit `83331af`) |
 | S06 | Main Activities and Deliverables (Section 13 work packages) | Approved, conditional pass (content commit `03f56dd`) |
 | S07 | Detailed Technical Methodology (Section 12) | Approved, conditional pass (content commit `b534b9a`) |
-| S08–S10 | Proposal drafting through final integration | Not started |
+| S08 | Proposal Drafting and Intensive Editorial Pass | Submitted for gate (English master `proposal/IRAA_PROPOSAL_EN_MASTER.md`) |
+| S09–S10 | Independent review through final integration | Not started |
 
 Current position: `project/00_STAGE_STATUS.md`.
 
@@ -33,4 +34,4 @@ The sponsor's reference documents are not part of this repository. Administrativ
 
 ## Quality check
 
-From the repository root, each stage has its own check, for example `python3 stages/S07/qc/S07_QC_CHECK.py .` (Python 3 standard library only). Each earlier check validates its own stage baseline and is run against that commit.
+From the repository root, each stage has its own check, for example `python3 stages/S08/qc/S08_QC_CHECK.py .` (Python 3 standard library only). Each earlier check validates its own stage baseline and is run against that commit.
