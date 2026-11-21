@@ -19,7 +19,7 @@
 | Baseline identification | By commit SHA only (DEC-020). No Git tags exist in the repository |
 | Planning scope | Narrowed Option B, laboratory prototype, technology development, design + build + test (DEC-028) |
 | S05 content | 83331af94aa058c486ad1150a0472178375e6cf1 (approved, CONDITIONAL PASS, DEC-031) |
-| S06 content | Submitted for gate; commit SHA reported to the coordinator and recorded here by the gate decision |
+| S06 content | 03f56ddafbca86f52158827b1dc3bacf49852f62 (submitted for gate; DEC-032) |
 | Next stage | S07 — Detailed Technical Methodology (Section 12) |
 | S07 may start | No: requires the owner's S06 gate decision (DEC-024) |
 
@@ -33,7 +33,7 @@
 | S04 | Product Definition and Technical Architecture | Approved as corrected by S04.1 | APPROVED (DEC-028) |
 | S04.1 | Consolidated correction and cross-stage audit (S01–S04) | Approved; content commit 4c3ddda | APPROVED (DEC-028) |
 | S05 | Technical Feasibility and Evaluation Design | Approved; content commit 83331af | CONDITIONAL PASS (DEC-031); mandatory corrections ISS-042 to ISS-045 before the S07 freeze |
-| S06 | Main Activities and Deliverables (Section 13 work packages) | Submitted for gate (DEC-032) | Pending |
+| S06 | Main Activities and Deliverables (Section 13 work packages) | Submitted for gate; content commit 03f56dd | Pending |
 | S07 | Detailed Technical Methodology (Section 12) | Not started | — |
 | S08 | Proposal Drafting and Intensive Editorial Pass | Not started | — |
 | S09 | Independent Critical Review | Not started | — |
