@@ -14,7 +14,7 @@
 | Item | Value |
 |---|---|
 | Current stage | S07 approved with CONDITIONAL PASS (DEC-035); S08 authorized, not started |
-| Latest approved baseline | Recorded in the follow-up commit (S07 conditional-pass checkpoint; DEC-035) |
+| Latest approved baseline | 267712fa4838c4f69f2e8773efaa29e9e74f732a (S07 conditional-pass checkpoint; DEC-035) |
 | Earlier baselines | S06 conditional-pass checkpoint 2d46990b966db528a39456d7457b23cf918b8f4d (DEC-033); S05 conditional-pass checkpoint 350ac4328908610e3c0fce678ead1eb77053dd69 (DEC-031); S05 content 83331af94aa058c486ad1150a0472178375e6cf1 (status record 5e75b5e); S03–S04.1 approved checkpoint 51daa1ac37c375736e086dfdec0f1e778966d8be (DEC-028); S04.1 content 4c3ddda872d2c8782a2994e1a122923104e371c7; S04 content ea246cef29c912dbd5a7b205b3a3a64f7f926597; S03 content 67803355fe0a9fd7ef9271718adb5f4b52459315 (approval confirmed in DEC-028); S02 961ae6ad31581eac633304d905cbab1761179b0b (DEC-022); S01 2b5f83c65749a4c697782216026a6291a91aa2a1 |
 | Baseline identification | By commit SHA only (DEC-020). No Git tags exist in the repository |
 | Planning scope | Narrowed Option B, laboratory prototype, technology development, design + build + test (DEC-028) |
