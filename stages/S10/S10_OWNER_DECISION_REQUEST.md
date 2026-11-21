@@ -10,6 +10,7 @@
 | Depends on | DEC-033; DEC-039; S06_DEPENDENCIES_AND_EFFORT; REF-02 §§4, 11, 13–16; ISS-013, ISS-017, ISS-018, ISS-025, ISS-046 to ISS-048, ISS-050, ISS-051 |
 
 - **Purpose:** the single owner-decision request of S10 (DEC-039 item 3). Sections 4, 11 (durations), 13 (final effort), 14, 15 and 16 are completed only from the answers. Nothing below is assumed.
+- **S11 note (DEC-041):** item 1 and the §1 recomputation are superseded by the S11 checkpoint (`stages/S11/S11_EFFORT_AND_SCHEDULE`); items 5 and 8 are partly answered by DEC-040 (four members) and DEC-041 (six months).
 - **How to answer:** reply by item number. "Default" means the option S10 would apply if you confirm it; no default is applied without your confirmation.
 - **Local fields:** names, qualifications, currency amounts, dates and contact details stay local. Where a calculation needs rates, relative values are enough.
 

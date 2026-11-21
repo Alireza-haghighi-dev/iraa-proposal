@@ -1,0 +1,80 @@
+PASS    S09 suite: only S11-superseded failures
+PASS    S10 suite: only S11-superseded failures
+INFO    S10 pending  [FX-02 to FX-05 (hours, costs, weights, shares)  [await owner inputs; Sections 14-16 still hold placeholders]]
+PASS    Master v0.4, stage S11, front matter states S11 status
+PASS    Removed element absent from proposal text: 're-rank'
+PASS    Removed element absent from proposal text: 'convex'
+PASS    Removed element absent from proposal text: 'holm'
+PASS    Removed element absent from proposal text: 'margin-shifted'
+PASS    Removed element absent from proposal text: 'minilm'
+PASS    Removed element absent from proposal text: 'property-based'
+PASS    Removed element absent from proposal text: '1,000,000'
+PASS    Removed element absent from proposal text: 'selected configuration'
+PASS    Removed element absent from proposal text: 'three dense'
+PASS    Removed element absent from proposal text: 'date-ordered'
+PASS    Removed element absent from proposal text: '0.10'
+PASS    Removed element absent from proposal text: 'superiority test'
+PASS    Removed element absent from proposal text: 'family-wise'
+PASS    Removed element absent from proposal text: 'non-inferiority not established'
+PASS    Required S11 wording: 'reciprocal rank fusion'
+PASS    Required S11 wording: 'fixed in advance as the primary configuration'
+PASS    Required S11 wording: 'inconclusive'
+PASS    Required S11 wording: 'lower bound of the interval'
+PASS    Required S11 wording: 'error analysis'
+PASS    Required S11 wording: 'two formulations'
+PASS    Required S11 wording: '10,000 and 100,000'
+PASS    Required S11 wording: 'did not write the deployment scripts'
+PASS    Required S11 wording: 'reproducibility check'
+PASS    Required S11 wording: 'being better than bm25 is not required'
+PASS    Required S11 wording: 'not re-scored on the test split'
+PASS    Required S11 wording: '30 statements are too few to support one'
+PASS    Required S11 wording: 'no ranking parameter is tuned'
+PASS    Required S11 wording: 'small end-to-end prototype'
+PASS    Preserved control wording: 'approval of a query does not authorize disclosure'
+PASS    Preserved control wording: 'query approval never substitutes for disclosure clearan'
+PASS    Preserved control wording: 'checks whether relevant existing solution examples can '
+PASS    Preserved control wording: 'two separate conditions must both be met'
+PASS    Preserved control wording: 'no transition into approved exists except the approval '
+PASS    Proposal text has no internal capability or training statements
+PASS    Uncited reference removed: Bruch,
+PASS    Uncited reference removed: Holm,
+PASS    Uncited reference removed: Malkov,
+PASS    Uncited reference removed: Nogueira,
+PASS    Uncited reference removed: all-MiniLM
+PASS    Uncited reference removed: bge-reranker
+PASS    No uncited reference entries  [[]]
+PASS    Body not longer than master v0.3  [12275 vs 12618]
+PASS    Section 13 effort = model WP totals  [[150, 168, 210, 138, 226, 267, 132] vs [150, 168, 210, 138, 226, 267, 132]]
+PASS    Section 16 effort = Section 13
+PASS    Model total 1,291 = lead 526 + contributors 765
+PASS    Total stated in Sections 4, 13 and 16
+PASS    Section 4 states six months, provisional
+PASS    Effort labelled provisional in Section 13 (seven rows and the total)
+PASS    Section 13 titles = model titles = Section 12 numbered titles
+PASS    Section 16 months not yet marked
+PASS    Month 1 is the lightest month  [[148, 242, 252, 274, 208, 167]]
+PASS    Workload rises from month 1 to month 4
+PASS    Lead peak at most 110 h per month  [108]
+PASS    Month 6 holds corrective work (T6.5 or T7.5)
+PASS    EH-10: one review line per WP, one coordination line
+PASS    Every task's month shares sum to 1
+PASS    S11_EFFORT_AND_SCHEDULE tables match the model output
+PASS    Task table matches the model
+PASS    Availability table matches model (lead 72 / 108 / 74; total 526)
+PASS    Shortfall at 80 h stated (480 < 526, 46 h)
+PASS    DEC-040 and DEC-041 recorded
+PASS    ISS-057 (Section 13 effort convention) registered
+PASS    Stage status records S11 submitted for the owner checkpoint
+PASS    Deliverable S11_PLAN present with metadata
+PASS    Deliverable S11_SCOPE_AND_TECHNICAL_PLAN present with metadata
+PASS    Deliverable S11_EFFORT_AND_SCHEDULE present with metadata
+PASS    Deliverable S11_TRACEABILITY_AND_ACCEPTANCE_IMPACT present with metadata
+PASS    Deliverable S11_CHANGE_REPORT present with metadata
+PASS    Deliverable S11_QC_REPORT present with metadata
+PASS    Deliverable S11_HANDOFF present with metadata
+PASS    No S11 file claims approval of the revised baseline
+PASS    Safety: no account name, repository URL, e-mail or phone
+PASS    No Persian text
+
+SUMMARY  s11_checks=76  failed=0  info=1
+RESULT PASS
