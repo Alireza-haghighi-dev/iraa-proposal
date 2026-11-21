@@ -1,0 +1,75 @@
+INFO  S08 cumulative run  [SUMMARY  s08_checks=92  failed=5]
+INFO  S07 check superseded  [no orphan sources in log -> SRC-091, SRC-092 are S09 sources cited in S09 deliverables]
+INFO  S07 check superseded  [every S07 source cited in an S07 deliverable or the Section 12 draft -> SRC-091, SRC-092 are S09 sources cited in S09 deliverables]
+INFO  S08 check superseded  [S09 not started -> S09 started under DEC-037]
+INFO  S08 check superseded  [Section 9: provisional selection flagged with ISS-030 -> ISS-030 resolved by DEC-037; placeholder removed (DEF-012)]
+INFO  S08 check superseded  [required wording present: 'lists as superseded' -> replaced by the draft-status statement (DEF-010)]
+INFO  S08 check superseded  [Stage status: S08 submitted -> stage status now records S09]
+PASS  S08 cumulative checks pass apart from the listed supersessions
+INFO  via S08  [S07 cumulative run  [SUMMARY  files=66  checks=1150  failed=4]]
+INFO  via S08  [S07 check superseded  [citation title in Section 19 reference list, line 356 'robust']]
+INFO  via S08  [S07 check superseded  [S08 not started -> S08 started under DEC-036]]
+PASS  file present: stages/S09/S09_PLAN.md
+PASS  file present: stages/S09/S09_REVIEW_REPORT.md
+PASS  file present: stages/S09/S09_CORRECTION_REPORT.md
+PASS  file present: stages/S09/S09_QC_REPORT.md
+PASS  file present: stages/S09/S09_HANDOFF.md
+PASS  isolated review record present
+PASS  S09 metadata header  [S09_CORRECTION_REPORT.md]
+PASS  S09 metadata header  [S09_HANDOFF.md]
+PASS  S09 metadata header  [S09_ISOLATED_REVIEW_RECORD.md]
+PASS  S09 metadata header  [S09_PLAN.md]
+PASS  S09 metadata header  [S09_QC_REPORT.md]
+PASS  S09 metadata header  [S09_REVIEW_REPORT.md]
+PASS  Master is v0.2, stage S09  [0.2 S09]
+PASS  S10 not started (stages/S10 holds no deliverables)  [empty]
+PASS  DEF-009 decision rule: adjusted p-values decide, intervals reported unadjusted
+PASS  DEF-009 old interval-only decision wording absent from Sections 8 and 12
+PASS  DEF-009 Section 8 specifications 1 to 3 state the Holm-adjusted rule
+PASS  DEF-010 EMA status: draft reference and absence of an adopted version stated
+PASS  DEF-010 EMA draft guideline listed in Section 19
+PASS  DEF-011 EPO: OPS limit stated correctly; 'ten searches per minute' absent
+PASS  DEF-012 Section 9: no ISS-030 placeholder and no 'provisional selection'
+PASS  DEF-012 no owner-decision placeholder remains for a resolved issue
+PASS  DEF-013 PQAI row: Type 'Industry project', bare Outcome; collaborative initiative and paid tiers in Notes
+PASS  Isolated IR-10: Section 9 Outcome and Status cells hold bare form categories
+PASS  Isolated IR-02: sample-size check uses 80% probability, not half-width = margin
+PASS  Isolated IR-03: specification 3 has a rule for both outcomes of the sizing decision
+PASS  Isolated IR-04: interval for paired binary outcome named; Clopper-Pearson limited to single proportions
+PASS  Isolated IR-05: editor of the confirmatory query defined; unedited query exploratory
+PASS  Isolated IR-06: confirmatory family listed; 'inferior' defined
+PASS  Isolated IR-07: retention keeps handover collections
+PASS  Isolated IR-08: manual route records exact query text and is counted in specification 5
+PASS  Isolated IR-09: Section 7 assumption restates both conditions
+PASS  Isolated IR-15: no 'S10' in running prose outside placeholders
+PASS  Isolated IR-26: single term 'terms note'
+PASS  DEF-014 superlatives removed or scoped
+PASS  DEF-016 Section 9 Type entries use form source categories (industry project / publication)  [['Industry project', 'Industry project', 'Industry project', 'Industry project', 'Industry project', 'Publication']]
+PASS  DEF-017 unreferenced 'two further idea-management products' absent
+PASS  DEF-018 universal vendor claim scoped
+PASS  DEF-019 circular authorization sentence replaced
+PASS  DEF-020 R2 retrieval assumption qualified
+PASS  DEF-021 timing-check wording
+PASS  DEF-022 Section 8 flags specification 3 sample-size limitation
+PASS  DEF-023 model input limits wording matches the tool table
+PASS  DEF-024 SOLVENT described as in its abstract
+PASS  DEF-026 ISO/IEC 20000 reading stated
+PASS  DEF-015 alignment sentence appears once (Section 8 only)  [1]
+PASS  DEF-015 assessor walk-through described once (Section 12)
+PASS  disclosure rule wording present: 'approval of a query does not authorize disclosure'
+PASS  disclosure rule wording present: 'query approval never substitutes for disclosure clearance'
+PASS  disclosure rule wording present: 'two separate conditions'
+PASS  disclosure rule wording present: 'every query, in either case, still requires the assessor's approval'
+PASS  No working identifiers or ISS references in proposal text
+PASS  Master not longer than the S08 baseline (12,874 words by whitespace split)  [12870]
+PASS  Every Section 9 URL and new reference logged (projectpq.ai, EMA status page)
+PASS  Defect log: DEF-009 to DEF-039 present
+PASS  No open Critical or Major defect
+PASS  ISS-055 and ISS-056 registered
+PASS  ISS-054 carries the S09 correction for owner confirmation
+PASS  Stage status records S09 submitted for gate
+PASS  Handoff lists owner decisions and S10 inputs
+PASS  Skill checkpoint recorded for S09
+
+SUMMARY  s09_checks=62  failed=0  info=10
+RESULT PASS
