@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | S08_QC_REPORT |
 | Version | 1.0 |
-| Status | SUBMITTED FOR GATE |
+| Status | APPROVED |
 | Stage | S08 |
 | Date | 2026-11-21 |
 | Depends on | S08_QC_CHECK; S08_EDITORIAL_LOG; 03_DEFECT_LOG; 00_STAGE_GATE_PROTOCOL §5–§7 |

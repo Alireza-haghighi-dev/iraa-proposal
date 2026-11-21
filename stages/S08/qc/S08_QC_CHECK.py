@@ -9,7 +9,8 @@ two S07 failures that S08 legitimately supersedes, each re-checked here:
   (2) inflated-language hits in IRAA_PROPOSAL_EN_MASTER.md that fall inside the
       Section 19 reference list (titles of cited works, the same exemption the
       S07 script grants to 02_SOURCE_LOG citation rows).
-Any other S07 failure fails this script. The S07 script also performs the
+Any other S07 failure fails this script. Gate adjustment (DEC-037): S08 files
+and the stage status may read APPROVED after the S08 gate. The S07 script also performs the
 repository-wide credential, identifier and file-type scan.
 
 S08 checks: 20 form sections in order; REF-02 table header rows verbatim;
@@ -65,7 +66,7 @@ for f in sorted(glob.glob(os.path.join(ROOT, "stages", "S08", "*.md"))):
     rows = [re.match(r"\|\s*(.*?)\s*\|\s*(.*?)\s*\|$", x).groups() for x in mm.group(1).splitlines()] if mm else []
     v = dict(rows)
     ok = ([k for k, _ in rows] == FIELDS and v.get("Document ID") == b[:-3] and v.get("Stage") == "S08"
-          and v.get("Status") == "SUBMITTED FOR GATE" and re.fullmatch(r"\d+\.\d+", v.get("Version", "")))
+          and v.get("Status") in ("SUBMITTED FOR GATE", "APPROVED") and re.fullmatch(r"\d+\.\d+", v.get("Version", "")))
     add("S08 metadata header", bool(ok), b)
 s9 = [x for x in glob.glob(os.path.join(ROOT, "stages", "S09", "*")) if not x.endswith(".gitkeep")]
 add("S09 not started (stages/S09 holds no deliverables)", not s9, ", ".join(map(os.path.basename, s9)) or "empty")
@@ -214,10 +215,10 @@ info("reference entries", str(len(refs)))
 st = rd("project", "00_STAGE_STATUS.md") or ""; dl = rd("project", "00_DECISIONS_LOG.md") or ""
 oi = rd("project", "00_OPEN_ISSUES_REGISTER.md") or ""; df = rd("project", "03_DEFECT_LOG.md") or ""
 ar = rd("stages", "S04", "S04_ARCHITECTURE.md") or ""; ho = rd("stages", "S08", "S08_HANDOFF.md") or ""
-add("Stage status: S08 SUBMITTED FOR GATE under DEC-036", "| Stage | S08 |" in st and "S08 SUBMITTED FOR GATE (DEC-036)" in st)
+add("Stage status: S08 submitted (DEC-036) or approved at the gate (DEC-037)", "| Stage | S08 |" in st and ("S08 SUBMITTED FOR GATE (DEC-036)" in st or "S08 approved with CONDITIONAL PASS (DEC-037)" in st))
 add("Decisions log: DEC-036 recorded", re.search(r"^\| DEC-036 \|", dl, re.M) is not None)
 iss52 = next((l for l in oi.splitlines() if l.startswith("| ISS-052 |")), "")
-add("ISS-052 marked resolved in the master, pending gate", "RESOLVED in the master" in iss52)
+add("ISS-052 marked resolved", "RESOLVED" in iss52)
 add("ISS-053 (EMA guideline supersession) registered", re.search(r"^\| ISS-053 \|", oi, re.M) is not None)
 add("Defect log: DEF-001 to DEF-008 present", all(re.search(rf"^\| DEF-00{i} \|", df, re.M) for i in range(1, 9)))
 cp1 = next((l for l in ar.splitlines() if l.startswith("| CP-1 |")), "")

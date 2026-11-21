@@ -16,7 +16,7 @@ This repository contains proposal-development records, not software. No product 
 | S05 | Technical Feasibility and Evaluation Design | Approved, conditional pass (content commit `83331af`) |
 | S06 | Main Activities and Deliverables (Section 13 work packages) | Approved, conditional pass (content commit `03f56dd`) |
 | S07 | Detailed Technical Methodology (Section 12) | Approved, conditional pass (content commit `b534b9a`) |
-| S08 | Proposal Drafting and Intensive Editorial Pass | Submitted for gate (English master `proposal/IRAA_PROPOSAL_EN_MASTER.md`) |
+| S08 | Proposal Drafting and Intensive Editorial Pass | Approved, conditional pass (content commit `f343416`; English master `proposal/IRAA_PROPOSAL_EN_MASTER.md`, working draft) |
 | S09–S10 | Independent review through final integration | Not started |
 
 Current position: `project/00_STAGE_STATUS.md`.

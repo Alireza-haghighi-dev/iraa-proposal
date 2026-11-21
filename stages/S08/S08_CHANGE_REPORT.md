@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | S08_CHANGE_REPORT |
 | Version | 1.0 |
-| Status | SUBMITTED FOR GATE |
+| Status | APPROVED |
 | Stage | S08 |
 | Date | 2026-11-21 |
 | Depends on | DEC-036; S08_EDITORIAL_LOG; 03_DEFECT_LOG |

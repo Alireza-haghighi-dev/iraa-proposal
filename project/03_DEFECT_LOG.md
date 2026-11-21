@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | 03_DEFECT_LOG |
 | Version | 1.0 |
-| Status | SUBMITTED FOR GATE |
+| Status | APPROVED |
 | Stage | S08 |
 | Date | 2026-11-21 |
 | Depends on | 00_PROJECT_RULES §5; 00_STAGE_GATE_PROTOCOL §6; S08_EDITORIAL_LOG; DEC-035 |

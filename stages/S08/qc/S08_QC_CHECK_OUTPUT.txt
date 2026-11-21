@@ -87,9 +87,9 @@ PASS  Section 12 effort-free: no person-hours or personnel in Section 12
 PASS  Every author-year citation has a Section 19 reference  [27 citations; missing: ]
 PASS  Every reference DOI or URL (Section 19 and Section 9) is logged in 02_SOURCE_LOG
 INFO  reference entries  [29]
-PASS  Stage status: S08 SUBMITTED FOR GATE under DEC-036
+PASS  Stage status: S08 submitted (DEC-036) or approved at the gate (DEC-037)
 PASS  Decisions log: DEC-036 recorded
-PASS  ISS-052 marked resolved in the master, pending gate
+PASS  ISS-052 marked resolved
 PASS  ISS-053 (EMA guideline supersession) registered
 PASS  Defect log: DEF-001 to DEF-008 present
 PASS  S04_ARCHITECTURE CP-1 row carries the DEC-035 rule

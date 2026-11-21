@@ -4,12 +4,13 @@
 |---|---|
 | Document ID | S08_HANDOFF |
 | Version | 1.0 |
-| Status | SUBMITTED FOR GATE |
+| Status | APPROVED |
 | Stage | S08 |
 | Date | 2026-11-21 |
 | Depends on | DEC-036; IRAA_PROPOSAL_EN_MASTER; S08_EDITORIAL_LOG; S08_QC_REPORT; 03_DEFECT_LOG |
 
-- **Transition:** S08 → S09 Independent Critical Review. S09 starts only after the owner records the S08 gate decision, authorizes the isolated reviewer (ISS-014) and opens a new chat (DEC-024).
+- **Transition:** S08 → S09 Independent Critical Review. S08 approved with CONDITIONAL PASS and S09 authorized (DEC-037, ISS-014); S09 runs in a new chat (DEC-024). The master is a working draft for independent review, not a submission-ready document.
+- **Gate directions for S09 (DEC-037):** review priorities in this order: (a) original form and table fidelity; (b) scientific accuracy and primary-source verification; (c) natural, concise professional English; (d) feasibility of fitting the content into the original proposal template; (e) comparative claims and competitor classifications, including correction of the PQAI categorization (ISS-054); (f) current EMA guidance status and statistical interpretation (ISS-053). Section 9 keeps rows 1–6; the two patent records stay as labelled prior-art discussion, not rows (ISS-030 resolved). Team assignments, person-hours, costs, schedule and local administrative information are not finalized in S09.
 
 ## What S08 produced
 
@@ -19,7 +20,7 @@
 
 ## Owner decisions
 
-**At the S08 gate:** acceptance of the master; Section 9 rows (ISS-030; patent rows need ISS-031 if used). **For S09:** ISS-014 authorization. **Before the protocol freeze:** ISS-053 with ISS-039, ISS-049, ISS-050. **S10:** DEF-002 register alignment, effort recomputation including the ISS-052 controls and deeper-check judging, and the items in `00_STAGE_STATUS`.
+**Decided at the S08 gate (DEC-037):** master accepted as working draft; Section 9 rows 1–6 (ISS-030); S09 authorized (ISS-014). **At the S09 gate:** review findings, ISS-054. **S10b:** independent-audit authorization (ISS-014). **Before the protocol freeze:** ISS-053 with ISS-039, ISS-049, ISS-050. **S10:** DEF-002 register alignment, effort recomputation including the ISS-052 controls and deeper-check judging, and the items in `00_STAGE_STATUS`.
 
 ## Inputs for S09
 
