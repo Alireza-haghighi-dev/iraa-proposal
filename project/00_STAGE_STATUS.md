@@ -22,7 +22,7 @@
 | S06 content | 03f56ddafbca86f52158827b1dc3bacf49852f62 (approved, CONDITIONAL PASS, DEC-033; status record f8bdb0e) |
 | S07 content | b534b9afd356c19c7fa36e3b46d4b9f2db1d11f0 (approved, CONDITIONAL PASS, DEC-035; status record 6208f0a) |
 | S08 content | f3434164baa1b4060c11831203d4deebfb8540f5 (approved, CONDITIONAL PASS, DEC-037; status record da66531) |
-| S09 content | Recorded in the S09 handoff note to the coordinator after push (commit SHA reported in chat and in the follow-up status record) |
+| S09 content | 9c8c9dbecaa212613f3064c223e979a297345a56 (SUBMITTED FOR GATE; awaiting owner decision) |
 | Next stage | S10 — Team, Financial Planning, Schedule and Final Integration |
 | S10 may start | No; requires the owner's S09 gate decision |
 
