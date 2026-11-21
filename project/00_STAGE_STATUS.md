@@ -3,17 +3,17 @@
 | Field | Value |
 |---|---|
 | Document ID | 00_STAGE_STATUS |
-| Version | 9.0 |
-| Status | APPROVED |
-| Stage | S09 |
+| Version | 10.0 |
+| Status | DRAFT |
+| Stage | S10 |
 | Date | 2026-11-21 |
-| Depends on | 00_DECISIONS_LOG; 00_OPEN_ISSUES_REGISTER; S06_HANDOFF; DEC-031; DEC-032; DEC-033; DEC-034; DEC-035; S07_HANDOFF; DEC-036; S08_HANDOFF; DEC-037; S09_HANDOFF; DEC-038 |
+| Depends on | 00_DECISIONS_LOG; 00_OPEN_ISSUES_REGISTER; S06_HANDOFF; DEC-031; DEC-032; DEC-033; DEC-034; DEC-035; S07_HANDOFF; DEC-036; S08_HANDOFF; DEC-037; S09_HANDOFF; DEC-038; DEC-039; S10_HANDOFF |
 
 ## Current position
 
 | Item | Value |
 |---|---|
-| Current stage | S09 approved with CONDITIONAL PASS (DEC-038); S10 authorized, not started |
+| Current stage | S10 in progress (DEC-039): technical integration complete; awaiting owner inputs (`stages/S10/S10_OWNER_DECISION_REQUEST`) before Sections 4, 11, 13–16 are finalized; not submission-ready |
 | Latest approved baseline | c8470d6a8c090e41a80cd5a34a37a0701c95b6a9 (S09 conditional-pass checkpoint; DEC-038) |
 | Earlier baselines | S07 conditional-pass checkpoint 267712fa4838c4f69f2e8773efaa29e9e74f732a (DEC-035); S06 conditional-pass checkpoint 2d46990b966db528a39456d7457b23cf918b8f4d (DEC-033); S05 conditional-pass checkpoint 350ac4328908610e3c0fce678ead1eb77053dd69 (DEC-031); S05 content 83331af94aa058c486ad1150a0472178375e6cf1 (status record 5e75b5e); S03–S04.1 approved checkpoint 51daa1ac37c375736e086dfdec0f1e778966d8be (DEC-028); S04.1 content 4c3ddda872d2c8782a2994e1a122923104e371c7; S04 content ea246cef29c912dbd5a7b205b3a3a64f7f926597; S03 content 67803355fe0a9fd7ef9271718adb5f4b52459315 (approval confirmed in DEC-028); S02 961ae6ad31581eac633304d905cbab1761179b0b (DEC-022); S01 2b5f83c65749a4c697782216026a6291a91aa2a1 |
 | Baseline identification | By commit SHA only (DEC-020). No Git tags exist in the repository |
@@ -24,7 +24,7 @@
 | S08 content | f3434164baa1b4060c11831203d4deebfb8540f5 (approved, CONDITIONAL PASS, DEC-037; status record da66531) |
 | S09 content | 9c8c9dbecaa212613f3064c223e979a297345a56 (approved, CONDITIONAL PASS, DEC-038; status record e5318e4) |
 | Next stage | S10 — Team, Financial Planning, Schedule and Final Integration |
-| S10 may start | Yes, in a new chat (DEC-024, DEC-038) |
+| S10 interim commit | Recorded in `stages/S10/S10_HANDOFF` after push |
 
 ## Stage register
 
@@ -40,7 +40,7 @@
 | S07 | Detailed Technical Methodology (Section 12) | Approved; content commit b534b9a | CONDITIONAL PASS (DEC-035); parameters and licensing decisions provisional; editorial correction ISS-052 due in S08 |
 | S08 | Proposal Drafting and Intensive Editorial Pass | Approved; content commit f343416; English master `proposal/IRAA_PROPOSAL_EN_MASTER` accepted as working draft for review | CONDITIONAL PASS (DEC-037); Section 9 rows fixed (ISS-030); PQAI classification to S09 (ISS-054) |
 | S09 | Independent Critical Review | Approved; content commit 9c8c9db; master v0.2 approved as basis for final integration | CONDITIONAL PASS (DEC-038); ISS-054 resolved; EPO OPS refinement applied |
-| S10 | Team, Financial Planning, Schedule and Final Integration (incl. S10b independent audit) | Not started | — |
+| S10 | Team, Financial Planning, Schedule and Final Integration (incl. S10b independent audit) | In progress (DEC-039); interim package pushed as DRAFT, awaiting owner inputs | — |
 
 ## Owner decisions due by stage
 
@@ -61,4 +61,4 @@ Full list: `00_OPEN_ISSUES_REGISTER.md`.
 
 ## Required inputs for the next session
 
-See `stages/S09/S09_HANDOFF.md`, sections "Inputs for S10" and "Session start".
+See `stages/S10/S10_HANDOFF.md`.

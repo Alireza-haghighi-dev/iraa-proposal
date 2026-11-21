@@ -3,12 +3,13 @@
 | Field | Value |
 |---|---|
 | Document ID | S04_ARCHITECTURE |
-| Version | 2.0 |
-| Status | APPROVED |
-| Stage | S08 |
+| Version | 3.0 |
+| Status | DRAFT |
+| Stage | S10 |
 | Date | 2026-11-21 |
 | Depends on | S01_REQUIREMENTS_REGISTER; S02_RESEARCH_SYNTHESIS §3–§4; S03_COMPARABLE_SYSTEMS_MATRIX §5; CLM-011; CLM-021; CLM-026; CLM-028; CLM-035; CLM-036; CLM-040; CLM-045; DEC-029; S04_SCOPE_OPTIONS; DEC-035; ISS-052 |
 
+- **S10 alignment (DEF-002, DEC-039):** wording aligned with the S09-corrected master (CP-1 always applied with disclosure clearance and query approval, DEC-035; EPO OPS thresholds as fair-use guidance, DEC-038; retention default, DEF-034). Content otherwise unchanged.
 - **Status of content:** everything in this file is PROPOSED design unless a row cites a source. No component exists. Tool and model names are deliberately absent: versions, licences and resource needs are verified in S05 and S07 (QA-010).
 - **Scope basis:** written for Option B, which remains a PROVISIONAL recommendation pending the owner's decision on ISS-001 (`S04_SCOPE_OPTIONS` §4). The functional decomposition also serves Options A and C; §7 states what changes.
 - **S08 correction (DEC-035, ISS-052):** CP-1 restated. Query approval is no longer described as the control that applies while disclosure is not authorized: confidential text leaves the controlled environment only if a disclosure authorization covers it and an assessor has approved the exact query text. Earlier registers that describe CP-1 as conditional (S04_DATA_FLOWS_AND_INTERFACES, S05_EVALUATION_DESIGN MS-05, S06_DELIVERABLES_AND_ACCEPTANCE D4.1) are governed by this row and by the English master; alignment of their wording is logged as DEF-002.
@@ -135,5 +136,5 @@ Four extension points are defined now so that later phases add functions without
 | Option | Change to this architecture |
 |---|---|
 | A | AC-01 to AC-05, AC-07 and AC-14 run as experiment code; AC-06, AC-08 to AC-13 are specified, and the review screens are a mock-up |
-| B, narrowed (S04.1; approved as planning scope, DEC-028) | Essential set only: FN-01 to FN-03, FN-05, FN-06, FN-08, FN-09 with CP-5 and CP-6, FN-11, FN-12; FN-10 recommended (logging only, supports C3); FN-04, FN-07 and CP-1 to CP-4 added only by owner selection (`S04_SCOPE_OPTIONS` §6) |
+| B, narrowed (S04.1; approved as planning scope, DEC-028) | Essential set only: FN-01 to FN-03, FN-05, FN-06, FN-08, FN-09 with CP-5 and CP-6, FN-11, FN-12; FN-10 recommended (logging only, supports C3); FN-04, FN-07 and CP-2 to CP-4 added only by owner selection; CP-1 required for every external query (DEC-035) (`S04_SCOPE_OPTIONS` §6) |
 | C | IF-07 is implemented; AC-12 connects to the sponsor's identity provider; deployment moves to sponsor infrastructure; write-back of approved outcomes needs a separate owner decision |

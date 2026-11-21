@@ -3,12 +3,13 @@
 | Field | Value |
 |---|---|
 | Document ID | DRAFT_SEC05_CLASSIFICATION |
-| Version | 0.2 |
-| Status | APPROVED |
-| Stage | S04.1 |
-| Date | 2026-11-20 |
+| Version | 1.0 |
+| Status | SUPERSEDED |
+| Stage | S10 |
+| Date | 2026-11-21 |
 | Depends on | F-05; FX-09; RF-011; ISS-001; ISS-016; S04_SCOPE_OPTIONS; CLM-046; DEC-029 |
 
+- **SUPERSEDED (S10, DEC-039):** this draft is superseded by `proposal/IRAA_PROPOSAL_EN_MASTER`, which carries all S08–S10 corrections (including DEF-002 items). Kept unchanged below as the approved stage input; do not use it as proposal text.
 - **Draft status:** provisional selection adopted by the owner (DEC-028), subject to later consistency review (ISS-016). OWNER DECISION REQUIRED (ISS-001, ISS-016); confirmed at S06, edited in S08. The table keeps the form's two columns and five rows (RF-003); the selected option is written in the second column after the form's options.
 
 ## 5. General project classification

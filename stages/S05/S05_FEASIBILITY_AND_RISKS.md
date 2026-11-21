@@ -3,12 +3,13 @@
 | Field | Value |
 |---|---|
 | Document ID | S05_FEASIBILITY_AND_RISKS |
-| Version | 1.0 |
-| Status | APPROVED |
-| Stage | S05 |
-| Date | 2026-11-20 |
+| Version | 2.0 |
+| Status | DRAFT |
+| Stage | S10 |
+| Date | 2026-11-21 |
 | Depends on | S04_ARCHITECTURE §3, §5; S04_ASSUMPTIONS_AND_STANDARDS §1; S05_EVALUATION_DESIGN; S05_DATA_AVAILABILITY_AND_SUBSTITUTES; RQ-14; RQ-15; CLM-036; CLM-051 to CLM-056; ISS-006; ISS-009; ISS-023; ISS-033; ISS-040; ISS-041 |
 
+- **S10 alignment (DEF-002, DEC-039):** wording aligned with the S09-corrected master (CP-1 always applied with disclosure clearance and query approval, DEC-035; EPO OPS thresholds as fair-use guidance, DEC-038; retention default, DEF-034). Content otherwise unchanged.
 - **Purpose:** check that the essential set of narrowed Option B can be built and evaluated with verifiable, self-hostable components and accessible external sources; define early feasibility tests; list technical and data risks for Section 17.
 - **Labels:** licence and limit statements are VERIFIED at documentation-page depth (A) and cite their source. Throughput, latency and hardware needs are not known and are not estimated: FT-02 measures them. Memory figures in §1.2 are arithmetic from stated dimensions (PROPOSED planning calculation, CLM-056).
 - **IDs defined here:** FT (feasibility test), RSK (risk).
@@ -48,7 +49,7 @@ At the two smaller sizes every candidate fits in the memory of an ordinary serve
 
 | Service | Coverage relevant to R4 | Access | Stated limits and terms | Source |
 |---|---|---|---|---|
-| EPO Open Patent Services (OPS) | Programmatic access to most of the EPO's data sets | Registration required | Free up to 4 GB of data per week; above that an annual subscription (EUR 2,800 on the current price page). Fair-use policy: as a rule all OPS services tolerate ten searches per minute per IP address, a threshold that may vary with operational circumstances, and OPS is not designed for downloading entire collections. Terms allow users to include the data in their own products | SRC-070, SRC-071, SRC-072, SRC-073 |
+| EPO Open Patent Services (OPS) | Programmatic access to most of the EPO's data sets | Registration required | Free up to 4 GB of data per week; above that an annual subscription (EUR 2,800 on the current price page). Fair-use guidance, not guaranteed limits (DEC-038): the charter gives approximately 1 Mbit per second for OPS (its 10 search-related actions per minute apply to Espacenet and the Register); the OPS FAQ states that as a rule OPS services tolerate ten searches per minute per IP address, a threshold that may be higher or lower depending on operational circumstances, one request per second for family-related actions, and that OPS is not designed for downloading entire collections. Terms allow users to include the data in their own products | SRC-070, SRC-071, SRC-072, SRC-073 |
 | USPTO PatentsView PatentSearch API | US patent data | API key requested through the PatentsView help centre; one key per user | 45 requests per minute per key. A third-party report states that the key-request link was removed in early 2026 (T3; not confirmed) | SRC-074, SRC-080 |
 | Lens API | Patent and scholarly records | Access granted on request; token created in the user profile | Use subject to the Lens Terms of Use; quotas returned in response headers; numeric quotas and pricing not stated on the page read | SRC-081 |
 | PQAI | Open-source prior-art search from plain-language descriptions, with an API | MIT-licensed code (CLM-036) | API terms not verified (open since S03) | SRC-053 |

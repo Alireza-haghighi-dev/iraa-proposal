@@ -3,12 +3,13 @@
 | Field | Value |
 |---|---|
 | Document ID | DRAFT_SEC13_ACTIVITIES |
-| Version | 0.2 |
-| Status | APPROVED |
-| Stage | S07 |
+| Version | 1.0 |
+| Status | SUPERSEDED |
+| Stage | S10 |
 | Date | 2026-11-21 |
 | Depends on | F-13; FX-01; FX-02; RF-006; RF-007; RF-011; RF-012; QA-001; QA-007; DEC-012; DEC-028; DEC-031; S06_WORK_PACKAGES; S06_DELIVERABLES_AND_ACCEPTANCE; S06_DEPENDENCIES_AND_EFFORT; ISS-013; ISS-018; DEC-033; DEC-034; ISS-050; DRAFT_SEC12_METHODOLOGY |
 
+- **SUPERSEDED (S10, DEC-039):** this draft is superseded by `proposal/IRAA_PROPOSAL_EN_MASTER`, which carries all S08–S10 corrections (including DEF-002 items). Kept unchanged below as the approved stage input; do not use it as proposal text.
 - **Draft status:** working draft in the form's Section 13 table schema (REF-02 §13: No., Main activity, Activity deliverable(s), Key tasks, Effort (person-hours)). Activity numbers and titles are frozen at the S06 gate; Section 12 (S07) and Section 16 (S10) repeat them verbatim (FX-01, FX-02).
 - **Effort:** provisional planning figures (`S06_DEPENDENCIES_AND_EFFORT` §3). The effort envelope (ISS-013) is open; the figures are conditional and are recomputed in S10, including the judging hours in activity 6 once pilot values exist. Ranges are kept in the working file, not in the form table.
 - **S07 alignment (v0.2):** activity 6 key tasks name the deeper relevance check for queries with no relevant item in the judged pool (ET-12, ISS-043). Its judging hours are not yet in the activity 6 figure; S10 adds them with the other judging recomputations (ISS-050, ISS-046). Titles, numbers and the other cells are unchanged and match Section 12 (FX-01).

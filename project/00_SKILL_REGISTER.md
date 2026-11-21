@@ -3,9 +3,9 @@
 | Field | Value |
 |---|---|
 | Document ID | 00_SKILL_REGISTER |
-| Version | 9.0 |
-| Status | APPROVED |
-| Stage | S09 |
+| Version | 10.0 |
+| Status | DRAFT |
+| Stage | S10 |
 | Date | 2026-11-21 |
 | Depends on | DEC-005 |
 
@@ -31,6 +31,7 @@
 | SKL-008 | S07 | Reading a small number of licence, package and guideline pages one by one (ISS-041, ISS-044, statistical sources), and drafting Section 12 as repository Markdown | Built-in `pdf-reading` (licence or guideline documents as PDF); built-in `deep-research`; built-in `docs` (document output); `dataviz` (no charts needed) | Not applicable (no third-party Skill) | No Skill used. The pages needed were HTML and were read with the web tools, so `pdf-reading` was not needed; `deep-research` DEFERRED for the S02 reason (subagent narrative output does not meet the per-source logging rule, and fewer than ten sources were needed); `docs` not applicable because the repository Markdown is the canonical format and the owner reviews drafts there | Not required |
 | SKL-009 | S08 | Assembling and editing repository Markdown; a small number of targeted source checks (Pass A) | Built-in `docs` (shareable review copy), `pdf-reading` (full-text PDFs), `deep-research` | Not applicable (no third-party Skill) | No Skill used. Repository Markdown is canonical and the owner reviews it there, so `docs` was not used; Pass A needed only targeted search extracts, so `deep-research` was not applicable; page fetching required approval that was unavailable, so `pdf-reading` could not be applied to downloaded files | Not required |
 | SKL-010 | S09 | Independent review of the master; targeted primary-source re-reads | Built-in `deep-research`, `pdf-reading`, `docs`; a general-purpose reviewer agent (built-in agent capability, not a Skill) | Not applicable (no third-party Skill) | No Skill used. Source checks needed fewer than twenty individually logged pages, read with the web tools, so `deep-research` was not applicable; pages were HTML, so `pdf-reading` was not needed; repository Markdown stays canonical, so `docs` was not used. The isolated review was run by a separate built-in agent instance given only the baseline master, a form digest, the style guide and the criteria register, as DEC-037 and the owner's S09 instruction asked | Not required (agent use requested in the owner's START_STAGE S09 instruction) |
+| SKL-011 | S10 | Targeted re-reads of two EPO pages and two bibliographic records; Markdown integration; effort arithmetic | Built-in `docx` (native template, if supplied); `xlsx` (effort and cost tables); `docs`; `deep-research` | Not applicable (no third-party Skill) | No Skill used in the interim phase. No native Word template was available, so `docx` had nothing to read; effort and cost arithmetic is recomputed by the QC script from Markdown, so `xlsx` is not needed; repository Markdown stays canonical, so `docs` was not used; four pages did not justify `deep-research`. `docx` is reconsidered if the owner supplies the template | Not required |
 
 ## 3. Forward notes
 
@@ -40,4 +41,4 @@
 | pdf-reading | Built-in (Anthropic) | Reading open-access papers retrieved as PDFs | Low risk; check that extracted figures are verified against the page |
 | Third-party research or citation-verification Skills | To be proposed by owner | Citation checking, structured extraction | Full security review required before any use |
 
-No Skill was used in S02 to S09. A shareable review copy of the English master (`docs`) can be made on owner request; the repository stays canonical.
+No Skill was used in S02 to S10 (interim). A shareable review copy of the English master (`docs`) can be made on owner request; the repository stays canonical.

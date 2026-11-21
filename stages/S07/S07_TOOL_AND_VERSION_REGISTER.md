@@ -3,12 +3,13 @@
 | Field | Value |
 |---|---|
 | Document ID | S07_TOOL_AND_VERSION_REGISTER |
-| Version | 1.0 |
-| Status | APPROVED |
-| Stage | S07 |
+| Version | 2.0 |
+| Status | DRAFT |
+| Stage | S10 |
 | Date | 2026-11-21 |
 | Depends on | S05_FEASIBILITY_AND_RISKS §1; S04_ARCHITECTURE §3, §5; QA-010; ISS-040; ISS-041; SRC-033 to SRC-037; SRC-075 to SRC-078; SRC-086; CLM-054; CLM-055; CLM-058; CLM-063 |
 
+- **S10 alignment (DEF-002, DEC-039):** wording aligned with the S09-corrected master (CP-1 always applied with disclosure clearance and query approval, DEC-035; EPO OPS thresholds as fair-use guidance, DEC-038; retention default, DEF-034). Content otherwise unchanged.
 - **Purpose:** every tool, library, model and external service named in Section 12, with what has been verified about it and what is only proposed (REF-02 §12 rule; QA-010; S07 gate criterion).
 - **Status key:** VERIFIED (SRC-###) = the stated property was found in the cited source at the depth recorded in `02_SOURCE_LOG`. PROPOSED = a team choice not checked against a source in this project; its licence and version are recorded in the D7.3 inventory before use. "Version" means the version to be pinned; no version is pinned before T1.5 (reference environment) and T3.3 (index layer).
 - **Rule for pinning:** at T1.5 each component is pinned to an exact version, its licence file is read on the version pinned, and the result is entered in D1.1 §environment and later D7.3. A component whose licence or terms fail that check is replaced by the listed alternative or dropped, and the change is logged.
@@ -41,7 +42,7 @@
 
 | Service | Status in S07 | Basis |
 |---|---|---|
-| EPO Open Patent Services | Recommended first connector, subject to owner decision ISS-040 | Registration route, free tier to 4 GB per week, fair-use guide value of ten searches per minute and terms allowing inclusion in own products are documented (VERIFIED, CLM-051); the full terms were read only in part (SRC-073) |
+| EPO Open Patent Services | Recommended first connector, subject to owner decision ISS-040 | Registration route, free tier to 4 GB per week, fair-use guidance (charter: approximately 1 Mbit per second for OPS; OPS FAQ: ten searches per minute per IP address as a rule, varying with operational circumstances; neither guaranteed, DEC-038) and terms allowing inclusion in own products are documented (VERIFIED, CLM-051); the full terms were read only in part (SRC-073) |
 | USPTO PatentsView PatentSearch API | Alternative | 45 requests per minute per key (VERIFIED, SRC-074); key issuance uncertain (T3 report, SRC-080, CLM-052 OPEN) |
 | Lens API | Alternative | Access on request, quotas in response headers (VERIFIED, CLM-053); terms and plan not read |
 | PQAI | Not recommended for the funded connector | MIT-licensed code (CLM-036); API terms not verified |

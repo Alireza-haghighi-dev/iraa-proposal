@@ -3,12 +3,13 @@
 | Field | Value |
 |---|---|
 | Document ID | DRAFT_SEC07_OBJECTIVES |
-| Version | 0.3 |
-| Status | APPROVED |
-| Stage | S06 |
+| Version | 1.0 |
+| Status | SUPERSEDED |
+| Stage | S10 |
 | Date | 2026-11-21 |
 | Depends on | F-07; FX-06; R1–R4; C1; C3; ISS-001; ISS-002; ISS-003; ISS-004; ISS-005; ISS-012; ISS-037; DEC-029; DEC-033; AS-10; S04_ARCHITECTURE; S04_ASSUMPTIONS_AND_STANDARDS |
 
+- **SUPERSEDED (S10, DEC-039):** this draft is superseded by `proposal/IRAA_PROPOSAL_EN_MASTER`, which carries all S08–S10 corrections (including DEF-002 items). Kept unchanged below as the approved stage input; do not use it as proposal text.
 - **Draft status:** PROVISIONAL, written for the narrowed Option B (ISS-001 open; `S04_SCOPE_OPTIONS` §6). Revised in S04.1 for the corrected R2 and for optional functions. Objectives name deliverables only; work-package numbers are added after S06 so that every objective maps to a scheduled activity (FX-06); the mapping is in `S06_WORK_PACKAGES` §5. S06 gate (DEC-033): the walk-through and judging sentences were corrected so that no sponsor assessor availability is promised. Targets are set in S05; no figure appears here. Bracketed IDs are working references and are removed in S08.
 
 ## 7. Project objectives

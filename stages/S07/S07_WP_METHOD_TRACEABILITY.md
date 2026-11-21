@@ -3,12 +3,13 @@
 | Field | Value |
 |---|---|
 | Document ID | S07_WP_METHOD_TRACEABILITY |
-| Version | 1.0 |
-| Status | APPROVED |
-| Stage | S07 |
+| Version | 2.0 |
+| Status | DRAFT |
+| Stage | S10 |
 | Date | 2026-11-21 |
 | Depends on | DRAFT_SEC12_METHODOLOGY; S06_WORK_PACKAGES; S06_DELIVERABLES_AND_ACCEPTANCE; S05_EVALUATION_DESIGN; S05_FEASIBILITY_AND_RISKS; S07_CORRECTED_EVALUATION_METHODOLOGY; S07_TOOL_AND_VERSION_REGISTER; DRAFT_SEC07_OBJECTIVES; DRAFT_SEC08_FEATURES; DRAFT_SEC13_ACTIVITIES; DEC-033 |
 
+- **S10 alignment (DEF-002, DEC-039):** wording aligned with the S09-corrected master (CP-1 always applied with disclosure clearance and query approval, DEC-035; EPO OPS thresholds as fair-use guidance, DEC-038; retention default, DEF-034). Content otherwise unchanged.
 - **Purpose:** shows, for each work package, where Section 12 covers the seven elements the S07 instruction requires (DEC-034), maps every Section 8 row to a verification step (S07 gate criterion; QA-004, QA-010), lists the task refinements made in S07, and records the cross-section consistency checks.
 - **Rule:** WP identifiers, titles and order are those frozen at the S06 gate (DEC-033). Tasks are refined without renumbering. No personnel, hours, costs or months appear here (S10).
 - **Labels:** all methods are PROPOSED; tool status is in `S07_TOOL_AND_VERSION_REGISTER`.
@@ -59,7 +60,7 @@ Element key: (1) technical objectives and procedures; (2) inputs, prerequisite d
 |---|---|
 | 1 | Connector plug-in contract, rate limiter, retries, cache with provenance; one patent connector; TF-IDF query construction; CP-1 approval of exact text; two-level enforcement; payload hash logging; manual-entry fallback; contract and bypass tests |
 | 2 | D1.1 state model and interfaces (M1); service choice (ISS-040); disclosure authorization (ISS-033); service credentials obtained by the project (none assumed) |
-| 3 | EPO OPS recommended, ten searches per minute fair-use guide value (VERIFIED, CLM-051); alternatives PatentsView (CLM-052) and Lens (CLM-053); TF-IDF term selection (PROPOSED); network egress allowlist (PROPOSED); request-payload hash comparison (PROPOSED) |
+| 3 | EPO OPS recommended, fair-use guidance as recorded in CLM-051 (VERIFIED; not guaranteed limits, DEC-038); alternatives PatentsView (CLM-052) and Lens (CLM-053); TF-IDF term selection (PROPOSED); network egress allowlist (PROPOSED); request-payload hash comparison (PROPOSED) |
 | 4 | FT-03 smoke test; contract tests; CP-1 bypass attempts through the interface, the service layer and direct network calls; provenance completeness (instrumentation for ET-08); ET-09 three-formulation comparison with separate judges for Q-A and Q-C |
 | 5 | D4.1, D4.2 |
 | 6 | Access refused or withdrawn (RSK-06) → AS-08 manual entry, MS-03 marked untested against a connected service; disclosure never authorized (RSK-07) → Track P only for R4; MS-03 sample size (ISS-049) |
@@ -132,7 +133,7 @@ Element key: (1) technical objectives and procedures; (2) inputs, prerequisite d
 | MS-02 | As MS-01 per registered source | T6.3, T6.5, T6.6; ET-03, ET-04, ET-12 | D2.2, D6.3, D6.4 | As MS-01 on P@5; pool-based false-reassurance rate (lower bound) and ET-12 estimate reported |
 | MS-03 | Three-formulation comparison on PV-08 need statements | T6.2 (PV-13 pilot), T6.5, T6.6; ET-09 | D4.1, D6.3, D6.4 | Lower 95% limit of Q-C − Q-A success@10 above −PV-12; otherwise "non-inferiority not established" |
 | MS-04 | Generated approval suite on the release | T5.6, T6.5; ET-06, ET-07 | D5.3 executed in D6.3 | 0 records reach Approved without CP-5; 0 changes escape CP-6 |
-| MS-05 | Disclosure check over every external query of ET-09 | T4.5, T6.5; ET-08 | D6.3 | 100% of queries have a logged approval of the exact text sent (while CP-1 applies) |
+| MS-05 | Disclosure check over every external query of ET-09 | T4.5, T6.5; ET-08 | D6.3 | 100% of queries have both a logged approval of the exact text sent and a disclosure clearance; 0 unrefused attempts without authorization (DEC-035) |
 | MS-06 | Version-field check over every approved record | T5.1, T6.5; ET-07 | D6.3 | 100% of approved records store model, index, connector and template versions |
 | MS-07 | Not applicable | — | — | Feature outside the funded scope (DEC-028) |
 | MS-08 | Timing on the reference environment at each confirmed corpus size | T3.6, T6.5; FT-02, ET-10 | D3.3, D6.3 | 95th-percentile display time ≤ PV-09 |

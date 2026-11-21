@@ -1,0 +1,101 @@
+INFO    S09 cumulative run  [SUMMARY  s09_checks=62  failed=4]
+PASS    S09 cumulative checks pass apart from the listed supersessions
+INFO    superseded S09 condition  [Master is v0.2, stage S09  [0.3 S10]]
+INFO    superseded S09 condition  [S10 not started (stages/S10 holds no deliverables)  [qc, S10_UNRESOLVED_ITEMS.md, S10_CHANGE_REPORT.md, S10_PLAN.m]
+INFO    superseded S09 condition  [Master not longer than the S08 baseline (12,874 words; DEC-038 EPO refinement allowance to 12,900)  [12941]]
+INFO    superseded S09 condition  [Stage status records S09 submitted for gate]
+PASS    20 sections in official order with form headings  [[('1', 'Project title'), ('2', 'Team name'), ('3', 'Team lead and contact information')]]
+PASS    Master v0.3, stage S10, status DRAFT
+PASS    Master states it is not submission-ready
+PASS    Embedded header for Section 5 equals REF-02
+PASS    Embedded header for Section 9 equals REF-02
+PASS    Embedded header for Section 10 equals REF-02
+PASS    Embedded header for Section 11 equals REF-02
+PASS    Embedded header for Section 13 equals REF-02
+PASS    Embedded header for Section 14 equals REF-02
+PASS    Embedded header for Section 15 equals REF-02
+PASS    Embedded header for Section 16 equals REF-02
+PASS    Embedded header for Section 17 equals REF-02
+PASS    Embedded header for Section 20 equals REF-02
+INFO    Header source  [REF-02 file]
+PASS    Section 5 table header verbatim
+PASS    Section 9 table header verbatim
+PASS    Section 10 table header verbatim
+PASS    Section 11 table header verbatim
+PASS    Section 13 table header verbatim
+PASS    Section 14 table header verbatim
+PASS    Section 15 table header verbatim
+PASS    Section 16 table header verbatim
+PASS    Section 17 table header verbatim
+PASS    Section 20 table header verbatim
+PASS    Section 5 rows keep the header's column count
+PASS    Section 9 rows keep the header's column count
+PASS    Section 10 rows keep the header's column count
+PASS    Section 11 rows keep the header's column count
+PASS    Section 13 rows keep the header's column count
+PASS    Section 14 rows keep the header's column count
+PASS    Section 15 rows keep the header's column count
+PASS    Section 16 rows keep the header's column count
+PASS    Section 17 rows keep the header's column count
+PASS    Section 20 rows keep the header's column count
+PASS    Section 5 row labels unchanged
+PASS    Tables per section as mapped (8: two project tables; 12: one tool table)  [{5: 1, 8: 2, 9: 1, 10: 1, 11: 1, 12: 1, 13: 1, 14: 1, 15: 1, 16: 1, 17: 1, 20: 1}]
+PASS    Seven frozen WP titles found in S06
+PASS    Section 13 titles equal frozen WP titles, in order
+PASS    Section 12 numbered titles equal Section 13 (FX-01)
+PASS    Section 16 titles equal Section 13
+PASS    Section 13 efforts sum to stated total  [2004 vs 2,004]
+PASS    Section 16 efforts equal Section 13 row by row
+PENDING FX-02 to FX-05 (hours, costs, weights, shares)  [await owner inputs; Sections 14-16 still hold placeholders]
+PASS    Effort marked provisional while owner inputs are open
+PASS    No bold, bullets or decorative marks in proposal text
+PASS    No working identifiers in proposal text  [[]]
+PASS    Body length within S09 body + 50 words (S10 corrections allowance)  [12622 vs S09 12590]
+PASS    OPS: thresholds called guidance values, not fixed limits
+PASS    OPS: charter values (1 Mbit per second; 4 GB per week)
+PASS    OPS: FAQ values (ten per minute per IP as a rule; family-related one per second; operational variation)
+PASS    OPS: Espacenet/Register charter value not attributed to OPS
+PASS    Statistical level question stated (0.025 per family or 0.05 with 90% intervals)
+PASS    Required wording present: 'approval of a query does not authorize disclosure'
+PASS    Required wording present: 'query approval never substitutes for disclosure clearance'
+PASS    Required wording present: 'checks whether relevant existing solution examples can be id'
+PASS    Required wording present: 'superiority tested second, not required'
+PASS    Required wording present: 'has not been confirmed'
+PASS    Prohibited claim wording absent: 'certified'
+PASS    Prohibited claim wording absent: 'proven'
+PASS    Prohibited claim wording absent: 'patentable'
+PASS    Prohibited claim wording absent: 'guarantee'
+PASS    Prohibited claim wording absent: 'state-of-the-art'
+PASS    Prohibited claim wording absent: 'will reduce'
+PASS    Prohibited claim wording absent: 'outperforms'
+PASS    DEF-002: outdated CP-1, OPS and retention wording absent from live registers  [[]]
+PASS    Section drafts marked SUPERSEDED
+PASS    DEF-002 recorded as FIXED
+PASS    DEF-029 recorded as FIXED
+PASS    DEF-040 recorded as FIXED
+PASS    DEF-041 recorded as FIXED
+PASS    Malkov and Yashunin: journal record and DOI
+PASS    Every author-year citation has a reference entry  [[]]
+PASS    Addition rows recompute (13/30/53, 6/10/15, 4/5/7)
+PASS    Added totals 23/45/75 stated
+PASS    Request S06 column equals Section 13 provisional figures
+PASS    Proposed planning total = 2004 + 45 = 2049
+PASS    Proposed range 1,577 to 2,745 (S06 1,554 / 2,670 + additions)
+PASS    Person-weeks at 45 h: about 45.5
+PASS    Deliverable S10_PLAN present with metadata
+PASS    Deliverable S10_FORM_MAPPING present with metadata
+PASS    Deliverable S10_OWNER_DECISION_REQUEST present with metadata
+PASS    Deliverable S10_UNRESOLVED_ITEMS present with metadata
+PASS    Deliverable S10_CONSISTENCY_REPORT present with metadata
+PASS    Deliverable S10_CHANGE_REPORT present with metadata
+PASS    Deliverable S10_QC_REPORT present with metadata
+PASS    Deliverable S10_HANDOFF present with metadata
+PASS    DEC-039 recorded
+PASS    Stage status records S10 in progress, awaiting owner inputs
+PASS    Skill checkpoint recorded for S10
+PASS    Safety: no account name, repository URL, e-mail or phone
+PASS    No Persian text in repository
+PASS    Submission readiness not claimed
+
+SUMMARY  s10_checks=91  failed=0  pending=1  info=6
+RESULT PASS

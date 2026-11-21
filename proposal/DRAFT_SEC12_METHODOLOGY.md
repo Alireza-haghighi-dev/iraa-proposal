@@ -3,12 +3,13 @@
 | Field | Value |
 |---|---|
 | Document ID | DRAFT_SEC12_METHODOLOGY |
-| Version | 0.1 |
-| Status | APPROVED |
-| Stage | S07 |
+| Version | 1.0 |
+| Status | SUPERSEDED |
+| Stage | S10 |
 | Date | 2026-11-21 |
 | Depends on | F-12; FX-01; RF-006; QA-004; QA-007; QA-010; DEC-028; DEC-033; DEC-034; S06_WORK_PACKAGES; S06_DELIVERABLES_AND_ACCEPTANCE; S05_EVALUATION_DESIGN; S07_CORRECTED_EVALUATION_METHODOLOGY; S07_TOOL_AND_VERSION_REGISTER; S07_WP_METHOD_TRACEABILITY; S04_ARCHITECTURE; S04_DATA_FLOWS_AND_INTERFACES; DRAFT_SEC08_FEATURES; DRAFT_SEC13_ACTIVITIES |
 
+- **SUPERSEDED (S10, DEC-039):** this draft is superseded by `proposal/IRAA_PROPOSAL_EN_MASTER`, which carries all S08–S10 corrections (including DEF-002 items). Kept unchanged below as the approved stage input; do not use it as proposal text.
 - **Draft status:** working draft of proposal Section 12 for the narrowed Option B laboratory prototype (DEC-028). Every method, tool and threshold is PROPOSED unless marked as verified; nothing has been built or tested. Tool and version status is in `stages/S07/S07_TOOL_AND_VERSION_REGISTER`; the per-activity mapping to R1–R4, components, tests and Section 8 rows is in `stages/S07/S07_WP_METHOD_TRACEABILITY`.
 - **Form rule (REF-02 §12):** the activity numbers and titles repeat Section 13 exactly (FX-01, RF-006); tool names, versions, quantities and test criteria are verified or labelled proposed. Bracketed IDs are working references and are removed in S08. No personnel are assigned to activities and no hours appear here (S10; DEC-033).
 

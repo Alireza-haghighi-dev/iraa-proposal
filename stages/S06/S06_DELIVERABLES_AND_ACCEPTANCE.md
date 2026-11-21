@@ -3,12 +3,13 @@
 | Field | Value |
 |---|---|
 | Document ID | S06_DELIVERABLES_AND_ACCEPTANCE |
-| Version | 1.0 |
-| Status | APPROVED |
-| Stage | S06 |
+| Version | 2.0 |
+| Status | DRAFT |
+| Stage | S10 |
 | Date | 2026-11-21 |
 | Depends on | S06_WORK_PACKAGES; S05_EVALUATION_DESIGN; S05_FEASIBILITY_AND_RISKS; DRAFT_SEC08_FEATURES; DEC-031 |
 
+- **S10 alignment (DEF-002, DEC-039):** wording aligned with the S09-corrected master (CP-1 always applied with disclosure clearance and query approval, DEC-035; EPO OPS thresholds as fair-use guidance, DEC-038; retention default, DEF-034). Content otherwise unchanged.
 - **Rule for acceptance evidence:** a deliverable is accepted on evidence that a third party can inspect: a document reviewed against a stated checklist, a test log with a pass criterion, a run file or a recorded measurement. Acceptance of a deliverable does not depend on a retrieval target being met. Retrieval targets (MS-01 to MS-03) are reported results; a "no supported difference" outcome is a valid evaluation result, not a failed deliverable (`S05_EVALUATION_DESIGN` §6).
 - **Who accepts:** the owner, or a reviewer the owner designates, records acceptance. No named person is assumed (S10).
 - **Affected targets:** MS-01 to MS-03 and the ET-01b and ET-04 definitions are not final until ISS-042 to ISS-045 are corrected in S07 (DEC-031). D2.1 is the deliverable that carries the corrected versions.
@@ -26,7 +27,7 @@
 | D3.1 | Ingestion and normalization components (AC-01, AC-02) with source registry | WP3 | Software | Import of the field-mapped test file produces an import report listing rejected rows with reasons; every stored item carries source type, availability status and permission note; truncation counts reported per corpus | Unit and integration test log |
 | D3.2 | Index layer and retrieval service (AC-04, AC-05) with all S05 configurations and display thresholds | WP3 | Software | Each configuration in `S05_EVALUATION_DESIGN` §2 that passed FT-02 produces a run file on the development split; each candidate is returned with an evidence passage; index and model versions stored | Run files; test log |
 | D3.3 | Resource and latency measurement note (FT-02); FT-04 import report if an export is released | WP3 | Note | Measured encoding, search and re-ranking times recorded per configuration and confirmed corpus size; configuration set for ET-10 stated | Measurement log |
-| D4.1 | Connector framework, patent connector, query construction and CP-1 approval | WP4 | Software | Every external call passes through CP-1 while it applies; logged text equals sent text; each stored result has source, retrieval date and terms note; AS-08 manual-entry path works with the same fields | Contract tests; CP-1 bypass tests |
+| D4.1 | Connector framework, patent connector, query construction and CP-1 approval | WP4 | Software | Every external call passes through CP-1 (disclosure clearance and assessor approval of the exact text, DEC-035); confidential text with an approved query but no authorization is refused; logged text equals sent text; each stored result has source, retrieval date and terms note; AS-08 manual-entry path works with the same fields and records the exact query text and the clearance relied on | Contract tests; CP-1 bypass tests |
 | D4.2 | Connector smoke-test report (FT-03) | WP4 | Note | Authenticated query, parsed results, stored provenance and observed rate-limit handling for each connected service; if access is refused, the AS-08 fallback is recorded and MS-03 is marked untested | Test log |
 | D5.1 | Assessment record service, access control, audit log, report and decision-log export (AC-09, AC-11 to AC-13) | WP5 | Software | Approved records carry model, index, connector and template versions; audit log holds one entry per transition; report export (IF-05) and decision-log export (IF-06) validate against D1.1 | Test log |
 | D5.2 | Review interface (AC-10) | WP5 | Software | Screens show passage before score for R1, R2 and R4 items; source attribution fields visible; CP-1, approval and return actions available only to the assessor role | Scripted interface tests; checklist review |
@@ -48,7 +49,7 @@
 | MS-02 | D6.4 (ET-03, ET-04) on D3.2; D2.2 for the source tested | Target not final (ISS-043, ISS-045) |
 | MS-03 | D6.4 (ET-09) on D4.1 | Target not final (ISS-042) |
 | MS-04 | D5.3 executed in D6.3 | Pass/fail target unchanged |
-| MS-05 | ET-08 in D6.3 | Applies while CP-1 applies |
+| MS-05 | ET-08 in D6.3 | Applies to every external query (DEC-035) |
 | MS-06 | ET-07 in D6.3 | Pass/fail target unchanged |
 | MS-08 | ET-10 in D6.3; D3.3 | Planning value PV-09 awaiting ISS-039 |
 | MS-10 | ET-05 in D6.3 | Pass/fail target unchanged |

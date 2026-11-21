@@ -3,12 +3,13 @@
 | Field | Value |
 |---|---|
 | Document ID | S06_DEPENDENCIES_AND_EFFORT |
-| Version | 1.0 |
-| Status | APPROVED |
-| Stage | S06 |
+| Version | 2.0 |
+| Status | DRAFT |
+| Stage | S10 |
 | Date | 2026-11-21 |
 | Depends on | S06_WORK_PACKAGES; S06_DELIVERABLES_AND_ACCEPTANCE; S05_EVALUATION_DESIGN §5, §7, §9; S05_FEASIBILITY_AND_RISKS §3; S05_DATA_AVAILABILITY_AND_SUBSTITUTES §3; ISS-013; ISS-017; ISS-039 |
 
+- **S10 alignment (DEF-002, DEC-039):** wording aligned with the S09-corrected master (CP-1 always applied with disclosure clearance and query approval, DEC-035; EPO OPS thresholds as fair-use guidance, DEC-038; retention default, DEF-034). Content otherwise unchanged.
 - **Status of figures:** every person-hour figure is a provisional ASSUMPTION for planning (EH-01 to EH-10). No figure is taken from earlier drafts (QA-001). None is a commitment, a team allocation or a cost.
 - **Effort envelope:** ISS-013 (duration and effort envelope) is open. S06 therefore gives conditional estimates and a list of reductions with their consequences (§6). It does not claim that any ceiling is met.
 - **Unit:** person-hours of a proficient practitioner, independent of team size (REF-02 §13).
@@ -164,10 +165,10 @@ An envelope above the planning total needs no change; the remaining margin cover
 | ISS-002, ISS-003, ISS-012 data, R2 sources, assessor time | T2.3 | Outcome O-4 (AS-09, AS-10) |
 | ISS-005 assessment fields | T1.1 | Placeholder template (AD-07) |
 | ISS-034 approval model; ISS-035 accounts | T1.2, T5.2 | AD-06 single approver with optional second; AS-05 |
-| ISS-036 retention | T1.4, T7.2 | Delete at project close; no copy outside the environment |
+| ISS-036 retention | T1.4, T7.2 | Delete imported sponsor data, collections derived from it and cached external results at project close; retain and hand over public-source collections, judgment files and run files where licences permit; no copy of sponsor data outside the environment (DEF-034) |
 | ISS-038, ISS-044 substitute licences; DS-05 | T2.1, T2.4, T2.6 | Candidate unusable until checked; DS-05 assumed built (EH-04) |
 | ISS-039 planning values | T2.2 freeze | AS-12 |
 | ISS-040 patent service | T4.2 | None: T4.2 cannot start; AS-08 fallback if no service is chosen |
-| ISS-033 external disclosure | Track S part of T6.3, T6.5 | CP-1 applies; ET-09 on Track P |
+| ISS-033 external disclosure | Track S part of T6.3, T6.5 | CP-1 applies to every query; no sponsor-derived text sent without authorization; ET-09 on Track P |
 | ISS-018 training activity | Section 13 final form | None included |
 | ISS-046 to ISS-048 (S06) | S10 | EH-01 to EH-10 |

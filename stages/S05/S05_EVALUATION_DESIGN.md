@@ -3,12 +3,13 @@
 | Field | Value |
 |---|---|
 | Document ID | S05_EVALUATION_DESIGN |
-| Version | 2.0 |
-| Status | APPROVED |
-| Stage | S07 |
+| Version | 3.0 |
+| Status | DRAFT |
+| Stage | S10 |
 | Date | 2026-11-21 |
 | Depends on | S01_REQUIREMENTS_REGISTER §1, §1a; S04_ARCHITECTURE; S04_DATA_FLOWS_AND_INTERFACES DF-08; S04_ASSUMPTIONS_AND_STANDARDS §1; S05_DATA_AVAILABILITY_AND_SUBSTITUTES; S05_FEASIBILITY_AND_RISKS; CLM-025 to CLM-028; CLM-045; CLM-047 to CLM-050; CLM-059 to CLM-064; DEC-028; DEC-029; DEC-034; S07_CORRECTED_EVALUATION_METHODOLOGY |
 
+- **S10 alignment (DEF-002, DEC-039):** wording aligned with the S09-corrected master (CP-1 always applied with disclosure clearance and query approval, DEC-035; EPO OPS thresholds as fair-use guidance, DEC-038; retention default, DEF-034). Content otherwise unchanged.
 - **S07 corrections (DEC-031, DEC-034):** the four mandatory corrections are made in this version: ET-01b and ET-04 redefined and ET-12 added (ISS-043); §6 rewritten for non-inferiority, closed testing and Holm (ISS-042, ISS-045); PV-12 to PV-15 added; §8 targets MS-01 to MS-03 corrected. Reasoning and planning calculations: `stages/S07/S07_CORRECTED_EVALUATION_METHODOLOGY`. The CQADupStack licence (ISS-044) is not established; DS-01 and DS-02 stay unusable until the T2.1 licensing gate passes.
 - **Status of content:** PROPOSED evaluation design. No test has been run, no dataset has been obtained and no result exists. Every value in §7 is a planning value (ASSUMPTION, AS-12) that the owner can change; every entry in §8 is a target, not a result.
 - **Scope:** the narrowed Option B essential set (DEC-028). Tests for excluded options (FN-04 grouping, FN-07 summaries, mandatory CP-2) are not designed here; MS-07 and MS-09 stay conditional in the Section 8 draft.
@@ -90,7 +91,7 @@ R3 is tested as a workflow property, not statistically. The requirement is met o
 
 | ID | Test | Data and procedure | Metrics | Spec |
 |---|---|---|---|---|
-| ET-08 | Disclosure control and provenance | For every external query issued during ET-09, check the logged query text against the text actually sent, the approving assessor (CP-1, while external disclosure is not authorized, DEC-028), and the stored source, retrieval date and terms note of each result | Share of external queries with a logged approval of the exact text sent; share of results with complete provenance | MS-05, MS-10 |
+| ET-08 | Disclosure control and provenance | For every external query issued during ET-09, check the logged query text against the text actually sent, the disclosure clearance and the approving assessor (CP-1, required for every external query, DEC-035), and the stored source, retrieval date and terms note of each result | Share of external queries with both a logged approval of the exact text sent and a disclosure clearance; unrefused attempts to send confidential text without authorization; share of results with complete provenance | MS-05, MS-10 |
 | ET-09 | Relevance by query formulation | Need statements (PV-08; PV-13 development statements for the pilot) are searched in one patent service selected from `S05_FEASIBILITY_AND_RISKS` §2 with three formulations: Q-A, a keyword query written by a judge without assistance (baseline representing manual searching, CTX-02); Q-B, an automatically generated query; Q-C, Q-B after assessor editing at CP-1. Pool the top 10 of each formulation and judge on the R4 scale | Primary: success@10 (at least one grade-2 item in the top 10). Secondary: P@10 at grade 2 | MS-03 |
 
 Track S queries use submission text only if ISS-033 authorizes it. Otherwise ET-09 runs on Track P need statements, which are public text, so the R4 evaluation does not depend on the disclosure decision. No estimate of R4 performance can be given in advance: no study of retrieval from need statements to patents was found (S02 synthesis §5; ISS-028).
@@ -150,7 +151,7 @@ The judgments are the measuring instrument, so they are validated before any con
 | MS-02 | The same rule on P@5 at grade ≥ 2 on each registered source; pool-based false-reassurance rate (lower bound) and the ET-12 estimate reported; source type of each corpus stated (corrected S07, ISS-043, ISS-045) |
 | MS-03 | Q-C non-inferior to Q-A in success@10 with margin PV-12 (lower limit of the 95% interval of the paired difference above −PV-12); superiority tested second; reported per track and per patent service, with "non-inferiority not established" where the interval contains the margin (corrected S07, ISS-042) |
 | MS-04 | 0 records reach Approved without a CP-5 event; 0 changes to an approved record escape CP-6 |
-| MS-05 | 100% of external queries have a logged approval of the exact text sent (while CP-1 applies) |
+| MS-05 | 100% of external queries have both a logged assessor approval of the exact text sent and a disclosure clearance; 0 unrefused attempts to send confidential text without authorization; manual-entry queries reported separately (DEC-035; master Section 8 specification 5) |
 | MS-06 | 100% of approved records store model, index, connector and template versions |
 | MS-08 | 95th-percentile display time within PV-09 at each confirmed corpus size |
 | MS-10 | 100% of listed items carry source type, availability status, permission note and an evidence passage |
