@@ -15,7 +15,8 @@ This repository contains proposal-development records, not software. No product 
 | S04.1 | Consolidated correction and cross-stage audit (S01–S04) | Approved (content commit `4c3ddda`) |
 | S05 | Technical Feasibility and Evaluation Design | Approved, conditional pass (content commit `83331af`) |
 | S06 | Main Activities and Deliverables (Section 13 work packages) | Approved, conditional pass (content commit `03f56dd`) |
-| S07–S10 | Technical methodology through final integration | Not started |
+| S07 | Detailed Technical Methodology (Section 12) | Submitted for gate |
+| S08–S10 | Proposal drafting through final integration | Not started |
 
 Current position: `project/00_STAGE_STATUS.md`.
 
@@ -26,10 +27,10 @@ Current position: `project/00_STAGE_STATUS.md`.
 | `CLAUDE.md` | Session entry point and hard rules |
 | `project/` | Living documents: project rules, stage status, gate protocol, decisions, open issues, Skill register, source log, claim register, style guide, requirements, reviewer criteria, research questions, traceability |
 | `stages/S01/` … `stages/S10/` | Stage deliverables: plan, QC report and evidence, change report, handoff |
-| `proposal/` | Proposal section drafts (provisional drafts of Sections 5, 7, 8 and 11 from S04; Section 13 from S06) and the English master (from S08) |
+| `proposal/` | Proposal section drafts (provisional drafts of Sections 5, 7, 8 and 11 from S04; Section 13 from S06; Section 12 from S07) and the English master (from S08) |
 
 The sponsor's reference documents are not part of this repository. Administrative, team, personal and locally restricted information is completed outside it.
 
 ## Quality check
 
-From the repository root, each stage has its own check, for example `python3 stages/S06/qc/S06_QC_CHECK.py .` (Python 3 standard library only). Each earlier check validates its own stage baseline and is run against that commit.
+From the repository root, each stage has its own check, for example `python3 stages/S07/qc/S07_QC_CHECK.py .` (Python 3 standard library only). Each earlier check validates its own stage baseline and is run against that commit.

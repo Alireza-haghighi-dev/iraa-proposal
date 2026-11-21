@@ -3,13 +3,13 @@
 | Field | Value |
 |---|---|
 | Document ID | S05_EVALUATION_DESIGN |
-| Version | 1.0 |
-| Status | APPROVED |
-| Stage | S05 |
-| Date | 2026-11-20 |
-| Depends on | S01_REQUIREMENTS_REGISTER §1, §1a; S04_ARCHITECTURE; S04_DATA_FLOWS_AND_INTERFACES DF-08; S04_ASSUMPTIONS_AND_STANDARDS §1; S05_DATA_AVAILABILITY_AND_SUBSTITUTES; S05_FEASIBILITY_AND_RISKS; CLM-025 to CLM-028; CLM-045; CLM-047 to CLM-050; DEC-028; DEC-029 |
+| Version | 2.0 |
+| Status | SUBMITTED FOR GATE |
+| Stage | S07 |
+| Date | 2026-11-21 |
+| Depends on | S01_REQUIREMENTS_REGISTER §1, §1a; S04_ARCHITECTURE; S04_DATA_FLOWS_AND_INTERFACES DF-08; S04_ASSUMPTIONS_AND_STANDARDS §1; S05_DATA_AVAILABILITY_AND_SUBSTITUTES; S05_FEASIBILITY_AND_RISKS; CLM-025 to CLM-028; CLM-045; CLM-047 to CLM-050; CLM-059 to CLM-064; DEC-028; DEC-029; DEC-034; S07_CORRECTED_EVALUATION_METHODOLOGY |
 
-- **Gate condition (DEC-031):** S05 passed conditionally. Mandatory corrections ISS-042 to ISS-045 apply to this file and must be completed before the S07 evaluation-methodology freeze; until then the affected rows are not final.
+- **S07 corrections (DEC-031, DEC-034):** the four mandatory corrections are made in this version: ET-01b and ET-04 redefined and ET-12 added (ISS-043); §6 rewritten for non-inferiority, closed testing and Holm (ISS-042, ISS-045); PV-12 to PV-15 added; §8 targets MS-01 to MS-03 corrected. Reasoning and planning calculations: `stages/S07/S07_CORRECTED_EVALUATION_METHODOLOGY`. The CQADupStack licence (ISS-044) is not established; DS-01 and DS-02 stay unusable until the T2.1 licensing gate passes.
 - **Status of content:** PROPOSED evaluation design. No test has been run, no dataset has been obtained and no result exists. Every value in §7 is a planning value (ASSUMPTION, AS-12) that the owner can change; every entry in §8 is a target, not a result.
 - **Scope:** the narrowed Option B essential set (DEC-028). Tests for excluded options (FN-04 grouping, FN-07 summaries, mandatory CP-2) are not designed here; MS-07 and MS-09 stay conditional in the Section 8 draft.
 - **IDs defined here:** ET (evaluation test), PV (planning value). Data candidates (DS), data requirements (DR), feasibility tests (FT) and risks (RSK) are defined in the two companion files.
@@ -19,7 +19,7 @@
 1. **Two data tracks, never pooled.** *Track S* uses sponsor data: exported submissions, sponsor-confirmed solution-example sources and sponsor assessors as judges. It runs only if ISS-002 and, for R2, ISS-003 are answered yes. *Track P* uses public or constructed substitute data and project judges. Every result table, file name and figure carries its track label. A Track P result is evidence about the method on that data only; it is never reported as performance on sponsor submissions (ISS-028, CLM-045).
 2. **Protocol frozen before test data is seen.** Metrics, grade scales, configurations, significance procedure and acceptance targets are fixed in an evaluation protocol document before the test split is judged. Changes after that point are logged with a reason and reported.
 3. **Development and test split by time.** Configuration choice, fusion weights and thresholds are tuned on the development split only. The test split is run once per configuration. This applies the realistic, time-ordered evaluation that S02 found avoids overestimation in duplicate retrieval (S02 matrix rows 2.3 and 6.4; SRC-010).
-4. **Acceptance is relative to a baseline first.** No absolute performance level can be justified in advance: no public benchmark of need or challenge submissions was identified (CLM-025), and no comparator publishes accuracy figures (CLM-034). The primary criterion for each retrieval test is a statistically supported difference from a stated baseline (§6). Absolute floors are set after the pilot and before the test run (PV-11).
+4. **Targets are relative to a baseline, and no superiority is promised.** No absolute performance level can be justified in advance: no public benchmark of need or challenge submissions was identified (CLM-025), and no comparator publishes accuracy figures (CLM-034). The primary criterion for each retrieval test is non-inferiority to a stated baseline within a pre-declared margin; superiority is tested second and reported, not required (§6; corrected in S07, ISS-045). Absolute floors are set after the pilot and before the test run (PV-11). Acceptance of the evaluation deliverables does not depend on the outcome (`S06_DELIVERABLES_AND_ACCEPTANCE`).
 5. **The assistant's output is a ranked list for an assessor.** Metrics are chosen for what the assessor sees: graded quality near the top of the list, and whether anything useful appears in the part of the list a person will read.
 
 ## 2. Retrieval configurations and baselines (R1, R2)
@@ -58,8 +58,8 @@ The R1 labels follow the relationship labels proposed in S02 (synthesis §3, ite
 
 | ID | Test | Data and procedure | Metrics | Spec |
 |---|---|---|---|---|
-| ET-01 | Similar-submission ranking quality | Sort the corpus by submission date. The last time segment supplies test queries (PV-01) and the segment before it development queries (PV-02); each query searches only items dated before it. Pool the top PV-03 items of every configuration in §2 and judge the pool on the R1 scale. Queries with no item graded ≥ 2 are kept and analysed in ET-01b | Primary: nDCG@10 (SRC-025). Secondary: Recall@20 of items graded ≥ 2; MRR of the first duplicate; P@5; bpref and judged@10 as completeness checks (SRC-068) | MS-01 |
-| ET-01b | Behaviour when nothing similar is stored | For test queries whose pool contains no item graded ≥ 2, record the highest score shown and how often a top-ranked item would mislead (score above the display threshold chosen on the development split) | False-match rate at the display threshold | MS-01 (reported with it) |
+| ET-01 | Similar-submission ranking quality | Sort the corpus by submission date. The last time segment supplies test queries (PV-01) and the segment before it development queries (PV-02); each query searches only items dated before it. Pool the top PV-03 items of every configuration in §2 and judge the pool on the R1 scale. Pool-absent queries (no item graded ≥ 2 in the judged pool) are kept and analysed in ET-01b and ET-12 | Primary: nDCG@10 (SRC-025). Secondary: Recall@20 of items graded ≥ 2; MRR of the first duplicate; P@5; bpref and judged@10 as completeness checks (SRC-068) | MS-01 |
+| ET-01b | Behaviour on pool-absent queries (corrected S07, ISS-043) | For test queries whose judged pool contains no item graded ≥ 2, record the highest score shown and how often the top-ranked item scores above the display threshold chosen on the development split. Pool-absence does not show that the corpus holds no similar submission; ET-12 checks a sample at greater depth | Pool-based false-match rate at the display threshold | MS-01 (reported with it) |
 | ET-02 | Harness reproduction | Run B-LEX on a public benchmark with published reference runs through Pyserini and compare with the reference result | Difference from reference run on the same metric | FT-01 |
 
 Track S uses exported submissions. Track P uses a public duplicate-question collection with post dates, if its licence check passes (DS-01, ISS-038); its "duplicate" labels were assigned by forum users (SRC-011 limitation), so Track P judges re-grade the pooled items on the R1 scale rather than relying on the original labels alone.
@@ -71,10 +71,11 @@ R2 is tested against whatever source is registered. No source is assumed. The te
 | ID | Test | Data and procedure | Metrics | Spec |
 |---|---|---|---|---|
 | ET-03 | Solution-example ranking quality | Queries: submissions (Track S) or need statements from the substitute set (Track P, DS-05). Corpus: each registered solution-example source, indexed separately (AD-01). Pool and judge on the R2 scale as in ET-01 | Primary: P@5 at grade ≥ 2 (share of the first five shown that address at least part of the need). Secondary: nDCG@10; Recall@20 | MS-02 |
-| ET-04 | "Can be identified" signal | R2 asks whether examples can be identified, so "none found" is a legitimate answer. Test queries include needs with no relevant item in the source, established by judging the full pool. The assistant shows "no example above threshold" when no candidate passes a threshold set on the development split | False-reassurance rate (assistant reports none, but a grade ≥ 2 item exists in the pool); false-alarm rate (assistant shows a candidate, none is graded ≥ 2) | MS-02 (reported with it) |
+| ET-04 | "Can be identified" signal (corrected S07, ISS-043) | R2 asks whether examples can be identified, so "none found" is a legitimate answer. Test queries include pool-absent needs: no item graded ≥ 2 in the judged pool, which is not the same as no relevant item in the source. The assistant shows "no example above threshold" when no candidate passes a threshold set on the development split | Pool-based false-reassurance rate (assistant reports none, but a grade ≥ 2 item exists in the pool), reported as a lower bound with the ET-12 estimate; false-alarm rate (assistant shows a candidate, none of the displayed items is graded ≥ 2) | MS-02 (reported with it) |
+| ET-12 | Extended absence check (added S07, ISS-043) | For each retrieval test and track, a seeded random sample of PV-14 pool-absent queries (plus queries where the assistant reported none) is judged to the PV-15 depth of every configuration, or exhaustively when the source meets the PV-15 size condition | Share of sampled pool-absent queries with an item graded ≥ 2 found deeper, with Clopper–Pearson 95% interval (SRC-090); count of verified absent queries | MS-01, MS-02 (reported with them) |
 | ET-05 | Source attribution and evidence display | Inspect every listed item in the R1, R2 and R4 result sets produced during ET-01, ET-03 and ET-09 | Share of listed items with source type, availability status, permission note and evidence passage | MS-10 |
 
-If no R2 source is confirmed before the evaluation, ET-03 and ET-04 run on Track P only, and Section 8 states that MS-02 was tested on substitute data. Judges also record, for each R2 query, whether a relevant example exists in the source at all; the share of needs with at least one grade ≥ 2 example is a property of the source, reported separately from ranking quality so that a sparse source is not mistaken for a weak method.
+If no R2 source is confirmed before the evaluation, ET-03 and ET-04 run on Track P only, and Section 8 states that MS-02 was tested on substitute data. Judges also record, for each R2 query, whether a relevant example exists among the judged items; the share of needs with at least one grade ≥ 2 example in the judged pool is a property of the source (a lower bound on the share in the whole source), reported separately from ranking quality so that a sparse source is not mistaken for a weak method.
 
 ### R3 — final human approval
 
@@ -90,7 +91,7 @@ R3 is tested as a workflow property, not statistically. The requirement is met o
 | ID | Test | Data and procedure | Metrics | Spec |
 |---|---|---|---|---|
 | ET-08 | Disclosure control and provenance | For every external query issued during ET-09, check the logged query text against the text actually sent, the approving assessor (CP-1, while external disclosure is not authorized, DEC-028), and the stored source, retrieval date and terms note of each result | Share of external queries with a logged approval of the exact text sent; share of results with complete provenance | MS-05, MS-10 |
-| ET-09 | Relevance by query formulation | Need statements (PV-08) are searched in one patent service selected from `S05_FEASIBILITY_AND_RISKS` §2 with three formulations: Q-A, a keyword query written by a judge without assistance (baseline representing manual searching, CTX-02); Q-B, an automatically generated query; Q-C, Q-B after assessor editing at CP-1. Pool the top 10 of each formulation and judge on the R4 scale | Primary: success@10 (at least one grade-2 item in the top 10). Secondary: P@10 at grade 2 | MS-03 |
+| ET-09 | Relevance by query formulation | Need statements (PV-08; PV-13 development statements for the pilot) are searched in one patent service selected from `S05_FEASIBILITY_AND_RISKS` §2 with three formulations: Q-A, a keyword query written by a judge without assistance (baseline representing manual searching, CTX-02); Q-B, an automatically generated query; Q-C, Q-B after assessor editing at CP-1. Pool the top 10 of each formulation and judge on the R4 scale | Primary: success@10 (at least one grade-2 item in the top 10). Secondary: P@10 at grade 2 | MS-03 |
 
 Track S queries use submission text only if ISS-033 authorizes it. Otherwise ET-09 runs on Track P need statements, which are public text, so the R4 evaluation does not depend on the disclosure decision. No estimate of R4 performance can be given in advance: no study of retrieval from need statements to patents was found (S02 synthesis §5; ISS-028).
 
@@ -111,14 +112,15 @@ The judgments are the measuring instrument, so they are validated before any con
 4. **Sensitivity.** Configuration comparisons are repeated with each judge's own judgments on the double-judged subset. S02 found that system rankings stayed stable despite assessor disagreement on TREC-scale topic sets, with smaller sets possibly less stable (matrix row 6.2, SRC-026); the repetition checks whether that holds here.
 5. **Effort.** Judging hours = test queries × mean pooled items per query × (1 + PV-04) × seconds per judgment ÷ 3,600, summed over tests and tracks. Pooled items per query and seconds per judgment are unknown until FT-05; S06 sizes the judging activity from this formula with the pilot values, not from a guess.
 
-## 6. Statistical analysis
+## 6. Statistical analysis (rewritten in S07; ISS-042, ISS-045)
 
-- Unit of analysis: the query. Each comparison uses per-query paired differences between two configurations on the same queries and judgments.
-- Test: two-sided paired randomization (permutation) test, with a paired bootstrap 95% confidence interval for the mean difference (PV-06). In a comparison over TREC runs, the randomization, bootstrap and t tests showed little practical difference, while the Wilcoxon and sign tests were less able to detect significance and could produce false detections (CLM-047, SRC-066); the Wilcoxon and sign tests are therefore not used.
-- Multiple comparisons: only pre-declared comparisons are tested: the selected configuration against B-LEX for each retrieval test, and RR against its input run. The correction method is fixed in the protocol (§1, rule 2).
-- Sample size: error rates in retrieval comparisons depend on the number of topics and on the size of the observed difference (CLM-048, SRC-067). PV-01 is therefore a starting value: after the pilot, the variance of per-query differences on the development split is used to check whether PV-01 queries give a confidence interval narrower than the minimum difference of interest (PV-07). If not, the query count is raised within the judging budget, or the result is reported as underpowered.
-- Incomplete judgments: unjudged items count as not relevant; judged@10 is reported for every run, and bpref is reported as a check of sensitivity to missing judgments because standard measures degrade under substantially incomplete judgments (CLM-049, SRC-068). Pooling all configurations, including B-REC, reduces the chance that a new configuration is penalized for retrieving unjudged items.
-- Reporting: mean, per-query distribution, confidence interval and p-value for each comparison, by track. A difference whose interval includes zero is reported as "no supported difference", never as an improvement.
+- Unit of analysis: the query. Each comparison uses per-query paired differences between two configurations (or two R4 formulations) on the same queries and judgments.
+- Confirmatory comparisons are pre-declared: the selected configuration against B-LEX for MS-01 and for MS-02 on each registered source, and Q-C against Q-A for MS-03 on each connected patent service. B-LEX parameters are tuned on the development split over a grid fixed in the protocol.
+- Each confirmatory comparison is a closed sequence. Non-inferiority first: the lower limit of the two-sided 95% paired bootstrap interval (PV-06) of the mean difference must lie above minus the margin (PV-07 for MS-01 and MS-02; PV-12 for MS-03); the confirmatory p-value is a one-sided sign-flip randomization test on the differences shifted by the margin. Superiority second, only if non-inferiority holds (lower limit above zero; two-sided randomization test). A non-significant superiority test is never read as non-inferiority (SRC-087, CLM-060). In a comparison over TREC runs, the randomization, bootstrap and t tests showed little practical difference, while the Wilcoxon and sign tests were less able to detect significance and could produce false detections (CLM-047, SRC-066); the Wilcoxon and sign tests are therefore not used.
+- Multiple comparisons: Holm step-down procedure over the confirmatory family of each track at a family-wise level of 0.05 (SRC-089, CLM-061). The comparison of RR with its input run is decided on the development split and reported on the test split as secondary, with an unadjusted interval.
+- Sample size: error rates in retrieval comparisons depend on the number of topics and on the size of the observed difference (CLM-048, SRC-067). After the pilot, the standard deviation of per-query differences on the development split (MS-01, MS-02) and the discordant share on the PV-13 development statements (MS-03) are used to check whether the planned query counts give an interval half-width no larger than the margin. If not, the query count is raised within the judging budget, the owner choice of ISS-049 is applied, or the result is reported as underpowered. Planning calculations: `S07_CORRECTED_EVALUATION_METHODOLOGY` §2.3, §5.2.
+- Incomplete judgments: unjudged items count as not relevant; judged@10 is reported for every run, and bpref is reported as a check of sensitivity to missing judgments because standard measures degrade under substantially incomplete judgments (CLM-049, SRC-068). Pooling all configurations, including B-REC, reduces the chance that a new configuration is penalized for retrieving unjudged items. Absence of relevant items is stated at the level actually checked: pool, depth or verified (ET-12).
+- Reporting: mean, per-query distribution, confidence interval and adjusted p-value for each comparison, by track, with one of the outcome labels "superior", "non-inferior", "non-inferiority not established", "inferior" or "below floor". A difference whose interval includes zero is reported as "no supported difference", never as an improvement.
 
 ## 7. Planning values (ASSUMPTION, AS-12; owner confirmation ISS-039)
 
@@ -135,14 +137,18 @@ The judgments are the measuring instrument, so they are validated before any con
 | PV-09 | Response-time target (ET-10) | 95th percentile ≤ 5 s | Project planning value for interactive use; no sponsor figure exists | Owner sets another value |
 | PV-10 | Corpus sizes for sizing and timing | 10,000; 100,000; 1,000,000 items | Brackets for an unknown corpus size (ISS-023, AS-07) | ISS-023 answered |
 | PV-11 | Absolute floors for MS-01 to MS-03 | Not set now; fixed after the pilot and before the test run | No defensible prior value (rule 4) | — |
+| PV-12 | Non-inferiority margin for MS-03 (success@10, Q-C − Q-A) | 0.10 absolute | Largest shortfall (10 need statements in 100) treated as acceptable for an assisted query; project judgement (added S07) | Owner sets another value before the protocol freeze (ISS-049) |
+| PV-13 | R4 development need statements per track, for the pilot estimate of the discordant share | 10, each searched with three formulations | Needed to check the MS-03 sample size before the test run (added S07) | Owner decision (ISS-049) |
+| PV-14 | Pool-absent queries sampled per retrieval test and track for ET-12 | 10 | Bounded by judging cost; precision stated in advance (added S07) | Owner decision (ISS-050) |
+| PV-15 | ET-12 extended judging depth and size condition | Ranks 11 to 50 of every configuration; exhaustive judging if the source holds at most 200 items dated before the query | Deeper than the primary pool at bounded cost (added S07) | Owner decision (ISS-050) |
 
 ## 8. Acceptance targets (for the Section 8 table)
 
 | Spec | Target (to be tested; not a result) |
 |---|---|
-| MS-01 | Selected configuration scores higher than B-LEX on nDCG@10 on the test split, with the 95% interval of the paired difference above zero; absolute floor per PV-11; reported per track with ET-01b |
-| MS-02 | Selected configuration scores higher than B-LEX on P@5 on each registered source, same criterion; false-reassurance rate reported (ET-04); source type of each corpus stated |
-| MS-03 | Q-C success@10 not lower than Q-A, tested as in §6; result reported per track and per patent service |
+| MS-01 | Selected configuration not lower than B-LEX by more than PV-07 on nDCG@10 (lower limit of the 95% interval of the paired difference above −PV-07) and at or above the absolute floor (PV-11); superiority over B-LEX tested second and reported, not required; reported per track with ET-01b and ET-12 (corrected S07, ISS-045) |
+| MS-02 | The same rule on P@5 at grade ≥ 2 on each registered source; pool-based false-reassurance rate (lower bound) and the ET-12 estimate reported; source type of each corpus stated (corrected S07, ISS-043, ISS-045) |
+| MS-03 | Q-C non-inferior to Q-A in success@10 with margin PV-12 (lower limit of the 95% interval of the paired difference above −PV-12); superiority tested second; reported per track and per patent service, with "non-inferiority not established" where the interval contains the margin (corrected S07, ISS-042) |
 | MS-04 | 0 records reach Approved without a CP-5 event; 0 changes to an approved record escape CP-6 |
 | MS-05 | 100% of external queries have a logged approval of the exact text sent (while CP-1 applies) |
 | MS-06 | 100% of approved records store model, index, connector and template versions |
@@ -158,7 +164,7 @@ The judgments are the measuring instrument, so they are validated before any con
 | E-2 | Obtain data per track (`S05_DATA_AVAILABILITY_AND_SUBSTITUTES` §3); build splits | Versioned test collections |
 | E-3 | Pilot judging on development queries (FT-05); revise guide | Pilot report with agreement and time per judgment |
 | E-4 | Tune on development split; select configuration | Selection record |
-| E-5 | Judge test pools; single test run; workflow tests ET-06 to ET-08; timing ET-10 | Judgments, run files, test logs |
+| E-5 | Judge test pools; single test run; extended absence check ET-12; workflow tests ET-06 to ET-08; timing ET-10 | Judgments, run files, test logs |
 | E-6 | Analysis and evaluation report, by track | Evaluation report feeding Section 8 and Section 17 |
 
 ## 10. What this evaluation cannot show

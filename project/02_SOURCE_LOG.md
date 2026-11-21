@@ -3,11 +3,11 @@
 | Field | Value |
 |---|---|
 | Document ID | 02_SOURCE_LOG |
-| Version | 5.0 |
-| Status | APPROVED |
-| Stage | S05 |
-| Date | 2026-11-20 |
-| Depends on | REF-01; REF-02; REF-03; S02_LITERATURE_EVIDENCE_MATRIX; S03_COMPARABLE_SYSTEMS_MATRIX; S03_PRIOR_ART_REGISTER; S04_ASSUMPTIONS_AND_STANDARDS; S05_EVALUATION_DESIGN; S05_FEASIBILITY_AND_RISKS |
+| Version | 6.0 |
+| Status | SUBMITTED FOR GATE |
+| Stage | S07 |
+| Date | 2026-11-21 |
+| Depends on | REF-01; REF-02; REF-03; S02_LITERATURE_EVIDENCE_MATRIX; S03_COMPARABLE_SYSTEMS_MATRIX; S03_PRIOR_ART_REGISTER; S04_ASSUMPTIONS_AND_STANDARDS; S05_EVALUATION_DESIGN; S05_FEASIBILITY_AND_RISKS; S07_CORRECTED_EVALUATION_METHODOLOGY; S07_TOOL_AND_VERSION_REGISTER |
 
 - **Rule:** Every source cited anywhere in the project is logged here before use. No citation from memory. Re-check this log before searching, to avoid repeated research.
 
@@ -30,7 +30,7 @@
 ## 3. External sources
 
 - **Depth key:** A = abstract or landing page read; P = full-text excerpt read; B = bibliographic record only. Verified = Y means the statement used in S02 was found at that depth.
-- **Accessed:** all entries 2026-11-20 unless stated.
+- **Accessed:** all entries 2026-11-20 unless stated. S07 entries (SRC-082 to SRC-090) and the S07 re-read of SRC-078 were accessed 2026-11-21.
 - **S04 entries (SRC-064, SRC-065):** standards-body records for RQ-13; they describe each standard's scope and do not evidence any organization's conformity.
 - **S03 entries (SRC-040 to SRC-063):** T2 rows evidence only what the vendor or project states about itself (C4, QA-005). Patent rows support prior-art statements, not legal conclusions.
 
@@ -113,10 +113,19 @@
 | SRC-075 | intfloat. multilingual-e5-base model card. Hugging Face. | https://huggingface.co/intfloat/multilingual-e5-base | Official model documentation | T1 | A | Y | RQ-15 | Accessed 2026-11-20; licence, layers, embedding size, 512-token truncation, languages and input prefix verified; training-data terms not assessed |
 | SRC-076 | BAAI. bge-m3 model card and repository file listing. Hugging Face. | https://huggingface.co/BAAI/bge-m3 | Official model documentation | T1 | A | Y | RQ-15 | Accessed 2026-11-20 via search extracts of the model card and file listing; licence, 8,192-token input, 1024 dimensions and 2.27 GB weight file verified |
 | SRC-077 | BAAI. bge-reranker-v2-m3 model repository listing. Hugging Face. | https://huggingface.co/BAAI/bge-reranker-v2-m3 | Official model documentation | T1 | A | Partial | RQ-15 | Accessed 2026-11-20 via repository listing; licence and weight-file size verified; input limit not read |
-| SRC-078 | Pyserini project page. Python Package Index. | https://pypi.org/project/pyserini | Official package documentation | T1 | A | Y | RQ-06, RQ-15 | Accessed 2026-11-20 via search-result extract; Java 21 requirement verified; licence read from a secondary listing of the project badge, not from the licence file |
+| SRC-078 | Pyserini project page. Python Package Index. | https://pypi.org/project/pyserini | Official package documentation | T1 | A | Y | RQ-06, RQ-15 | Accessed 2026-11-20 via search-result extract; Java 21 requirement verified; licence read from a secondary listing of the project badge, not from the licence file; S07 re-read (2026-11-21): latest release 2.4.0 (2026-08-27), "License expression" Apache-2.0 in package metadata, Python ≥ 3.12, Java 21; repository licence file not retrievable |
 | SRC-079 | CQADupStack preprocessed mirror, dataset card. Hugging Face (third-party upload). | https://huggingface.co/datasets/LLukas22/cqadupstack | Third-party dataset card | T3 | A | Y (statement only) | RQ-06 | Accessed 2026-11-20; licence statement made by the uploader, not by the dataset authors; not sufficient to establish the licence (ISS-038) |
 | SRC-080 | rOpenSci. "Breaking Release of the patentsview R Package." Blog post, 2026-03-10. | https://ropensci.org/blog/2026/03/10/patentsview-breaking-release/ | Blog | T3 | A | Y (statement only) | RQ-14 | Accessed 2026-11-20; reports removal of the key-request link; context only (ISS-040) |
 | SRC-081 | Lens. API documentation, Getting Started. | https://docs.api.lens.org/getting-started.html | Official API documentation | T1 | A | Y | RQ-14 | Accessed 2026-11-20; no numeric quotas or prices on the page; Terms of Use not read |
+| SRC-082 | Hoogeveen, D., Verspoor, K. M. & Baldwin, T. CQADupStack resource page (original distribution). University of Melbourne NLP group. | https://nlp.cis.unimelb.edu.au/resources/cqadupstack/ | Official dataset distribution page | T1 | A | Y (negative finding) | RQ-06; ISS-044 | Accessed 2026-11-21 through a page-reading tool; the retrieved content contains no licence or terms statement; the sections headed "The Data" and "The Script" were not returned in readable form; direct download from the session failed |
+| SRC-083 | Hoogeveen, D. CQADupStack script repository, README. GitHub. | https://github.com/D1Doris/CQADupStack | Official repository of the dataset author | T1 | A | Y | RQ-06; ISS-044 | Accessed 2026-11-21; README states the data come from the Stack Exchange data dump of 2014-09-26 and refers to a LICENCE file for licensing; the LICENCE file could not be retrieved, and its scope (scripts or data) is not stated |
+| SRC-084 | Stack Exchange. "Stack Exchange CC Data Now Hosted by the Internet Archive." Stack Overflow Blog, 2014-01-23. | https://stackoverflow.blog/2014/01/23/stack-exchange-cc-data-now-hosted-by-the-internet-archive/ | Licensor's statement of its own terms | T2 | A | Y (search-result extract) | RQ-06; ISS-044 | Accessed 2026-11-21 via search-result extract; states that all community-contributed content on Stack Exchange is licensed under CC BY-SA 3.0 and that attribution is required; does not address derived datasets or their annotations |
+| SRC-085 | CQADupStack mirror of the BEIR-packaged version, dataset card (third-party upload). Hugging Face. | https://huggingface.co/datasets/nebula2025/cqadupstack | Third-party dataset card | T3 | A | Y (statement only) | RQ-06; ISS-044 | Accessed 2026-11-21 via search-result extract; uploader states CC BY-NC-SA 4.0; conflicts with SRC-079; not authoritative |
+| SRC-086 | Faiss project. LICENSE file. GitHub. | https://github.com/facebookresearch/faiss/blob/main/LICENSE | Official repository licence file | T1 | A | Y | RQ-15; ISS-041 | Accessed 2026-11-21; MIT License, copyright Facebook, Inc. and its affiliates; version of the library not checked |
+| SRC-087 | Committee for Proprietary Medicinal Products (2000). Points to consider on switching between superiority and non-inferiority. CPMP/EWP/482/99. European Medicines Agency; copy in PubMed Central (PMC2014556). | https://pmc.ncbi.nlm.nih.gov/articles/PMC2014556 | Regulatory scientific guideline | T1 | P | Y | RQ-06; ISS-042; ISS-045 | Accessed 2026-11-21 through a page-reading tool; clinical-trial context; statements used: non-inferiority shown by a two-sided 95% interval lying above −Δ with Δ pre-specified; switching from non-inferiority to superiority corresponds to a closed test with no multiplicity argument; superseded once SRC-088 is adopted |
+| SRC-088 | European Medicines Agency. Draft guideline on non-inferiority and equivalence comparisons in clinical trials, EMA/301654/2025 (status page). | https://www.ema.europa.eu/en/non-inferiority-equivalence-comparisons-clinical-trials-scientific-guideline | Regulatory guideline status page | T1 | A | Y | RQ-06; ISS-042 | Accessed 2026-11-21; draft, consultation 2025-11-13 to 2026-05-31; replaces CPMP/EWP/482/99 and EMEA/CPMP/EWP/2158/99 once adopted; the draft text was not read |
+| SRC-089 | Holm, S. (1979). A Simple Sequentially Rejective Multiple Test Procedure. Scandinavian Journal of Statistics 6(2), 65–70. | doi:10.2307/4615733 | Journal article | T1 | A | Y | RQ-06; ISS-042; ISS-045 | Accessed 2026-11-21 via search-result extracts of the article front page and abstract; statement used: the sequentially rejective procedure keeps the prescribed significance level for any combination of true hypotheses |
+| SRC-090 | Clopper, C. J. & Pearson, E. S. (1934). The Use of Confidence or Fiducial Limits Illustrated in the Case of the Binomial. Biometrika 26(4), 404–413. | doi:10.1093/biomet/26.4.404 | Journal article | T1 | A | Y | RQ-06; ISS-043 | Accessed 2026-11-21 via search-result extracts of the abstract; statement used: confidence limits for a binomial proportion from x successes in n trials; exact computation not taken from the source |
 
 ## 4. Entry procedure (from S02)
 

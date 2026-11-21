@@ -3,13 +3,13 @@
 | Field | Value |
 |---|---|
 | Document ID | S05_DATA_AVAILABILITY_AND_SUBSTITUTES |
-| Version | 1.0 |
-| Status | APPROVED |
-| Stage | S05 |
-| Date | 2026-11-20 |
-| Depends on | S05_EVALUATION_DESIGN; S04_ASSUMPTIONS_AND_STANDARDS §1 (AS-01, AS-02, AS-09, AS-10); ISS-002; ISS-003; ISS-007; ISS-012; ISS-023; ISS-028; ISS-033; ISS-037; ISS-038; CLM-025; CLM-045; DEC-029 |
+| Version | 2.0 |
+| Status | SUBMITTED FOR GATE |
+| Stage | S07 |
+| Date | 2026-11-21 |
+| Depends on | S05_EVALUATION_DESIGN; S04_ASSUMPTIONS_AND_STANDARDS §1 (AS-01, AS-02, AS-09, AS-10); ISS-002; ISS-003; ISS-007; ISS-012; ISS-023; ISS-028; ISS-033; ISS-037; ISS-038; CLM-025; CLM-045; CLM-059; DEC-029; DEC-034; S07_CORRECTED_EVALUATION_METHODOLOGY §4 |
 
-- **Gate condition (DEC-031):** S05 passed conditionally. Mandatory corrections ISS-042 to ISS-045 apply to this file and must be completed before the S07 evaluation-methodology freeze; until then the affected rows are not final.
+- **S07 correction (ISS-044):** the CQADupStack licence was checked on the original distribution in S07 and could not be established; DS-01 and DS-02 rows record the finding and the T2.1 licensing gate (`stages/S07/S07_CORRECTED_EVALUATION_METHODOLOGY` §4). The other corrections (ISS-042, ISS-043, ISS-045) do not change this file.
 - **Purpose:** state what data each test needs, what the project would ask the sponsor for, what happens under each availability outcome, and which public or constructed substitutes could stand in. Sponsor data and substitute data are kept in separate tracks throughout (`S05_EVALUATION_DESIGN` §1, rule 1).
 - **What is not claimed:** no sponsor dataset is available to the project, no permission has been given, and no substitute dataset has been selected. Candidates in §4 are options for the owner, each with an open licence or structure check.
 - **IDs defined here:** DR (data requirement), DS (dataset candidate).
@@ -50,8 +50,8 @@ The owner is asked to obtain answers to these questions. None asks for confident
 
 | ID | Candidate | Could serve | Fit | Licence or access status | Open checks |
 |---|---|---|---|---|---|
-| DS-01 | CQADupStack: threads from twelve StackExchange subforums with duplicate-question annotations and predefined splits (SRC-011) | R1 method comparison (ET-01, ET-01b); corpus padding for ET-10 | Duplicate retrieval among stored questions is structurally similar to new-versus-stored comparison. Questions are not organizational needs; labels come from forum users | A third-party mirror states Apache 2.0 (SRC-079, T3). The original distribution refers to its own licence file, not read in S05 | Licence on the original distribution; presence of post dates in the released files (ISS-038) |
-| DS-02 | CQADupStack as packaged in the BEIR benchmark and Pyserini prebuilt indexes (SRC-002, SRC-036) | FT-01 harness reproduction (ET-02) only | Published reference runs exist for comparison | As DS-01 | As DS-01 |
+| DS-01 | CQADupStack: threads from twelve StackExchange subforums with duplicate-question annotations and predefined splits (SRC-011) | R1 method comparison (ET-01, ET-01b); corpus padding for ET-10 | Duplicate retrieval among stored questions is structurally similar to new-versus-stored comparison. Questions are not organizational needs; labels come from forum users | Not established (S07 check, CLM-059): the original distribution page shows no licence statement (SRC-082); the authors' script repository points to a LICENCE file that could not be read and whose scope (scripts or data) is not stated (SRC-083); the underlying 2014 Stack Exchange posts were released under CC BY-SA 3.0 (SRC-084); third-party mirrors state Apache 2.0 (SRC-079, T3) and CC BY-NC-SA 4.0 (SRC-085, T3), which conflict. UNUSABLE until the gate passes | T2.1 licensing gate: data licence from the original distribution, compatibility with planned use, consistency with CC BY-SA 3.0, owner decision (ISS-044); presence of post dates (ISS-038) |
+| DS-02 | CQADupStack as packaged in the BEIR benchmark and Pyserini prebuilt indexes (SRC-002, SRC-036) | FT-01 harness reproduction (ET-02) only | Published reference runs exist for comparison | As DS-01; the BEIR packaging adds its own terms, which must also pass T2.1. UNUSABLE until the gate passes | As DS-01 |
 | DS-03 | Open innovation contest dataset: student-generated ideas on 16 topics, 2015–2022 (SRC-063) | R1 on idea-like text; possibly R2 if ideas are linked to the topic statement they answer | Closer in register to submissions than DS-01, but ideas are not need or challenge submissions (CLM-025) | Record page not reachable in this session; licence not read | Structure (topic-to-idea links, dates), licence, language (ISS-038) |
 | DS-04 | Annotated idea-relationship data from an open-innovation study (SRC-013) | R1 relationship grades | Relationship labels are close to the R1 scale | Availability of the data not established | Whether the data is obtainable and under what terms (ISS-038) |
 | DS-05 | Constructed R2 substitute: need statements written by project judges in the form of a submission, searched against a public solution-description source with permissive terms, judged on the R2 scale | ET-03, ET-04 on Track P | Matches the R2 task directly; construction effort falls on the project | Depends on the solution-description source chosen; none chosen | OWNER DECISION REQUIRED: whether to build it, and which public source to use (ISS-038) |

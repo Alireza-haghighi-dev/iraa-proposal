@@ -3,11 +3,11 @@
 | Field | Value |
 |---|---|
 | Document ID | S01_TRACEABILITY_MATRIX |
-| Version | 6.0 |
-| Status | APPROVED |
-| Stage | S06 |
+| Version | 7.0 |
+| Status | SUBMITTED FOR GATE |
+| Stage | S07 |
 | Date | 2026-11-21 |
-| Depends on | S01_REQUIREMENTS_REGISTER; S01_REVIEWER_CRITERIA_REGISTER; S01_RESEARCH_QUESTIONS; 00_OPEN_ISSUES_REGISTER; S02_LITERATURE_EVIDENCE_MATRIX; S03_COMPARABLE_SYSTEMS_MATRIX; S03_SECTION9_COMPARISON; S04_ARCHITECTURE; S04_DATA_FLOWS_AND_INTERFACES; S05_EVALUATION_DESIGN; S05_DATA_AVAILABILITY_AND_SUBSTITUTES; S06_WORK_PACKAGES; S06_DELIVERABLES_AND_ACCEPTANCE |
+| Depends on | S01_REQUIREMENTS_REGISTER; S01_REVIEWER_CRITERIA_REGISTER; S01_RESEARCH_QUESTIONS; 00_OPEN_ISSUES_REGISTER; S02_LITERATURE_EVIDENCE_MATRIX; S03_COMPARABLE_SYSTEMS_MATRIX; S03_SECTION9_COMPARISON; S04_ARCHITECTURE; S04_DATA_FLOWS_AND_INTERFACES; S05_EVALUATION_DESIGN; S05_DATA_AVAILABILITY_AND_SUBSTITUTES; S06_WORK_PACKAGES; S06_DELIVERABLES_AND_ACCEPTANCE; DRAFT_SEC12_METHODOLOGY; S07_WP_METHOD_TRACEABILITY; S07_CORRECTED_EVALUATION_METHODOLOGY |
 
 ## A. Requirements statement (REF-01) → project items → proposal sections
 
@@ -117,10 +117,10 @@ Coverage, status and evidence for RF-001 to RF-012 and QA-001 to QA-010 are main
 
 | Item | Evaluation tests | Specification rows | Target type | Data tracks | Baseline | Conditions |
 |---|---|---|---|---|---|---|
-| R1 | ET-01, ET-01b, ET-02, ET-10, ET-11 | MS-01, MS-08, MS-10 | Relative to baseline; absolute floor after pilot (PV-11); latency PV-09 | Track S if ISS-002; Track P (DS-01, ISS-038) | B-LEX (BM25); B-REC; B-FP for duplicates | ISS-002, ISS-007, ISS-012, ISS-039 |
-| R2 | ET-03, ET-04, ET-05, ET-11 | MS-02, MS-10 | Relative to baseline per registered source; false-reassurance rate reported | Track S only on a source confirmed under ISS-003; Track P (DS-05) | B-LEX | ISS-003, ISS-037, ISS-038 |
+| R1 | ET-01, ET-01b, ET-02, ET-10, ET-11, ET-12 | MS-01, MS-08, MS-10 | Non-inferiority to the baseline within PV-07, superiority secondary (corrected S07, ISS-045); absolute floor after pilot (PV-11); latency PV-09 | Track S if ISS-002; Track P (DS-01 only if the T2.1 licensing gate passes, ISS-044; otherwise another candidate, ISS-038) | B-LEX (BM25); B-REC; B-FP for duplicates | ISS-002, ISS-007, ISS-012, ISS-039 |
+| R2 | ET-03, ET-04, ET-05, ET-11, ET-12 | MS-02, MS-10 | Non-inferiority to the baseline within PV-07 per registered source, superiority secondary; pool-based false-reassurance rate reported as a lower bound with the ET-12 estimate (corrected S07, ISS-043, ISS-045) | Track S only on a source confirmed under ISS-003; Track P (DS-05) | B-LEX | ISS-003, ISS-037, ISS-038 |
 | R3 | ET-06, ET-07 | MS-04, MS-06 | Pass/fail: 0 violations; 100% version fields | Synthetic records (DR-05) | — | ISS-005, ISS-034 |
-| R4 | ET-08, ET-09, ET-11 | MS-03, MS-05, MS-10 | Not lower than unaided keyword queries; 100% approval and provenance | Track P always; Track S only if ISS-033 authorizes | Q-A unaided keyword query | ISS-006, ISS-033, ISS-040 |
+| R4 | ET-08, ET-09, ET-11 | MS-03, MS-05, MS-10 | Non-inferiority of Q-C to Q-A within PV-12, superiority secondary (corrected S07, ISS-042, ISS-049); 100% approval and provenance | Track P always; Track S only if ISS-033 authorizes | Q-A unaided keyword query | ISS-006, ISS-033, ISS-040 |
 | C2 (SC) | ET-06 to ET-08 | MS-05, MS-06 | Pass/fail | Synthetic records | — | ISS-009, ISS-010 |
 | QA-002, QA-004 | All ET; S05_DATA_AVAILABILITY_AND_SUBSTITUTES | MS-01 to MS-06, MS-08, MS-10 | Targets labelled; no benefit claims (ISS-011) | Separated by track | — | ISS-002 (AS-09) |
 
@@ -136,3 +136,16 @@ Coverage, status and evidence for RF-001 to RF-012 and QA-001 to QA-010 are main
 | C2 (SC) | WP5 (AC-12, AC-13) | WP1 (D1.2, D1.3) | WP6 (ET-06 to ET-08); WP7 (D7.2) | D1.2, D1.3, D7.2 | MS-05, MS-06 | ISS-009, ISS-010, ISS-036 |
 | C3 (EA) | WP5 (FN-10 export only) | — | — | D5.1, D7.1 | — | Future: Section 11 row 3 |
 | QA-001, RF-007 | All WP | — | — | S06_DEPENDENCIES_AND_EFFORT | — | ISS-013, ISS-046 |
+
+## I. Section 12 methodology per requirement (added S07; PROPOSED method)
+
+| Item | Section 12 activities | Method elements | Verification in Section 12 | Section 8 rows | Conditions |
+|---|---|---|---|---|---|
+| R1 | 1, 2, 3, 6 | Import and normalization; per-corpus lexical and vector indexes; nine configurations with max-passage scoring and evidence spans; date filter; display threshold on development split | ET-01, ET-01b, ET-10, ET-12; non-inferiority then superiority against B-LEX; Holm | MS-01, MS-08, MS-10 | ISS-002, ISS-007, ISS-044, ISS-050 |
+| R2 | 1, 2, 3, 6 | Source registry with source type, availability and permission note; same retrieval service per registered source; "no example above threshold" signal; DS-05 if approved | ET-03, ET-04, ET-05, ET-12 | MS-02, MS-10 | ISS-003, ISS-037, ISS-038, ISS-050 |
+| R3 | 1, 5, 6 | Transition table with default rejection; two independent properties; record service as sole state changer; database trigger on the outcome field; hash-chained insert-only audit log | ET-06, ET-07 generated from the table, oracle independent of it | MS-04, MS-06 | ISS-005, ISS-034, ISS-035 |
+| R4 | 1, 4, 6 | Connector contract with rate limiter, cache and provenance; TF-IDF query construction; CP-1 approval with network egress allowlist and payload-hash logging; manual-entry fallback | ET-08, ET-09 with separate judges for Q-A and Q-C; non-inferiority within PV-12 | MS-03, MS-05, MS-10 | ISS-033, ISS-040, ISS-049 |
+| C1 (SC) | 1, 7 | IF-01, IF-02, IF-03 implemented; IF-07 specified | D1.1, D7.1 review | Section 8 feature 9 | — |
+| C2 (SC) | 1, 5, 7 | Risk assessment per data flow; roles; audit log; versioned components; deletion record | ET-06 to ET-08; D7.2 | MS-05, MS-06 | ISS-009, ISS-010, ISS-036 |
+| C3 (EA) | 5, 7 | Decision-log export without retraining | D5.1 export validation | — | Future: Section 11 row 3 |
+| RF-006, QA-007, QA-010 | All | WP titles verbatim; tool status register | S07_WP_METHOD_TRACEABILITY §1, §3 | All active rows | ISS-041 |
