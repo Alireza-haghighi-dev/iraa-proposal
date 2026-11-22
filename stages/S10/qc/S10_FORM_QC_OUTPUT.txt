@@ -1,5 +1,5 @@
 INFO    Blank form SHA-256  [8bc63dabdbddff9c8deb78fdd6ab336fde198f33f57b2652fb1a8d6c5fddc267]
-INFO    Filled form SHA-256  [f581f7b6591d7d3b2268ef561bcb137f575f99601310dcbd7f0744caaf2af58e]
+INFO    Filled form SHA-256  [848ba4df04aed44c86cb732ae841fcf9bcc7599496406036b1875f9fe92c2511]
 PASS    Unchanged part: word/header1.xml
 PASS    Unchanged part: word/footer1.xml
 PASS    Unchanged part: word/styles.xml
@@ -13,7 +13,9 @@ PASS    Footer signature table present and unchanged
 PASS    20 section headings, same order
 PASS    Heading texts unchanged except the Section 1 title and Section 4 duration fields
 PASS    Heading paragraph formatting unchanged
-PASS    Table count unchanged (10)  [10 vs 10]
+PASS    Original tables: 10 in the blank form, 10 preserved outside Section 8  [10 vs 10]
+PASS    Exactly one supplementary table, in Section 8 (DEC-044); total tables 11  [1 supplementary]
+PASS    Blank form has no table in Section 8
 PASS    Tables sit in the same sections  [[5, 9, 10, 11, 13, 14, 15, 16, 17, 20]]
 PASS    S5: table properties unchanged
 PASS    S5: grid columns and widths unchanged (5 columns)
@@ -66,6 +68,10 @@ PASS    S20: header row text and structure unchanged
 PASS    S20: every original row kept in order; 0 added row(s) cloned from an adjacent data row
 PASS    S20: every row spans the full grid
 PASS    Added table rows = 20 (S9 3, S11 1, S13 2, S14 1, S16 2, S17 11)  [added 20]
+PASS    S8 table: header No. / Specification / Metric and test condition / Target and 8 rows identical to the master
+PASS    S8 table: table properties copied from the native Section 13 table
+PASS    S8 table: four columns spanning the native table width
+PASS    S8: specification paragraphs replaced, not duplicated
 PASS    S13: seven activities with effort 150/168/210/138/226/267/132
 PASS    S13: TOTAL = 1,291 = sum
 PASS    S16: titles identical to S13
@@ -87,8 +93,10 @@ PASS    S17: 16 risks numbered 1-16 in the form's category order
 PASS    S11: current phase first, 6 months; later durations open
 PASS    S5: seven selections marked, nothing else
 PASS    Narrative paragraphs: regular weight, 12 pt, no list numbering
+PASS    Table data cells: 12 pt regular in Sections 8, 11, 13, 14, 15, 17; native 10 pt in Sections 9 and 16  [[]]
+PASS    Header rows kept with the first data row (keep-with-next)
 PASS    No bullet or decorative glyphs
-PASS    Template guidance removed in implemented sections (kept only in 1 general note, 2, 10, 14 local note, 15, 16 cost notes, 20)  [[(1, 'Template guidance: remove instructional text when '), (2, 'Provide a concise name describing the team and its'), (10, 'Record only substantiated prior work directly rela'), (10, 'Type may include patent, article, thesis, technica'), (10, 'For location and organization, provide only confir'), (]
+PASS    Template guidance removed in implemented sections, including the general note (kept only in 2, 10, 14 local note, 15, 16 cost notes, 20)  [[(2, 'Provide a concise name describing the team and its'), (10, 'Record only substantiated prior work directly rela'), (10, 'Type may include patent, article, thesis, technica'), (10, 'For location and organization, provide only confir'), (10, 'Outputs may include a report, design, simulation, '), ]
 PASS    Local placeholder kept: [TEAM NAME]
 PASS    Local placeholder kept: [TO BE COMPLETED LOCALLY]
 PASS    Local placeholder kept: [YYYY-MM-DD]
@@ -103,6 +111,7 @@ PASS    Required wording present: 'checks whether relevant existing solution exa
 PASS    Required wording present: 'approval of a query does not authorize disclosure'
 PASS    Required wording present: 'no transition into approved exists except the approval '
 PASS    Required wording present: 'being better than bm25 is not required'
+PASS    Approval-status wording: test sizes, margin and corpus sizes stated as fixed; response time, floors, agreement open
 PASS    Prohibited claim wording absent: 'certified'  [['not ']]
 PASS    Prohibited claim wording absent: 'proven'  [[]]
 PASS    Prohibited claim wording absent: 'patentable'  [[]]
@@ -114,5 +123,5 @@ PASS    No working identifiers (DEC-, ISS-, S10 markers) in the form
 PASS    No Persian text, e-mail address or phone number
 PASS    Document metadata carries no author name
 
-SUMMARY  form_checks=112  failed=0  pending=1
+SUMMARY  form_checks=121  failed=0  pending=1
 RESULT PASS

@@ -105,7 +105,6 @@ def lr(vals, target):
     r = [int(v) for v in vals]; rem = target - sum(r)
     for i in sorted(range(len(vals)), key=lambda i: vals[i]-int(vals[i]), reverse=True)[:rem]: r[i] += 1
     return r
-mLi = lr(mL, TL); mCi = lr(mC, TC); mTi = [mLi[m] + mCi[m] for m in range(6)]
 X = {w: [0.0]*6 for w in TITLES}
 for m in range(6):
     tot = sum((t[3]+t[4])*t[5][m] for t in T)
@@ -117,9 +116,53 @@ def controlled(X, rows, cols):
     cand = sorted(((X[w][m]-int(X[w][m]), w, m) for w in X for m in range(6) if X[w][m] > 0), reverse=True)
     for _, w, m in cand:
         if rd[w] > 0 and cd[m] > 0: I[w][m] += 1; rd[w] -= 1; cd[m] -= 1
+    # remaining deficits: augmenting paths (row -> column by raising a floored cell, column -> row by
+    # lowering a raised cell), so that every cell stays the floor or ceiling of its model value
+    up = lambda w, m: X[w][m] > 0 and I[w][m] == int(X[w][m]) and X[w][m] != int(X[w][m])
+    down = lambda w, m: I[w][m] == int(X[w][m]) + 1
+    while any(v > 0 for v in rd.values()):
+        start = next(w for w in X if rd[w] > 0)
+        prev, frontier, found = {("r", start): None}, [("r", start)], None
+        while frontier and found is None:
+            nxt = []
+            for kind, k in frontier:
+                if kind == "r":
+                    for m in range(len(cols)):
+                        if up(k, m) and ("c", m) not in prev:
+                            prev[("c", m)] = (kind, k); nxt.append(("c", m))
+                            if cd[m] > 0: found = ("c", m); break
+                else:
+                    for w in X:
+                        if down(w, k) and ("r", w) not in prev:
+                            prev[("r", w)] = (kind, k); nxt.append(("r", w))
+                if found: break
+            frontier = nxt
+        assert found, (rd, cd)
+        node = found
+        while prev[node] is not None:
+            p_ = prev[node]
+            if node[0] == "c": I[p_[1]][node[1]] += 1
+            else: I[node[1]][p_[1]] -= 1
+            node = p_
+        rd[start] -= 1; cd[found[1]] -= 1
     assert all(v == 0 for v in rd.values()) and all(v == 0 for v in cd), (rd, cd)
     return I
+# Monthly totals approved with the S11 baseline (DEC-042), as presented at the checkpoint (S10 correction pass,
+# 2026-11-22; restores the approved figures after the 147/243 display). Lead months add to 526, contributor
+# months to 765, each month to its approved total, and each value is the floor or ceiling of the model value.
+APPROVED_MONTHS = [148, 242, 252, 274, 208, 167]
+assert sum(APPROVED_MONTHS) == TL + TC == 1291
+# The technical-lead row presented at the S11 checkpoint (72/93/108/105/74/74) is kept as well; contributor
+# hours are the difference. Both rows stay within one hour of the model values (asserted below).
+APPROVED_LEAD = [72, 93, 108, 105, 74, 74]
+mLi = APPROVED_LEAD[:]; mCi = [APPROVED_MONTHS[m] - mLi[m] for m in range(6)]
+assert sum(mLi) == TL and sum(mCi) == TC
+mTi = [mLi[m] + mCi[m] for m in range(6)]
+assert mTi == APPROVED_MONTHS
+assert all(int(v) <= i <= int(v) + 1 for vals, ints in ((mL, mLi), (mC, mCi)) for v, i in zip(vals, ints))
 WPM = controlled(X, {w: RL[w]+RC[w] for w in TITLES}, mTi)
+assert all(sum(WPM[w]) == RL[w] + RC[w] for w in TITLES) and [sum(WPM[w][m] for w in TITLES) for m in range(6)] == mTi
+assert all(int(X[w][m]) <= WPM[w][m] <= int(X[w][m]) + 1 for w in TITLES for m in range(6))
 out.append("| Month | Technical lead (h) | Contributors combined (h) | Per contributor if shared equally (h) | Team total (h) |")
 out.append("|---|---|---|---|---|")
 for m in range(6):

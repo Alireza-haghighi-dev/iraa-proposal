@@ -3,7 +3,7 @@
 | Field | Value |
 |---|---|
 | Document ID | S10_CHANGE_REPORT |
-| Version | 0.3 |
+| Version | 0.4 |
 | Status | DRAFT |
 | Stage | S10 |
 | Date | 2026-11-21 |
@@ -42,3 +42,19 @@
 | S11 month table and WP × month table recomputed with controlled rounding; the WP × month table now includes attributed coordination, so rows equal the approved WP totals and columns the month totals (month 1 team total 147, month 2 243; per-contributor values to one decimal) | stages/S11/qc/S11_EFFORT_MODEL.py; stages/S11/S11_EFFORT_AND_SCHEDULE.md | DEC-043 item 9; approved totals unchanged |
 | Resource calculations: monthly averages 87.7 and 42.5 h; DEC-043 split | S10_RESOURCE_CALCULATIONS | DEC-043 item 7 |
 | DEC-043; ISS-021, ISS-025, ISS-056 notes; stage status | project/ | Record keeping |
+
+## Limited correction pass (DEC-044, 2026-11-22)
+
+Applied to a copy of the filled form by `qc/S10_CORRECT_FORM_DOCX.py` (log: `qc/S10_FORM_CORRECTIONS_LOG.txt`); the form was not rebuilt.
+
+| Change | Where | Reason |
+|---|---|---|
+| One supplementary specification table replaces the eight specification paragraphs | Form §8 | DEC-044 item 2 |
+| Inserted data-cell text set to 12 pt (No. column and form row labels unchanged) | Form §§8, 11, 13, 14, 15, 17 tables | DEC-044 item 3 |
+| Native 10 pt kept, conflict reported | Form §9 and §16 tables | 12 pt would break words inside fixed narrow columns |
+| Monthly-hours cells show the figure only (planned averages explained below the table); cost cells read "[open]"; header rows kept with the first data row | Form §§14, 15; table header rows | Safe layout adjustments without changing columns |
+| Approval-status wording: test-set sizes, 0.05 margin and corpus sizes stated as fixed; response time, floors and agreement threshold stay open | Master and form §§8, 12 | DEC-044 item 5 (DEC-042) |
+| General template note removed | Form §1 | DEC-044 item 6 |
+| Monthly totals restored to the approved 148 / 242 / 252 / 274 / 208 / 167 with the lead row 72 / 93 / 108 / 105 / 74 / 74; contributor months 76 / 149 / 144 / 169 / 134 / 93 (each within one hour of the model value); WP × month table recomputed to the same column totals | stages/S11/qc/S11_EFFORT_MODEL.py; S11_EFFORT_AND_SCHEDULE | DEC-044 item 4 |
+| Master v0.7 (wording; Section 14 monthly-hours cells) | proposal/IRAA_PROPOSAL_EN_MASTER.md | Consistency with the form |
+| Form QC: separates the supplementary Section 8 table from the 10 original tables; checks table typography, header keep-with-next and approval wording; stops with FAIL if an original table is missing | qc/S10_FORM_QC.py | DEC-044 item 9 |

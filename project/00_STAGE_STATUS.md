@@ -7,13 +7,13 @@
 | Status | DRAFT |
 | Stage | S11 |
 | Date | 2026-11-21 |
-| Depends on | 00_DECISIONS_LOG; 00_OPEN_ISSUES_REGISTER; S06_HANDOFF; DEC-031; DEC-032; DEC-033; DEC-034; DEC-035; S07_HANDOFF; DEC-036; S08_HANDOFF; DEC-037; S09_HANDOFF; DEC-038; DEC-039; S10_HANDOFF; DEC-040; DEC-041; S11_HANDOFF; DEC-042; DEC-043 |
+| Depends on | 00_DECISIONS_LOG; 00_OPEN_ISSUES_REGISTER; S06_HANDOFF; DEC-031; DEC-032; DEC-033; DEC-034; DEC-035; S07_HANDOFF; DEC-036; S08_HANDOFF; DEC-037; S09_HANDOFF; DEC-038; DEC-039; S10_HANDOFF; DEC-040; DEC-041; S11_HANDOFF; DEC-042; DEC-043; DEC-044 |
 
 ## Current position
 
 | Item | Value |
 |---|---|
-| Current stage | S10 in progress on the approved S11 baseline (DEC-042): native-form insertion done and submitted for an owner gate (DEC-043); cost allocation, Section 16 weights, contributor assignments, Section 10 and local fields open; not submission-ready |
+| Current stage | S10 in progress on the approved S11 baseline (DEC-042): native-form insertion (DEC-043) and the limited correction pass (DEC-044) done and submitted for owner review; cost allocation, Section 16 weights, contributor assignments, Section 10 and local fields open; not submission-ready |
 | Latest approved baseline | 0475aa1 (S11 content, approved by DEC-042); earlier: c8470d6a8c090e41a80cd5a34a37a0701c95b6a9 (S09 conditional-pass checkpoint; DEC-038) |
 | Earlier baselines | S07 conditional-pass checkpoint 267712fa4838c4f69f2e8773efaa29e9e74f732a (DEC-035); S06 conditional-pass checkpoint 2d46990b966db528a39456d7457b23cf918b8f4d (DEC-033); S05 conditional-pass checkpoint 350ac4328908610e3c0fce678ead1eb77053dd69 (DEC-031); S05 content 83331af94aa058c486ad1150a0472178375e6cf1 (status record 5e75b5e); S03–S04.1 approved checkpoint 51daa1ac37c375736e086dfdec0f1e778966d8be (DEC-028); S04.1 content 4c3ddda872d2c8782a2994e1a122923104e371c7; S04 content ea246cef29c912dbd5a7b205b3a3a64f7f926597; S03 content 67803355fe0a9fd7ef9271718adb5f4b52459315 (approval confirmed in DEC-028); S02 961ae6ad31581eac633304d905cbab1761179b0b (DEC-022); S01 2b5f83c65749a4c697782216026a6291a91aa2a1 |
 | Baseline identification | By commit SHA only (DEC-020). No Git tags exist in the repository |

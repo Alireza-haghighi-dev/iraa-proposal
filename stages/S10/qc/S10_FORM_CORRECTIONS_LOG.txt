@@ -1,0 +1,20 @@
+Section 1: removed the general template note
+Section 8: approval-status wording: 'The margin of 0.05, the response-time value, ...'
+Section 12: approval-status wording: 'For the two ranking tasks the margin is 0.05,...'
+Section 12: approval-status wording: 'at 10,000 and 100,000 items, the planning siz...'
+Section 8: eight specification paragraphs replaced by one supplementary table (4 columns, 8 data rows)
+Section 14 table: monthly-hours cells shortened to the figure (planned averages are explained below the table)
+Section 15 table: three cost cells shortened to '[open]' (fits the 1,077-twip column at 12 pt)
+Section 8 table: header row kept with the first data row
+Section 9 table: header row kept with the first data row
+Section 11 table: header row kept with the first data row
+Section 13 table: header row kept with the first data row
+Section 14 table: header row kept with the first data row
+Section 15 table: header row kept with the first data row
+Section 17 table: header row kept with the first data row
+Section 8 table: 24 data-row runs set to regular 12 pt
+Section 11 table: 16 data-row runs set to regular 12 pt
+Section 13 table: 29 data-row runs set to regular 12 pt
+Section 14 table: 20 data-row runs set to regular 12 pt
+Section 15 table: 8 data-row runs set to regular 12 pt
+Section 17 table: 32 data-row runs set to regular 12 pt

@@ -54,13 +54,22 @@ hx = lambda e: etree.tostring(e.find(W("pPr")), method="c14n")
 add("Heading paragraph formatting unchanged", [hx(e) for e in bb if is_heading(e)] == [hx(e) for e in ob if is_heading(e)])
 
 # ---- 3. tables: count, grid, properties, merges, rows ---------------------------------------------------
-tb = [e for e in bb if e.tag == W("tbl")]; to = [e for e in ob if e.tag == W("tbl")]
-add("Table count unchanged (10)", len(tb) == len(to) == 10, "%d vs %d" % (len(tb), len(to)))
+tb = [e for e in bb if e.tag == W("tbl")]; to_all = [e for e in ob if e.tag == W("tbl")]
 def sec_of(body_list, tbl):
     n = None
     for e in body_list:
         if is_heading(e): n = int(text(e).split(".")[0])
         if e is tbl: return n
+# the one supplementary table authorized for Section 8 (DEC-044) is checked separately in section 3b
+supp = [t for t in to_all if sec_of(ob, t) == 8]
+to = [t for t in to_all if sec_of(ob, t) != 8]
+add("Original tables: 10 in the blank form, 10 preserved outside Section 8", len(tb) == len(to) == 10, "%d vs %d" % (len(tb), len(to)))
+add("Exactly one supplementary table, in Section 8 (DEC-044); total tables 11", len(supp) == 1 and len(to_all) == 11, "%d supplementary" % len(supp))
+add("Blank form has no table in Section 8", not any(sec_of(bb, t) == 8 for t in tb))
+if len(to) != len(tb):   # table-by-table comparison is impossible; stop with a clear failure
+    for n, s_, d_ in res: print("%-7s %s%s" % (s_, n, ("  [" + d_ + "]") if d_ else ""))
+    print("\nSUMMARY  form_checks=%d  failed=%d  (stopped: original table count differs)" % (len(res), sum(1 for r in res if r[1] == "FAIL")))
+    print("RESULT FAIL"); sys.exit(1)
 SECS = [sec_of(bb, t) for t in tb]
 add("Tables sit in the same sections", SECS == [sec_of(ob, t) for t in to], str(SECS))
 def sig(tr):
@@ -99,6 +108,22 @@ for t_b, t_o, s in zip(tb, to, SECS):
 add("Added table rows = 20 (S9 3, S11 1, S13 2, S14 1, S16 2, S17 11)", added_total == 20,
     "added %d" % added_total)
 
+# ---- 3b. supplementary Section 8 specification table --------------------------------------------------------
+M0 = open(MASTER, encoding="utf-8").read()
+mspec = [[re.sub(r"\s+", " ", c.replace("[OPEN — S10]", "[OPEN]")).strip() for c in l.strip().strip("|").split("|")]
+         for l in [b for b in M0.split("## 8.")[1].split("## 9.")[0].split("\n\n") if b.startswith("| No. | Specification |")][0].splitlines()
+         if l.startswith("|") and not l.startswith("| ---")]
+if supp:
+    st = supp[0]
+    srows = [[text(c).strip() for c in r.findall(W("tc"))] for r in st.findall(W("tr"))]
+    add("S8 table: header No. / Specification / Metric and test condition / Target and 8 rows identical to the master", srows == mspec and len(srows) == 9)
+    n13 = [t for t in tb if sec_of(bb, t) == 13][0]
+    add("S8 table: table properties copied from the native Section 13 table", etree.tostring(st.find(W("tblPr")), method="c14n") == etree.tostring(n13.find(W("tblPr")), method="c14n"))
+    gw = [int(g.get(W("w"))) for g in st.find(W("tblGrid"))]
+    add("S8 table: four columns spanning the native table width", len(gw) == 4 and sum(gw) == sum(int(g.get(W("w"))) for g in n13.find(W("tblGrid")))
+        and all(len(r.findall(W("tc"))) == 4 for r in st.findall(W("tr"))))
+    add("S8: specification paragraphs replaced, not duplicated", not any(re.match(r"Specification [1-8]\. ", text(e)) for e in ob if e.tag == W("p")))
+
 # ---- 4. content cross-checks ------------------------------------------------------------------------------
 def rows_text(t, skip=1): return [[text(c).strip() for c in r.findall(W("tc"))] for r in t.findall(W("tr"))[skip:]]
 T = dict(zip(SECS, to))
@@ -129,7 +154,7 @@ add("S14: monthly hours are planned averages (526/6, 255/6)", t14[0][4].startswi
     and round(526 / 6, 1) == 87.7 and 255 / 6 == 42.5)
 t15 = rows_text(T[15])
 add("S15: no amounts or currency entered", not re.search(r"\d[\d,.]*\s*(?:€|\$|EUR|USD|IRR|rial|toman)", " ".join(sum(t15, [])), re.I)
-    and all(r[-1] in ("", "[pending approved rate]", "[pending approved costs]") for r in t15))
+    and all(r[-1] in ("", "[open]") for r in t15))
 add("S15: personnel quantity 1,291 person-hours", t15[0][3] == "1,291 person-hours")
 t9 = rows_text(T[9])
 add("S9: six comparator rows in the seven original columns", len(t9) == 6 and all(len(r) == 7 and r[1] for r in t9))
@@ -160,6 +185,26 @@ for e in ob:
         if sz is not None and sz.get(W("val")) != "24": bad_fmt.append("size: " + text(e)[:40])
 add("Narrative paragraphs: regular weight, 12 pt, no list numbering", not bad_fmt, "; ".join(bad_fmt[:5]))
 alltext = "\n".join(text(e) for e in O.element.body.iter(W("p")))
+# table typography (DEC-044): inserted data-cell text 12 pt and regular in Sections 8, 11, 13, 14, 15, 17
+# (No. column and the form's own row labels excluded); Sections 9 and 16 keep the native 10 pt (reported conflict)
+TT = {8: supp[0] if supp else None}
+TT.update({s_: t_ for s_, t_ in zip(SECS, to)})
+badc = []
+for s_, skip, size in [(8, {0}, "24"), (11, {0}, "24"), (13, {0}, "24"), (14, {0}, "24"), (15, {0, 1}, "24"), (17, {0, 1}, "24"), (9, {0}, "20"), (16, {0}, "20")]:
+    t_ = TT.get(s_)
+    hdr = 2 if s_ == 16 else 1
+    for tr in t_.findall(W("tr"))[hdr:]:
+        for ci, tc in enumerate(tr.findall(W("tc"))):
+            if ci in skip: continue
+            for r in tc.iter(W("r")):
+                if not text(r).strip(): continue
+                rp = r.find(W("rPr")); sz = rp.find(W("sz")) if rp is not None else None; b = rp.find(W("b")) if rp is not None else None
+                if sz is None or sz.get(W("val")) != size: badc.append("S%d size %s" % (s_, sz.get(W("val")) if sz is not None else None))
+                if b is not None and b.get(W("val")) not in ("0", "false"): badc.append("S%d bold" % s_)
+add("Table data cells: 12 pt regular in Sections 8, 11, 13, 14, 15, 17; native 10 pt in Sections 9 and 16", not badc, str(sorted(set(badc)))[:200])
+kn = all(p.find(W("pPr")) is not None and p.find(W("pPr")).find(W("keepNext")) is not None
+         for s_ in (8, 9, 11, 13, 14, 15, 17) for p in TT[s_].findall(W("tr"))[0].iter(W("p")))
+add("Header rows kept with the first data row (keep-with-next)", kn)
 add("No bullet or decorative glyphs", not re.search(r"[•▪◦✓✔☐☑►■]", alltext))
 
 # ---- 6. guidance removed where content is inserted; local fields kept ---------------------------------------
@@ -168,10 +213,10 @@ cur = None
 for e in bb:
     if is_heading(e): cur = int(text(e).split(".")[0]); continue
     if e.tag == W("p") and text(e).strip(): gb.setdefault(cur, []).append(text(e))
-KEEP = {1: 1, 2: 1, 10: 5, 14: 1, 15: 4, 16: 3, 20: 4}
+KEEP = {2: 1, 10: 5, 14: 1, 15: 4, 16: 3, 20: 4}
 left = [(s, t[:50]) for s, ts in gb.items() for t in ts if t in alltext.split("\n") and not t.startswith("Comparison and distinguishing")]
 expected_left = sum(KEEP.values())
-add("Template guidance removed in implemented sections (kept only in 1 general note, 2, 10, 14 local note, 15, 16 cost notes, 20)",
+add("Template guidance removed in implemented sections, including the general note (kept only in 2, 10, 14 local note, 15, 16 cost notes, 20)",
     sorted(set(s for s, _ in left)) == sorted(KEEP) and len(left) == expected_left, str(left)[:300])
 for ph in ["[TEAM NAME]", "[TO BE COMPLETED LOCALLY]", "[YYYY-MM-DD]"]:
     add("Local placeholder kept: %s" % ph, ph in alltext)
@@ -185,6 +230,9 @@ for ph in ["checks whether relevant existing solution examples can be identified
            "approval of a query does not authorize disclosure", "no transition into approved exists except the approval event",
            "being better than bm25 is not required"]:
     add("Required wording present: '%s'" % ph[:55], ph in low)
+add("Approval-status wording: test sizes, margin and corpus sizes stated as fixed; response time, floors, agreement open",
+    "are fixed for this project" in low and "remain to be confirmed before the evaluation protocol is frozen" in low
+    and "await owner confirmation" not in low and "the planning sizes" not in low and "margin is 0.05, a planning value" not in low)
 for w in ["certified", "proven", "patentable", "guarantee", "outperforms", "state-of-the-art", "will reduce"]:
     hits = re.findall(r"(.{4})\b%s\b" % w, low_nr)
     add("Prohibited claim wording absent: '%s'" % w, all(h == "not " for h in hits), str(hits))

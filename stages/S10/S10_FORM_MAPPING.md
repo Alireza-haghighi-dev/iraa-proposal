@@ -3,7 +3,7 @@
 | Field | Value |
 |---|---|
 | Document ID | S10_FORM_MAPPING |
-| Version | 0.3 |
+| Version | 0.4 |
 | Status | DRAFT |
 | Stage | S10 |
 | Date | 2026-11-21 |
@@ -54,15 +54,15 @@
 |---|---|---|
 | Tables | 10 native tables (Sections 5, 9, 10, 11, 13, 14, 15, 16, 17, 20) | Count, grids, widths, table properties, header rows and merges unchanged; 20 data rows added by cloning adjacent rows (S9 3, S11 1, S13 2, S14 1, S16 2, S17 11; list in `qc/S10_FORM_ADDED_ROWS.txt`) |
 | Section 5 | Checkbox cells | Seven selections marked [X]; justification paragraphs below the table |
-| Section 8 | No native table | Features and measurable specifications inserted as numbered paragraphs, so no table is added; the form's guidance asks for a specification table, which the owner may approve as one addition (ISS-056) |
+| Section 8 | No native table | Features as numbered paragraphs; measurable specifications in ONE supplementary table (No. / Specification / Metric and test condition / Target; table properties copied from the native Section 13 table), authorized by DEC-044 because the form asks for a specifications table; checked separately from the 10 original tables |
 | Section 9 | Seven columns; three comparison fields | Six rows; six comparison fields (three cloned); patent prior-art paragraph after the fields |
 | Section 11 | Labels Current phase, Future phase 1, 2 | Row Future phase 3 added |
-| Section 12 | Free text | Subheadings as plain paragraphs (no heading style or bold); the tool table rendered as sentences (ISS-056) |
+| Section 12 | Free text | Subheadings as plain paragraphs; tool descriptions as prose (accepted, DEC-044) |
 | Section 14 | Six columns, three rows | Fourth row added; neutral labels; planned hours and shares (DEC-043 item 7) |
 | Section 15 | Fixed category rows with merges | Quantities and pending items only; no amounts or units |
 | Section 16 | 17 columns, two header rows, 12 month columns | Seven activity rows; months 1–6 marked X; months 7–12 blank; costs and weights pending |
 | Section 17 | Five category rows (Technical, Data / information, Schedule, Financial, Other) | 16 risks in that order; master renumbered to match |
 | Column labels | Differ from REF-02 (for example "Implementation context", "Work assignment", "Cost weight (%)") | Native labels kept in the Word file; master keeps REF-02 labels as working text |
-| Template guidance | Instruction paragraphs per section | Removed where content was inserted; kept where content is still open (general note in Section 1; Sections 2, 10, 14 local-entry note, 15, 16 cost notes, 20) |
+| Template guidance | Instruction paragraphs per section | Removed where content was inserted, including the general note (DEC-044); kept where content is still open (Sections 2, 10, 14 local-entry note, 15, 16 cost notes, 20) |
 | Header, footer and signature block, styles, numbering, page setup | — | Byte-equivalent after canonicalization (scripted) |
-| Table cell type size | Native 10 pt cell format | Kept; the 12 pt rule is applied to narrative paragraphs |
+| Table cell type size | Native 10 pt cell format | Inserted data-cell text set to 12 pt in Sections 8, 11, 13, 14, 15, 17 (DEC-044); No. column and the form's own row labels keep 10 pt. Conflicts kept at the native 10 pt and reported: Section 9 (columns of 750–1,246 twips with zero cell margins break 12 pt words such as "Industry" inside the word) and Section 16 (month columns of 166–236 twips). Section 14 monthly-hours cells show the figure only and Section 15 cost cells read "[open]" so that 12 pt text does not break inside words; header rows are kept with the first data row |

@@ -3,7 +3,7 @@
 | Field | Value |
 |---|---|
 | Document ID | S10_QC_REPORT |
-| Version | 0.3 |
+| Version | 0.4 |
 | Status | DRAFT |
 | Stage | S10 |
 | Date | 2026-11-21 |
@@ -21,3 +21,6 @@
 - **Native-form QC (DEC-043):** `python3 -I stages/S10/qc/S10_FORM_QC.py <blank form> proposal/IRAA_PROPOSAL_EN_FORM.docx proposal/IRAA_PROPOSAL_EN_MASTER.md` → 112 checks, 0 failures, 1 pending (Section 16 costs and weights). It compares header, footer, styles, numbering, settings and page setup; the 20 headings; for each of the 10 tables the properties, grid widths, header rows, merges and the order of original rows, and requires every added row to clone an adjacent row; then cross-checks Sections 12/13/16 titles, effort and months, Section 14 shares, Section 15 (no amounts), Sections 5, 9, 10, 11, 17 content, narrative formatting (12 pt, regular, no numbering), guidance removal, local placeholders and claim wording. The file was also validated against the OOXML schema and rendered to PDF (33 pages) for a visual check.
 - **Negative test (form):** removing one vertical merge in Section 15 and adding a month-7 mark in Section 16 produced three failures; the test copy was deleted.
 - **Not established by a structural PASS:** cost inputs, local completion, the signed original's formatting, S10b.
+- **Correction pass (DEC-044):** form QC 121 checks, 0 failures, 1 pending (Section 16 costs and weights); corrected form SHA-256 848ba4df04aed44c86cb732ae841fcf9bcc7599496406036b1875f9fe92c2511; blank form SHA-256 8bc63dabdbddff9c8deb78fdd6ab336fde198f33f57b2652fb1a8d6c5fddc267. OOXML validation passed; rendered to PDF (37 pages) and Sections 8, 9, 13, 14, 15, 16 and 17 inspected.
+- **Negative tests (correction pass):** a second Section 8 table (1 failure), a deleted original table (stops with FAIL), an altered specification cell (2 failures), a Section 13 cell at 10 pt (1 failure) and restored "await owner confirmation" wording (1 failure). Test copies deleted.
+- **S10 suite:** 106 checks, 0 failures, 1 pending; includes the approved monthly totals and lead row.

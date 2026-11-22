@@ -79,7 +79,7 @@ HEAD = ["Project title", "Team name", "Team lead and contact information", "Proj
 found = re.findall(r"^## (\d+)\. (.+)$", body, re.M)
 add("20 sections in official order with form headings", [(int(a), b.strip()) for a, b in found] == list(enumerate(HEAD, 1)),
     str(found[:3]))
-add("Master v0.6, stage S10, status DRAFT", "| Version | 0.6 |" in M and "| Stage | S10 |" in M and "| Status | DRAFT |" in M)
+add("Master v0.7, stage S10, status DRAFT", "| Version | 0.7 |" in M and "| Stage | S10 |" in M and "| Status | DRAFT |" in M)
 add("Master states it is not submission-ready", "Not submission-ready" in M)
 
 # ---- 2. Official table header rows -----------------------------------------------------
@@ -200,6 +200,7 @@ mod = importlib.util.module_from_spec(sp)
 with contextlib.redirect_stdout(io.StringIO()): sp.loader.exec_module(mod)
 APPROVED = [150, 168, 210, 138, 226, 267, 132]
 add("Section 13 effort = DEC-042 approved figures = model", e13 == APPROVED == [mod.RL[w] + mod.RC[w] for w in range(1, 8)])
+add("Approved monthly totals 148/242/252/274/208/167 and lead row 72/93/108/105/74/74 kept (DEC-044)", mod.mTi == [148, 242, 252, 274, 208, 167] and mod.mLi == [72, 93, 108, 105, 74, 74] and sum(mod.mCi) == 765)
 add("Section 4: 6 months and 1,291 person-hours", "Duration: 6 months. Total effort: 1,291 person-hours." in sec(4))
 s11row = next((l for l in sec(11).splitlines() if l.startswith("| 1 (current project)")), "")
 add("Section 11 stage 1 duration = 6", s11row.split("|")[3].strip() == "6" if s11row else False)
@@ -217,7 +218,7 @@ add("Dependency order: no activity starts before its predecessor starts", all(fi
 add("Capacity risk (lead about 110 h per month) recorded in Section 17", "about 110 hours per month" in sec(17))
 add("Weights and activity costs still open (await costs)", sec(16).count("[OPEN — S10]") == 7 and sec(16).count("[LOCAL COMPLETION ONLY]") == 7)
 R = rd("stages", "S10", "S10_OWNER_DECISION_REQUEST.md") or ""
-add("Decision request v0.3 on the approved baseline, updated for DEC-043", "| Version | 0.3 |" in R and "DEC-042" in R and "DEC-043" in R)
+add("Decision request on the approved baseline, updated for DEC-043", "| Version | 0.3 |" in R and "DEC-042" in R and "DEC-043" in R)
 C = rd("stages", "S10", "S10_RESOURCE_CALCULATIONS.md") or ""
 wl = round(100 * 526 / 1291, 1)
 add("Resource calculations: lead share 40.7% and contributor share 59.3% of 1,291 h", wl == 40.7 and "40.7%" in C and "59.3%" in C)
@@ -230,7 +231,7 @@ nontext = sorted(os.path.relpath(f, ROOT) for f in glob.glob(os.path.join(ROOT, 
 add("No non-text file other than the filled native form (which .gitignore keeps out of the repository)",
     nontext in ([], [os.path.join("proposal", "IRAA_PROPOSAL_EN_FORM.docx")]), str(nontext))
 FQ = rd("stages", "S10", "qc", "S10_FORM_QC_OUTPUT.txt") or ""
-add("Form QC output recorded with RESULT PASS and costs pending", "RESULT PASS" in FQ and "PENDING S16: activity costs and cost weights" in FQ)
+add("Form QC output recorded with RESULT PASS, the supplementary Section 8 table and costs pending", "RESULT PASS" in FQ and "PENDING S16: activity costs and cost weights" in FQ and "Exactly one supplementary table, in Section 8" in FQ)
 import hashlib
 fsha = hashlib.sha256(open(os.path.join(ROOT, "proposal", "IRAA_PROPOSAL_EN_FORM.docx"), "rb").read()).hexdigest() \
     if os.path.isfile(os.path.join(ROOT, "proposal", "IRAA_PROPOSAL_EN_FORM.docx")) else ""
@@ -255,8 +256,9 @@ for f in ["S10_PLAN", "S10_FORM_MAPPING", "S10_OWNER_DECISION_REQUEST", "S10_UNR
 DL = rd("project", "00_DECISIONS_LOG.md") or ""
 add("DEC-039 recorded", "| DEC-039 |" in DL)
 ST = rd("project", "00_STAGE_STATUS.md") or ""
-add("Stage status records S10 on the approved S11 baseline with the form insertion submitted for gate", "S10 in progress on the approved S11 baseline (DEC-042): native-form insertion done and submitted for an owner gate (DEC-043)" in ST)
+add("Stage status records the correction pass submitted for owner review", "the limited correction pass (DEC-044) done and submitted for owner review" in ST)
 add("DEC-042 recorded", "| DEC-042 |" in DL)
+add("DEC-044 recorded", "| DEC-044 |" in DL)
 add("Skill checkpoint recorded for S10", "| SKL-011 | S10 |" in (rd("project", "00_SKILL_REGISTER.md") or ""))
 allmd = "\n".join(open(f, encoding="utf-8").read() for f in glob.glob(os.path.join(ROOT, "**", "*.md"), recursive=True))
 add("Safety: no account name, repository URL, e-mail or phone", not re.search(r"github\.com/[A-Za-z0-9-]+/iraa|@[a-z0-9-]+\.(com|org|ir)\b|\+\d{2}[ \d]{8,}", allmd, re.I))
