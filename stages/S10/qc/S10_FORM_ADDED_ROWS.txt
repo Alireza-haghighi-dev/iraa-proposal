@@ -1,0 +1,23 @@
+Section 9: data row 4
+Section 9: data row 5
+Section 9: data row 6
+Section 9: comparison field for entry 4
+Section 9: comparison field for entry 5
+Section 9: comparison field for entry 6
+Section 11: row 'Future phase 3'
+Section 13: data row 6
+Section 13: data row 7
+Section 14: row 4 (neutral placeholder for the fourth member)
+Section 16: data row 6
+Section 16: data row 7
+Section 17: additional 'Technical' row
+Section 17: additional 'Technical' row
+Section 17: additional 'Technical' row
+Section 17: additional 'Technical' row
+Section 17: additional 'Technical' row
+Section 17: additional 'Data / information' row
+Section 17: additional 'Data / information' row
+Section 17: additional 'Data / information' row
+Section 17: additional 'Schedule' row
+Section 17: additional 'Schedule' row
+Section 17: additional 'Financial' row

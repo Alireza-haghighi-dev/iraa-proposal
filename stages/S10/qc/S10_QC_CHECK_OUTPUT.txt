@@ -1,7 +1,7 @@
-INFO    S11 cumulative run  [SUMMARY  s11_checks=75  failed=7]
+INFO    S11 cumulative run  [SUMMARY  s11_checks=75  failed=8]
 PASS    S11 cumulative checks pass apart from the listed supersessions
 PASS    20 sections in official order with form headings  [[('1', 'Project title'), ('2', 'Team name'), ('3', 'Team lead and contact information')]]
-PASS    Master v0.5, stage S10, status DRAFT
+PASS    Master v0.6, stage S10, status DRAFT
 PASS    Master states it is not submission-ready
 PASS    Embedded header for Section 5 equals REF-02
 PASS    Embedded header for Section 9 equals REF-02
@@ -42,12 +42,12 @@ PASS    Section 12 numbered titles equal Section 13 (FX-01)
 PASS    Section 16 titles equal Section 13
 PASS    Section 13 efforts sum to stated total  [1291 vs 1,291]
 PASS    Section 16 efforts equal Section 13 row by row
-PENDING FX-03 to FX-05 (costs, weights, shares)  [await personnel and cost inputs; Sections 14, 15 and the Section 16 cost columns still hold placeholders]
+PENDING FX-03 and FX-04 (cost totals, cost weights)  [await the approved personnel-rate allocation and non-personnel amounts (DEC-043 item 8)]
 PASS    FX-02 Section 16 hours = Section 13 total = 1,291 (DEC-042)
 PASS    No effort cell still marked provisional
 PASS    No bold, bullets or decorative marks in proposal text
 PASS    No working identifiers in proposal text  [[]]
-PASS    Body length within S09 body + 50 words (S10 corrections allowance)  [12116 vs S09 12590]
+PASS    Body length within S09 body + 50 words (S10 corrections allowance)  [12366 vs S09 12590]
 PASS    OPS: thresholds called guidance values, not fixed limits
 PASS    OPS: charter values (1 Mbit per second; 4 GB per week)
 PASS    OPS: FAQ values (ten per minute per IP as a rule; family-related one per second; operational variation)
@@ -80,9 +80,15 @@ PASS    Every activity scheduled in at least one month; month 1 and month 6 used
 PASS    Dependency order: no activity starts before its predecessor starts
 PASS    Capacity risk (lead about 110 h per month) recorded in Section 17
 PASS    Weights and activity costs still open (await costs)
-PASS    Decision request v0.2 issued on the approved baseline
+PASS    Decision request v0.3 on the approved baseline, updated for DEC-043
 PASS    Resource calculations: lead share 40.7% and contributor share 59.3% of 1,291 h
 PASS    Resource calculations: hour-share weights listed and summing to 100% within rounding
+PASS    Only non-text file is the filled native form  [['proposal/IRAA_PROPOSAL_EN_FORM.docx']]
+PASS    Form QC output recorded with RESULT PASS and costs pending
+PASS    Recorded form QC refers to the committed form file (SHA-256)
+PASS    No capability, internship or training statements; member labels only in Section 14
+PASS    Section 14 shares 40.7 + 19.8 + 19.8 + 19.7 = 100.0 (FX-05 on planned hours)
+PASS    Section 17 follows the native form's category order
 PASS    Deliverable S10_PLAN present with metadata
 PASS    Deliverable S10_FORM_MAPPING present with metadata
 PASS    Deliverable S10_OWNER_DECISION_REQUEST present with metadata
@@ -93,12 +99,12 @@ PASS    Deliverable S10_CHANGE_REPORT present with metadata
 PASS    Deliverable S10_QC_REPORT present with metadata
 PASS    Deliverable S10_HANDOFF present with metadata
 PASS    DEC-039 recorded
-PASS    Stage status records S11 approved and S10 resumed
+PASS    Stage status records S10 on the approved S11 baseline with the form insertion submitted for gate
 PASS    DEC-042 recorded
 PASS    Skill checkpoint recorded for S10
 PASS    Safety: no account name, repository URL, e-mail or phone
 PASS    No Persian text in repository
 PASS    Submission readiness not claimed
 
-SUMMARY  s10_checks=98  failed=0  pending=1  info=2
+SUMMARY  s10_checks=104  failed=0  pending=1  info=2
 RESULT PASS

@@ -98,19 +98,41 @@ for w in TITLES:
     out.append(f"| WP{w} | {TITLES[w]} | {RL[w]} | {RC[w]} | {RL[w]+RC[w]} | {OLD[w]} |")
 out.append(f"| Total | | {TL} | {TC} | {TL+TC} | {sum(OLD.values())} |")
 out.append("")
+# S10 correction (owner instruction 2026-11-22): monthly figures and the WP x month table are rounded
+# with controlled rounding, so that rows and columns add to the approved totals, and the WP x month
+# table includes the coordination attributed to each WP (it previously showed task hours only).
+def lr(vals, target):
+    r = [int(v) for v in vals]; rem = target - sum(r)
+    for i in sorted(range(len(vals)), key=lambda i: vals[i]-int(vals[i]), reverse=True)[:rem]: r[i] += 1
+    return r
+mLi = lr(mL, TL); mCi = lr(mC, TC); mTi = [mLi[m] + mCi[m] for m in range(6)]
+X = {w: [0.0]*6 for w in TITLES}
+for m in range(6):
+    tot = sum((t[3]+t[4])*t[5][m] for t in T)
+    for t in T:
+        X[t[1]][m] += (t[3]+t[4])*t[5][m] * (1 + (COORD_L+COORD_C)*CMON[m]/tot)
+def controlled(X, rows, cols):
+    I = {w: [int(x) for x in X[w]] for w in X}
+    rd = {w: rows[w] - sum(I[w]) for w in X}; cd = [cols[m] - sum(I[w][m] for w in X) for m in range(6)]
+    cand = sorted(((X[w][m]-int(X[w][m]), w, m) for w in X for m in range(6) if X[w][m] > 0), reverse=True)
+    for _, w, m in cand:
+        if rd[w] > 0 and cd[m] > 0: I[w][m] += 1; rd[w] -= 1; cd[m] -= 1
+    assert all(v == 0 for v in rd.values()) and all(v == 0 for v in cd), (rd, cd)
+    return I
+WPM = controlled(X, {w: RL[w]+RC[w] for w in TITLES}, mTi)
 out.append("| Month | Technical lead (h) | Contributors combined (h) | Per contributor if shared equally (h) | Team total (h) |")
 out.append("|---|---|---|---|---|")
 for m in range(6):
-    out.append(f"| {m+1} | {round(mL[m])} | {round(mC[m])} | {round(mC[m]/3)} | {round(mL[m]+mC[m])} |")
-out.append(f"| Total | {TL} | {TC} | {round(TC/3)} | {TL+TC} |")
+    out.append(f"| {m+1} | {mLi[m]} | {mCi[m]} | {mCi[m]/3:.1f} | {mTi[m]} |")
+out.append(f"| Total | {TL} | {TC} | {TC/3:.1f} | {TL+TC} |")
 out.append("")
-out.append("| WP | " + " | ".join(f"M{m+1}" for m in range(6)) + " |")
-out.append("|---|" + "---|"*6)
+out.append("| WP | " + " | ".join(f"M{m+1}" for m in range(6)) + " | Total |")
+out.append("|---|" + "---|"*7)
 for w in TITLES:
-    row = [sum((t[3]+t[4])*t[5][m] for t in T if t[1]==w) for m in range(6)]
-    out.append(f"| WP{w} | " + " | ".join(str(round(x)) if x >= .5 else "" for x in row) + " |")
+    out.append(f"| WP{w} | " + " | ".join(str(x) if x else "" for x in WPM[w]) + f" | {sum(WPM[w])} |")
+out.append("| Total | " + " | ".join(str(x) for x in mTi) + f" | {sum(mTi)} |")
 print("\n".join(out))
-print(f"\nPEAK lead={max(round(x) for x in mL)} contributors_each={max(round(x/3) for x in mC)} month1_team={round(mL[0]+mC[0])} "
+print(f"\nPEAK lead={max(mLi)} contributors_each={max(mCi)/3:.1f} month1_team={mTi[0]} "
       f"task_lead={sum(t[3] for t in T)} task_contrib={sum(t[4] for t in T)} coord={COORD_L+COORD_C} review={sum(t[3]+t[4] for t in T if t[0].startswith('R'))}")
 
 if __name__ == "__main__" and "--tasks" in __import__("sys").argv:

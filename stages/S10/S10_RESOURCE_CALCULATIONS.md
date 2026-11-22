@@ -3,7 +3,7 @@
 | Field | Value |
 |---|---|
 | Document ID | S10_RESOURCE_CALCULATIONS |
-| Version | 0.1 |
+| Version | 0.2 |
 | Status | DRAFT |
 | Stage | S10 |
 | Date | 2026-11-21 |
@@ -25,7 +25,7 @@
 | 7 | 54 | 78 | 132 | 10.2% |
 | Total | 526 | 765 | 1,291 | 100.0% |
 
-Lead share of total effort: 40.7%; contributors combined: 59.3%. Average monthly hours over six months: lead 88 (planned peak 108 in month 3, a scheduling assumption under DEC-042 item 9); contributors combined 128.
+Lead share of total effort: 40.7%; contributors combined: 59.3%. Average monthly hours over six months: lead 87.7 (planned peak 108 in month 3, a scheduling assumption under DEC-042 item 9); contributors combined 127.5; each contributor 42.5.
 
 ## 2. Section 14 (team table)
 
@@ -33,7 +33,7 @@ Share of total effort for a member = member hours ÷ 1,291; monthly hours = memb
 
 | Case | Member 1 (technical lead) | Members 2, 3, 4 |
 |---|---|---|
-| Contributor hours shared equally (255 h each) | 526 h; 88 h per month; 40.7% | 255 h each; 43 h per month; 19.8%, 19.8%, 19.7% (rounded so the column totals 100.0%) |
+| Contributor hours shared equally (255 h each; DEC-043) | 526 h; 87.7 h per month; 40.7% | 255 h each; 42.5 h per month; 19.8%, 19.8%, 19.7% (largest-remainder rounding to one decimal so the column totals 100.0%; exact values 40.74% and 19.75%) |
 | Unequal shares | As above | Hours per member from the owner; shares and monthly hours recomputed by the formula |
 
 ## 3. Section 15 (budget table)

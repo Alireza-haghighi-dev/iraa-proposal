@@ -99,29 +99,30 @@ S06 estimates included coordination and review inside each task (EH-10). S11 tas
 
 | Month | Technical lead (h) | Contributors combined (h) | Per contributor if shared equally (h) | Team total (h) |
 |---|---|---|---|---|
-| 1 | 72 | 75 | 25 | 148 |
-| 2 | 93 | 150 | 50 | 242 |
-| 3 | 108 | 144 | 48 | 252 |
-| 4 | 105 | 169 | 56 | 274 |
-| 5 | 74 | 134 | 45 | 208 |
-| 6 | 74 | 92 | 31 | 167 |
-| Total | 526 | 765 | 255 | 1291 |
+| 1 | 72 | 75 | 25.0 | 147 |
+| 2 | 93 | 150 | 50.0 | 243 |
+| 3 | 108 | 144 | 48.0 | 252 |
+| 4 | 105 | 169 | 56.3 | 274 |
+| 5 | 74 | 134 | 44.7 | 208 |
+| 6 | 74 | 93 | 31.0 | 167 |
+| Total | 526 | 765 | 255.0 | 1291 |
 
-Hours per work package and month (team total):
+Hours per work package and month (team total, including the coordination attributed to each work package; controlled rounding so that every row equals the approved work-package total and every column equals the month total — S10 correction of 2026-11-22, which replaced a table that showed task hours only and rounded each cell separately):
 
-| WP | M1 | M2 | M3 | M4 | M5 | M6 |
-|---|---|---|---|---|---|---|
-| WP1 | 103 | 23 |  |  |  |  |
-| WP2 | 19 | 64 | 65 |  |  |  |
-| WP3 |  | 120 | 53 | 9 | 6 |  |
-| WP4 |  |  | 58 | 66 |  |  |
-| WP5 |  | 9 | 50 | 145 |  |  |
-| WP6 |  |  |  | 28 | 165 | 39 |
-| WP7 |  |  |  |  | 11 | 101 |
+| WP | M1 | M2 | M3 | M4 | M5 | M6 | Total |
+|---|---|---|---|---|---|---|---|
+| WP1 | 124 | 26 |  |  |  |  | 150 |
+| WP2 | 23 | 73 | 72 |  |  |  | 168 |
+| WP3 |  | 134 | 59 | 10 | 7 |  | 210 |
+| WP4 |  |  | 65 | 73 |  |  | 138 |
+| WP5 |  | 10 | 56 | 160 |  |  | 226 |
+| WP6 |  |  |  | 31 | 189 | 47 | 267 |
+| WP7 |  |  |  |  | 12 | 120 | 132 |
+| Total | 147 | 243 | 252 | 274 | 208 | 167 | 1291 |
 
 | Month | Owner's focus (DEC-041 item 2) | Planned work |
 |---|---|---|
-| 1 | Lighter start: specifications, environment, formats, libraries, vertical prototype, evaluation procedures | WP1 nearly complete; licence check and protocol drafting start; end-to-end prototype; team total 148 h, the lightest month |
+| 1 | Lighter start: specifications, environment, formats, libraries, vertical prototype, evaluation procedures | WP1 nearly complete; licence check and protocol drafting start; end-to-end prototype; team total 147 h, the lightest month |
 | 2 | Ingestion, normalization, duplicates, BM25, initial semantic retrieval, early tests | WP3 import, normalization, indexes, BM25 and dense retrieval; WP2 collections and harness; record-service skeleton |
 | 3 | R1 and R2 integration, evidence handling, external search, core record and workflow | Retrieval service completed with fusion, thresholds, evidence passages; connector and query flow; record service; harness reproduction run |
 | 4 | Integrated workflow, approval and re-approval, interface, traceability, access control, audit, system tests | Review interface, audit log, exports, generated approval suite, bypass tests; integration release starts; pilot judging; timing |
@@ -133,8 +134,8 @@ Hours per work package and month (team total):
 | Role | Month 1 | Months 2–4 | Months 5–6 | Total over six months |
 |---|---|---|---|---|
 | Technical lead | 72 h (about 18 h per week) | up to 108 h in month 3 (about 27 h per week) | 74 h (about 19 h per week) | 526 h |
-| Each contributor, if work is shared equally | 25 h (about 6 h per week) | up to 56 h in month 4 (about 14 h per week) | 45 h, then 31 h | 255 h |
-| Contributors combined, if not equal | 75 h | up to 169 h in month 4 | 134 h, then 92 h | 765 h |
+| Each contributor, if work is shared equally | 25.0 h (about 6 h per week) | up to 56.3 h in month 4 (about 14 h per week) | 44.7 h, then 31.0 h | 255 h |
+| Contributors combined, if not equal | 75 h | up to 169 h in month 4 | 134 h, then 93 h | 765 h |
 
 Weeks are converted at four weeks per month, the form's own example (ISS-017). These are the hours the plan needs; actual availability has not been stated and is not assumed.
 

@@ -3,7 +3,7 @@
 | Field | Value |
 |---|---|
 | Document ID | S10_QC_REPORT |
-| Version | 0.2 |
+| Version | 0.3 |
 | Status | DRAFT |
 | Stage | S10 |
 | Date | 2026-11-21 |
@@ -18,3 +18,6 @@
 - **Recommended outcome:** none yet; S10 continues after the owner's answers.
 - **Negative test:** on a scratch copy, one Section 12 title and the OPS family-related clause were altered; the script reported both as FAIL (FX-01 and the OPS FAQ check) and the copy was deleted.
 - **Negative test (resumption):** on a scratch copy, one Section 16 month mark was added to activity 7; the script reported the Gantt check as FAIL; the copy was deleted.
+- **Native-form QC (DEC-043):** `python3 -I stages/S10/qc/S10_FORM_QC.py <blank form> proposal/IRAA_PROPOSAL_EN_FORM.docx proposal/IRAA_PROPOSAL_EN_MASTER.md` → 112 checks, 0 failures, 1 pending (Section 16 costs and weights). It compares header, footer, styles, numbering, settings and page setup; the 20 headings; for each of the 10 tables the properties, grid widths, header rows, merges and the order of original rows, and requires every added row to clone an adjacent row; then cross-checks Sections 12/13/16 titles, effort and months, Section 14 shares, Section 15 (no amounts), Sections 5, 9, 10, 11, 17 content, narrative formatting (12 pt, regular, no numbering), guidance removal, local placeholders and claim wording. The file was also validated against the OOXML schema and rendered to PDF (33 pages) for a visual check.
+- **Negative test (form):** removing one vertical merge in Section 15 and adding a month-7 mark in Section 16 produced three failures; the test copy was deleted.
+- **Not established by a structural PASS:** cost inputs, local completion, the signed original's formatting, S10b.

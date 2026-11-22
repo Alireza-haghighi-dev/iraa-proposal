@@ -1,0 +1,118 @@
+INFO    Blank form SHA-256  [8bc63dabdbddff9c8deb78fdd6ab336fde198f33f57b2652fb1a8d6c5fddc267]
+INFO    Filled form SHA-256  [f581f7b6591d7d3b2268ef561bcb137f575f99601310dcbd7f0744caaf2af58e]
+PASS    Unchanged part: word/header1.xml
+PASS    Unchanged part: word/footer1.xml
+PASS    Unchanged part: word/styles.xml
+PASS    Unchanged part: word/numbering.xml
+PASS    Unchanged part: word/settings.xml
+PASS    Unchanged part: word/fontTable.xml
+PASS    Unchanged part: word/theme/theme1.xml
+PASS    Header relationships: blank form has none; the writer omits the empty part
+PASS    Section properties (page, margins, header/footer references) unchanged
+PASS    Footer signature table present and unchanged
+PASS    20 section headings, same order
+PASS    Heading texts unchanged except the Section 1 title and Section 4 duration fields
+PASS    Heading paragraph formatting unchanged
+PASS    Table count unchanged (10)  [10 vs 10]
+PASS    Tables sit in the same sections  [[5, 9, 10, 11, 13, 14, 15, 16, 17, 20]]
+PASS    S5: table properties unchanged
+PASS    S5: grid columns and widths unchanged (5 columns)
+PASS    S5: header row text and structure unchanged
+PASS    S5: every original row kept in order; 0 added row(s) cloned from an adjacent data row
+PASS    S5: every row spans the full grid
+PASS    S9: table properties unchanged
+PASS    S9: grid columns and widths unchanged (7 columns)
+PASS    S9: header row text and structure unchanged
+PASS    S9: every original row kept in order; 3 added row(s) cloned from an adjacent data row
+PASS    S9: every row spans the full grid
+PASS    S10: table properties unchanged
+PASS    S10: grid columns and widths unchanged (7 columns)
+PASS    S10: header row text and structure unchanged
+PASS    S10: every original row kept in order; 0 added row(s) cloned from an adjacent data row
+PASS    S10: every row spans the full grid
+PASS    S11: table properties unchanged
+PASS    S11: grid columns and widths unchanged (5 columns)
+PASS    S11: header row text and structure unchanged
+PASS    S11: every original row kept in order; 1 added row(s) cloned from an adjacent data row
+PASS    S11: every row spans the full grid
+PASS    S13: table properties unchanged
+PASS    S13: grid columns and widths unchanged (5 columns)
+PASS    S13: header row text and structure unchanged
+PASS    S13: every original row kept in order; 2 added row(s) cloned from an adjacent data row
+PASS    S13: every row spans the full grid
+PASS    S14: table properties unchanged
+PASS    S14: grid columns and widths unchanged (6 columns)
+PASS    S14: header row text and structure unchanged
+PASS    S14: every original row kept in order; 1 added row(s) cloned from an adjacent data row
+PASS    S14: every row spans the full grid
+PASS    S15: table properties unchanged
+PASS    S15: grid columns and widths unchanged (6 columns)
+PASS    S15: header row text and structure unchanged
+PASS    S15: every original row kept in order; 0 added row(s) cloned from an adjacent data row
+PASS    S15: every row spans the full grid
+PASS    S16: table properties unchanged
+PASS    S16: grid columns and widths unchanged (17 columns)
+PASS    S16: header row text and structure unchanged
+PASS    S16: every original row kept in order; 2 added row(s) cloned from an adjacent data row
+PASS    S16: every row spans the full grid
+PASS    S17: table properties unchanged
+PASS    S17: grid columns and widths unchanged (4 columns)
+PASS    S17: header row text and structure unchanged
+PASS    S17: every original row kept in order; 11 added row(s) cloned from an adjacent data row
+PASS    S17: every row spans the full grid
+PASS    S20: table properties unchanged
+PASS    S20: grid columns and widths unchanged (4 columns)
+PASS    S20: header row text and structure unchanged
+PASS    S20: every original row kept in order; 0 added row(s) cloned from an adjacent data row
+PASS    S20: every row spans the full grid
+PASS    Added table rows = 20 (S9 3, S11 1, S13 2, S14 1, S16 2, S17 11)  [added 20]
+PASS    S13: seven activities with effort 150/168/210/138/226/267/132
+PASS    S13: TOTAL = 1,291 = sum
+PASS    S16: titles identical to S13
+PASS    S16: effort identical to S13 row by row; TOTAL 1,291
+PASS    S16: months 7-12 blank in every activity row
+PASS    S16: every activity scheduled within months 1-6
+PASS    S16: month marks identical to the master (approved S11 distribution)
+PENDING S16: activity costs and cost weights  [await the approved personnel-rate allocation and non-personnel amounts (DEC-043 item 8)]
+PASS    S12: numbered activity titles identical to S13, in order
+PASS    S14: four member rows with neutral placeholders
+PASS    S14: participation 40.7 + 19.8 + 19.8 + 19.7 = 100.0 (526 h and 3 x 255 h of 1,291 h)
+PASS    S14: monthly hours are planned averages (526/6, 255/6)
+PASS    S15: no amounts or currency entered
+PASS    S15: personnel quantity 1,291 person-hours
+PASS    S9: six comparator rows in the seven original columns
+PASS    S9: six comparison fields, none left as a placeholder
+PASS    S10: prior-work table left blank (no invented team work)
+PASS    S17: 16 risks numbered 1-16 in the form's category order
+PASS    S11: current phase first, 6 months; later durations open
+PASS    S5: seven selections marked, nothing else
+PASS    Narrative paragraphs: regular weight, 12 pt, no list numbering
+PASS    No bullet or decorative glyphs
+PASS    Template guidance removed in implemented sections (kept only in 1 general note, 2, 10, 14 local note, 15, 16 cost notes, 20)  [[(1, 'Template guidance: remove instructional text when '), (2, 'Provide a concise name describing the team and its'), (10, 'Record only substantiated prior work directly rela'), (10, 'Type may include patent, article, thesis, technica'), (10, 'For location and organization, provide only confir'), (]
+PASS    Local placeholder kept: [TEAM NAME]
+PASS    Local placeholder kept: [TO BE COMPLETED LOCALLY]
+PASS    Local placeholder kept: [YYYY-MM-DD]
+PASS    Content placeholder replaced: [PROJECT RATIONALE AND SIGNIFICANCE]
+PASS    Content placeholder replaced: [CURRENT-PHASE OBJECTIVES]
+PASS    Content placeholder replaced: [FEATURES AND MEASURABLE SPECIFICATIONS]
+PASS    Content placeholder replaced: [DETAILED METHODOLOGY BY WORK PACKAGE]
+PASS    Content placeholder replaced: [ADDITIONAL VERIFIED INFORMATION, IF ANY]
+PASS    Content placeholder replaced: [PROJECT TITLE]
+PASS    Content placeholder replaced: [MONTHS]
+PASS    Required wording present: 'checks whether relevant existing solution examples can '
+PASS    Required wording present: 'approval of a query does not authorize disclosure'
+PASS    Required wording present: 'no transition into approved exists except the approval '
+PASS    Required wording present: 'being better than bm25 is not required'
+PASS    Prohibited claim wording absent: 'certified'  [['not ']]
+PASS    Prohibited claim wording absent: 'proven'  [[]]
+PASS    Prohibited claim wording absent: 'patentable'  [[]]
+PASS    Prohibited claim wording absent: 'guarantee'  [[]]
+PASS    Prohibited claim wording absent: 'outperforms'  [[]]
+PASS    Prohibited claim wording absent: 'state-of-the-art'  [[]]
+PASS    Prohibited claim wording absent: 'will reduce'  [[]]
+PASS    No working identifiers (DEC-, ISS-, S10 markers) in the form
+PASS    No Persian text, e-mail address or phone number
+PASS    Document metadata carries no author name
+
+SUMMARY  form_checks=112  failed=0  pending=1
+RESULT PASS

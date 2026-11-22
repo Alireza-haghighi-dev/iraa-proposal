@@ -41,6 +41,7 @@ ACC_S11 = {
     "Section 16 months not yet marked": "months marked from the approved distribution (checked in section 4)",
     "Stage status records S11 submitted for the owner checkpoint": "stage status records S11 approved",
     "No S11 file claims approval of the revised baseline": "S11 approved by DEC-042",
+    "Proposal text has no internal capability or training statements": "Section 14 now carries the neutral labels Member 1-4 (DEC-043); re-checked below without the label pattern",
 }
 ACC_DEEP = {  # earlier-stage checks reported inside the S11 suite's S09 line
     "Section 13: every effort cell marked provisional": "approved figures",
@@ -48,6 +49,10 @@ ACC_DEEP = {  # earlier-stage checks reported inside the S11 suite's S09 line
     "Section 11: durations S10, costs local": "stage 1 duration 6 (approved); later stages open; costs local",
     "ISS-013 updated and still open": "resolved by DEC-042", "ISS-018 updated and still open": "resolved by DEC-040/DEC-042",
     "ISS-049 registered and open": "resolved by DEC-042", "ISS-050 registered and open": "resolved by DEC-042",
+    "file inventory": "the filled native form (DEC-043) is a .docx; checked below that it is the only non-text file",
+    "Section 17: categories from the form's four risk types": "categories now follow the native form's five risk types (DEC-043)",
+    "Section 14: table rows hold placeholders only": "member rows entered per DEC-043 with neutral labels",
+    "Section 15: table rows hold placeholders only": "quantities entered per DEC-043; no amounts",
 }
 bad = []
 for l in [x for x in s11.splitlines() if x.startswith("FAIL")]:
@@ -74,7 +79,7 @@ HEAD = ["Project title", "Team name", "Team lead and contact information", "Proj
 found = re.findall(r"^## (\d+)\. (.+)$", body, re.M)
 add("20 sections in official order with form headings", [(int(a), b.strip()) for a, b in found] == list(enumerate(HEAD, 1)),
     str(found[:3]))
-add("Master v0.5, stage S10, status DRAFT", "| Version | 0.5 |" in M and "| Stage | S10 |" in M and "| Status | DRAFT |" in M)
+add("Master v0.6, stage S10, status DRAFT", "| Version | 0.6 |" in M and "| Stage | S10 |" in M and "| Status | DRAFT |" in M)
 add("Master states it is not submission-ready", "Not submission-ready" in M)
 
 # ---- 2. Official table header rows -----------------------------------------------------
@@ -134,7 +139,7 @@ e13 = [num(x) for x in tbl(13, 5)]; e16 = [num(x) for x in tbl(16, 3)]
 tot = re.search(r"Total effort: ([\d,]+) person-hours", sec(13))
 add("Section 13 efforts sum to stated total", None not in e13 and tot and sum(e13) == num(tot.group(1)), "%s vs %s" % (sum(x or 0 for x in e13), tot.group(1) if tot else None))
 add("Section 16 efforts equal Section 13 row by row", e16 == e13)
-pend("FX-03 to FX-05 (costs, weights, shares)", "await personnel and cost inputs; Sections 14, 15 and the Section 16 cost columns still hold placeholders")
+pend("FX-03 and FX-04 (cost totals, cost weights)", "await the approved personnel-rate allocation and non-personnel amounts (DEC-043 item 8)")
 add("FX-02 Section 16 hours = Section 13 total = 1,291 (DEC-042)", sum(e16) == sum(e13) == 1291)
 add("No effort cell still marked provisional", "(provisional)" not in sec(13) + sec(16))
 
@@ -212,12 +217,31 @@ add("Dependency order: no activity starts before its predecessor starts", all(fi
 add("Capacity risk (lead about 110 h per month) recorded in Section 17", "about 110 hours per month" in sec(17))
 add("Weights and activity costs still open (await costs)", sec(16).count("[OPEN — S10]") == 7 and sec(16).count("[LOCAL COMPLETION ONLY]") == 7)
 R = rd("stages", "S10", "S10_OWNER_DECISION_REQUEST.md") or ""
-add("Decision request v0.2 issued on the approved baseline", "| Version | 0.2 |" in R and "DEC-042" in R)
+add("Decision request v0.3 on the approved baseline, updated for DEC-043", "| Version | 0.3 |" in R and "DEC-042" in R and "DEC-043" in R)
 C = rd("stages", "S10", "S10_RESOURCE_CALCULATIONS.md") or ""
 wl = round(100 * 526 / 1291, 1)
 add("Resource calculations: lead share 40.7% and contributor share 59.3% of 1,291 h", wl == 40.7 and "40.7%" in C and "59.3%" in C)
 hw = [round(100 * x / 1291, 1) for x in APPROVED]
 add("Resource calculations: hour-share weights listed and summing to 100% within rounding", all(("%.1f" % x) in C for x in hw) and abs(sum(hw) - 100) <= 0.2)
+
+# ---- 9b. Native-form insertion (DEC-043) ---------------------------------------------------------------
+nontext = sorted(os.path.relpath(f, ROOT) for f in glob.glob(os.path.join(ROOT, "**", "*"), recursive=True)
+                 if os.path.isfile(f) and ".git" + os.sep not in f and not f.endswith((".md", ".py", ".txt", ".gitkeep", ".gitignore")))
+add("Only non-text file is the filled native form", nontext == [os.path.join("proposal", "IRAA_PROPOSAL_EN_FORM.docx")], str(nontext))
+FQ = rd("stages", "S10", "qc", "S10_FORM_QC_OUTPUT.txt") or ""
+add("Form QC output recorded with RESULT PASS and costs pending", "RESULT PASS" in FQ and "PENDING S16: activity costs and cost weights" in FQ)
+import hashlib
+fsha = hashlib.sha256(open(os.path.join(ROOT, "proposal", "IRAA_PROPOSAL_EN_FORM.docx"), "rb").read()).hexdigest() \
+    if os.path.isfile(os.path.join(ROOT, "proposal", "IRAA_PROPOSAL_EN_FORM.docx")) else ""
+add("Recorded form QC refers to the committed form file (SHA-256)", fsha and fsha in FQ)
+add("No capability, internship or training statements; member labels only in Section 14",
+    not re.search(r"\bintern\b|\binterns\b|junior|under (?:the lead's )?supervision", low)
+    and all("member 1" not in sec(n).lower() for n in range(1, 21) if n != 14) and "Member 4" in sec(14))
+t14 = [l for l in sec(14).splitlines() if re.match(r"\| [1-4] \|", l)]
+sh = [float(l.split("|")[6]) for l in t14]
+add("Section 14 shares 40.7 + 19.8 + 19.8 + 19.7 = 100.0 (FX-05 on planned hours)", len(t14) == 4 and abs(sum(sh) - 100) < 1e-9)
+cats17 = [l.split("|")[2].strip() for l in sec(17).splitlines() if re.match(r"\| \d+ \|", l)]
+add("Section 17 follows the native form's category order", cats17 == ["Technical"] * 6 + ["Data / information"] * 4 + ["Schedule"] * 3 + ["Financial"] * 2 + ["Other"])
 
 # ---- 10. Deliverables, records, safety ------------------------------------------------------------
 for f in ["S10_PLAN", "S10_FORM_MAPPING", "S10_OWNER_DECISION_REQUEST", "S10_UNRESOLVED_ITEMS", "S10_CONSISTENCY_REPORT", "S10_RESOURCE_CALCULATIONS",
@@ -227,7 +251,7 @@ for f in ["S10_PLAN", "S10_FORM_MAPPING", "S10_OWNER_DECISION_REQUEST", "S10_UNR
 DL = rd("project", "00_DECISIONS_LOG.md") or ""
 add("DEC-039 recorded", "| DEC-039 |" in DL)
 ST = rd("project", "00_STAGE_STATUS.md") or ""
-add("Stage status records S11 approved and S10 resumed", "S11 approved (DEC-042); S10 resumed" in ST)
+add("Stage status records S10 on the approved S11 baseline with the form insertion submitted for gate", "S10 in progress on the approved S11 baseline (DEC-042): native-form insertion done and submitted for an owner gate (DEC-043)" in ST)
 add("DEC-042 recorded", "| DEC-042 |" in DL)
 add("Skill checkpoint recorded for S10", "| SKL-011 | S10 |" in (rd("project", "00_SKILL_REGISTER.md") or ""))
 allmd = "\n".join(open(f, encoding="utf-8").read() for f in glob.glob(os.path.join(ROOT, "**", "*.md"), recursive=True))

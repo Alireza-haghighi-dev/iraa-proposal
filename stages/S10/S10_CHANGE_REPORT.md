@@ -3,7 +3,7 @@
 | Field | Value |
 |---|---|
 | Document ID | S10_CHANGE_REPORT |
-| Version | 0.2 |
+| Version | 0.3 |
 | Status | DRAFT |
 | Stage | S10 |
 | Date | 2026-11-21 |
@@ -31,3 +31,14 @@
 | Decision request v0.2 (nine remaining inputs); resource calculations with formulas for Sections 14–16 | S10_OWNER_DECISION_REQUEST, S10_RESOURCE_CALCULATIONS | DEC-042 next step |
 | QC rebuilt on the approved baseline: runs the S11 suite (which runs S09, S08, S07) and checks FX-02, the Gantt marks, dependencies and the new documents; S11 suite skips its call back to S10 when run from it | qc/S10_QC_CHECK.py; stages/S11/qc/S11_QC_CHECK.py | Avoids circular suites |
 | Registers: DEC-042; ISS-013, ISS-018, ISS-046, ISS-048, ISS-049, ISS-050, ISS-055, ISS-057 resolved; ISS-025, ISS-039, ISS-051 notes; S11 files APPROVED; stage status | project/; stages/S11 | Record keeping |
+
+## Native-form insertion (DEC-043, 2026-11-22)
+
+| Change | Files | Reason |
+|---|---|---|
+| Filled native form built from the master | proposal/IRAA_PROPOSAL_EN_FORM.docx; qc/S10_BUILD_FORM_DOCX.py | DEC-043 items 1–3 |
+| Cell-by-cell structural and content QC against the blank form | qc/S10_FORM_QC.py; qc/S10_FORM_QC_OUTPUT.txt; qc/S10_FORM_ADDED_ROWS.txt | DEC-043 QC requirement |
+| Master v0.6: Section 14 four member rows (526 h; 255 h each; shares 40.7/19.8/19.8/19.7; planned monthly averages); Section 15 personnel quantity and pending items; Section 17 reordered into the native form's categories with a sixteenth "Other" row; risk cross-references updated; Faiss row corrected to exact search (S11) | proposal/IRAA_PROPOSAL_EN_MASTER.md; qc/S10_FORM_ALIGN_MASTER.py | DEC-043 items 7–8; consistency |
+| S11 month table and WP × month table recomputed with controlled rounding; the WP × month table now includes attributed coordination, so rows equal the approved WP totals and columns the month totals (month 1 team total 147, month 2 243; per-contributor values to one decimal) | stages/S11/qc/S11_EFFORT_MODEL.py; stages/S11/S11_EFFORT_AND_SCHEDULE.md | DEC-043 item 9; approved totals unchanged |
+| Resource calculations: monthly averages 87.7 and 42.5 h; DEC-043 split | S10_RESOURCE_CALCULATIONS | DEC-043 item 7 |
+| DEC-043; ISS-021, ISS-025, ISS-056 notes; stage status | project/ | Record keeping |

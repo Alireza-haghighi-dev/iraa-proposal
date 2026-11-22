@@ -3,14 +3,14 @@
 | Field | Value |
 |---|---|
 | Document ID | S10_FORM_MAPPING |
-| Version | 0.2 |
+| Version | 0.3 |
 | Status | DRAFT |
 | Stage | S10 |
 | Date | 2026-11-21 |
 | Depends on | REF-02 (PROPOSAL_FORM_EN_WORKING_V1); proposal/IRAA_PROPOSAL_EN_MASTER v0.5; DEC-042; RF-001 to RF-003; DEC-039; ISS-021; ISS-056 |
 
 - **Purpose:** maps every field and table of the official form to the master and states what remains before transfer into the native template.
-- **Native template:** not available in this session. The only form available is the English working representation REF-02, which reproduces the 20 sections and the logical table schemas but not the page design. No claim of Word-layout compliance is made (DEC-039 item 2). Table header rows below are checked verbatim against REF-02 by `qc/S10_QC_CHECK.py`.
+- **Native template:** supplied by the owner on 2026-11-22 as a sanitized blank English working copy (DEC-043; SHA-256 in `qc/S10_FORM_QC_OUTPUT.txt`; not committed, as a reference document). The filled form is `proposal/IRAA_PROPOSAL_EN_FORM.docx`, built by `qc/S10_BUILD_FORM_DOCX.py` and checked cell by cell by `qc/S10_FORM_QC.py`. The working markdown master keeps the REF-02 column labels; the native form's own labels govern the Word file (§3).
 - **Status codes:** COMPLETE (text final pending native insertion); OWNER (waits for `S10_OWNER_DECISION_REQUEST`); LOCAL (reserved for local completion, never filled here).
 
 ## 1. Section and table map
@@ -47,3 +47,22 @@
 5. Decide the Section 12 subheadings and tool table and the Section 8 features table (ISS-056); apply the S09 reduction plan (`S09_REVIEW_REPORT` §5) only if a length rule applies.
 6. Fill local fields: Sections 2, 3, 18, 20, the location part of Section 9 column 4, Section 14 names and qualifications, Section 15 unit costs and totals, Section 16 activity costs, Section 11 costs.
 7. Localization is a separate post-S10 process; the English master stays the source text.
+
+## 3. Native form: insertion record (DEC-043)
+
+| Item | Native form | Treatment |
+|---|---|---|
+| Tables | 10 native tables (Sections 5, 9, 10, 11, 13, 14, 15, 16, 17, 20) | Count, grids, widths, table properties, header rows and merges unchanged; 20 data rows added by cloning adjacent rows (S9 3, S11 1, S13 2, S14 1, S16 2, S17 11; list in `qc/S10_FORM_ADDED_ROWS.txt`) |
+| Section 5 | Checkbox cells | Seven selections marked [X]; justification paragraphs below the table |
+| Section 8 | No native table | Features and measurable specifications inserted as numbered paragraphs, so no table is added; the form's guidance asks for a specification table, which the owner may approve as one addition (ISS-056) |
+| Section 9 | Seven columns; three comparison fields | Six rows; six comparison fields (three cloned); patent prior-art paragraph after the fields |
+| Section 11 | Labels Current phase, Future phase 1, 2 | Row Future phase 3 added |
+| Section 12 | Free text | Subheadings as plain paragraphs (no heading style or bold); the tool table rendered as sentences (ISS-056) |
+| Section 14 | Six columns, three rows | Fourth row added; neutral labels; planned hours and shares (DEC-043 item 7) |
+| Section 15 | Fixed category rows with merges | Quantities and pending items only; no amounts or units |
+| Section 16 | 17 columns, two header rows, 12 month columns | Seven activity rows; months 1–6 marked X; months 7–12 blank; costs and weights pending |
+| Section 17 | Five category rows (Technical, Data / information, Schedule, Financial, Other) | 16 risks in that order; master renumbered to match |
+| Column labels | Differ from REF-02 (for example "Implementation context", "Work assignment", "Cost weight (%)") | Native labels kept in the Word file; master keeps REF-02 labels as working text |
+| Template guidance | Instruction paragraphs per section | Removed where content was inserted; kept where content is still open (general note in Section 1; Sections 2, 10, 14 local-entry note, 15, 16 cost notes, 20) |
+| Header, footer and signature block, styles, numbering, page setup | — | Byte-equivalent after canonicalization (scripted) |
+| Table cell type size | Native 10 pt cell format | Kept; the 12 pt rule is applied to narrative paragraphs |

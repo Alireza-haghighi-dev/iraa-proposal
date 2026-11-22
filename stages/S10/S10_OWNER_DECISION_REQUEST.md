@@ -3,13 +3,14 @@
 | Field | Value |
 |---|---|
 | Document ID | S10_OWNER_DECISION_REQUEST |
-| Version | 0.2 |
+| Version | 0.3 |
 | Status | DRAFT |
 | Stage | S10 |
 | Date | 2026-11-21 |
 | Depends on | DEC-040; DEC-042; S10_RESOURCE_CALCULATIONS; REF-02 §§10, 11, 14–16 |
 
 - **Purpose:** the remaining inputs needed to finalize Sections 10, 11, 14, 15 and 16 on the approved baseline (DEC-042). Version 0.1 items on effort, duration, team size, coordination, training and the rehearsal principle are settled by DEC-040 and DEC-042 and are withdrawn.
+- **Status after DEC-043:** item 1 answered (255 h per contributor); item 3 shown as the planned average (87.7 h) pending confirmation; item 9 answered (native form supplied). Items 2, 4, 5, 6, 7 and 8 remain open.
 - **Local fields:** names, qualifications, currency amounts, dates and contact details stay local and are not requested here.
 
 | No. | Input | Needed for | What is enough |
