@@ -83,9 +83,9 @@ PASS    Weights and activity costs still open (await costs)
 PASS    Decision request v0.3 on the approved baseline, updated for DEC-043
 PASS    Resource calculations: lead share 40.7% and contributor share 59.3% of 1,291 h
 PASS    Resource calculations: hour-share weights listed and summing to 100% within rounding
-PASS    Only non-text file is the filled native form  [['proposal/IRAA_PROPOSAL_EN_FORM.docx']]
+PASS    No non-text file other than the filled native form (which .gitignore keeps out of the repository)  [['proposal/IRAA_PROPOSAL_EN_FORM.docx']]
 PASS    Form QC output recorded with RESULT PASS and costs pending
-PASS    Recorded form QC refers to the committed form file (SHA-256)
+PASS    Recorded form QC refers to this form file (SHA-256)
 PASS    No capability, internship or training statements; member labels only in Section 14
 PASS    Section 14 shares 40.7 + 19.8 + 19.8 + 19.7 = 100.0 (FX-05 on planned hours)
 PASS    Section 17 follows the native form's category order

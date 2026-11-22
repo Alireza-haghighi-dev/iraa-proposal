@@ -10,7 +10,7 @@
 | Depends on | REF-02 (PROPOSAL_FORM_EN_WORKING_V1); proposal/IRAA_PROPOSAL_EN_MASTER v0.5; DEC-042; RF-001 to RF-003; DEC-039; ISS-021; ISS-056 |
 
 - **Purpose:** maps every field and table of the official form to the master and states what remains before transfer into the native template.
-- **Native template:** supplied by the owner on 2026-11-22 as a sanitized blank English working copy (DEC-043; SHA-256 in `qc/S10_FORM_QC_OUTPUT.txt`; not committed, as a reference document). The filled form is `proposal/IRAA_PROPOSAL_EN_FORM.docx`, built by `qc/S10_BUILD_FORM_DOCX.py` and checked cell by cell by `qc/S10_FORM_QC.py`. The working markdown master keeps the REF-02 column labels; the native form's own labels govern the Word file (§3).
+- **Native template:** supplied by the owner on 2026-11-22 as a sanitized blank English working copy (DEC-043; SHA-256 in `qc/S10_FORM_QC_OUTPUT.txt`; not committed, as a reference document). The filled form `proposal/IRAA_PROPOSAL_EN_FORM.docx` is kept out of the public repository by the existing `*.docx` rule in `.gitignore` and is delivered to the owner directly (its SHA-256 is in the QC output); it is reproducible from the blank form and the master with `qc/S10_BUILD_FORM_DOCX.py`, and is checked cell by cell by `qc/S10_FORM_QC.py`. The working markdown master keeps the REF-02 column labels; the native form's own labels govern the Word file (§3).
 - **Status codes:** COMPLETE (text final pending native insertion); OWNER (waits for `S10_OWNER_DECISION_REQUEST`); LOCAL (reserved for local completion, never filled here).
 
 ## 1. Section and table map

@@ -227,13 +227,17 @@ add("Resource calculations: hour-share weights listed and summing to 100% within
 # ---- 9b. Native-form insertion (DEC-043) ---------------------------------------------------------------
 nontext = sorted(os.path.relpath(f, ROOT) for f in glob.glob(os.path.join(ROOT, "**", "*"), recursive=True)
                  if os.path.isfile(f) and ".git" + os.sep not in f and not f.endswith((".md", ".py", ".txt", ".gitkeep", ".gitignore")))
-add("Only non-text file is the filled native form", nontext == [os.path.join("proposal", "IRAA_PROPOSAL_EN_FORM.docx")], str(nontext))
+add("No non-text file other than the filled native form (which .gitignore keeps out of the repository)",
+    nontext in ([], [os.path.join("proposal", "IRAA_PROPOSAL_EN_FORM.docx")]), str(nontext))
 FQ = rd("stages", "S10", "qc", "S10_FORM_QC_OUTPUT.txt") or ""
 add("Form QC output recorded with RESULT PASS and costs pending", "RESULT PASS" in FQ and "PENDING S16: activity costs and cost weights" in FQ)
 import hashlib
 fsha = hashlib.sha256(open(os.path.join(ROOT, "proposal", "IRAA_PROPOSAL_EN_FORM.docx"), "rb").read()).hexdigest() \
     if os.path.isfile(os.path.join(ROOT, "proposal", "IRAA_PROPOSAL_EN_FORM.docx")) else ""
-add("Recorded form QC refers to the committed form file (SHA-256)", fsha and fsha in FQ)
+if fsha:
+    add("Recorded form QC refers to this form file (SHA-256)", fsha in FQ)
+else:
+    info("Filled form file", "not present in this checkout (*.docx is git-ignored); SHA-256 recorded in S10_FORM_QC_OUTPUT.txt")
 add("No capability, internship or training statements; member labels only in Section 14",
     not re.search(r"\bintern\b|\binterns\b|junior|under (?:the lead's )?supervision", low)
     and all("member 1" not in sec(n).lower() for n in range(1, 21) if n != 14) and "Member 4" in sec(14))
