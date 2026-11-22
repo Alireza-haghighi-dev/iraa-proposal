@@ -1,6 +1,7 @@
 # Packages and exports
 *.zip
 *.docx
+!proposal/IRAA_Proposal_EN_Form_Corrected.docx
 *.pdf
 exports/
 

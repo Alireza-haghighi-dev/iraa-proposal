@@ -228,13 +228,13 @@ add("Resource calculations: hour-share weights listed and summing to 100% within
 # ---- 9b. Native-form insertion (DEC-043) ---------------------------------------------------------------
 nontext = sorted(os.path.relpath(f, ROOT) for f in glob.glob(os.path.join(ROOT, "**", "*"), recursive=True)
                  if os.path.isfile(f) and ".git" + os.sep not in f and not f.endswith((".md", ".py", ".txt", ".gitkeep", ".gitignore")))
-add("No non-text file other than the filled native form (which .gitignore keeps out of the repository)",
-    nontext in ([], [os.path.join("proposal", "IRAA_PROPOSAL_EN_FORM.docx")]), str(nontext))
+add("No non-text file other than the corrected filled form (committed by owner authorization, DEC-045)",
+    nontext in ([], [os.path.join("proposal", "IRAA_Proposal_EN_Form_Corrected.docx")]), str(nontext))
 FQ = rd("stages", "S10", "qc", "S10_FORM_QC_OUTPUT.txt") or ""
 add("Form QC output recorded with RESULT PASS, the supplementary Section 8 table and costs pending", "RESULT PASS" in FQ and "PENDING S16: activity costs and cost weights" in FQ and "Exactly one supplementary table, in Section 8" in FQ)
 import hashlib
-fsha = hashlib.sha256(open(os.path.join(ROOT, "proposal", "IRAA_PROPOSAL_EN_FORM.docx"), "rb").read()).hexdigest() \
-    if os.path.isfile(os.path.join(ROOT, "proposal", "IRAA_PROPOSAL_EN_FORM.docx")) else ""
+fsha = hashlib.sha256(open(os.path.join(ROOT, "proposal", "IRAA_Proposal_EN_Form_Corrected.docx"), "rb").read()).hexdigest() \
+    if os.path.isfile(os.path.join(ROOT, "proposal", "IRAA_Proposal_EN_Form_Corrected.docx")) else ""
 if fsha:
     add("Recorded form QC refers to this form file (SHA-256)", fsha in FQ)
 else:
